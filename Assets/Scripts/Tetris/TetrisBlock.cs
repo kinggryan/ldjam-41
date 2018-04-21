@@ -11,21 +11,33 @@ public class TetrisBlock {
     protected int localOriginY;
 
 	// Returns true if the rotation was successful
-    public bool RotateLeft(char[,] board)
+    public virtual bool RotateClockwise(char[,] board)
     {
-        return true;
+        var newRotation = GetRotationOfBlockLetters(blockLetters, true);
+        if (CanBeAtPosition(board, newRotation, positionX, positionY))
+        {
+            blockLetters = newRotation;
+            return true;
+        }
+        return false;
     }
 
     // returns true if the rotation was successful
-    public bool RotateRight(char[,] board)
+    public virtual bool RotateCounterClockwise(char[,] board)
     {
-        return true;
+        var newRotation = GetRotationOfBlockLetters(blockLetters, false);
+        if (CanBeAtPosition(board, newRotation, positionX, positionY))
+        {
+            blockLetters = newRotation;
+            return true;
+        }
+        return false;
     }
 
     // returns true if the move down was successful
     public bool MoveDown(char[,] board)
     {
-        if(CanBeAtPosition(board, positionX, positionY - 1))
+        if(CanBeAtPosition(board, blockLetters, positionX, positionY - 1))
         {
             positionY -= 1;
             return true;
@@ -42,11 +54,7 @@ public class TetrisBlock {
 
     public bool MoveRight(char[,] board)
     {
-        if (positionX == 8)
-        {
-            Debug.Log("stop");
-        }
-        if (CanBeAtPosition(board, positionX + 1, positionY))
+        if (CanBeAtPosition(board, blockLetters, positionX + 1, positionY))
         {
             positionX += 1;
             return true;
@@ -56,7 +64,7 @@ public class TetrisBlock {
 
     public bool MoveLeft(char[,] board)
     {
-        if(CanBeAtPosition(board, positionX - 1, positionY))
+        if(CanBeAtPosition(board, blockLetters, positionX - 1, positionY))
         {
             positionX -= 1;
             return true;
@@ -81,7 +89,7 @@ public class TetrisBlock {
         return newBoard;
     }
 
-    private bool CanBeAtPosition(char[,] board, int newPosX, int newPosY)
+    private bool CanBeAtPosition(char[,] board, char[,] blockLetters, int newPosX, int newPosY)
     {
         for (var localX = 0; localX < blockLetters.GetLength(0); localX++)
         {
@@ -112,6 +120,37 @@ public class TetrisBlock {
 
         return true;
     }
+
+    private char[,] GetRotationOfBlockLetters(char [,] blockLetters, bool clockwise)
+    {
+        var rotatedBlock = (char[,])blockLetters.Clone();
+        for(var x = 0; x < blockLetters.GetLength(0);x++)
+        {
+            for(var y = 0; y < blockLetters.GetLength(1); y++)
+            {
+                var localCoordX = x - localOriginX;
+                var localCoordY = y - localOriginY;
+                var rotatedCoordinate = Rotate(new Vector2(localCoordX, localCoordY), clockwise ? -90 : 90);
+                var rotatedX = Mathf.RoundToInt(rotatedCoordinate.x) + localOriginX;
+                var rotatedY = Mathf.RoundToInt(rotatedCoordinate.y) + localOriginY;
+                rotatedBlock[rotatedX, rotatedY] = blockLetters[x, y];
+            }
+        }
+
+        return rotatedBlock;
+    }
+
+    private Vector2 Rotate(Vector2 v, float degrees)
+    {
+        float sin = Mathf.Sin(degrees * Mathf.Deg2Rad);
+        float cos = Mathf.Cos(degrees * Mathf.Deg2Rad);
+
+        float tx = v.x;
+        float ty = v.y;
+        v.x = (cos * tx) - (sin * ty);
+        v.y = (sin * tx) + (cos * ty);
+        return v;
+    }
 }
 
 public class SquareBlock : TetrisBlock {
@@ -120,6 +159,109 @@ public class SquareBlock : TetrisBlock {
         blockLetters = new char[,] { { 'X', 'X' }, { 'X', 'X' } };
         localOriginX = 0;
         localOriginY = 0;
+        this.positionX = positionX;
+        this.positionY = positionY;
+    }
+
+    public override bool RotateClockwise(char[,] board)
+    {
+        return false;
+    }
+
+    public override bool RotateCounterClockwise(char[,] board)
+    {
+        return false;
+    }
+}
+
+public class TBlock : TetrisBlock
+{
+    public TBlock(int positionX, int positionY)
+    {
+        blockLetters = new char[,] {
+            { ' ', 'X', ' '}, 
+            { 'X', 'X', 'X' }, 
+            { ' ', ' ', ' ' } };
+        localOriginX = 1;
+        localOriginY = 1;
+        this.positionX = positionX;
+        this.positionY = positionY;
+    }
+}
+
+public class LongBlock : TetrisBlock
+{
+    public LongBlock(int positionX, int positionY)
+    {
+        blockLetters = new char[,] {
+            {' ', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', ' '},
+            {' ', 'X', 'X', 'X', 'X'},
+            {' ', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', ' '}};
+        localOriginX = 2;
+        localOriginY = 2;
+        this.positionX = positionX;
+        this.positionY = positionY;
+    }
+}
+
+public class ZBlock : TetrisBlock
+{
+    public ZBlock(int positionX, int positionY)
+    {
+        blockLetters = new char[,] {
+            {' ', 'X', 'X'},
+            {'X', 'X', ' '},
+            {' ', ' ', ' '}};
+        localOriginX = 1;
+        localOriginY = 1;
+        this.positionX = positionX;
+        this.positionY = positionY;
+    }
+}
+
+public class ReverseZBlock : TetrisBlock
+{
+    public ReverseZBlock(int positionX, int positionY)
+    {
+        blockLetters = new char[,] {
+            {'X', 'X', ' '},
+            {' ', 'X', 'X'},
+            {' ', ' ', ' '}};
+        localOriginX = 1;
+        localOriginY = 1;
+        this.positionX = positionX;
+        this.positionY = positionY;
+    }
+}
+
+public class LBlock : TetrisBlock
+{
+    public LBlock(int positionX, int positionY)
+    {
+        blockLetters = new char[,] {
+            {' ', 'X', ' '},
+            {' ', 'X', ' '},
+            {' ', 'X', 'X'}};
+        localOriginX = 1;
+        localOriginY = 1;
+        this.positionX = positionX;
+        this.positionY = positionY;
+    }
+}
+
+
+public class ReverseLBlock : TetrisBlock
+{
+    public ReverseLBlock(int positionX, int positionY)
+    {
+        blockLetters = new char[,] {
+            {' ', 'X', ' '},
+            {' ', 'X', ' '},
+            {'X', 'X', ' '}};
+        localOriginX = 1;
+        localOriginY = 1;
         this.positionX = positionX;
         this.positionY = positionY;
     }
