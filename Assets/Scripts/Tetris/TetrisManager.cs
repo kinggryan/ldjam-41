@@ -7,7 +7,7 @@ public class TetrisManager : MonoBehaviour {
     private TetrisDisplay display;
 
     private int boardSizeX = 10;
-    private int boardSizeY = 24;
+    private int boardSizeY = 18;
 
     private char[,] tetrisBoard;
     private TetrisBlock currentBlock;
@@ -61,7 +61,7 @@ public class TetrisManager : MonoBehaviour {
         }
         else if(Input.GetButtonDown("down"))
         {
-            currentBlock.MoveDown(tetrisBoard);
+            PerformNextDownwardMove();
         }
 
         display.UpdateBoard(tetrisBoard, currentBlock);
@@ -83,18 +83,18 @@ public class TetrisManager : MonoBehaviour {
 
     TetrisBlock GetNextBlock()
     {
-        return new TetrisBlock();
+        return new SquareBlock(boardSizeX/2, boardSizeY-2);
     }
 
     void CheckForCompleteLines()
     {
         // Check for complete lines
         // Go from the top down so we don't have to recheck lines if they move down
-        for (var y = boardSizeY; y >= 0; y--)
+        for (var y = boardSizeY - 1; y >= 0; y--)
         {
             var command = GetCommandFromLine(y);
             // Do something with the command
-            if (command == Command.None || IsLineComplete(y))
+            if (command != Command.None || IsLineComplete(y))
             {
                 RemoveLineAndMoveAboveLinesDown(y);
             }
@@ -103,9 +103,11 @@ public class TetrisManager : MonoBehaviour {
 
     bool IsLineComplete(int yCoord)
     {
-        for(var i = 0; i < boardSizeX; i++)
+       // Debug.Log("Line " + yCoord);
+        for(var x = 0; x < boardSizeX; x++)
         {
-            if(tetrisBoard[i,yCoord] == ' ')
+           // Debug.Log("is " + tetrisBoard[x, yCoord]);
+            if(tetrisBoard[x,yCoord] == ' ')
             {
                 return false;
             }
