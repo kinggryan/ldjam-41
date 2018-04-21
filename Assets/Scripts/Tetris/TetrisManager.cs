@@ -7,7 +7,7 @@ public class TetrisManager : MonoBehaviour {
     private TetrisDisplay display;
 
     private int boardSizeX = 10;
-    private int boardSizeY = 18;
+    private int boardSizeY = 24;
 
     private char[,] tetrisBoard;
     private TetrisBlock currentBlock;
