@@ -151,6 +151,20 @@ public class TetrisBlock {
         v.y = (sin * tx) + (cos * ty);
         return v;
     }
+
+    protected void RandomizeLetters()
+    {
+        for (var x = 0; x < blockLetters.GetLength(0); x++)
+        {
+            for (var y = 0; y < blockLetters.GetLength(1); y++)
+            {
+                if (blockLetters[x, y] != ' ')
+                {
+                    blockLetters[x, y] = LetterGenerator.GetLetter();
+                }
+            }
+        }
+    }
 }
 
 public class SquareBlock : TetrisBlock {
@@ -161,16 +175,30 @@ public class SquareBlock : TetrisBlock {
         localOriginY = 0;
         this.positionX = positionX;
         this.positionY = positionY;
+
+        RandomizeLetters();
     }
 
     public override bool RotateClockwise(char[,] board)
     {
-        return false;
+        var newLetters = (char[,])blockLetters.Clone();
+        newLetters[0, 0] = blockLetters[1,0];
+        newLetters[1, 0] = blockLetters[1, 1];
+        newLetters[1, 1] = blockLetters[0, 1];
+        newLetters[0, 1] = blockLetters[0, 0];
+        blockLetters = newLetters;
+        return true;
     }
 
     public override bool RotateCounterClockwise(char[,] board)
     {
-        return false;
+        var newLetters = (char[,])blockLetters.Clone();
+        newLetters[1, 0] = blockLetters[0, 0];
+        newLetters[1, 1] = blockLetters[1, 0];
+        newLetters[0, 1] = blockLetters[1, 1];
+        newLetters[0, 0] = blockLetters[0, 1];
+        blockLetters = newLetters;
+        return true;
     }
 }
 
@@ -186,6 +214,8 @@ public class TBlock : TetrisBlock
         localOriginY = 1;
         this.positionX = positionX;
         this.positionY = positionY;
+
+        RandomizeLetters();
     }
 }
 
@@ -203,6 +233,8 @@ public class LongBlock : TetrisBlock
         localOriginY = 2;
         this.positionX = positionX;
         this.positionY = positionY;
+
+        RandomizeLetters();
     }
 }
 
@@ -218,6 +250,8 @@ public class ZBlock : TetrisBlock
         localOriginY = 1;
         this.positionX = positionX;
         this.positionY = positionY;
+
+        RandomizeLetters();
     }
 }
 
@@ -233,6 +267,8 @@ public class ReverseZBlock : TetrisBlock
         localOriginY = 1;
         this.positionX = positionX;
         this.positionY = positionY;
+
+        RandomizeLetters();
     }
 }
 
@@ -248,6 +284,8 @@ public class LBlock : TetrisBlock
         localOriginY = 1;
         this.positionX = positionX;
         this.positionY = positionY;
+
+        RandomizeLetters();
     }
 }
 
@@ -264,5 +302,7 @@ public class ReverseLBlock : TetrisBlock
         localOriginY = 1;
         this.positionX = positionX;
         this.positionY = positionY;
+
+        RandomizeLetters();
     }
 }
