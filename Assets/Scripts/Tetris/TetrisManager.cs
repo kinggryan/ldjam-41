@@ -44,7 +44,16 @@ public class TetrisManager : MonoBehaviour {
 
     void PerformPlayerControlledMovement()
     {
-        if(Input.GetButtonDown("left"))
+        if(Input.GetButtonDown("rotateclockwise"))
+        {
+            currentBlock.RotateClockwise(tetrisBoard);
+        }
+        if (Input.GetButtonDown("rotatecounterclockwise"))
+        {
+            currentBlock.RotateCounterClockwise(tetrisBoard);
+        }
+
+        if (Input.GetButtonDown("left"))
         {
             currentBlock.MoveLeft(tetrisBoard);
         }
@@ -83,7 +92,38 @@ public class TetrisManager : MonoBehaviour {
 
     TetrisBlock GetNextBlock()
     {
-        return new SquareBlock(boardSizeX/2, boardSizeY-2);
+        var spawnX = boardSizeX / 2;
+        var spawnY = boardSizeY - 3;
+        var randomNum = Random.value;
+        var numberOfBlockTypes = 7;
+
+        if (randomNum < 1f / numberOfBlockTypes)
+        {
+            return new SquareBlock(spawnX, spawnY);
+        }
+        else if (randomNum < 2* (1f / numberOfBlockTypes))
+        {
+            return new LongBlock(spawnX, spawnY);
+        }
+        else if (randomNum < 3 * (1f / numberOfBlockTypes))
+        {
+            return new TBlock(spawnX, spawnY);
+        }
+        else if (randomNum < 4 * (1f / numberOfBlockTypes))
+        {
+            return new ZBlock(spawnX, spawnY);
+        }
+        else if (randomNum < 5 * (1f / numberOfBlockTypes))
+        {
+            return new ReverseZBlock(spawnX, spawnY);
+        }
+        else if (randomNum < 6 * (1f / numberOfBlockTypes))
+        {
+            return new LBlock(spawnX, spawnY);
+        } else
+        {
+            return new ReverseLBlock(spawnX, spawnY);
+        }
     }
 
     void CheckForCompleteLines()
