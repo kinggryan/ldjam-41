@@ -12,12 +12,13 @@ public class TwineTextPlayer : MonoBehaviour {
 
 	public Story Story;
 	public RectTransform Container;
-	public Button LinkTemplate;
+	public Button LinkTemplate; 
 	public Text WordTemplate;
 	public RectTransform LineBreakTemplate;
 	public bool StartStory = true;
 	public bool AutoDisplay = true;
 	public bool ShowNamedLinks = true;
+	public
 
 	static Regex rx_splitText = new Regex(@"(\s+|[^\s]+)");
 
@@ -148,19 +149,7 @@ public class TwineTextPlayer : MonoBehaviour {
 		{
 			var link = (StoryLink)output;
 			if (!ShowNamedLinks && link.IsNamed)
-				return;
-
-			Button uiLink = (Button)Instantiate(LinkTemplate);
-			uiLink.gameObject.SetActive(true);
-			uiLink.name = "[[" + link.Text + "]]";
-
-			Text uiLinkText = uiLink.GetComponentInChildren<Text>();
-			uiLinkText.text = link.Text;
-			uiLink.onClick.AddListener(() =>
-			{
-				this.Story.DoLink(link);
-			});
-			AddToUI((RectTransform)uiLink.transform, output, uiInsertIndex);
+				return;			
 		}
 		else if (output is LineBreak)
 		{
@@ -187,4 +176,25 @@ public class TwineTextPlayer : MonoBehaviour {
 		var elem = rect.gameObject.AddComponent<TwineTextPlayerElement>();
 		elem.SourceOutput = output;
 	}
+
+
+
+	bool DoCommand(Command command)
+	{
+		var link = this.Story.GetCurrentLinks();
+		if (link != null)
+		{
+			foreach (String c in command.actions)
+			{
+				if (link.Text == c) 
+					this.Story.DoLink(link);
+						
+			}
+		}
+
+	}
 }
+class Command
+	{
+		enum actions = {"OPEN'};
+	}
