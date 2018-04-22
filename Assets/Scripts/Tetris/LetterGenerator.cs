@@ -19,7 +19,8 @@ public static class LetterGenerator {
         }
     }
 
-    public static WeightedCommand[] weightedCommandsList = new WeightedCommand[] {
+    // SHOULD BE CONST
+    public static WeightedCommand[] fullWeightedCommandsList = new WeightedCommand[] {
         new WeightedCommand( TwineTextPlayer.Command.North, "NORTH", 1),
         new WeightedCommand( TwineTextPlayer.Command.South, "SOUTH", 1),
         new WeightedCommand( TwineTextPlayer.Command.East, "EAST", 1),
@@ -37,7 +38,34 @@ public static class LetterGenerator {
         //Look,
     };
 
+    public static WeightedCommand[] weightedCommandsList = new WeightedCommand[] { };
+
     static float weightedCommandTotal = 0;
+
+    public static void UpdateWithPossibleCommands(TwineTextPlayer.Command[] commands)
+    {
+        // HACK: we should jsut prevent this from happening at the start of the story but whatever
+        if(commands.Length == 0)
+        {
+            weightedCommandsList = new WeightedCommand[] { new WeightedCommand(TwineTextPlayer.Command.Open, "OPEN", 1) };
+            return;
+        }
+
+        // Generate the list from the default list
+        var newWeightedList = new List<WeightedCommand>();
+        foreach(var command in commands)
+        {
+            foreach(var weightedCommand in fullWeightedCommandsList)
+            {
+                if(weightedCommand.command == command)
+                {
+                    newWeightedList.Add(weightedCommand);
+                }
+            }
+        }
+
+        weightedCommandsList = newWeightedList.ToArray();
+    }
 
 	public static char GetLetter()
     {

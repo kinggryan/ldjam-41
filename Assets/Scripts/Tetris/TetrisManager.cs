@@ -32,7 +32,8 @@ public class TetrisManager : MonoBehaviour {
                 tetrisBoard[x, y] = ' ';
             }
         }
-        currentBlock = new SquareBlock(0, boardSizeY - 2);
+
+        currentBlock = GetNextBlock();
         display.UpdateBoard(tetrisBoard, currentBlock);
         gameStepTimer = gameStepsDuration;
     }
@@ -130,6 +131,9 @@ public class TetrisManager : MonoBehaviour {
 
     TetrisBlock GetNextBlock()
     {
+        // Update the letters table to be based on the current possible commands.
+        LetterGenerator.UpdateWithPossibleCommands(twinePlayer.GetCurrentPossibleCommands());
+
         var spawnX = boardSizeX / 2;
         var spawnY = boardSizeY - 3;
         var randomNum = Random.value;

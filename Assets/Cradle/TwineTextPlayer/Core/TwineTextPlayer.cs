@@ -55,7 +55,32 @@ public class TwineTextPlayer : MonoBehaviour {
 
     }
 
-static Regex rx_splitText = new Regex(@"(\s+|[^\s]+)");
+    Dictionary<Command, string> commandToNameMap = new Dictionary<Command, string>
+    {
+        { Command.Begin, "Begin." },
+        { Command.North, "NORTH" },
+        { Command.South, "SOUTH" },
+        { Command.West, "WEST" },
+        { Command.East, "EAST" },
+        { Command.Open, "OPEN" },
+        { Command.Hack, "HACK" },
+        { Command.Look, "LOOK" },
+        { Command.None, "" }
+    };
+
+    Dictionary<string, Command> nameToCommandMap = new Dictionary<string, Command>
+    {
+        { "Begin.", Command.Begin },
+        { "NORTH", Command.North },
+        { "SOUTH", Command.South },
+        { "WEST", Command.West },
+        { "EAST", Command.East },
+        { "OPEN", Command.Open },
+        { "HACK", Command.Hack },
+        { "LOOK", Command.Look }
+    };
+
+    static Regex rx_splitText = new Regex(@"(\s+|[^\s]+)");
 
 	void Start () {
 		if (!Application.isPlaying)
@@ -229,27 +254,7 @@ static Regex rx_splitText = new Regex(@"(\s+|[^\s]+)");
 
 	public bool DoCommand(Command command)
 	{	
-		var commandText = "";
-		switch (command)
-		{
-            case Command.North:
-                commandText = "north";
-                break;
-            case Command.South:
-                commandText = "south";
-                break;
-            case Command.East:
-				commandText = "east";
-				break;
-			case Command.West:
-				commandText = "west";
-				break;
-			case Command.Begin:
-				commandText = "Begin.";
-				break;
-			default:
-				break;
-		}
+		var commandText = commandToNameMap[command];
 
 		var links = this.Story.GetCurrentLinks();
 		if (links != null)
@@ -263,5 +268,22 @@ static Regex rx_splitText = new Regex(@"(\s+|[^\s]+)");
 		}
 		return true ; 
 	}
+
+    public Command[] GetCurrentPossibleCommands()
+    {
+        var commandsList = new List<Command>();
+        var links = this.Story.GetCurrentLinks();
+        foreach (var link in links)
+        {
+            if(nameToCommandMap.ContainsKey(link.Text))
+            {
+                commandsList.Add(nameToCommandMap[link.Text]);
+            }
+        }
+        
+        return commandsList.ToArray();
+    }
+
+
 }
 
