@@ -13,7 +13,8 @@ public class TetrisManager : MonoBehaviour {
     private TetrisBlock currentBlock;
 
     private float gameStepsDuration = 1;
-    private float gameStepTimer = 0;
+    private float gameStepTimer;
+    private float lineCompleteHangDuration = 1.5f;
 
 	// Use this for initialization
 	void Start () {
@@ -28,15 +29,16 @@ public class TetrisManager : MonoBehaviour {
         }
         currentBlock = new SquareBlock(0, boardSizeY - 2);
         display.UpdateBoard(tetrisBoard, currentBlock);
+        gameStepTimer = gameStepsDuration;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        gameStepTimer += Time.deltaTime;
-        if(gameStepTimer >= gameStepsDuration)
+        gameStepTimer -= Time.deltaTime;
+        if(gameStepTimer <= 0)
         {
-            gameStepTimer -= gameStepsDuration;
-            PerformNextDownwardMove();
+            gameStepTimer += gameStepsDuration;
+            PerformNextGameStep();
         }
 
         PerformPlayerControlledMovement();
@@ -44,6 +46,11 @@ public class TetrisManager : MonoBehaviour {
 
     void PerformPlayerControlledMovement()
     {
+        if(currentBlock == null)
+        {
+            return;
+        }
+
         if(Input.GetButtonDown("rotateclockwise"))
         {
             currentBlock.RotateClockwise(tetrisBoard);
@@ -76,18 +83,35 @@ public class TetrisManager : MonoBehaviour {
         display.UpdateBoard(tetrisBoard, currentBlock);
     }
 
+    void PerformNextGameStep()
+    {
+        if (currentBlock == null)
+            currentBlock = GetNextBlock();
+
+        PerformNextDownwardMove();
+    }
+
     void PerformNextDownwardMove()
     {
+        if (currentBlock == null)
+            return;
+
         bool blockCanKeepMoving = false;
+        bool shouldUpdateBoard = true;
         blockCanKeepMoving = currentBlock.MoveDown(tetrisBoard);
         if(!blockCanKeepMoving)
         {
             tetrisBoard = currentBlock.AddToBoard(tetrisBoard);
-            currentBlock = GetNextBlock();
-            CheckForCompleteLines();
+            currentBlock = null;
+            if(CheckForCompleteLines())
+            {
+                gameStepTimer += lineCompleteHangDuration;
+                shouldUpdateBoard = false;
+            }
         }
 
-        display.UpdateBoard(tetrisBoard, currentBlock);
+        if(shouldUpdateBoard)
+            display.UpdateBoard(tetrisBoard, currentBlock);
     }
 
     TetrisBlock GetNextBlock()
@@ -126,19 +150,34 @@ public class TetrisManager : MonoBehaviour {
         }
     }
 
-    void CheckForCompleteLines()
+    bool CheckForCompleteLines()
     {
         // Check for complete lines
         // Go from the top down so we don't have to recheck lines if they move down
+        var didEraseLine = false;
         for (var y = boardSizeY - 1; y >= 0; y--)
         {
             var command = GetCommandFromLine(y);
+
+            if (command.command != Command.None)
+            {
+                display.UpdateBoardWithCommandOnLine(tetrisBoard, command.name, y);
+            }
+
+            if(IsLineComplete(y))
+            {
+                display.UpdateBoardWithCompleteLine(tetrisBoard, y);
+            }
+
             // Do something with the command
-            if (command != Command.None || IsLineComplete(y))
+            if (command.command != Command.None || IsLineComplete(y))
             {
                 RemoveLineAndMoveAboveLinesDown(y);
+                didEraseLine = true;
             }
         }
+
+        return didEraseLine;
     }
 
     bool IsLineComplete(int yCoord)
@@ -156,10 +195,31 @@ public class TetrisManager : MonoBehaviour {
         return true;
     }
 
-    Command GetCommandFromLine(int yCoord)
+    LetterGenerator.WeightedCommand GetCommandFromLine(int yCoord)
     {
+        var lineString = "";
+
         // Do some stuff to find teh commands
-        return Command.None;
+        for (var x = 0; x < boardSizeX; x++)
+        {
+            if(tetrisBoard[x,yCoord] != ' ')
+            {
+                lineString += tetrisBoard[x, yCoord];
+            }
+        }
+
+        if (lineString.Length != 0)
+        {
+            foreach (var command in LetterGenerator.weightedCommandsList)
+            {
+                if (lineString.Contains(command.name))
+                {
+                    return command;
+                }
+            }
+        }
+
+        return new LetterGenerator.WeightedCommand(Command.None, "", 0);
     }
 
     void RemoveLineAndMoveAboveLinesDown(int yCoord)

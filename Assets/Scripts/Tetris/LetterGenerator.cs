@@ -6,20 +6,22 @@ using UnityEngine;
 
 public static class LetterGenerator {
 
-    struct WeightedCommand
+    public struct WeightedCommand
     {
-        public readonly string command;
+        public readonly Command command;
+        public readonly string name;
         public readonly float weight;
 
-        public WeightedCommand(string command, float weight)
+        public WeightedCommand(Command command, string name, float weight)
         {
             this.command = command;
+            this.name = name;
             this.weight = weight;
         }
     }
 
-    static WeightedCommand[] weightedCommandsList = new WeightedCommand[] {
-        new WeightedCommand( "NONE", 1 )
+    public static WeightedCommand[] weightedCommandsList = new WeightedCommand[] {
+        new WeightedCommand( Command.Up, "UP", 1)
     };
 
     static float weightedCommandTotal = 0;
@@ -31,8 +33,8 @@ public static class LetterGenerator {
             weightedCommandTotal = GetWeightedCommandTotal();
         }
         var command = GetRandomWeightCommand();
-        var letterIndex = Random.Range(0, command.command.Length);
-        return command.command[letterIndex];
+        var letterIndex = Random.Range(0, command.name.Length);
+        return command.name[letterIndex];
     }
 
     static float GetWeightedCommandTotal()
