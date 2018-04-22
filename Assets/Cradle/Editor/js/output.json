@@ -2,7 +2,7 @@
     "console": [
         {
             "type": "message",
-            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:99:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:99:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:41837\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:42285\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:45808\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:103:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:106:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:89:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:89:36747 undefined"
+            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:65:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:65:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:41837\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:42285\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:45808\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:69:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:71:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:71:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:71:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:71:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:72:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:55:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:55:36747 undefined"
         }
     ],
     "result": {
@@ -65,32 +65,94 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN. ",
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.",
                         "type": "text"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "\n(set: $look_desk to true)\n(click: ?lo)[(append: ?c1)[(display: \"Look_Logic\")]]\n",
-                        "text": "{\n(set: $look_desk to true)\n(click: ?lo)[(append: ?c1)[(display: \"Look_Logic\")]]\n}",
+                        "innerText": "LOOK",
+                        "name": "lo",
+                        "text": "[LOOK]<lo|",
                         "tokens": [
                             {
-                                "text": "\n",
-                                "type": "br"
+                                "text": "LOOK",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "set: $look_desk to true",
+                        "name": "set",
+                        "text": "(set: $look_desk to true)",
+                        "tokens": [
+                            {
+                                "text": "set:",
+                                "type": "macroName"
                             },
                             {
-                                "innerText": "set: $look_desk to true",
-                                "name": "set",
-                                "text": "(set: $look_desk to true)",
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "look_desk",
+                                "text": "$look_desk",
+                                "type": "variable"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "to",
+                                "type": "to"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "true",
+                                "type": "boolean"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "click: ?lo",
+                        "name": "click",
+                        "text": "(click: ?lo)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "lo",
+                                "text": "?lo",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Look_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Look_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
                                 "tokens": [
                                     {
-                                        "text": "set:",
+                                        "text": "append:",
                                         "type": "macroName"
                                     },
                                     {
@@ -98,65 +160,24 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "name": "look_desk",
-                                        "text": "$look_desk",
-                                        "type": "variable"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "text": "to",
-                                        "type": "to"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "text": "true",
-                                        "type": "boolean"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "innerText": "click: ?lo",
-                                "name": "click",
-                                "text": "(click: ?lo)",
-                                "tokens": [
-                                    {
-                                        "text": "click:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "lo",
-                                        "text": "?lo",
+                                        "name": "c1",
+                                        "text": "?c1",
                                         "type": "hookRef"
                                     }
                                 ],
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(append: ?c1)[(display: \"Look_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"Look_Logic\")]]",
+                                "innerText": "(display: \"Look_Logic\")",
+                                "text": "[(display: \"Look_Logic\")]",
                                 "tokens": [
                                     {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
+                                        "innerText": "display: \"Look_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Look_Logic\")",
                                         "tokens": [
                                             {
-                                                "text": "append:",
+                                                "text": "display:",
                                                 "type": "macroName"
                                             },
                                             {
@@ -164,50 +185,18 @@
                                                 "type": "whitespace"
                                             },
                                             {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
+                                                "innerText": "Look_Logic",
+                                                "text": "\"Look_Logic\"",
+                                                "type": "string"
                                             }
                                         ],
                                         "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Look_Logic\")",
-                                        "text": "[(display: \"Look_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Look_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"Look_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Look_Logic",
-                                                        "text": "\"Look_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
                             }
                         ],
-                        "type": "collapsed"
+                        "type": "hook"
                     }
                 ]
             },
@@ -227,6 +216,10 @@
                 "Pid": "4",
                 "Tags": "",
                 "Tokens": [
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
                     {
                         "innerText": "if: $look_desk is false",
                         "name": "if",
@@ -265,12 +258,24 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "You need a tape player to play the tape.",
-                        "text": "[You need a tape player to play the tape.]",
+                        "innerText": "You need a tape player to play the tape. [USE TAPE]<ut|",
+                        "text": "[You need a tape player to play the tape. [USE TAPE]<ut|]",
                         "tokens": [
                             {
-                                "text": "You need a tape player to play the tape.",
+                                "text": "You need a tape player to play the tape. ",
                                 "type": "text"
+                            },
+                            {
+                                "innerText": "USE TAPE",
+                                "name": "ut",
+                                "text": "[USE TAPE]<ut|",
+                                "tokens": [
+                                    {
+                                        "text": "USE TAPE",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
                             }
                         ],
                         "type": "hook"
@@ -292,8 +297,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "You pull the tape player out of the desk drawer and put the audio TAPE inside it. You hit play. A gravelly voice starts talking.\n\nHello agent, this is your commander. We have sent you to Moscow to infiltrate a research facility that, we believe, is developing a machine that can alter people’s minds. You have been outfitted with the cyborg implant Total Environmental Transcription/Reactive Information Synthesis, or T.E.T./R.I.S., to aid in your mission. It will allow you to quickly analyze your surroundings and determine your best courses of action. Good luck.\n\nThe tape ends.",
-                        "text": "[You pull the tape player out of the desk drawer and put the audio TAPE inside it. You hit play. A gravelly voice starts talking.\n\nHello agent, this is your commander. We have sent you to Moscow to infiltrate a research facility that, we believe, is developing a machine that can alter people’s minds. You have been outfitted with the cyborg implant Total Environmental Transcription/Reactive Information Synthesis, or T.E.T./R.I.S., to aid in your mission. It will allow you to quickly analyze your surroundings and determine your best courses of action. Good luck.\n\nThe tape ends.]",
+                        "innerText": "You pull the tape player out of the desk drawer and put the audio TAPE inside it. You hit play. A gravelly voice starts talking.\n\nHello agent, this is your commander. We have sent you to Moscow to infiltrate a research facility that, we believe, is developing a machine that can alter people’s minds. You have been outfitted with the cyborg implant Total Environmental Transcription/Reactive Information Synthesis, or T.E.T./R.I.S., to aid in your mission. It will allow you to quickly analyze your surroundings and determine your best courses of action. Good luck.\n\nThe tape ends. [USE TAPE]<ut|",
+                        "text": "[You pull the tape player out of the desk drawer and put the audio TAPE inside it. You hit play. A gravelly voice starts talking.\n\nHello agent, this is your commander. We have sent you to Moscow to infiltrate a research facility that, we believe, is developing a machine that can alter people’s minds. You have been outfitted with the cyborg implant Total Environmental Transcription/Reactive Information Synthesis, or T.E.T./R.I.S., to aid in your mission. It will allow you to quickly analyze your surroundings and determine your best courses of action. Good luck.\n\nThe tape ends. [USE TAPE]<ut|]",
                         "tokens": [
                             {
                                 "text": "You pull the tape player out of the desk drawer and put the audio TAPE inside it. You hit play. A gravelly voice starts talking.",
@@ -320,35 +325,56 @@
                                 "type": "br"
                             },
                             {
-                                "text": "The tape ends.",
+                                "text": "The tape ends. ",
                                 "type": "text"
+                            },
+                            {
+                                "innerText": "USE TAPE",
+                                "name": "ut",
+                                "text": "[USE TAPE]<ut|",
+                                "tokens": [
+                                    {
+                                        "text": "USE TAPE",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
                             }
                         ],
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "\n(click: ?ut)[(append: ?c1)[(display: \"Tape_Logic\")]]\n",
-                        "text": "{\n(click: ?ut)[(append: ?c1)[(display: \"Tape_Logic\")]]\n}",
+                        "innerText": "click: ?ut",
+                        "name": "click",
+                        "text": "(click: ?ut)",
                         "tokens": [
                             {
-                                "text": "\n",
-                                "type": "br"
+                                "text": "click:",
+                                "type": "macroName"
                             },
                             {
-                                "innerText": "click: ?ut",
-                                "name": "click",
-                                "text": "(click: ?ut)",
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "ut",
+                                "text": "?ut",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Tape_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Tape_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
                                 "tokens": [
                                     {
-                                        "text": "click:",
+                                        "text": "append:",
                                         "type": "macroName"
                                     },
                                     {
@@ -356,24 +382,24 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "name": "ut",
-                                        "text": "?ut",
+                                        "name": "c1",
+                                        "text": "?c1",
                                         "type": "hookRef"
                                     }
                                 ],
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(append: ?c1)[(display: \"Tape_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"Tape_Logic\")]]",
+                                "innerText": "(display: \"Tape_Logic\")",
+                                "text": "[(display: \"Tape_Logic\")]",
                                 "tokens": [
                                     {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
+                                        "innerText": "display: \"Tape_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Tape_Logic\")",
                                         "tokens": [
                                             {
-                                                "text": "append:",
+                                                "text": "display:",
                                                 "type": "macroName"
                                             },
                                             {
@@ -381,50 +407,18 @@
                                                 "type": "whitespace"
                                             },
                                             {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
+                                                "innerText": "Tape_Logic",
+                                                "text": "\"Tape_Logic\"",
+                                                "type": "string"
                                             }
                                         ],
                                         "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Tape_Logic\")",
-                                        "text": "[(display: \"Tape_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Tape_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"Tape_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Tape_Logic",
-                                                        "text": "\"Tape_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
                             }
                         ],
-                        "type": "collapsed"
+                        "type": "hook"
                     }
                 ]
             },
@@ -433,6 +427,10 @@
                 "Pid": "5",
                 "Tags": "",
                 "Tokens": [
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
                     {
                         "innerText": "if: $inv's NOTE is true",
                         "name": "if",
@@ -516,39 +514,72 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "The door won’t open. Looks like you need a password for this keypad.",
-                        "text": "[The door won’t open. Looks like you need a password for this keypad.]",
+                        "innerText": "The door won’t open. Looks like you need a password for this keypad.[NORTH]<no|[OPEN]<no|",
+                        "text": "[The door won’t open. Looks like you need a password for this keypad.[NORTH]<no|[OPEN]<no|]",
                         "tokens": [
                             {
                                 "text": "The door won’t open. Looks like you need a password for this keypad.",
                                 "type": "text"
+                            },
+                            {
+                                "innerText": "NORTH",
+                                "name": "no",
+                                "text": "[NORTH]<no|",
+                                "tokens": [
+                                    {
+                                        "text": "NORTH",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
+                            },
+                            {
+                                "innerText": "OPEN",
+                                "name": "no",
+                                "text": "[OPEN]<no|",
+                                "tokens": [
+                                    {
+                                        "text": "OPEN",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
                             }
                         ],
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "\n(click: ?no)[(append: ?c1)[(display: \"North_Logic\")]]\n",
-                        "text": "{\n(click: ?no)[(append: ?c1)[(display: \"North_Logic\")]]\n}",
+                        "innerText": "click: ?no",
+                        "name": "click",
+                        "text": "(click: ?no)",
                         "tokens": [
                             {
-                                "text": "\n",
-                                "type": "br"
+                                "text": "click:",
+                                "type": "macroName"
                             },
                             {
-                                "innerText": "click: ?no",
-                                "name": "click",
-                                "text": "(click: ?no)",
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "no",
+                                "text": "?no",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"North_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"North_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
                                 "tokens": [
                                     {
-                                        "text": "click:",
+                                        "text": "append:",
                                         "type": "macroName"
                                     },
                                     {
@@ -556,24 +587,24 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "name": "no",
-                                        "text": "?no",
+                                        "name": "c1",
+                                        "text": "?c1",
                                         "type": "hookRef"
                                     }
                                 ],
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(append: ?c1)[(display: \"North_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"North_Logic\")]]",
+                                "innerText": "(display: \"North_Logic\")",
+                                "text": "[(display: \"North_Logic\")]",
                                 "tokens": [
                                     {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
+                                        "innerText": "display: \"North_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"North_Logic\")",
                                         "tokens": [
                                             {
-                                                "text": "append:",
+                                                "text": "display:",
                                                 "type": "macroName"
                                             },
                                             {
@@ -581,50 +612,95 @@
                                                 "type": "whitespace"
                                             },
                                             {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
+                                                "innerText": "North_Logic",
+                                                "text": "\"North_Logic\"",
+                                                "type": "string"
                                             }
                                         ],
                                         "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"North_Logic\")",
-                                        "text": "[(display: \"North_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"North_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"North_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "North_Logic",
-                                                        "text": "\"North_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
                             }
                         ],
-                        "type": "collapsed"
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "click: ?un",
+                        "name": "click",
+                        "text": "(click: ?un)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "un",
+                                "text": "?un",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Note_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Note_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Note_Logic\")",
+                                "text": "[(display: \"Note_Logic\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Note_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Note_Logic\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Note_Logic",
+                                                "text": "\"Note_Logic\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
                     }
                 ]
             },
@@ -634,28 +710,57 @@
                 "Tags": "",
                 "Tokens": [
                     {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
                         "text": "You try to HACK the keypad next to the door. You don’t get the door open, but you do learn that the password is long, and would be difficult to remember for underpaid guards.",
                         "type": "text"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "(click: ?ha)[(append: ?c1)[(display: \"Hack_Logic\")]]\n",
-                        "text": "{(click: ?ha)[(append: ?c1)[(display: \"Hack_Logic\")]]\n}",
+                        "innerText": "HACK",
+                        "name": "ha",
+                        "text": "[HACK]<ha|",
                         "tokens": [
                             {
-                                "innerText": "click: ?ha",
-                                "name": "click",
-                                "text": "(click: ?ha)",
+                                "text": "HACK",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "click: ?ha",
+                        "name": "click",
+                        "text": "(click: ?ha)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "ha",
+                                "text": "?ha",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Hack_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Hack_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
                                 "tokens": [
                                     {
-                                        "text": "click:",
+                                        "text": "append:",
                                         "type": "macroName"
                                     },
                                     {
@@ -663,24 +768,24 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "name": "ha",
-                                        "text": "?ha",
+                                        "name": "c1",
+                                        "text": "?c1",
                                         "type": "hookRef"
                                     }
                                 ],
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(append: ?c1)[(display: \"Hack_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"Hack_Logic\")]]",
+                                "innerText": "(display: \"Hack_Logic\")",
+                                "text": "[(display: \"Hack_Logic\")]",
                                 "tokens": [
                                     {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
+                                        "innerText": "display: \"Hack_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Hack_Logic\")",
                                         "tokens": [
                                             {
-                                                "text": "append:",
+                                                "text": "display:",
                                                 "type": "macroName"
                                             },
                                             {
@@ -688,50 +793,18 @@
                                                 "type": "whitespace"
                                             },
                                             {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
+                                                "innerText": "Hack_Logic",
+                                                "text": "\"Hack_Logic\"",
+                                                "type": "string"
                                             }
                                         ],
                                         "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Hack_Logic\")",
-                                        "text": "[(display: \"Hack_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Hack_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"Hack_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Hack_Logic",
-                                                        "text": "\"Hack_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
                             }
                         ],
-                        "type": "collapsed"
+                        "type": "hook"
                     }
                 ]
             },
@@ -765,10 +838,6 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "name": "c1",
                         "text": "[]<c1|",
                         "type": "hook"
@@ -782,767 +851,708 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "(set: $look_desk to false)\n\n[LOOK]<lo|  [USE TAPE]<ut|  [NORTH]<no|  [HACK]<ha|  [OPEN]<no| [TAKE NOTE]<un| [TAKE GUN]<tg| [USE GUN]<ug|\n\n\n(click: ?lo)[(append: ?c1)[(display: \"Look_Logic\")]]\n(click: ?ut)[(append: ?c1)[(display: \"Tape_Logic\")]]\n(click: ?no)[(append: ?c1)[(display: \"North_Logic\")]]\n(click: ?ha)[(append: ?c1)[(display: \"Hack_Logic\")]]\n\n(click: ?tg)[(append: ?c1)[(display: \"Gun_Logic\")]]\n(click: ?ug)[(append: ?c1)[(display: \"Gun_Logic2\")]]\n\n(click: ?un)[(append: ?c1)[(display: \"Note_Logic\")]]\n",
-                        "text": "{(set: $look_desk to false)\n\n[LOOK]<lo|  [USE TAPE]<ut|  [NORTH]<no|  [HACK]<ha|  [OPEN]<no| [TAKE NOTE]<un| [TAKE GUN]<tg| [USE GUN]<ug|\n\n\n(click: ?lo)[(append: ?c1)[(display: \"Look_Logic\")]]\n(click: ?ut)[(append: ?c1)[(display: \"Tape_Logic\")]]\n(click: ?no)[(append: ?c1)[(display: \"North_Logic\")]]\n(click: ?ha)[(append: ?c1)[(display: \"Hack_Logic\")]]\n\n(click: ?tg)[(append: ?c1)[(display: \"Gun_Logic\")]]\n(click: ?ug)[(append: ?c1)[(display: \"Gun_Logic2\")]]\n\n(click: ?un)[(append: ?c1)[(display: \"Note_Logic\")]]\n}",
+                        "innerText": "set: $look_desk to false",
+                        "name": "set",
+                        "text": "(set: $look_desk to false)",
                         "tokens": [
                             {
-                                "innerText": "set: $look_desk to false",
-                                "name": "set",
-                                "text": "(set: $look_desk to false)",
-                                "tokens": [
-                                    {
-                                        "text": "set:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "look_desk",
-                                        "text": "$look_desk",
-                                        "type": "variable"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "text": "to",
-                                        "type": "to"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "text": "false",
-                                        "type": "boolean"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "innerText": "LOOK",
-                                "name": "lo",
-                                "text": "[LOOK]<lo|",
-                                "tokens": [
-                                    {
-                                        "text": "LOOK",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": "  ",
-                                "type": "text"
-                            },
-                            {
-                                "innerText": "USE TAPE",
-                                "name": "ut",
-                                "text": "[USE TAPE]<ut|",
-                                "tokens": [
-                                    {
-                                        "text": "USE TAPE",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": "  ",
-                                "type": "text"
-                            },
-                            {
-                                "innerText": "NORTH",
-                                "name": "no",
-                                "text": "[NORTH]<no|",
-                                "tokens": [
-                                    {
-                                        "text": "NORTH",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": "  ",
-                                "type": "text"
-                            },
-                            {
-                                "innerText": "HACK",
-                                "name": "ha",
-                                "text": "[HACK]<ha|",
-                                "tokens": [
-                                    {
-                                        "text": "HACK",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": "  ",
-                                "type": "text"
-                            },
-                            {
-                                "innerText": "OPEN",
-                                "name": "no",
-                                "text": "[OPEN]<no|",
-                                "tokens": [
-                                    {
-                                        "text": "OPEN",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
+                                "text": "set:",
+                                "type": "macroName"
                             },
                             {
                                 "text": " ",
-                                "type": "text"
+                                "type": "whitespace"
                             },
                             {
-                                "innerText": "TAKE NOTE",
-                                "name": "un",
-                                "text": "[TAKE NOTE]<un|",
-                                "tokens": [
-                                    {
-                                        "text": "TAKE NOTE",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
+                                "name": "look_desk",
+                                "text": "$look_desk",
+                                "type": "variable"
                             },
                             {
                                 "text": " ",
-                                "type": "text"
+                                "type": "whitespace"
                             },
                             {
-                                "innerText": "TAKE GUN",
-                                "name": "tg",
-                                "text": "[TAKE GUN]<tg|",
-                                "tokens": [
-                                    {
-                                        "text": "TAKE GUN",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
+                                "text": "to",
+                                "type": "to"
                             },
                             {
                                 "text": " ",
-                                "type": "text"
+                                "type": "whitespace"
                             },
                             {
-                                "innerText": "USE GUN",
-                                "name": "ug",
-                                "text": "[USE GUN]<ug|",
-                                "tokens": [
-                                    {
-                                        "text": "USE GUN",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "innerText": "click: ?lo",
-                                "name": "click",
-                                "text": "(click: ?lo)",
-                                "tokens": [
-                                    {
-                                        "text": "click:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "lo",
-                                        "text": "?lo",
-                                        "type": "hookRef"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "(append: ?c1)[(display: \"Look_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"Look_Logic\")]]",
-                                "tokens": [
-                                    {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
-                                        "tokens": [
-                                            {
-                                                "text": "append:",
-                                                "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Look_Logic\")",
-                                        "text": "[(display: \"Look_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Look_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"Look_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Look_Logic",
-                                                        "text": "\"Look_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "innerText": "click: ?ut",
-                                "name": "click",
-                                "text": "(click: ?ut)",
-                                "tokens": [
-                                    {
-                                        "text": "click:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "ut",
-                                        "text": "?ut",
-                                        "type": "hookRef"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "(append: ?c1)[(display: \"Tape_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"Tape_Logic\")]]",
-                                "tokens": [
-                                    {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
-                                        "tokens": [
-                                            {
-                                                "text": "append:",
-                                                "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Tape_Logic\")",
-                                        "text": "[(display: \"Tape_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Tape_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"Tape_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Tape_Logic",
-                                                        "text": "\"Tape_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "innerText": "click: ?no",
-                                "name": "click",
-                                "text": "(click: ?no)",
-                                "tokens": [
-                                    {
-                                        "text": "click:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "no",
-                                        "text": "?no",
-                                        "type": "hookRef"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "(append: ?c1)[(display: \"North_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"North_Logic\")]]",
-                                "tokens": [
-                                    {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
-                                        "tokens": [
-                                            {
-                                                "text": "append:",
-                                                "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"North_Logic\")",
-                                        "text": "[(display: \"North_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"North_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"North_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "North_Logic",
-                                                        "text": "\"North_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "innerText": "click: ?ha",
-                                "name": "click",
-                                "text": "(click: ?ha)",
-                                "tokens": [
-                                    {
-                                        "text": "click:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "ha",
-                                        "text": "?ha",
-                                        "type": "hookRef"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "(append: ?c1)[(display: \"Hack_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"Hack_Logic\")]]",
-                                "tokens": [
-                                    {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
-                                        "tokens": [
-                                            {
-                                                "text": "append:",
-                                                "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Hack_Logic\")",
-                                        "text": "[(display: \"Hack_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Hack_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"Hack_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Hack_Logic",
-                                                        "text": "\"Hack_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "innerText": "click: ?tg",
-                                "name": "click",
-                                "text": "(click: ?tg)",
-                                "tokens": [
-                                    {
-                                        "text": "click:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "tg",
-                                        "text": "?tg",
-                                        "type": "hookRef"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "(append: ?c1)[(display: \"Gun_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"Gun_Logic\")]]",
-                                "tokens": [
-                                    {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
-                                        "tokens": [
-                                            {
-                                                "text": "append:",
-                                                "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Gun_Logic\")",
-                                        "text": "[(display: \"Gun_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Gun_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"Gun_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Gun_Logic",
-                                                        "text": "\"Gun_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "innerText": "click: ?ug",
-                                "name": "click",
-                                "text": "(click: ?ug)",
-                                "tokens": [
-                                    {
-                                        "text": "click:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "ug",
-                                        "text": "?ug",
-                                        "type": "hookRef"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "(append: ?c1)[(display: \"Gun_Logic2\")]",
-                                "text": "[(append: ?c1)[(display: \"Gun_Logic2\")]]",
-                                "tokens": [
-                                    {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
-                                        "tokens": [
-                                            {
-                                                "text": "append:",
-                                                "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Gun_Logic2\")",
-                                        "text": "[(display: \"Gun_Logic2\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Gun_Logic2\"",
-                                                "name": "display",
-                                                "text": "(display: \"Gun_Logic2\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Gun_Logic2",
-                                                        "text": "\"Gun_Logic2\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "innerText": "click: ?un",
-                                "name": "click",
-                                "text": "(click: ?un)",
-                                "tokens": [
-                                    {
-                                        "text": "click:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "un",
-                                        "text": "?un",
-                                        "type": "hookRef"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "(append: ?c1)[(display: \"Note_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"Note_Logic\")]]",
-                                "tokens": [
-                                    {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
-                                        "tokens": [
-                                            {
-                                                "text": "append:",
-                                                "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Note_Logic\")",
-                                        "text": "[(display: \"Note_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Note_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"Note_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Note_Logic",
-                                                        "text": "\"Note_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
+                                "text": "false",
+                                "type": "boolean"
                             }
                         ],
-                        "type": "collapsed"
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "LOOK",
+                        "name": "lo",
+                        "text": "[LOOK]<lo|",
+                        "tokens": [
+                            {
+                                "text": "LOOK",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "  ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "USE TAPE",
+                        "name": "ut",
+                        "text": "[USE TAPE]<ut|",
+                        "tokens": [
+                            {
+                                "text": "USE TAPE",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "  ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "NORTH",
+                        "name": "no",
+                        "text": "[NORTH]<no|",
+                        "tokens": [
+                            {
+                                "text": "NORTH",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "  ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "HACK",
+                        "name": "ha",
+                        "text": "[HACK]<ha|",
+                        "tokens": [
+                            {
+                                "text": "HACK",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "  ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "OPEN",
+                        "name": "no",
+                        "text": "[OPEN]<no|",
+                        "tokens": [
+                            {
+                                "text": "OPEN",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "TAKE NOTE",
+                        "name": "un",
+                        "text": "[TAKE NOTE]<un|",
+                        "tokens": [
+                            {
+                                "text": "TAKE NOTE",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "TAKE GUN",
+                        "name": "tg",
+                        "text": "[TAKE GUN]<tg|",
+                        "tokens": [
+                            {
+                                "text": "TAKE GUN",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "USE GUN",
+                        "name": "ug",
+                        "text": "[USE GUN]<ug|",
+                        "tokens": [
+                            {
+                                "text": "USE GUN",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "click: ?lo",
+                        "name": "click",
+                        "text": "(click: ?lo)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "lo",
+                                "text": "?lo",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Look_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Look_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Look_Logic\")",
+                                "text": "[(display: \"Look_Logic\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Look_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Look_Logic\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Look_Logic",
+                                                "text": "\"Look_Logic\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "click: ?ut",
+                        "name": "click",
+                        "text": "(click: ?ut)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "ut",
+                                "text": "?ut",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Tape_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Tape_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Tape_Logic\")",
+                                "text": "[(display: \"Tape_Logic\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Tape_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Tape_Logic\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Tape_Logic",
+                                                "text": "\"Tape_Logic\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "click: ?no",
+                        "name": "click",
+                        "text": "(click: ?no)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "no",
+                                "text": "?no",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"North_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"North_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"North_Logic\")",
+                                "text": "[(display: \"North_Logic\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"North_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"North_Logic\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "North_Logic",
+                                                "text": "\"North_Logic\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "click: ?ha",
+                        "name": "click",
+                        "text": "(click: ?ha)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "ha",
+                                "text": "?ha",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Hack_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Hack_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Hack_Logic\")",
+                                "text": "[(display: \"Hack_Logic\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Hack_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Hack_Logic\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Hack_Logic",
+                                                "text": "\"Hack_Logic\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "click: ?tg",
+                        "name": "click",
+                        "text": "(click: ?tg)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "tg",
+                                "text": "?tg",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Gun_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Gun_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Gun_Logic\")",
+                                "text": "[(display: \"Gun_Logic\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Gun_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Gun_Logic\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Gun_Logic",
+                                                "text": "\"Gun_Logic\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "click: ?ug",
+                        "name": "click",
+                        "text": "(click: ?ug)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "ug",
+                                "text": "?ug",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Gun_Logic2\")]",
+                        "text": "[(append: ?c1)[(display: \"Gun_Logic2\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Gun_Logic2\")",
+                                "text": "[(display: \"Gun_Logic2\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Gun_Logic2\"",
+                                        "name": "display",
+                                        "text": "(display: \"Gun_Logic2\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Gun_Logic2",
+                                                "text": "\"Gun_Logic2\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "click: ?un",
+                        "name": "click",
+                        "text": "(click: ?un)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "un",
+                                "text": "?un",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Note_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Note_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Note_Logic\")",
+                                "text": "[(display: \"Note_Logic\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Note_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Note_Logic\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Note_Logic",
+                                                "text": "\"Note_Logic\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
                     },
                     {
                         "text": "\n",
@@ -1567,6 +1577,10 @@
                 "Pid": "8",
                 "Tags": "",
                 "Tokens": [
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
                     {
                         "innerText": "if: $look_desk is true",
                         "name": "if",
@@ -1605,8 +1619,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $inv's GUN is true)[You already took the GUN.](else:)[(set: $inv's GUN to true) You take the GUN.] ",
-                        "text": "[(if: $inv's GUN is true)[You already took the GUN.](else:)[(set: $inv's GUN to true) You take the GUN.] ]",
+                        "innerText": "(if: $inv's GUN is true)[You already took the GUN.[TAKE GUN]<tg|](else:)[(set: $inv's GUN to true) You take the GUN.[TAKE GUN]<tg|]",
+                        "text": "[(if: $inv's GUN is true)[You already took the GUN.[TAKE GUN]<tg|](else:)[(set: $inv's GUN to true) You take the GUN.[TAKE GUN]<tg|]]",
                         "tokens": [
                             {
                                 "innerText": "if: $inv's GUN is true",
@@ -1651,12 +1665,24 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "You already took the GUN.",
-                                "text": "[You already took the GUN.]",
+                                "innerText": "You already took the GUN.[TAKE GUN]<tg|",
+                                "text": "[You already took the GUN.[TAKE GUN]<tg|]",
                                 "tokens": [
                                     {
                                         "text": "You already took the GUN.",
                                         "type": "text"
+                                    },
+                                    {
+                                        "innerText": "TAKE GUN",
+                                        "name": "tg",
+                                        "text": "[TAKE GUN]<tg|",
+                                        "tokens": [
+                                            {
+                                                "text": "TAKE GUN",
+                                                "type": "text"
+                                            }
+                                        ],
+                                        "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
@@ -1674,8 +1700,8 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(set: $inv's GUN to true) You take the GUN.",
-                                "text": "[(set: $inv's GUN to true) You take the GUN.]",
+                                "innerText": "(set: $inv's GUN to true) You take the GUN.[TAKE GUN]<tg|",
+                                "text": "[(set: $inv's GUN to true) You take the GUN.[TAKE GUN]<tg|]",
                                 "tokens": [
                                     {
                                         "innerText": "set: $inv's GUN to true",
@@ -1722,13 +1748,21 @@
                                     {
                                         "text": " You take the GUN.",
                                         "type": "text"
+                                    },
+                                    {
+                                        "innerText": "TAKE GUN",
+                                        "name": "tg",
+                                        "text": "[TAKE GUN]<tg|",
+                                        "tokens": [
+                                            {
+                                                "text": "TAKE GUN",
+                                                "type": "text"
+                                            }
+                                        ],
+                                        "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
-                            },
-                            {
-                                "text": " ",
-                                "type": "text"
                             }
                         ],
                         "type": "hook"
@@ -1746,39 +1780,60 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "What gun?",
-                        "text": "[What gun?]",
+                        "innerText": "What gun?[TAKE GUN]<tg|",
+                        "text": "[What gun?[TAKE GUN]<tg|]",
                         "tokens": [
                             {
                                 "text": "What gun?",
                                 "type": "text"
+                            },
+                            {
+                                "innerText": "TAKE GUN",
+                                "name": "tg",
+                                "text": "[TAKE GUN]<tg|",
+                                "tokens": [
+                                    {
+                                        "text": "TAKE GUN",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
                             }
                         ],
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "\n(click: ?tg)[(append: ?c1)[(display: \"Gun_Logic\")]]\n",
-                        "text": "{\n(click: ?tg)[(append: ?c1)[(display: \"Gun_Logic\")]]\n}",
+                        "innerText": "click: ?tg",
+                        "name": "click",
+                        "text": "(click: ?tg)",
                         "tokens": [
                             {
-                                "text": "\n",
-                                "type": "br"
+                                "text": "click:",
+                                "type": "macroName"
                             },
                             {
-                                "innerText": "click: ?tg",
-                                "name": "click",
-                                "text": "(click: ?tg)",
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "tg",
+                                "text": "?tg",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Gun_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Gun_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
                                 "tokens": [
                                     {
-                                        "text": "click:",
+                                        "text": "append:",
                                         "type": "macroName"
                                     },
                                     {
@@ -1786,24 +1841,24 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "name": "tg",
-                                        "text": "?tg",
+                                        "name": "c1",
+                                        "text": "?c1",
                                         "type": "hookRef"
                                     }
                                 ],
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(append: ?c1)[(display: \"Gun_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"Gun_Logic\")]]",
+                                "innerText": "(display: \"Gun_Logic\")",
+                                "text": "[(display: \"Gun_Logic\")]",
                                 "tokens": [
                                     {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
+                                        "innerText": "display: \"Gun_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Gun_Logic\")",
                                         "tokens": [
                                             {
-                                                "text": "append:",
+                                                "text": "display:",
                                                 "type": "macroName"
                                             },
                                             {
@@ -1811,50 +1866,18 @@
                                                 "type": "whitespace"
                                             },
                                             {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
+                                                "innerText": "Gun_Logic",
+                                                "text": "\"Gun_Logic\"",
+                                                "type": "string"
                                             }
                                         ],
                                         "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Gun_Logic\")",
-                                        "text": "[(display: \"Gun_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Gun_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"Gun_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Gun_Logic",
-                                                        "text": "\"Gun_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
                             }
                         ],
-                        "type": "collapsed"
+                        "type": "hook"
                     }
                 ]
             },
@@ -1863,6 +1886,10 @@
                 "Pid": "9",
                 "Tags": "",
                 "Tokens": [
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
                     {
                         "innerText": "if: $look_desk is true",
                         "name": "if",
@@ -1901,8 +1928,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $inv's NOTE to true) You read the NOTE. Your cyborg brain easily memorizes the long string of numbers.",
-                        "text": "[(set: $inv's NOTE to true) You read the NOTE. Your cyborg brain easily memorizes the long string of numbers.]",
+                        "innerText": "(set: $inv's NOTE to true) You read the NOTE. Your cyborg brain easily memorizes the long string of numbers.[TAKE NOTE]<un|",
+                        "text": "[(set: $inv's NOTE to true) You read the NOTE. Your cyborg brain easily memorizes the long string of numbers.[TAKE NOTE]<un|]",
                         "tokens": [
                             {
                                 "innerText": "set: $inv's NOTE to true",
@@ -1949,6 +1976,18 @@
                             {
                                 "text": " You read the NOTE. Your cyborg brain easily memorizes the long string of numbers.",
                                 "type": "text"
+                            },
+                            {
+                                "innerText": "TAKE NOTE",
+                                "name": "un",
+                                "text": "[TAKE NOTE]<un|",
+                                "tokens": [
+                                    {
+                                        "text": "TAKE NOTE",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
                             }
                         ],
                         "type": "hook"
@@ -1966,115 +2005,27 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "What note?",
-                        "text": "[What note?]",
+                        "innerText": "What note?[TAKE NOTE]<un|",
+                        "text": "[What note?[TAKE NOTE]<un|]",
                         "tokens": [
                             {
                                 "text": "What note?",
                                 "type": "text"
-                            }
-                        ],
-                        "type": "hook"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "\n(click: ?un)[(append: ?c1)[(display: \"Note_Logic\")]]\n",
-                        "text": "{\n(click: ?un)[(append: ?c1)[(display: \"Note_Logic\")]]\n}",
-                        "tokens": [
-                            {
-                                "text": "\n",
-                                "type": "br"
                             },
                             {
-                                "innerText": "click: ?un",
-                                "name": "click",
-                                "text": "(click: ?un)",
+                                "innerText": "TAKE NOTE",
+                                "name": "un",
+                                "text": "[TAKE NOTE]<un|",
                                 "tokens": [
                                     {
-                                        "text": "click:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "un",
-                                        "text": "?un",
-                                        "type": "hookRef"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "(append: ?c1)[(display: \"Note_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"Note_Logic\")]]",
-                                "tokens": [
-                                    {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
-                                        "tokens": [
-                                            {
-                                                "text": "append:",
-                                                "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Note_Logic\")",
-                                        "text": "[(display: \"Note_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Note_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"Note_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Note_Logic",
-                                                        "text": "\"Note_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
+                                        "text": "TAKE NOTE",
+                                        "type": "text"
                                     }
                                 ],
                                 "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
                             }
                         ],
-                        "type": "collapsed"
+                        "type": "hook"
                     }
                 ]
             },
@@ -2083,6 +2034,10 @@
                 "Pid": "10",
                 "Tags": "",
                 "Tokens": [
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
                     {
                         "innerText": "if: $look_desk is true",
                         "name": "if",
@@ -2121,8 +2076,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $inv's GUN is true)[You shoot the GUN.](else:)[What gun?] ",
-                        "text": "[(if: $inv's GUN is true)[You shoot the GUN.](else:)[What gun?] ]",
+                        "innerText": "(if: $inv's GUN is true)[You shoot the GUN.[USE GUN]<ug|](else:)[What gun?[USE GUN]<ug|] ",
+                        "text": "[(if: $inv's GUN is true)[You shoot the GUN.[USE GUN]<ug|](else:)[What gun?[USE GUN]<ug|] ]",
                         "tokens": [
                             {
                                 "innerText": "if: $inv's GUN is true",
@@ -2167,12 +2122,24 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "You shoot the GUN.",
-                                "text": "[You shoot the GUN.]",
+                                "innerText": "You shoot the GUN.[USE GUN]<ug|",
+                                "text": "[You shoot the GUN.[USE GUN]<ug|]",
                                 "tokens": [
                                     {
                                         "text": "You shoot the GUN.",
                                         "type": "text"
+                                    },
+                                    {
+                                        "innerText": "USE GUN",
+                                        "name": "ug",
+                                        "text": "[USE GUN]<ug|",
+                                        "tokens": [
+                                            {
+                                                "text": "USE GUN",
+                                                "type": "text"
+                                            }
+                                        ],
+                                        "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
@@ -2190,12 +2157,24 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "What gun?",
-                                "text": "[What gun?]",
+                                "innerText": "What gun?[USE GUN]<ug|",
+                                "text": "[What gun?[USE GUN]<ug|]",
                                 "tokens": [
                                     {
                                         "text": "What gun?",
                                         "type": "text"
+                                    },
+                                    {
+                                        "innerText": "USE GUN",
+                                        "name": "ug",
+                                        "text": "[USE GUN]<ug|",
+                                        "tokens": [
+                                            {
+                                                "text": "USE GUN",
+                                                "type": "text"
+                                            }
+                                        ],
+                                        "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
@@ -2220,35 +2199,60 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "What gun?",
-                        "text": "[What gun?]",
+                        "innerText": "What gun?[USE GUN]<ug|",
+                        "text": "[What gun?[USE GUN]<ug|]",
                         "tokens": [
                             {
                                 "text": "What gun?",
                                 "type": "text"
+                            },
+                            {
+                                "innerText": "USE GUN",
+                                "name": "ug",
+                                "text": "[USE GUN]<ug|",
+                                "tokens": [
+                                    {
+                                        "text": "USE GUN",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
                             }
                         ],
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "\n(click: ?ug)[(append: ?c1)[(display: \"Gun_Logic2\")]]\n",
-                        "text": "{\n(click: ?ug)[(append: ?c1)[(display: \"Gun_Logic2\")]]\n}",
+                        "innerText": "click: ?ug",
+                        "name": "click",
+                        "text": "(click: ?ug)",
                         "tokens": [
                             {
-                                "text": "\n",
-                                "type": "br"
+                                "text": "click:",
+                                "type": "macroName"
                             },
                             {
-                                "innerText": "click: ?ug",
-                                "name": "click",
-                                "text": "(click: ?ug)",
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "ug",
+                                "text": "?ug",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Gun_Logic2\")]",
+                        "text": "[(append: ?c1)[(display: \"Gun_Logic2\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
                                 "tokens": [
                                     {
-                                        "text": "click:",
+                                        "text": "append:",
                                         "type": "macroName"
                                     },
                                     {
@@ -2256,24 +2260,24 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "name": "ug",
-                                        "text": "?ug",
+                                        "name": "c1",
+                                        "text": "?c1",
                                         "type": "hookRef"
                                     }
                                 ],
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(append: ?c1)[(display: \"Gun_Logic2\")]",
-                                "text": "[(append: ?c1)[(display: \"Gun_Logic2\")]]",
+                                "innerText": "(display: \"Gun_Logic2\")",
+                                "text": "[(display: \"Gun_Logic2\")]",
                                 "tokens": [
                                     {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
+                                        "innerText": "display: \"Gun_Logic2\"",
+                                        "name": "display",
+                                        "text": "(display: \"Gun_Logic2\")",
                                         "tokens": [
                                             {
-                                                "text": "append:",
+                                                "text": "display:",
                                                 "type": "macroName"
                                             },
                                             {
@@ -2281,58 +2285,18 @@
                                                 "type": "whitespace"
                                             },
                                             {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
+                                                "innerText": "Gun_Logic2",
+                                                "text": "\"Gun_Logic2\"",
+                                                "type": "string"
                                             }
                                         ],
                                         "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Gun_Logic2\")",
-                                        "text": "[(display: \"Gun_Logic2\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Gun_Logic2\"",
-                                                "name": "display",
-                                                "text": "(display: \"Gun_Logic2\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Gun_Logic2",
-                                                        "text": "\"Gun_Logic2\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
                             }
                         ],
-                        "type": "collapsed"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
+                        "type": "hook"
                     }
                 ]
             },

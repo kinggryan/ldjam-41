@@ -158,6 +158,17 @@ public class TwineTextPlayer : MonoBehaviour {
 				if (!ShowNamedLinks && link.IsNamed)
 					return;
 
+				Button uiLink = (Button)Instantiate(LinkTemplate);
+				uiLink.gameObject.SetActive(true);
+				uiLink.name = "[[" + link.Text + "]]";
+
+				Text uiLinkText = uiLink.GetComponentInChildren<Text>();
+				uiLinkText.text = link.Text;
+				uiLink.onClick.AddListener(() =>
+				{
+					this.Story.DoLink(link);
+				});
+				AddToUI((RectTransform)uiLink.transform, output, uiInsertIndex);
 					
 		}
 		else if (output is LineBreak)

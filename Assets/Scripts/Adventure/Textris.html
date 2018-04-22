@@ -13,70 +13,36 @@
 
 <tw-storydata name="Textris" startnode="1" creator="Twine" creator-version="2.2.1" ifid="35C09751-7328-4A7F-B4B9-EC448829EBA7" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 </script><tw-passagedata pid="1" name="Title" tags="" position="412,200" size="100,100">{You wake up, floating in the dark. Where are you? When are you? Is this death? You move your arm, and you feel water splash. Oh, sweet. Nah, it’s all good, you’re just floating in a sensory deprivation tank! The hatch is above you. You could probably OPEN it.
 [[OPEN -&gt; Garage]]
-}</tw-passagedata><tw-passagedata pid="2" name="Look_Logic" tags="" position="192,350" size="100,100">You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN. 
-
-{
-(set: $look_desk to true)
-(click: ?lo)[(append: ?c1)[(display: &quot;Look_Logic&quot;)]]
-}</tw-passagedata><tw-passagedata pid="3" name=" NOPE2" tags="" position="542,350" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="4" name="Tape_Logic" tags="" position="198,220" size="100,100">(if: $look_desk is false)[You need a tape player to play the tape.]
+}</tw-passagedata><tw-passagedata pid="2" name="Look_Logic" tags="" position="192,350" size="100,100">
+You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.[LOOK]&lt;lo|(set: $look_desk to true)(click: ?lo)[(append: ?c1)[(display: &quot;Look_Logic&quot;)]]</tw-passagedata><tw-passagedata pid="3" name=" NOPE2" tags="" position="542,350" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="4" name="Tape_Logic" tags="" position="198,220" size="100,100">
+(if: $look_desk is false)[You need a tape player to play the tape. [USE TAPE]&lt;ut|]
 (else:)[You pull the tape player out of the desk drawer and put the audio TAPE inside it. You hit play. A gravelly voice starts talking.
 
 Hello agent, this is your commander. We have sent you to Moscow to infiltrate a research facility that, we believe, is developing a machine that can alter people’s minds. You have been outfitted with the cyborg implant Total Environmental Transcription/Reactive Information Synthesis, or T.E.T./R.I.S., to aid in your mission. It will allow you to quickly analyze your surroundings and determine your best courses of action. Good luck.
 
-The tape ends.]
-
-{
-(click: ?ut)[(append: ?c1)[(display: &quot;Tape_Logic&quot;)]]
-}</tw-passagedata><tw-passagedata pid="5" name="North_Logic" tags="" position="300,54" size="100,100">(if: $inv&#39;s NOTE is true)[(go-to: &quot;Warehouse&quot;)](else:)[The door won’t open. Looks like you need a password for this keypad.]
-
-{
-(click: ?no)[(append: ?c1)[(display: &quot;North_Logic&quot;)]]
-}</tw-passagedata><tw-passagedata pid="6" name="Hack_Logic" tags="" position="302,228" size="100,100">You try to HACK the keypad next to the door. You don’t get the door open, but you do learn that the password is long, and would be difficult to remember for underpaid guards.
-
-{(click: ?ha)[(append: ?c1)[(display: &quot;Hack_Logic&quot;)]]
-}</tw-passagedata><tw-passagedata pid="7" name=" Garage" tags="" position="680,86" size="100,100">
+The tape ends. [USE TAPE]&lt;ut|](click: ?ut)[(append: ?c1)[(display: &quot;Tape_Logic&quot;)]]</tw-passagedata><tw-passagedata pid="5" name="North_Logic" tags="" position="300,54" size="100,100">
+(if: $inv&#39;s NOTE is true)[(go-to: &quot;Warehouse&quot;)](else:)[The door won’t open. Looks like you need a password for this keypad.[NORTH]&lt;no|[OPEN]&lt;no|](click: ?no)[(append: ?c1)[(display: &quot;North_Logic&quot;)]](click: ?un)[(append: ?c1)[(display: &quot;Note_Logic&quot;)]]</tw-passagedata><tw-passagedata pid="6" name="Hack_Logic" tags="" position="302,228" size="100,100">
+You try to HACK the keypad next to the door. You don’t get the door open, but you do learn that the password is long, and would be difficult to remember for underpaid guards.[HACK]&lt;ha|(click: ?ha)[(append: ?c1)[(display: &quot;Hack_Logic&quot;)]]</tw-passagedata><tw-passagedata pid="7" name=" Garage" tags="" position="680,86" size="100,100">
 You pound on the hatch until it springs open. You haul yourself out of the tank
 
 You’re in a garage. There is a door to the NORTH, with a keypad next to it. There is a CAMERA in the northwest corner, and another in the northeast. There is a desk with several drawers. You feel something in your pocket. When you check to see what it is, you find an audio TAPE.
-
 []&lt;c1|
 
-{(set: $look_desk to false)
-
-[LOOK]&lt;lo|  [USE TAPE]&lt;ut|  [NORTH]&lt;no|  [HACK]&lt;ha|  [OPEN]&lt;no| [TAKE NOTE]&lt;un| [TAKE GUN]&lt;tg| [USE GUN]&lt;ug|
-
-
-(click: ?lo)[(append: ?c1)[(display: &quot;Look_Logic&quot;)]]
-(click: ?ut)[(append: ?c1)[(display: &quot;Tape_Logic&quot;)]]
-(click: ?no)[(append: ?c1)[(display: &quot;North_Logic&quot;)]]
-(click: ?ha)[(append: ?c1)[(display: &quot;Hack_Logic&quot;)]]
-
-(click: ?tg)[(append: ?c1)[(display: &quot;Gun_Logic&quot;)]]
-(click: ?ug)[(append: ?c1)[(display: &quot;Gun_Logic2&quot;)]]
-
-(click: ?un)[(append: ?c1)[(display: &quot;Note_Logic&quot;)]]
-}
+(set: $look_desk to false)[LOOK]&lt;lo|  [USE TAPE]&lt;ut|  [NORTH]&lt;no|  [HACK]&lt;ha|  [OPEN]&lt;no| [TAKE NOTE]&lt;un| [TAKE GUN]&lt;tg| [USE GUN]&lt;ug|(click: ?lo)[(append: ?c1)[(display: &quot;Look_Logic&quot;)]](click: ?ut)[(append: ?c1)[(display: &quot;Tape_Logic&quot;)]](click: ?no)[(append: ?c1)[(display: &quot;North_Logic&quot;)]](click: ?ha)[(append: ?c1)[(display: &quot;Hack_Logic&quot;)]](click: ?tg)[(append: ?c1)[(display: &quot;Gun_Logic&quot;)]](click: ?ug)[(append: ?c1)[(display: &quot;Gun_Logic2&quot;)]](click: ?un)[(append: ?c1)[(display: &quot;Note_Logic&quot;)]]
 
 
 
-</tw-passagedata><tw-passagedata pid="8" name="Gun_Logic" tags="" position="32,99" size="100,100">(if: $look_desk is true)[(if: $inv&#39;s GUN is true)[You already took the GUN.](else:)[(set: $inv&#39;s GUN to true) You take the GUN.] ](else:)[What gun?]
 
-{
-(click: ?tg)[(append: ?c1)[(display: &quot;Gun_Logic&quot;)]]
-}</tw-passagedata><tw-passagedata pid="9" name="Note_Logic" tags="" position="302,358" size="100,100">(if: $look_desk is true)[(set: $inv&#39;s NOTE to true) You read the NOTE. Your cyborg brain easily memorizes the long string of numbers.](else:)[What note?]
-
-{
-(click: ?un)[(append: ?c1)[(display: &quot;Note_Logic&quot;)]]
-}</tw-passagedata><tw-passagedata pid="10" name="Gun_Logic2" tags="" position="48,273" size="100,100">(if: $look_desk is true)[(if: $inv&#39;s GUN is true)[You shoot the GUN.](else:)[What gun?] ](else:)[What gun?]
-{
-(click: ?ug)[(append: ?c1)[(display: &quot;Gun_Logic2&quot;)]]
-}
-
-</tw-passagedata><tw-passagedata pid="11" name="Init" tags="startup" position="693,244" size="100,100">{
+</tw-passagedata><tw-passagedata pid="8" name="Gun_Logic" tags="" position="32,99" size="100,100">
+(if: $look_desk is true)[(if: $inv&#39;s GUN is true)[You already took the GUN.[TAKE GUN]&lt;tg|](else:)[(set: $inv&#39;s GUN to true) You take the GUN.[TAKE GUN]&lt;tg|]](else:)[What gun?[TAKE GUN]&lt;tg|](click: ?tg)[(append: ?c1)[(display: &quot;Gun_Logic&quot;)]]</tw-passagedata><tw-passagedata pid="9" name="Note_Logic" tags="" position="302,358" size="100,100">
+(if: $look_desk is true)[(set: $inv&#39;s NOTE to true) You read the NOTE. Your cyborg brain easily memorizes the long string of numbers.[TAKE NOTE]&lt;un|](else:)[What note?[TAKE NOTE]&lt;un|]</tw-passagedata><tw-passagedata pid="10" name="Gun_Logic2" tags="" position="48,273" size="100,100">
+(if: $look_desk is true)[(if: $inv&#39;s GUN is true)[You shoot the GUN.[USE GUN]&lt;ug|](else:)[What gun?[USE GUN]&lt;ug|] ](else:)[What gun?[USE GUN]&lt;ug|](click: ?ug)[(append: ?c1)[(display: &quot;Gun_Logic2&quot;)]]</tw-passagedata><tw-passagedata pid="11" name="Init" tags="startup" position="693,244" size="100,100">{
 (set: $inv to (dm: &quot;GUN&quot;, false, &quot;NOTE&quot;, false))
 (set: $location to (dm: &quot;GARAGE&quot;, true, &quot;WAREHOUSE&quot;, false))
 }</tw-passagedata><tw-passagedata pid="12" name="Warehouse" tags="" position="509,45" size="100,100">The door swings open</tw-passagedata></tw-storydata>

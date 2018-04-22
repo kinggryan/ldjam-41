@@ -481,7 +481,7 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 153722, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
   m_PrefabInternal: {fileID: 2012901403}
---- !u!114 &1480000009
+--- !u!114 &1480000015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1480000008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bc9a1c8985fd1c4d8da4f626bac9165, type: 3}
+  m_Script: {fileID: 11500000, guid: 27f18305c3b884d129f8992f48fbcadc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AutoPlay: 0
@@ -1133,7 +1133,7 @@ Prefab:
     - target: {fileID: 11453716, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: Story
       value: 
-      objectReference: {fileID: 1480000009}
+      objectReference: {fileID: 0}
     - target: {fileID: 11400614, guid: c4ae6fc83f0d4f64091afc0dccd76dd6, type: 2}
       propertyPath: m_SpacingLine
       value: 0.25
