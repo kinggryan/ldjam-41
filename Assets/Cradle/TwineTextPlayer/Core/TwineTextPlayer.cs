@@ -20,7 +20,10 @@ public class TwineTextPlayer : MonoBehaviour {
 	public bool ShowNamedLinks = true;
 	public enum Command
 	{
-    	Begin, strong, quick, 
+        Begin,
+        strong,
+        quick,
+        None,
 	}
 
 	static Regex rx_splitText = new Regex(@"(\s+|[^\s]+)");
@@ -184,7 +187,7 @@ public class TwineTextPlayer : MonoBehaviour {
 	}
 
 
-	bool DoCommand(Command command)
+	public bool DoCommand(Command command)
 	{	
 		var commandText = "";
 		switch (command)

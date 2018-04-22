@@ -49,7 +49,8 @@ public class TetrisBlock {
     // always works
     public void MoveDownMax(char[,] board)
     {
-
+        // Move down as long as you can
+        while (MoveDown(board)) ;
     }
 
     public bool MoveRight(char[,] board)
@@ -151,26 +152,57 @@ public class TetrisBlock {
         v.y = (sin * tx) + (cos * ty);
         return v;
     }
+
+    protected void RandomizeLetters()
+    {
+        for (var x = 0; x < blockLetters.GetLength(0); x++)
+        {
+            for (var y = 0; y < blockLetters.GetLength(1); y++)
+            {
+                if (blockLetters[x, y] != ' ')
+                {
+                    blockLetters[x, y] = LetterGenerator.GetLetter();
+                }
+            }
+        }
+    }
 }
 
 public class SquareBlock : TetrisBlock {
     public SquareBlock(int positionX, int positionY)
     {
-        blockLetters = new char[,] { { 'X', 'X' }, { 'X', 'X' } };
+        var topLetters = LetterGenerator.GetSubstringFromCommands(2);
+        var leftLetters = LetterGenerator.GetSubstringFromCommandsIncludingLetterAtStart(2, topLetters[0]);
+        var bottomLetters = LetterGenerator.GetSubstringFromCommandsIncludingLetterAtStart(2, leftLetters[1]);
+        blockLetters = new char[,] { { topLetters[0], topLetters[1] }, { bottomLetters[0], bottomLetters[1] } };
         localOriginX = 0;
         localOriginY = 0;
         this.positionX = positionX;
         this.positionY = positionY;
+
+        RandomizeLetters();
     }
 
     public override bool RotateClockwise(char[,] board)
     {
-        return false;
+        var newLetters = (char[,])blockLetters.Clone();
+        newLetters[0, 0] = blockLetters[1,0];
+        newLetters[1, 0] = blockLetters[1, 1];
+        newLetters[1, 1] = blockLetters[0, 1];
+        newLetters[0, 1] = blockLetters[0, 0];
+        blockLetters = newLetters;
+        return true;
     }
 
     public override bool RotateCounterClockwise(char[,] board)
     {
-        return false;
+        var newLetters = (char[,])blockLetters.Clone();
+        newLetters[1, 0] = blockLetters[0, 0];
+        newLetters[1, 1] = blockLetters[1, 0];
+        newLetters[0, 1] = blockLetters[1, 1];
+        newLetters[0, 0] = blockLetters[0, 1];
+        blockLetters = newLetters;
+        return true;
     }
 }
 
@@ -178,9 +210,11 @@ public class TBlock : TetrisBlock
 {
     public TBlock(int positionX, int positionY)
     {
+        var middleLetters = LetterGenerator.GetSubstringFromCommands(3);
+        var verticalLetters = LetterGenerator.GetSubstringFromCommandsIncludingLetterAtStart(2, middleLetters[1]);
         blockLetters = new char[,] {
-            { ' ', 'X', ' '}, 
-            { 'X', 'X', 'X' }, 
+            { ' ', verticalLetters[1], ' '}, 
+            { middleLetters[0], middleLetters[1], middleLetters[2] }, 
             { ' ', ' ', ' ' } };
         localOriginX = 1;
         localOriginY = 1;
@@ -193,10 +227,11 @@ public class LongBlock : TetrisBlock
 {
     public LongBlock(int positionX, int positionY)
     {
+        var substrLetters = LetterGenerator.GetSubstringFromCommands(4);
         blockLetters = new char[,] {
             {' ', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' '},
-            {' ', 'X', 'X', 'X', 'X'},
+            {' ', substrLetters[0], substrLetters[1], substrLetters[2], substrLetters[3]},
             {' ', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' '}};
         localOriginX = 2;
@@ -210,9 +245,12 @@ public class ZBlock : TetrisBlock
 {
     public ZBlock(int positionX, int positionY)
     {
+        var topLetters = LetterGenerator.GetSubstringFromCommands(2);
+        var middleLetters = LetterGenerator.GetSubstringFromCommandsIncludingLetterAtStart(2, topLetters[0]);
+        var bottomLetters = LetterGenerator.GetSubstringFromCommandsIncludingLetterAtStart(2, middleLetters[1]);
         blockLetters = new char[,] {
-            {' ', 'X', 'X'},
-            {'X', 'X', ' '},
+            {' ', topLetters[0], topLetters[1]},
+            {bottomLetters[1], bottomLetters[0], ' '},
             {' ', ' ', ' '}};
         localOriginX = 1;
         localOriginY = 1;
@@ -225,9 +263,12 @@ public class ReverseZBlock : TetrisBlock
 {
     public ReverseZBlock(int positionX, int positionY)
     {
+        var topLetters = LetterGenerator.GetSubstringFromCommands(2);
+        var middleLetters = LetterGenerator.GetSubstringFromCommandsIncludingLetterAtStart(2, topLetters[0]);
+        var bottomLetters = LetterGenerator.GetSubstringFromCommandsIncludingLetterAtStart(2, middleLetters[1]);
         blockLetters = new char[,] {
-            {'X', 'X', ' '},
-            {' ', 'X', 'X'},
+            {topLetters[0], topLetters[1], ' '},
+            {' ', bottomLetters[1], bottomLetters[0]},
             {' ', ' ', ' '}};
         localOriginX = 1;
         localOriginY = 1;
@@ -240,10 +281,12 @@ public class LBlock : TetrisBlock
 {
     public LBlock(int positionX, int positionY)
     {
+        var middleLetters = LetterGenerator.GetSubstringFromCommands(3);
+        var bottomLetters = LetterGenerator.GetSubstringFromCommandsIncludingLetterAtStart(2, middleLetters[2]);
         blockLetters = new char[,] {
-            {' ', 'X', ' '},
-            {' ', 'X', ' '},
-            {' ', 'X', 'X'}};
+            {' ', middleLetters[0], ' '},
+            {' ', middleLetters[1], ' '},
+            {' ', middleLetters[2], bottomLetters[1]}};
         localOriginX = 1;
         localOriginY = 1;
         this.positionX = positionX;
@@ -256,10 +299,12 @@ public class ReverseLBlock : TetrisBlock
 {
     public ReverseLBlock(int positionX, int positionY)
     {
+        var middleLetters = LetterGenerator.GetSubstringFromCommands(3);
+        var bottomLetters = LetterGenerator.GetSubstringFromCommandsIncludingLetterAtStart(2, middleLetters[2]);
         blockLetters = new char[,] {
-            {' ', 'X', ' '},
-            {' ', 'X', ' '},
-            {'X', 'X', ' '}};
+            {' ', middleLetters[0], ' '},
+            {' ', middleLetters[1], ' '},
+            {bottomLetters[1], middleLetters[2], ' '}};
         localOriginX = 1;
         localOriginY = 1;
         this.positionX = positionX;

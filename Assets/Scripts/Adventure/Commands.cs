@@ -5,4 +5,6 @@ using UnityEngine;
 public enum Command
 {
     None,
+    North,
+    Up,
 }
