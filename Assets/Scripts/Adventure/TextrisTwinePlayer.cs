@@ -38,7 +38,7 @@ public class TextrisTwinePlayer : TwineTextPlayer {
             var text = (StoryText)output;
             if (!string.IsNullOrEmpty(text.Text))
             {
-                targetText += text.Text;
+                targetText += text.Text.ToUpper();
             }
         }
         else if (output is StoryLink)
