@@ -5,6 +5,7 @@ using UnityEngine;
 public class TetrisManager : MonoBehaviour {
 
     private TetrisDisplay display;
+    private TwineTextPlayer twinePlayer;
 
     private int boardSizeX = 10;
     private int boardSizeY = 24;
@@ -19,6 +20,8 @@ public class TetrisManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         display = Object.FindObjectOfType<TetrisDisplay>();
+        twinePlayer = Object.FindObjectOfType<TwineTextPlayer>();
+
         tetrisBoard = new char[boardSizeX, boardSizeY];
         for (var x = 0; x < boardSizeX; x++)
         {
@@ -159,7 +162,7 @@ public class TetrisManager : MonoBehaviour {
         {
             var command = GetCommandFromLine(y);
 
-            if (command.command != Command.None)
+            if (command.command != TwineTextPlayer.Command.None)
             {
                 display.UpdateBoardWithCommandOnLine(tetrisBoard, command.name, y);
             }
@@ -170,10 +173,16 @@ public class TetrisManager : MonoBehaviour {
             }
 
             // Do something with the command
-            if (command.command != Command.None || IsLineComplete(y))
+            if (command.command != TwineTextPlayer.Command.None || IsLineComplete(y))
             {
                 RemoveLineAndMoveAboveLinesDown(y);
                 didEraseLine = true;
+            }
+
+            if (command.command != TwineTextPlayer.Command.None)
+            {
+                twinePlayer.DoCommand(command.command);
+                return true;
             }
         }
 
@@ -219,7 +228,7 @@ public class TetrisManager : MonoBehaviour {
             }
         }
 
-        return new LetterGenerator.WeightedCommand(Command.None, "", 0);
+        return new LetterGenerator.WeightedCommand(TwineTextPlayer.Command.None, "", 0);
     }
 
     void RemoveLineAndMoveAboveLinesDown(int yCoord)

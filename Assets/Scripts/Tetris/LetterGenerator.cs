@@ -8,11 +8,11 @@ public static class LetterGenerator {
 
     public struct WeightedCommand
     {
-        public readonly Command command;
+        public readonly TwineTextPlayer.Command command;
         public readonly string name;
         public readonly float weight;
 
-        public WeightedCommand(Command command, string name, float weight)
+        public WeightedCommand(TwineTextPlayer.Command command, string name, float weight)
         {
             this.command = command;
             this.name = name;
@@ -21,7 +21,7 @@ public static class LetterGenerator {
     }
 
     public static WeightedCommand[] weightedCommandsList = new WeightedCommand[] {
-        new WeightedCommand( Command.Up, "UP", 1)
+        new WeightedCommand( TwineTextPlayer.Command.strong, "GO", 1)
     };
 
     static float weightedCommandTotal = 0;
@@ -30,14 +30,14 @@ public static class LetterGenerator {
     {
         if(weightedCommandTotal == 0)
         {
-            weightedCommandTotal = GetWeightedCommandTotal();
+            weightedCommandTotal = GetWeightedCommandTotal(weightedCommandsList);
         }
         var command = GetRandomWeightCommand();
         var letterIndex = Random.Range(0, command.name.Length);
         return command.name[letterIndex];
     }
 
-    static float GetWeightedCommandTotal()
+    static float GetWeightedCommandTotal(WeightedCommand[] weightedCommandsList)
     {
         float total = 0;
         foreach(var command in weightedCommandsList)
