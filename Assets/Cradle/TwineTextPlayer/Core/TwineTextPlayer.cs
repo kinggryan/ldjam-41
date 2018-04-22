@@ -12,12 +12,16 @@ public class TwineTextPlayer : MonoBehaviour {
 
 	public Story Story;
 	public RectTransform Container;
-	public Button LinkTemplate;
+	public Button LinkTemplate; 
 	public Text WordTemplate;
 	public RectTransform LineBreakTemplate;
 	public bool StartStory = true;
 	public bool AutoDisplay = true;
 	public bool ShowNamedLinks = true;
+	public enum Command
+	{
+    	Begin, strong, quick, 
+	}
 
 	static Regex rx_splitText = new Regex(@"(\s+|[^\s]+)");
 
@@ -51,6 +55,7 @@ public class TwineTextPlayer : MonoBehaviour {
 
 		if (StartStory)
 			this.Story.Begin();
+			DoCommand(Command.Begin);
 	}
 
 	void OnDestroy()
@@ -147,20 +152,20 @@ public class TwineTextPlayer : MonoBehaviour {
 		else if (output is StoryLink)
 		{
 			var link = (StoryLink)output;
-			if (!ShowNamedLinks && link.IsNamed)
-				return;
+				if (!ShowNamedLinks && link.IsNamed)
+					return;
 
-			Button uiLink = (Button)Instantiate(LinkTemplate);
-			uiLink.gameObject.SetActive(true);
-			uiLink.name = "[[" + link.Text + "]]";
+				Button uiLink = (Button)Instantiate(LinkTemplate);
+				uiLink.gameObject.SetActive(true);
+				uiLink.name = "[[" + link.Text + "]]";
 
-			Text uiLinkText = uiLink.GetComponentInChildren<Text>();
-			uiLinkText.text = link.Text;
-			uiLink.onClick.AddListener(() =>
-			{
-				this.Story.DoLink(link);
-			});
-			AddToUI((RectTransform)uiLink.transform, output, uiInsertIndex);
+				Text uiLinkText = uiLink.GetComponentInChildren<Text>();
+				uiLinkText.text = link.Text;
+				uiLink.onClick.AddListener(() =>
+				{
+					this.Story.DoLink(link);
+				});
+				AddToUI((RectTransform)uiLink.transform, output, uiInsertIndex);	
 		}
 		else if (output is LineBreak)
 		{
@@ -187,4 +192,37 @@ public class TwineTextPlayer : MonoBehaviour {
 		var elem = rect.gameObject.AddComponent<TwineTextPlayerElement>();
 		elem.SourceOutput = output;
 	}
+
+
+	bool DoCommand(Command command)
+	{	
+		var commandText = "";
+		switch (command)
+		{
+			case Command.strong:
+				commandText = "strong";
+				break;
+			case Command.quick:
+				commandText = "quick";
+				break;
+			case Command.Begin:
+				commandText = "Begin.";
+				break;
+			default:
+				break;
+		}
+
+		var links = this.Story.GetCurrentLinks();
+		if (links != null)
+		{
+			foreach (StoryLink link in links)
+			{
+				if (link.Text == commandText) 
+					this.Story.DoLink(link);
+						
+			}
+		}
+		return true ; 
+	}
 }
+
