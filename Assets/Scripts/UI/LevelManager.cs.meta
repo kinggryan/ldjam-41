@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 71f342a457c7e914f95f7666ab69576a
+timeCreated: 1508043873
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - colorFadePanel: {fileID: 1564554652853624, guid: dd0ed5260532ff043b7f6ab7607e5f5c,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

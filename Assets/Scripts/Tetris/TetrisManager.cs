@@ -16,11 +16,13 @@ public class TetrisManager : MonoBehaviour {
     private float gameStepsDuration = 1;
     private float gameStepTimer;
     private float lineCompleteHangDuration = 1.5f;
+    private SoundEngine soundEngine;
 
 	// Use this for initialization
 	void Start () {
         display = Object.FindObjectOfType<TetrisDisplay>();
         twinePlayer = Object.FindObjectOfType<TwineTextPlayer>();
+        soundEngine = Object.FindObjectOfType<SoundEngine>();
 
         tetrisBoard = new char[boardSizeX, boardSizeY];
         for (var x = 0; x < boardSizeX; x++)
@@ -57,20 +59,24 @@ public class TetrisManager : MonoBehaviour {
         if(Input.GetButtonDown("rotateclockwise"))
         {
             currentBlock.RotateClockwise(tetrisBoard);
+            soundEngine.PlaySoundWithName("BlockRotate");
         }
         if (Input.GetButtonDown("rotatecounterclockwise"))
         {
             currentBlock.RotateCounterClockwise(tetrisBoard);
+            soundEngine.PlaySoundWithName("BlockRotate");
         }
 
         if (Input.GetButtonDown("left"))
         {
             currentBlock.MoveLeft(tetrisBoard);
+            soundEngine.PlaySoundWithName("BlockMove");
         }
 
         if(Input.GetButtonDown("right"))
         {
             currentBlock.MoveRight(tetrisBoard);
+            soundEngine.PlaySoundWithName("BlockMove");
         }
 
         if(Input.GetButtonDown("up"))
@@ -80,6 +86,7 @@ public class TetrisManager : MonoBehaviour {
         else if(Input.GetButtonDown("down"))
         {
             PerformNextDownwardMove();
+            soundEngine.PlaySoundWithName("BlockMove");
         }
 
         display.UpdateBoard(tetrisBoard, currentBlock);
@@ -100,10 +107,13 @@ public class TetrisManager : MonoBehaviour {
 
         bool blockCanKeepMoving = false;
         bool shouldUpdateBoard = true;
+        
         blockCanKeepMoving = currentBlock.MoveDown(tetrisBoard);
         if(!blockCanKeepMoving)
         {
+            
             tetrisBoard = currentBlock.AddToBoard(tetrisBoard);
+            soundEngine.PlaySoundWithName("BlockLand");
             currentBlock = null;
             if(CheckForCompleteLines())
             {
@@ -114,7 +124,9 @@ public class TetrisManager : MonoBehaviour {
 
         if(shouldUpdateBoard)
             display.UpdateBoard(tetrisBoard, currentBlock);
+        
     }
+
 
     TetrisBlock GetNextBlock()
     {
@@ -239,5 +251,6 @@ public class TetrisManager : MonoBehaviour {
                 tetrisBoard[x, y] = tetrisBoard[x, y + 1];
             }
         }
+        soundEngine.PlaySoundWithName("LineClear");
     }
 }
