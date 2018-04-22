@@ -20,7 +20,21 @@ public static class LetterGenerator {
     }
 
     public static WeightedCommand[] weightedCommandsList = new WeightedCommand[] {
-        new WeightedCommand( TwineTextPlayer.Command.strong, "STRONG", 1)
+        new WeightedCommand( TwineTextPlayer.Command.North, "NORTH", 1),
+        new WeightedCommand( TwineTextPlayer.Command.South, "SOUTH", 1),
+        new WeightedCommand( TwineTextPlayer.Command.East, "EAST", 1),
+        new WeightedCommand( TwineTextPlayer.Command.West, "WEST", 1),
+        new WeightedCommand( TwineTextPlayer.Command.Open, "OPEN", 1),
+        new WeightedCommand( TwineTextPlayer.Command.Hack, "HACK", 1),
+        new WeightedCommand( TwineTextPlayer.Command.Look, "LOOK", 1)
+
+        //North,
+        //South,
+        //East,
+        //West,
+        //Open,
+        //Hack,
+        //Look,
     };
 
     static float weightedCommandTotal = 0;

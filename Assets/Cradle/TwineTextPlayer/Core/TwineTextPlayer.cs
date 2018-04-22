@@ -21,12 +21,41 @@ public class TwineTextPlayer : MonoBehaviour {
 	public enum Command
 	{
         Begin,
-        strong,
-        quick,
-        None,
-	}
+        North,
+        South,
+        East,
+        West,
+        Open,
+        Hack,
+        Look,
+        None
 
-	static Regex rx_splitText = new Regex(@"(\s+|[^\s]+)");
+//        USE <item>
+//GET/TAKE <item>
+//LOOK
+//HACK
+//OPEN
+//TALK
+//SHOOT
+//GEAR (brings up inventory)
+//Directions:
+//NORTH
+//SOUTH
+//EAST
+//WEST
+//Items:
+//TAPE
+//NOTE(does not get USEd)
+//GUN
+//FOB
+//COAT(does not get USEd)
+//LOG
+//BOARD
+
+
+    }
+
+static Regex rx_splitText = new Regex(@"(\s+|[^\s]+)");
 
 	void Start () {
 		if (!Application.isPlaying)
@@ -58,6 +87,7 @@ public class TwineTextPlayer : MonoBehaviour {
 
 		if (StartStory)
 			this.Story.Begin();
+			DoCommand(Command.Begin);
 	}
 
 	void OnDestroy()
@@ -202,11 +232,17 @@ public class TwineTextPlayer : MonoBehaviour {
 		var commandText = "";
 		switch (command)
 		{
-			case Command.strong:
-				commandText = "strong";
+            case Command.North:
+                commandText = "north";
+                break;
+            case Command.South:
+                commandText = "south";
+                break;
+            case Command.East:
+				commandText = "east";
 				break;
-			case Command.quick:
-				commandText = "quick";
+			case Command.West:
+				commandText = "west";
 				break;
 			case Command.Begin:
 				commandText = "Begin.";
