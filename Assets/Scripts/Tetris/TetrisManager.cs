@@ -76,7 +76,6 @@ public class TetrisManager : MonoBehaviour {
         if(Input.GetButtonDown("up"))
         {
             currentBlock.MoveDownMax(tetrisBoard);
-            currentBlock = GetNextBlock();
         }
         else if(Input.GetButtonDown("down"))
         {
