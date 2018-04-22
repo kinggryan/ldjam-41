@@ -58,7 +58,6 @@ public class TwineTextPlayer : MonoBehaviour {
 
 		if (StartStory)
 			this.Story.Begin();
-			DoCommand(Command.Begin);
 	}
 
 	void OnDestroy()

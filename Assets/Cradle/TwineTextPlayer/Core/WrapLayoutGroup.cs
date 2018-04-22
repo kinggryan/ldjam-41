@@ -19,6 +19,8 @@ public class WrapLayoutGroup : LayoutGroup
 	[SerializeField]
 	protected bool m_IsVertical;
 
+	
+
 	public float lineBreakMinHeight
 	{
 		get

@@ -200,12 +200,13 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			using (Group("hook", "no")) {
 				yield return text("NORTH");
 			}
+			yield return text(" ");
 			using (Group("hook", "no")) {
 				yield return text("OPEN");
 			}
+			yield return text(" ");
 		}
 		yield return enchantIntoLink(hookRef("no"), passage5_Fragment_1);
-		yield return enchantIntoLink(hookRef("un"), passage5_Fragment_3);
 		yield break;
 	}
 
@@ -218,18 +219,6 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	IStoryThread passage5_Fragment_1()
 	{
 		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage5_Fragment_0);
-		yield break;
-	}
-
-	IStoryThread passage5_Fragment_2()
-	{
-		yield return passage("Note_Logic");
-		yield break;
-	}
-
-	IStoryThread passage5_Fragment_3()
-	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage5_Fragment_2);
 		yield break;
 	}
 
@@ -283,7 +272,6 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		using (Group("hook", "c1")) {
 		}
 		yield return lineBreak();
-		yield return lineBreak();
 		Vars.look_desk  = false;
 		using (Group("hook", "lo")) {
 			yield return text("LOOK");
@@ -323,11 +311,6 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return enchantIntoLink(hookRef("tg"), passage7_Fragment_9);
 		yield return enchantIntoLink(hookRef("ug"), passage7_Fragment_11);
 		yield return enchantIntoLink(hookRef("un"), passage7_Fragment_13);
-		yield return lineBreak();
-		yield return lineBreak();
-		yield return lineBreak();
-		yield return lineBreak();
-		yield return lineBreak();
 		yield break;
 	}
 
@@ -487,9 +470,21 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 				yield return text("TAKE NOTE");
 			}
 		}
+		yield return enchantIntoLink(hookRef("un"), passage9_Fragment_1);
 		yield break;
 	}
 
+	IStoryThread passage9_Fragment_0()
+	{
+		yield return passage("Note_Logic");
+		yield break;
+	}
+
+	IStoryThread passage9_Fragment_1()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage9_Fragment_0);
+		yield break;
+	}
 
 	// .............
 	// #10: Gun_Logic2

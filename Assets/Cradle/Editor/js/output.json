@@ -2,7 +2,7 @@
     "console": [
         {
             "type": "message",
-            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:65:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:65:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:41837\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:42285\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:45808\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:68:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:69:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:71:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:71:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:71:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:71:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:72:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:55:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:55:36747 undefined"
+            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:62:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:62:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:62:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:59:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:59:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:62:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:62:41837\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:62:42285\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:62:45808\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:62:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:62:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:62:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:62:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:63:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:65:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:65:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:65:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:65:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:66:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:49:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:49:36747 undefined"
         }
     ],
     "result": {
@@ -514,8 +514,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "The door won’t open. Looks like you need a password for this keypad.[NORTH]<no|[OPEN]<no|",
-                        "text": "[The door won’t open. Looks like you need a password for this keypad.[NORTH]<no|[OPEN]<no|]",
+                        "innerText": "The door won’t open. Looks like you need a password for this keypad.[NORTH]<no| [OPEN]<no| ",
+                        "text": "[The door won’t open. Looks like you need a password for this keypad.[NORTH]<no| [OPEN]<no| ]",
                         "tokens": [
                             {
                                 "text": "The door won’t open. Looks like you need a password for this keypad.",
@@ -534,6 +534,10 @@
                                 "type": "hook"
                             },
                             {
+                                "text": " ",
+                                "type": "text"
+                            },
+                            {
                                 "innerText": "OPEN",
                                 "name": "no",
                                 "text": "[OPEN]<no|",
@@ -544,6 +548,10 @@
                                     }
                                 ],
                                 "type": "hook"
+                            },
+                            {
+                                "text": " ",
+                                "type": "text"
                             }
                         ],
                         "type": "hook"
@@ -614,83 +622,6 @@
                                             {
                                                 "innerText": "North_Logic",
                                                 "text": "\"North_Logic\"",
-                                                "type": "string"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    }
-                                ],
-                                "type": "hook"
-                            }
-                        ],
-                        "type": "hook"
-                    },
-                    {
-                        "innerText": "click: ?un",
-                        "name": "click",
-                        "text": "(click: ?un)",
-                        "tokens": [
-                            {
-                                "text": "click:",
-                                "type": "macroName"
-                            },
-                            {
-                                "text": " ",
-                                "type": "whitespace"
-                            },
-                            {
-                                "name": "un",
-                                "text": "?un",
-                                "type": "hookRef"
-                            }
-                        ],
-                        "type": "macro"
-                    },
-                    {
-                        "innerText": "(append: ?c1)[(display: \"Note_Logic\")]",
-                        "text": "[(append: ?c1)[(display: \"Note_Logic\")]]",
-                        "tokens": [
-                            {
-                                "innerText": "append: ?c1",
-                                "name": "append",
-                                "text": "(append: ?c1)",
-                                "tokens": [
-                                    {
-                                        "text": "append:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "c1",
-                                        "text": "?c1",
-                                        "type": "hookRef"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "(display: \"Note_Logic\")",
-                                "text": "[(display: \"Note_Logic\")]",
-                                "tokens": [
-                                    {
-                                        "innerText": "display: \"Note_Logic\"",
-                                        "name": "display",
-                                        "text": "(display: \"Note_Logic\")",
-                                        "tokens": [
-                                            {
-                                                "text": "display:",
-                                                "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "innerText": "Note_Logic",
-                                                "text": "\"Note_Logic\"",
                                                 "type": "string"
                                             }
                                         ],
@@ -841,10 +772,6 @@
                         "name": "c1",
                         "text": "[]<c1|",
                         "type": "hook"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
                     },
                     {
                         "text": "\n",
@@ -1549,26 +1476,6 @@
                             }
                         ],
                         "type": "hook"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
                     }
                 ]
             },
@@ -2020,6 +1927,83 @@
                                     {
                                         "text": "TAKE NOTE",
                                         "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "click: ?un",
+                        "name": "click",
+                        "text": "(click: ?un)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "un",
+                                "text": "?un",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Note_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Note_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Note_Logic\")",
+                                "text": "[(display: \"Note_Logic\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Note_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Note_Logic\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Note_Logic",
+                                                "text": "\"Note_Logic\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
                                     }
                                 ],
                                 "type": "hook"
