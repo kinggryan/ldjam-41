@@ -176,7 +176,7 @@ public class TwineTextPlayer : MonoBehaviour {
 		}
 	}
 
-	public void DisplayOutput(StoryOutput output)
+	public virtual void DisplayOutput(StoryOutput output)
 	{
 		// Deternine where to place this output in the hierarchy - right after the last UI element associated with the previous output, if exists
 		TwineTextPlayerElement last = Container.GetComponentsInChildren<TwineTextPlayerElement>()

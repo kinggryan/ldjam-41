@@ -8,7 +8,7 @@ public class TetrisManager : MonoBehaviour {
     private TwineTextPlayer twinePlayer;
 
     private int boardSizeX = 10;
-    private int boardSizeY = 24;
+    private int boardSizeY = 26;
 
     private char[,] tetrisBoard;
     private TetrisBlock currentBlock;
