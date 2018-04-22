@@ -256,13 +256,19 @@ public class TwineTextPlayer : MonoBehaviour {
 	{	
 		var commandText = commandToNameMap[command];
 
+        //Debug.Log("Looking for command text '" + commandText + "'");
+
 		var links = this.Story.GetCurrentLinks();
 		if (links != null)
 		{
 			foreach (StoryLink link in links)
 			{
-				if (link.Text == commandText) 
-					this.Story.DoLink(link);
+                //Debug.Log("Found text '" + link.Text +"'");
+                if (link.Text.Trim().Equals(commandText))
+                {
+                    //Debug.Log("Doing link!");
+                    this.Story.DoLink(link);
+                }
 						
 			}
 		}

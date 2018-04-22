@@ -48,6 +48,7 @@ public static class LetterGenerator {
         if(commands.Length == 0)
         {
             weightedCommandsList = new WeightedCommand[] { new WeightedCommand(TwineTextPlayer.Command.Open, "OPEN", 1) };
+            weightedCommandTotal = 0;
             return;
         }
 
@@ -60,11 +61,12 @@ public static class LetterGenerator {
                 if(weightedCommand.command == command)
                 {
                     newWeightedList.Add(weightedCommand);
+                    Debug.Log("Adding " + weightedCommand.name + " to commands list.");
                 }
             }
         }
-
         weightedCommandsList = newWeightedList.ToArray();
+        weightedCommandTotal = 0;
     }
 
 	public static char GetLetter()
@@ -101,7 +103,7 @@ public static class LetterGenerator {
         // Return the valid string
         var startIndex = Random.Range(0, command.name.Length - length + 1);
         var substr = command.name.Substring(startIndex, length);
-        Debug.Log("returning " + substr);
+        //Debug.Log("returning " + substr);
         return substr;
     }
 
