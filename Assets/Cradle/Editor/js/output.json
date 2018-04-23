@@ -1,5 +1,10 @@
 {
-    "console": [],
+    "console": [
+        {
+            "type": "message",
+            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:125:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:125:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:125:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:122:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:122:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:125:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:125:41837\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:125:45808\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:125:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:125:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:125:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:125:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:126:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:128:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:128:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:128:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:128:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:129:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:112:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:112:36747 undefined"
+        }
+    ],
     "result": {
         "passages": [
             {
@@ -106,8 +111,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.[LOOK]<lo|(set: $look_desk to true)(click: ?lo)[(append: ?c1)[(display: \"Look_Logic\")]]",
-                        "text": "[You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.[LOOK]<lo|(set: $look_desk to true)(click: ?lo)[(append: ?c1)[(display: \"Look_Logic\")]]]",
+                        "innerText": "You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.[LOOK]<lo|(set: $look_desk to true)",
+                        "text": "[You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.[LOOK]<lo|(set: $look_desk to true)]",
                         "tokens": [
                             {
                                 "text": "You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.",
@@ -161,83 +166,6 @@
                                     }
                                 ],
                                 "type": "macro"
-                            },
-                            {
-                                "innerText": "click: ?lo",
-                                "name": "click",
-                                "text": "(click: ?lo)",
-                                "tokens": [
-                                    {
-                                        "text": "click:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "lo",
-                                        "text": "?lo",
-                                        "type": "hookRef"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "(append: ?c1)[(display: \"Look_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"Look_Logic\")]]",
-                                "tokens": [
-                                    {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
-                                        "tokens": [
-                                            {
-                                                "text": "append:",
-                                                "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Look_Logic\")",
-                                        "text": "[(display: \"Look_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Look_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"Look_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Look_Logic",
-                                                        "text": "\"Look_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
-                                    }
-                                ],
-                                "type": "hook"
                             }
                         ],
                         "type": "hook"
@@ -289,8 +217,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $look_shelf to true) The shelves are organized with a sequence of labels reading AA, AB, AC, etc. all the way down to ZZ. As you’re studying the shelves, you notice that someone has left a key FOB on the shelf next to you. (click: ?lo)[(append: ?c1)[(display: \"Look_Logic\")]] ",
-                        "text": "[(set: $look_shelf to true) The shelves are organized with a sequence of labels reading AA, AB, AC, etc. all the way down to ZZ. As you’re studying the shelves, you notice that someone has left a key FOB on the shelf next to you. (click: ?lo)[(append: ?c1)[(display: \"Look_Logic\")]] ]",
+                        "innerText": "(set: $look_shelf to true) The shelves are organized with a sequence of labels reading AA, AB, AC, etc. all the way down to ZZ. As you’re studying the shelves, you notice that someone has left a key FOB on the shelf next to you.",
+                        "text": "[(set: $look_shelf to true) The shelves are organized with a sequence of labels reading AA, AB, AC, etc. all the way down to ZZ. As you’re studying the shelves, you notice that someone has left a key FOB on the shelf next to you.]",
                         "tokens": [
                             {
                                 "innerText": "set: $look_shelf to true",
@@ -330,16 +258,109 @@
                                 "type": "macro"
                             },
                             {
-                                "text": " The shelves are organized with a sequence of labels reading AA, AB, AC, etc. all the way down to ZZ. As you’re studying the shelves, you notice that someone has left a key FOB on the shelf next to you. ",
+                                "text": " The shelves are organized with a sequence of labels reading AA, AB, AC, etc. all the way down to ZZ. As you’re studying the shelves, you notice that someone has left a key FOB on the shelf next to you.",
                                 "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "if: $location's SERVER is true",
+                        "name": "if",
+                        "text": "(if: $location's SERVER is true)",
+                        "tokens": [
+                            {
+                                "text": "if:",
+                                "type": "macroName"
                             },
                             {
-                                "innerText": "click: ?lo",
-                                "name": "click",
-                                "text": "(click: ?lo)",
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "location",
+                                "text": "$location",
+                                "type": "variable"
+                            },
+                            {
+                                "name": "SERVER",
+                                "text": "'s SERVER",
+                                "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "true",
+                                "type": "boolean"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "The cabinet is secured with an electronic padlock. Must be some pretty valuable stuff in there.",
+                        "text": "[The cabinet is secured with an electronic padlock. Must be some pretty valuable stuff in there.]",
+                        "tokens": [
+                            {
+                                "text": "The cabinet is secured with an electronic padlock. Must be some pretty valuable stuff in there.",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "click: ?lo",
+                        "name": "click",
+                        "text": "(click: ?lo)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "lo",
+                                "text": "?lo",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Look_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Look_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
                                 "tokens": [
                                     {
-                                        "text": "click:",
+                                        "text": "append:",
                                         "type": "macroName"
                                     },
                                     {
@@ -347,24 +368,24 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "name": "lo",
-                                        "text": "?lo",
+                                        "name": "c1",
+                                        "text": "?c1",
                                         "type": "hookRef"
                                     }
                                 ],
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(append: ?c1)[(display: \"Look_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"Look_Logic\")]]",
+                                "innerText": "(display: \"Look_Logic\")",
+                                "text": "[(display: \"Look_Logic\")]",
                                 "tokens": [
                                     {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
+                                        "innerText": "display: \"Look_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Look_Logic\")",
                                         "tokens": [
                                             {
-                                                "text": "append:",
+                                                "text": "display:",
                                                 "type": "macroName"
                                             },
                                             {
@@ -372,47 +393,15 @@
                                                 "type": "whitespace"
                                             },
                                             {
-                                                "name": "c1",
-                                                "text": "?c1",
-                                                "type": "hookRef"
+                                                "innerText": "Look_Logic",
+                                                "text": "\"Look_Logic\"",
+                                                "type": "string"
                                             }
                                         ],
                                         "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "(display: \"Look_Logic\")",
-                                        "text": "[(display: \"Look_Logic\")]",
-                                        "tokens": [
-                                            {
-                                                "innerText": "display: \"Look_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"Look_Logic\")",
-                                                "tokens": [
-                                                    {
-                                                        "text": "display:",
-                                                        "type": "macroName"
-                                                    },
-                                                    {
-                                                        "text": " ",
-                                                        "type": "whitespace"
-                                                    },
-                                                    {
-                                                        "innerText": "Look_Logic",
-                                                        "text": "\"Look_Logic\"",
-                                                        "type": "string"
-                                                    }
-                                                ],
-                                                "type": "macro"
-                                            }
-                                        ],
-                                        "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
-                            },
-                            {
-                                "text": " ",
-                                "type": "text"
                             }
                         ],
                         "type": "hook"
@@ -1142,6 +1131,190 @@
                         "type": "br"
                     },
                     {
+                        "innerText": "if: $location's SERVER is true and $infected is false",
+                        "name": "if",
+                        "text": "(if: $location's SERVER is true and $infected is false)",
+                        "tokens": [
+                            {
+                                "text": "if:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "location",
+                                "text": "$location",
+                                "type": "variable"
+                            },
+                            {
+                                "name": "SERVER",
+                                "text": "'s SERVER",
+                                "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "true",
+                                "type": "boolean"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "and",
+                                "type": "and"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "infected",
+                                "text": "$infected",
+                                "type": "variable"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "false",
+                                "type": "boolean"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(set: $infected to true)(set: $power to true)You crack off the tip of your middle finger and run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. When you find the power controls for the elevator, you switch them on.\n\nAs you disconnect from the admin terminal, you feel it transfer a few packets your way.\n\nYou notice strange data in your T.E.T./R.I.S. implant. You’ve been infected with malware! You need to find an anti-virus CURE, fast!",
+                        "text": "[(set: $infected to true)(set: $power to true)You crack off the tip of your middle finger and run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. When you find the power controls for the elevator, you switch them on.\n\nAs you disconnect from the admin terminal, you feel it transfer a few packets your way.\n\nYou notice strange data in your T.E.T./R.I.S. implant. You’ve been infected with malware! You need to find an anti-virus CURE, fast!]",
+                        "tokens": [
+                            {
+                                "innerText": "set: $infected to true",
+                                "name": "set",
+                                "text": "(set: $infected to true)",
+                                "tokens": [
+                                    {
+                                        "text": "set:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "infected",
+                                        "text": "$infected",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "to",
+                                        "type": "to"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "true",
+                                        "type": "boolean"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "set: $power to true",
+                                "name": "set",
+                                "text": "(set: $power to true)",
+                                "tokens": [
+                                    {
+                                        "text": "set:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "power",
+                                        "text": "$power",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "to",
+                                        "type": "to"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "true",
+                                        "type": "boolean"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "text": "You crack off the tip of your middle finger and run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. When you find the power controls for the elevator, you switch them on.",
+                                "type": "text"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            },
+                            {
+                                "text": "As you disconnect from the admin terminal, you feel it transfer a few packets your way.",
+                                "type": "text"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            },
+                            {
+                                "text": "You notice strange data in your T.E.T./R.I.S. implant. You’ve been infected with malware! You need to find an anti-virus CURE, fast!",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
                         "text": "\n",
                         "type": "br"
                     },
@@ -1647,6 +1820,26 @@
                             }
                         ],
                         "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "SHOOT GUN",
+                        "name": "ug",
+                        "text": "[SHOOT GUN]<ug|",
+                        "tokens": [
+                            {
+                                "text": "SHOOT GUN",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?lo",
@@ -2729,13 +2922,9 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "if: $location's GARAGE is true",
+                        "innerText": "if: $inv's GUN is true",
                         "name": "if",
-                        "text": "(if: $location's GARAGE is true)",
+                        "text": "(if: $inv's GUN is true)",
                         "tokens": [
                             {
                                 "text": "if:",
@@ -2746,13 +2935,13 @@
                                 "type": "whitespace"
                             },
                             {
-                                "name": "location",
-                                "text": "$location",
+                                "name": "inv",
+                                "text": "$inv",
                                 "type": "variable"
                             },
                             {
-                                "name": "GARAGE",
-                                "text": "'s GARAGE",
+                                "name": "GUN",
+                                "text": "'s GUN",
                                 "type": "property"
                             },
                             {
@@ -2775,13 +2964,13 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $look_desk is true)[(if: $inv's GUN is true)[You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.](else:)[What gun?] ](else:)[What gun?]",
-                        "text": "[(if: $look_desk is true)[(if: $inv's GUN is true)[You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.](else:)[What gun?] ](else:)[What gun?]]",
+                        "innerText": "(if: $location's GARAGE is true)[You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.] (else-if: $location's WAREHOUSE is true)[You fire at the security barrier on the elevator, but even your military-grade APEX rounds don’t leave a mark.] (else-if: $location's SERVER is true and $open_cab is false)[(set: $open_cab to true) You fire a shot at the cabinet’s electronic padlock, shooting it clean off. The cabinet is open.]",
+                        "text": "[(if: $location's GARAGE is true)[You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.] (else-if: $location's WAREHOUSE is true)[You fire at the security barrier on the elevator, but even your military-grade APEX rounds don’t leave a mark.] (else-if: $location's SERVER is true and $open_cab is false)[(set: $open_cab to true) You fire a shot at the cabinet’s electronic padlock, shooting it clean off. The cabinet is open.]]",
                         "tokens": [
                             {
-                                "innerText": "if: $look_desk is true",
+                                "innerText": "if: $location's GARAGE is true",
                                 "name": "if",
-                                "text": "(if: $look_desk is true)",
+                                "text": "(if: $location's GARAGE is true)",
                                 "tokens": [
                                     {
                                         "text": "if:",
@@ -2792,9 +2981,14 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "name": "look_desk",
-                                        "text": "$look_desk",
+                                        "name": "location",
+                                        "text": "$location",
                                         "type": "variable"
+                                    },
+                                    {
+                                        "name": "GARAGE",
+                                        "text": "'s GARAGE",
+                                        "type": "property"
                                     },
                                     {
                                         "text": " ",
@@ -2816,175 +3010,27 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(if: $inv's GUN is true)[You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.](else:)[What gun?] ",
-                                "text": "[(if: $inv's GUN is true)[You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.](else:)[What gun?] ]",
+                                "innerText": "You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.",
+                                "text": "[You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.]",
                                 "tokens": [
                                     {
-                                        "innerText": "if: $inv's GUN is true",
-                                        "name": "if",
-                                        "text": "(if: $inv's GUN is true)",
-                                        "tokens": [
-                                            {
-                                                "text": "if:",
-                                                "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "name": "inv",
-                                                "text": "$inv",
-                                                "type": "variable"
-                                            },
-                                            {
-                                                "name": "GUN",
-                                                "text": "'s GUN",
-                                                "type": "property"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "text": "is",
-                                                "type": "is"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "text": "true",
-                                                "type": "boolean"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.",
-                                        "text": "[You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.]",
-                                        "tokens": [
-                                            {
-                                                "text": "You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.",
-                                                "type": "text"
-                                            }
-                                        ],
-                                        "type": "hook"
-                                    },
-                                    {
-                                        "innerText": "else:",
-                                        "name": "else",
-                                        "text": "(else:)",
-                                        "tokens": [
-                                            {
-                                                "text": "else:",
-                                                "type": "macroName"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    },
-                                    {
-                                        "innerText": "What gun?",
-                                        "text": "[What gun?]",
-                                        "tokens": [
-                                            {
-                                                "text": "What gun?",
-                                                "type": "text"
-                                            }
-                                        ],
-                                        "type": "hook"
-                                    },
-                                    {
-                                        "text": " ",
+                                        "text": "You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.",
                                         "type": "text"
                                     }
                                 ],
                                 "type": "hook"
                             },
                             {
-                                "innerText": "else:",
-                                "name": "else",
-                                "text": "(else:)",
+                                "text": " ",
+                                "type": "text"
+                            },
+                            {
+                                "innerText": "else-if: $location's WAREHOUSE is true",
+                                "name": "elseif",
+                                "text": "(else-if: $location's WAREHOUSE is true)",
                                 "tokens": [
                                     {
-                                        "text": "else:",
-                                        "type": "macroName"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "What gun?",
-                                "text": "[What gun?]",
-                                "tokens": [
-                                    {
-                                        "text": "What gun?",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
-                            }
-                        ],
-                        "type": "hook"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "if: $location's WAREHOUSE is true",
-                        "name": "if",
-                        "text": "(if: $location's WAREHOUSE is true)",
-                        "tokens": [
-                            {
-                                "text": "if:",
-                                "type": "macroName"
-                            },
-                            {
-                                "text": " ",
-                                "type": "whitespace"
-                            },
-                            {
-                                "name": "location",
-                                "text": "$location",
-                                "type": "variable"
-                            },
-                            {
-                                "name": "WAREHOUSE",
-                                "text": "'s WAREHOUSE",
-                                "type": "property"
-                            },
-                            {
-                                "text": " ",
-                                "type": "whitespace"
-                            },
-                            {
-                                "text": "is",
-                                "type": "is"
-                            },
-                            {
-                                "text": " ",
-                                "type": "whitespace"
-                            },
-                            {
-                                "text": "true",
-                                "type": "boolean"
-                            }
-                        ],
-                        "type": "macro"
-                    },
-                    {
-                        "innerText": "(if: $inv's GUN is true)[You fire at the security barrier on the elevator, but even your military-grade APEX rounds don’t leave a mark.](else:)[What gun?]",
-                        "text": "[(if: $inv's GUN is true)[You fire at the security barrier on the elevator, but even your military-grade APEX rounds don’t leave a mark.](else:)[What gun?]]",
-                        "tokens": [
-                            {
-                                "innerText": "if: $inv's GUN is true",
-                                "name": "if",
-                                "text": "(if: $inv's GUN is true)",
-                                "tokens": [
-                                    {
-                                        "text": "if:",
+                                        "text": "else-if:",
                                         "type": "macroName"
                                     },
                                     {
@@ -2992,13 +3038,13 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "name": "inv",
-                                        "text": "$inv",
+                                        "name": "location",
+                                        "text": "$location",
                                         "type": "variable"
                                     },
                                     {
-                                        "name": "GUN",
-                                        "text": "'s GUN",
+                                        "name": "WAREHOUSE",
+                                        "text": "'s WAREHOUSE",
                                         "type": "property"
                                     },
                                     {
@@ -3032,23 +3078,127 @@
                                 "type": "hook"
                             },
                             {
-                                "innerText": "else:",
-                                "name": "else",
-                                "text": "(else:)",
+                                "text": " ",
+                                "type": "text"
+                            },
+                            {
+                                "innerText": "else-if: $location's SERVER is true and $open_cab is false",
+                                "name": "elseif",
+                                "text": "(else-if: $location's SERVER is true and $open_cab is false)",
                                 "tokens": [
                                     {
-                                        "text": "else:",
+                                        "text": "else-if:",
                                         "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "location",
+                                        "text": "$location",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "name": "SERVER",
+                                        "text": "'s SERVER",
+                                        "type": "property"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "is",
+                                        "type": "is"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "true",
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "and",
+                                        "type": "and"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "open_cab",
+                                        "text": "$open_cab",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "is",
+                                        "type": "is"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "false",
+                                        "type": "boolean"
                                     }
                                 ],
                                 "type": "macro"
                             },
                             {
-                                "innerText": "What gun?",
-                                "text": "[What gun?]",
+                                "innerText": "(set: $open_cab to true) You fire a shot at the cabinet’s electronic padlock, shooting it clean off. The cabinet is open.",
+                                "text": "[(set: $open_cab to true) You fire a shot at the cabinet’s electronic padlock, shooting it clean off. The cabinet is open.]",
                                 "tokens": [
                                     {
-                                        "text": "What gun?",
+                                        "innerText": "set: $open_cab to true",
+                                        "name": "set",
+                                        "text": "(set: $open_cab to true)",
+                                        "tokens": [
+                                            {
+                                                "text": "set:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "name": "open_cab",
+                                                "text": "$open_cab",
+                                                "type": "variable"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "text": "to",
+                                                "type": "to"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "text": "true",
+                                                "type": "boolean"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    },
+                                    {
+                                        "text": " You fire a shot at the cabinet’s electronic padlock, shooting it clean off. The cabinet is open.",
                                         "type": "text"
                                     }
                                 ],
@@ -3056,6 +3206,33 @@
                             }
                         ],
                         "type": "hook"
+                    },
+                    {
+                        "innerText": "else:",
+                        "name": "else",
+                        "text": "(else:)",
+                        "tokens": [
+                            {
+                                "text": "else:",
+                                "type": "macroName"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "What gun?",
+                        "text": "[What gun?]",
+                        "tokens": [
+                            {
+                                "text": "What gun?",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
                     },
                     {
                         "text": "\n",
@@ -3074,7 +3251,23 @@
                         "type": "hook"
                     },
                     {
-                        "text": "]",
+                        "text": "] ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "SHOOT GUN",
+                        "name": "ug",
+                        "text": "[SHOOT GUN]<ug|",
+                        "tokens": [
+                            {
+                                "text": "SHOOT GUN",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
                         "type": "text"
                     },
                     {
@@ -3162,8 +3355,8 @@
                 "Tags": "startup",
                 "Tokens": [
                     {
-                        "innerText": "\n(set: $inv to (dm: \"GUN\", false, \"NOTE\", false, \"FOB\", false, \"COAT\", false, \"LOG\", false))\n(set: $location to (dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false))\n(set: $infected to true)\n(set: $look_shelf to false)\n(set: $look_desk to false)\n(set: $power to false)\n(set: $ser_door to false)\n",
-                        "text": "{\n(set: $inv to (dm: \"GUN\", false, \"NOTE\", false, \"FOB\", false, \"COAT\", false, \"LOG\", false))\n(set: $location to (dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false))\n(set: $infected to true)\n(set: $look_shelf to false)\n(set: $look_desk to false)\n(set: $power to false)\n(set: $ser_door to false)\n}",
+                        "innerText": "\n(set: $inv to (dm: \"GUN\", false, \"NOTE\", false, \"FOB\", false, \"COAT\", false, \"LOG\", false))\n(set: $location to (dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false))\n(set: $infected to false)\n(set: $look_shelf to false)\n(set: $look_desk to false)\n(set: $open_cab to false)\n(set: $power to false)\n(set: $ser_door to false)\n",
+                        "text": "{\n(set: $inv to (dm: \"GUN\", false, \"NOTE\", false, \"FOB\", false, \"COAT\", false, \"LOG\", false))\n(set: $location to (dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false))\n(set: $infected to false)\n(set: $look_shelf to false)\n(set: $look_desk to false)\n(set: $open_cab to false)\n(set: $power to false)\n(set: $ser_door to false)\n}",
                         "tokens": [
                             {
                                 "text": "\n",
@@ -3485,9 +3678,9 @@
                                 "type": "br"
                             },
                             {
-                                "innerText": "set: $infected to true",
+                                "innerText": "set: $infected to false",
                                 "name": "set",
-                                "text": "(set: $infected to true)",
+                                "text": "(set: $infected to false)",
                                 "tokens": [
                                     {
                                         "text": "set:",
@@ -3515,7 +3708,7 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "text": "true",
+                                        "text": "false",
                                         "type": "boolean"
                                     }
                                 ],
@@ -3582,6 +3775,47 @@
                                     {
                                         "name": "look_desk",
                                         "text": "$look_desk",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "to",
+                                        "type": "to"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "false",
+                                        "type": "boolean"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            },
+                            {
+                                "innerText": "set: $open_cab to false",
+                                "name": "set",
+                                "text": "(set: $open_cab to false)",
+                                "tokens": [
+                                    {
+                                        "text": "set:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "open_cab",
+                                        "text": "$open_cab",
                                         "type": "variable"
                                     },
                                     {
@@ -4079,6 +4313,42 @@
                             }
                         ],
                         "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "USE GUN",
+                        "name": "ug",
+                        "text": "[USE GUN]<ug|",
+                        "tokens": [
+                            {
+                                "text": "USE GUN",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "SHOOT GUN",
+                        "name": "ug",
+                        "text": "[SHOOT GUN]<ug|",
+                        "tokens": [
+                            {
+                                "text": "SHOOT GUN",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "text": "\n",
@@ -4808,6 +5078,87 @@
                             }
                         ],
                         "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "click: ?ug",
+                        "name": "click",
+                        "text": "(click: ?ug)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "ug",
+                                "text": "?ug",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Gun_Logic2\")]",
+                        "text": "[(append: ?c1)[(display: \"Gun_Logic2\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Gun_Logic2\")",
+                                "text": "[(display: \"Gun_Logic2\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Gun_Logic2\"",
+                                        "name": "display",
+                                        "text": "(display: \"Gun_Logic2\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Gun_Logic2",
+                                                "text": "\"Gun_Logic2\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
                     }
                 ]
             },
@@ -5458,13 +5809,9 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "if: $location's WAREHOUSE is true",
+                        "innerText": "if: $inv's LOG is true",
                         "name": "if",
-                        "text": "(if: $location's WAREHOUSE is true)",
+                        "text": "(if: $inv's LOG is true)",
                         "tokens": [
                             {
                                 "text": "if:",
@@ -5475,13 +5822,13 @@
                                 "type": "whitespace"
                             },
                             {
-                                "name": "location",
-                                "text": "$location",
+                                "name": "inv",
+                                "text": "$inv",
                                 "type": "variable"
                             },
                             {
-                                "name": "WAREHOUSE",
-                                "text": "'s WAREHOUSE",
+                                "name": "LOG",
+                                "text": "'s LOG",
                                 "type": "property"
                             },
                             {
@@ -5504,13 +5851,13 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $inv's LOG is true and $infected is true)[(set: $read_log to true)You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE.] [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]",
-                        "text": "[(if: $inv's LOG is true and $infected is true)[(set: $read_log to true)You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE.] [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]]",
+                        "innerText": "(if: $location's WAREHOUSE is true and $infected is true)[(set:$read_log to true) You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]](else-if: $location's WAREHOUSE is true and $infected is false )[You read the log but find nothing that you need at the moment.](else-if: $location's SERVER is true)[This would be more USEful in the warehouse.]",
+                        "text": "[(if: $location's WAREHOUSE is true and $infected is true)[(set:$read_log to true) You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]](else-if: $location's WAREHOUSE is true and $infected is false )[You read the log but find nothing that you need at the moment.](else-if: $location's SERVER is true)[This would be more USEful in the warehouse.]]",
                         "tokens": [
                             {
-                                "innerText": "if: $inv's LOG is true and $infected is true",
+                                "innerText": "if: $location's WAREHOUSE is true and $infected is true",
                                 "name": "if",
-                                "text": "(if: $inv's LOG is true and $infected is true)",
+                                "text": "(if: $location's WAREHOUSE is true and $infected is true)",
                                 "tokens": [
                                     {
                                         "text": "if:",
@@ -5521,13 +5868,13 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "name": "inv",
-                                        "text": "$inv",
+                                        "name": "location",
+                                        "text": "$location",
                                         "type": "variable"
                                     },
                                     {
-                                        "name": "LOG",
-                                        "text": "'s LOG",
+                                        "name": "WAREHOUSE",
+                                        "text": "'s WAREHOUSE",
                                         "type": "property"
                                     },
                                     {
@@ -5583,21 +5930,17 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(set: $read_log to true)You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE.",
-                                "text": "[(set: $read_log to true)You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE.]",
+                                "innerText": "(set:$read_log to true) You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]",
+                                "text": "[(set:$read_log to true) You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]]",
                                 "tokens": [
                                     {
-                                        "innerText": "set: $read_log to true",
+                                        "innerText": "set:$read_log to true",
                                         "name": "set",
-                                        "text": "(set: $read_log to true)",
+                                        "text": "(set:$read_log to true)",
                                         "tokens": [
                                             {
                                                 "text": "set:",
                                                 "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
                                             },
                                             {
                                                 "name": "read_log",
@@ -5624,80 +5967,48 @@
                                         "type": "macro"
                                     },
                                     {
-                                        "text": "You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE.",
+                                        "text": " You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE. ",
                                         "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": " ",
-                                "type": "text"
-                            },
-                            {
-                                "innerText": "TAKE CURE",
-                                "name": "tc",
-                                "text": "[TAKE CURE]<tc|",
-                                "tokens": [
+                                    },
                                     {
-                                        "text": "TAKE CURE",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": " ",
-                                "type": "text"
-                            },
-                            {
-                                "innerText": "USE CURE",
-                                "name": "tc",
-                                "text": "[USE CURE]<tc|",
-                                "tokens": [
-                                    {
-                                        "text": "USE CURE",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
-                            },
-                            {
-                                "text": " ",
-                                "type": "text"
-                            },
-                            {
-                                "innerText": "click: ?tc",
-                                "name": "click",
-                                "text": "(click: ?tc)",
-                                "tokens": [
-                                    {
-                                        "text": "click:",
-                                        "type": "macroName"
+                                        "innerText": "TAKE CURE",
+                                        "name": "tc",
+                                        "text": "[TAKE CURE]<tc|",
+                                        "tokens": [
+                                            {
+                                                "text": "TAKE CURE",
+                                                "type": "text"
+                                            }
+                                        ],
+                                        "type": "hook"
                                     },
                                     {
                                         "text": " ",
-                                        "type": "whitespace"
+                                        "type": "text"
                                     },
                                     {
+                                        "innerText": "USE CURE",
                                         "name": "tc",
-                                        "text": "?tc",
-                                        "type": "hookRef"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "(append: ?c1)[(display: \"Cure_Logic\")]",
-                                "text": "[(append: ?c1)[(display: \"Cure_Logic\")]]",
-                                "tokens": [
-                                    {
-                                        "innerText": "append: ?c1",
-                                        "name": "append",
-                                        "text": "(append: ?c1)",
+                                        "text": "[USE CURE]<tc|",
                                         "tokens": [
                                             {
-                                                "text": "append:",
+                                                "text": "USE CURE",
+                                                "type": "text"
+                                            }
+                                        ],
+                                        "type": "hook"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "innerText": "click: ?tc",
+                                        "name": "click",
+                                        "text": "(click: ?tc)",
+                                        "tokens": [
+                                            {
+                                                "text": "click:",
                                                 "type": "macroName"
                                             },
                                             {
@@ -5705,24 +6016,24 @@
                                                 "type": "whitespace"
                                             },
                                             {
-                                                "name": "c1",
-                                                "text": "?c1",
+                                                "name": "tc",
+                                                "text": "?tc",
                                                 "type": "hookRef"
                                             }
                                         ],
                                         "type": "macro"
                                     },
                                     {
-                                        "innerText": "(display: \"Cure_Logic\")",
-                                        "text": "[(display: \"Cure_Logic\")]",
+                                        "innerText": "(append: ?c1)[(display: \"Cure_Logic\")]",
+                                        "text": "[(append: ?c1)[(display: \"Cure_Logic\")]]",
                                         "tokens": [
                                             {
-                                                "innerText": "display: \"Cure_Logic\"",
-                                                "name": "display",
-                                                "text": "(display: \"Cure_Logic\")",
+                                                "innerText": "append: ?c1",
+                                                "name": "append",
+                                                "text": "(append: ?c1)",
                                                 "tokens": [
                                                     {
-                                                        "text": "display:",
+                                                        "text": "append:",
                                                         "type": "macroName"
                                                     },
                                                     {
@@ -5730,18 +6041,212 @@
                                                         "type": "whitespace"
                                                     },
                                                     {
-                                                        "innerText": "Cure_Logic",
-                                                        "text": "\"Cure_Logic\"",
-                                                        "type": "string"
+                                                        "name": "c1",
+                                                        "text": "?c1",
+                                                        "type": "hookRef"
                                                     }
                                                 ],
                                                 "type": "macro"
+                                            },
+                                            {
+                                                "innerText": "(display: \"Cure_Logic\")",
+                                                "text": "[(display: \"Cure_Logic\")]",
+                                                "tokens": [
+                                                    {
+                                                        "innerText": "display: \"Cure_Logic\"",
+                                                        "name": "display",
+                                                        "text": "(display: \"Cure_Logic\")",
+                                                        "tokens": [
+                                                            {
+                                                                "text": "display:",
+                                                                "type": "macroName"
+                                                            },
+                                                            {
+                                                                "text": " ",
+                                                                "type": "whitespace"
+                                                            },
+                                                            {
+                                                                "innerText": "Cure_Logic",
+                                                                "text": "\"Cure_Logic\"",
+                                                                "type": "string"
+                                                            }
+                                                        ],
+                                                        "type": "macro"
+                                                    }
+                                                ],
+                                                "type": "hook"
                                             }
                                         ],
                                         "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
+                            },
+                            {
+                                "innerText": "else-if: $location's WAREHOUSE is true and $infected is false ",
+                                "name": "elseif",
+                                "text": "(else-if: $location's WAREHOUSE is true and $infected is false )",
+                                "tokens": [
+                                    {
+                                        "text": "else-if:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "location",
+                                        "text": "$location",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "name": "WAREHOUSE",
+                                        "text": "'s WAREHOUSE",
+                                        "type": "property"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "is",
+                                        "type": "is"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "true",
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "and",
+                                        "type": "and"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "infected",
+                                        "text": "$infected",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "is",
+                                        "type": "is"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "false",
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "You read the log but find nothing that you need at the moment.",
+                                "text": "[You read the log but find nothing that you need at the moment.]",
+                                "tokens": [
+                                    {
+                                        "text": "You read the log but find nothing that you need at the moment.",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
+                            },
+                            {
+                                "innerText": "else-if: $location's SERVER is true",
+                                "name": "elseif",
+                                "text": "(else-if: $location's SERVER is true)",
+                                "tokens": [
+                                    {
+                                        "text": "else-if:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "location",
+                                        "text": "$location",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "name": "SERVER",
+                                        "text": "'s SERVER",
+                                        "type": "property"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "is",
+                                        "type": "is"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "true",
+                                        "type": "boolean"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "This would be more USEful in the warehouse.",
+                                "text": "[This would be more USEful in the warehouse.]",
+                                "tokens": [
+                                    {
+                                        "text": "This would be more USEful in the warehouse.",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "else:",
+                        "name": "else",
+                        "text": "(else:)",
+                        "tokens": [
+                            {
+                                "text": "else:",
+                                "type": "macroName"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "What log?",
+                        "text": "[What log?]",
+                        "tokens": [
+                            {
+                                "text": "What log?",
+                                "type": "text"
                             }
                         ],
                         "type": "hook"
@@ -6398,6 +6903,80 @@
                         "type": "br"
                     },
                     {
+                        "innerText": "if: $location's SERVER is true",
+                        "name": "if",
+                        "text": "(if: $location's SERVER is true)",
+                        "tokens": [
+                            {
+                                "text": "if:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "location",
+                                "text": "$location",
+                                "type": "variable"
+                            },
+                            {
+                                "name": "SERVER",
+                                "text": "'s SERVER",
+                                "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "true",
+                                "type": "boolean"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(go-to: \"Warehouse\")",
+                        "text": "[(go-to: \"Warehouse\")]",
+                        "tokens": [
+                            {
+                                "innerText": "go-to: \"Warehouse\"",
+                                "name": "goto",
+                                "text": "(go-to: \"Warehouse\")",
+                                "tokens": [
+                                    {
+                                        "text": "go-to:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "innerText": "Warehouse",
+                                        "text": "\"Warehouse\"",
+                                        "type": "string"
+                                    }
+                                ],
+                                "type": "macro"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
                         "innerText": "EAST",
                         "name": "eo",
                         "text": "[EAST]<eo|",
@@ -6540,9 +7119,9 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "set: $location's WAREHOUSE to true",
+                        "innerText": "set: $location's WAREHOUSE to false",
                         "name": "set",
-                        "text": "(set: $location's WAREHOUSE to true)",
+                        "text": "(set: $location's WAREHOUSE to false)",
                         "tokens": [
                             {
                                 "text": "set:",
@@ -6575,7 +7154,7 @@
                                 "type": "whitespace"
                             },
                             {
-                                "text": "true",
+                                "text": "false",
                                 "type": "boolean"
                             }
                         ],
@@ -6672,6 +7251,738 @@
                     {
                         "text": "You go WEST, through the Server Room door",
                         "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "You enter the Server Room. There are banks of computers, the collective whirring of their fans creating a loud hum. In front of you, there is an administrative terminal. Along the wall, there is a CABINET.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "name": "c1",
+                        "text": "[]<c1|",
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "LOOK",
+                        "name": "lo",
+                        "text": "[LOOK]<lo|",
+                        "tokens": [
+                            {
+                                "text": "LOOK",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "HACK",
+                        "name": "ha",
+                        "text": "[HACK]<ha|",
+                        "tokens": [
+                            {
+                                "text": "HACK",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "USE FOB",
+                        "name": "uf",
+                        "text": "[USE FOB]<uf|",
+                        "tokens": [
+                            {
+                                "text": "USE FOB",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "SHOOT GUN",
+                        "name": "ug",
+                        "text": "[SHOOT GUN]<ug|",
+                        "tokens": [
+                            {
+                                "text": "SHOOT GUN",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "USE GUN",
+                        "name": "ug",
+                        "text": "[USE GUN]<ug|",
+                        "tokens": [
+                            {
+                                "text": "USE GUN",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "GET LOG",
+                        "name": "tl",
+                        "text": "[GET LOG]<tl|",
+                        "tokens": [
+                            {
+                                "text": "GET LOG",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "TAKE LOG",
+                        "name": "tl",
+                        "text": "[TAKE LOG]<tl|",
+                        "tokens": [
+                            {
+                                "text": "TAKE LOG",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "USE LOG",
+                        "name": "ul",
+                        "text": "[USE LOG]<ul|",
+                        "tokens": [
+                            {
+                                "text": "USE LOG",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "EAST",
+                        "name": "eo",
+                        "text": "[EAST]<eo|",
+                        "tokens": [
+                            {
+                                "text": "EAST",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "click: ?lo",
+                        "name": "click",
+                        "text": "(click: ?lo)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "lo",
+                                "text": "?lo",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Look_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Look_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Look_Logic\")",
+                                "text": "[(display: \"Look_Logic\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Look_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Look_Logic\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Look_Logic",
+                                                "text": "\"Look_Logic\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "click: ?ha",
+                        "name": "click",
+                        "text": "(click: ?ha)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "ha",
+                                "text": "?ha",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Hack_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Hack_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Hack_Logic\")",
+                                "text": "[(display: \"Hack_Logic\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Hack_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Hack_Logic\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Hack_Logic",
+                                                "text": "\"Hack_Logic\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "click: ?uf",
+                        "name": "click",
+                        "text": "(click: ?uf)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "uf",
+                                "text": "?uf",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Fob_Logic2\")]",
+                        "text": "[(append: ?c1)[(display: \"Fob_Logic2\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Fob_Logic2\")",
+                                "text": "[(display: \"Fob_Logic2\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Fob_Logic2\"",
+                                        "name": "display",
+                                        "text": "(display: \"Fob_Logic2\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Fob_Logic2",
+                                                "text": "\"Fob_Logic2\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "click: ?ug",
+                        "name": "click",
+                        "text": "(click: ?ug)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "ug",
+                                "text": "?ug",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Gun_Logic2\")]",
+                        "text": "[(append: ?c1)[(display: \"Gun_Logic2\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Gun_Logic2\")",
+                                "text": "[(display: \"Gun_Logic2\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Gun_Logic2\"",
+                                        "name": "display",
+                                        "text": "(display: \"Gun_Logic2\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Gun_Logic2",
+                                                "text": "\"Gun_Logic2\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "click: ?tl",
+                        "name": "click",
+                        "text": "(click: ?tl)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "tl",
+                                "text": "?tl",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Log_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Log_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Log_Logic\")",
+                                "text": "[(display: \"Log_Logic\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Log_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Log_Logic\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Log_Logic",
+                                                "text": "\"Log_Logic\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "click: ?ul",
+                        "name": "click",
+                        "text": "(click: ?ul)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "ul",
+                                "text": "?ul",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Log_Logic2\")]",
+                        "text": "[(append: ?c1)[(display: \"Log_Logic2\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Log_Logic2\")",
+                                "text": "[(display: \"Log_Logic2\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Log_Logic2\"",
+                                        "name": "display",
+                                        "text": "(display: \"Log_Logic2\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Log_Logic2",
+                                                "text": "\"Log_Logic2\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "click: ?eo",
+                        "name": "click",
+                        "text": "(click: ?eo)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "eo",
+                                "text": "?eo",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"East_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"East_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"East_Logic\")",
+                                "text": "[(display: \"East_Logic\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"East_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"East_Logic\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "East_Logic",
+                                                "text": "\"East_Logic\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
                     }
                 ]
             },
@@ -6840,6 +8151,726 @@
                                             {
                                                 "innerText": "South_Logic",
                                                 "text": "\"South_Logic\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    }
+                ]
+            },
+            {
+                "Name": "Fob_Logic2",
+                "Pid": "21",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "innerText": "if: $inv's FOB is true",
+                        "name": "if",
+                        "text": "(if: $inv's FOB is true)",
+                        "tokens": [
+                            {
+                                "text": "if:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "inv",
+                                "text": "$inv",
+                                "type": "variable"
+                            },
+                            {
+                                "name": "FOB",
+                                "text": "'s FOB",
+                                "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "true",
+                                "type": "boolean"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(if: $location's SERVER is true and $open_cab is false)[(set: $open_cab to true) You tap the key FOB you found onto the cabinet’s electronic padlock. The cabinet swings open. Inside you find a bunch of cables and dongles, along with a LOG of warehouse contents.]",
+                        "text": "[(if: $location's SERVER is true and $open_cab is false)[(set: $open_cab to true) You tap the key FOB you found onto the cabinet’s electronic padlock. The cabinet swings open. Inside you find a bunch of cables and dongles, along with a LOG of warehouse contents.]]",
+                        "tokens": [
+                            {
+                                "innerText": "if: $location's SERVER is true and $open_cab is false",
+                                "name": "if",
+                                "text": "(if: $location's SERVER is true and $open_cab is false)",
+                                "tokens": [
+                                    {
+                                        "text": "if:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "location",
+                                        "text": "$location",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "name": "SERVER",
+                                        "text": "'s SERVER",
+                                        "type": "property"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "is",
+                                        "type": "is"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "true",
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "and",
+                                        "type": "and"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "open_cab",
+                                        "text": "$open_cab",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "is",
+                                        "type": "is"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "false",
+                                        "type": "boolean"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(set: $open_cab to true) You tap the key FOB you found onto the cabinet’s electronic padlock. The cabinet swings open. Inside you find a bunch of cables and dongles, along with a LOG of warehouse contents.",
+                                "text": "[(set: $open_cab to true) You tap the key FOB you found onto the cabinet’s electronic padlock. The cabinet swings open. Inside you find a bunch of cables and dongles, along with a LOG of warehouse contents.]",
+                                "tokens": [
+                                    {
+                                        "innerText": "set: $open_cab to true",
+                                        "name": "set",
+                                        "text": "(set: $open_cab to true)",
+                                        "tokens": [
+                                            {
+                                                "text": "set:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "name": "open_cab",
+                                                "text": "$open_cab",
+                                                "type": "variable"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "text": "to",
+                                                "type": "to"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "text": "true",
+                                                "type": "boolean"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    },
+                                    {
+                                        "text": " You tap the key FOB you found onto the cabinet’s electronic padlock. The cabinet swings open. Inside you find a bunch of cables and dongles, along with a LOG of warehouse contents.",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "else:",
+                        "name": "else",
+                        "text": "(else:)",
+                        "tokens": [
+                            {
+                                "text": "else:",
+                                "type": "macroName"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "What fob?",
+                        "text": "[What fob?]",
+                        "tokens": [
+                            {
+                                "text": "What fob?",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "USE FOB",
+                        "name": "uf",
+                        "text": "[USE FOB]<uf|",
+                        "tokens": [
+                            {
+                                "text": "USE FOB",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "click: ?uf",
+                        "name": "click",
+                        "text": "(click: ?uf)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "uf",
+                                "text": "?uf",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Fob_Logic\"2)]",
+                        "text": "[(append: ?c1)[(display: \"Fob_Logic\"2)]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Fob_Logic\"2)",
+                                "text": "[(display: \"Fob_Logic\"2)]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Fob_Logic\"2",
+                                        "name": "display",
+                                        "text": "(display: \"Fob_Logic\"2)",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Fob_Logic",
+                                                "text": "\"Fob_Logic\"",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "text": "2",
+                                                "type": "number",
+                                                "value": 2
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
+                    }
+                ]
+            },
+            {
+                "Name": "Log_Logic",
+                "Pid": "22",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "innerText": "if: $location's SERVER is true and $open_cab is true and $inv's LOG is false",
+                        "name": "if",
+                        "text": "(if: $location's SERVER is true and $open_cab is true and $inv's LOG is false)",
+                        "tokens": [
+                            {
+                                "text": "if:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "location",
+                                "text": "$location",
+                                "type": "variable"
+                            },
+                            {
+                                "name": "SERVER",
+                                "text": "'s SERVER",
+                                "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "true",
+                                "type": "boolean"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "and",
+                                "type": "and"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "open_cab",
+                                "text": "$open_cab",
+                                "type": "variable"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "true",
+                                "type": "boolean"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "and",
+                                "type": "and"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "inv",
+                                "text": "$inv",
+                                "type": "variable"
+                            },
+                            {
+                                "name": "LOG",
+                                "text": "'s LOG",
+                                "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "false",
+                                "type": "boolean"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(set: $inv's LOG to true)You take the warehouse LOG. You should be able to find anything in the warehouse with this.",
+                        "text": "[(set: $inv's LOG to true)You take the warehouse LOG. You should be able to find anything in the warehouse with this.]",
+                        "tokens": [
+                            {
+                                "innerText": "set: $inv's LOG to true",
+                                "name": "set",
+                                "text": "(set: $inv's LOG to true)",
+                                "tokens": [
+                                    {
+                                        "text": "set:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "inv",
+                                        "text": "$inv",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "name": "LOG",
+                                        "text": "'s LOG",
+                                        "type": "property"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "to",
+                                        "type": "to"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "true",
+                                        "type": "boolean"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "text": "You take the warehouse LOG. You should be able to find anything in the warehouse with this.",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "else-if:$location's SERVER is true and $inv's LOG is true",
+                        "name": "elseif",
+                        "text": "(else-if:$location's SERVER is true and $inv's LOG is true)",
+                        "tokens": [
+                            {
+                                "text": "else-if:",
+                                "type": "macroName"
+                            },
+                            {
+                                "name": "location",
+                                "text": "$location",
+                                "type": "variable"
+                            },
+                            {
+                                "name": "SERVER",
+                                "text": "'s SERVER",
+                                "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "true",
+                                "type": "boolean"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "and",
+                                "type": "and"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "inv",
+                                "text": "$inv",
+                                "type": "variable"
+                            },
+                            {
+                                "name": "LOG",
+                                "text": "'s LOG",
+                                "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "true",
+                                "type": "boolean"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "You already have the log.",
+                        "text": "[You already have the log.]",
+                        "tokens": [
+                            {
+                                "text": "You already have the log.",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "else:",
+                        "name": "else",
+                        "text": "(else:)",
+                        "tokens": [
+                            {
+                                "text": "else:",
+                                "type": "macroName"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "What log?",
+                        "text": "[What log?]",
+                        "tokens": [
+                            {
+                                "text": "What log?",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "GET LOG",
+                        "name": "tl",
+                        "text": "[GET LOG]<tl|",
+                        "tokens": [
+                            {
+                                "text": "GET LOG",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "TAKE LOG",
+                        "name": "tl",
+                        "text": "[TAKE LOG]<tl|",
+                        "tokens": [
+                            {
+                                "text": "TAKE LOG",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "click: ?tl",
+                        "name": "click",
+                        "text": "(click: ?tl)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "tl",
+                                "text": "?tl",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Log_Logic\")]",
+                        "text": "[(append: ?c1)[(display: \"Log_Logic\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Log_Logic\")",
+                                "text": "[(display: \"Log_Logic\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Log_Logic\"",
+                                        "name": "display",
+                                        "text": "(display: \"Log_Logic\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Log_Logic",
+                                                "text": "\"Log_Logic\"",
                                                 "type": "string"
                                             }
                                         ],
