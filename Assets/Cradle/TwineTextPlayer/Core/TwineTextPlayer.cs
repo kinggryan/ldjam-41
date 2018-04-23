@@ -46,6 +46,7 @@ public class TwineTextPlayer : MonoBehaviour {
         GetLog,
         GetBoard,
         Gear,
+        End,
 
         None
 }
@@ -74,6 +75,7 @@ public class TwineTextPlayer : MonoBehaviour {
         { Command.GetLog, "GET LOG" },
         { Command.GetBoard, "GET BOARD" },
         { Command.Gear, "GEAR" },
+        { Command.End, "END" },
         { Command.None, "" }
     };
 
@@ -100,6 +102,7 @@ public class TwineTextPlayer : MonoBehaviour {
         { "GET LOG", Command.GetLog },
         { "GET BOARD", Command.GetBoard },
         { "GEAR", Command.Gear },
+        { "END", Command.End },
         { "LOOK", Command.Look }
     };
 
