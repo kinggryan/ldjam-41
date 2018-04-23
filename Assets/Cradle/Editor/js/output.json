@@ -2,7 +2,7 @@
     "console": [
         {
             "type": "message",
-            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:41837\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:45808\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:109:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:111:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:111:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:111:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:111:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:112:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:36747 undefined"
+            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:106:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:106:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:106:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:103:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:103:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:106:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:106:41837\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:106:45808\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:106:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:106:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:106:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:106:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:109:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:109:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:109:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:109:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:110:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:93:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:93:36747 undefined"
         }
     ],
     "result": {
@@ -13,49 +13,34 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "innerText": "You wake up, floating. It's dark. Where are you? Can't remember. Is this death? You move your arm, feel water splash. Not death. Sensory deprivation tank. The hatch is above you. Could probably OPEN it.\n[[OPEN ->Garage]]\n",
-                        "text": "{You wake up, floating. It's dark. Where are you? Can't remember. Is this death? You move your arm, feel water splash. Not death. Sensory deprivation tank. The hatch is above you. Could probably OPEN it.\n[[OPEN ->Garage]]\n}",
+                        "text": "You wake up, floating. It's dark. Where are you? Can't remember. Is this death? You move your arm, feel water splash. Not death. Sensory deprivation tank. The hatch is above you. Could probably OPEN it.",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "link-goto:\"OPEN \",\"Garage\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"OPEN \",\"Garage\")",
                         "tokens": [
                             {
-                                "text": "You wake up, floating. It's dark. Where are you? Can't remember. Is this death? You move your arm, feel water splash. Not death. Sensory deprivation tank. The hatch is above you. Could probably OPEN it.",
-                                "type": "text"
+                                "text": "link-goto:",
+                                "type": "macroName"
                             },
                             {
-                                "text": "\n",
-                                "type": "br"
+                                "innerText": "OPEN ",
+                                "text": "\"OPEN \"",
+                                "type": "string"
                             },
                             {
-                                "innerText": "link-goto:\"OPEN \",\"Garage\"",
-                                "name": "linkgoto",
-                                "text": "(link-goto:\"OPEN \",\"Garage\")",
-                                "tokens": [
-                                    {
-                                        "text": "link-goto:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "innerText": "OPEN ",
-                                        "text": "\"OPEN \"",
-                                        "type": "string"
-                                    },
-                                    {
-                                        "text": ",",
-                                        "type": "comma"
-                                    },
-                                    {
-                                        "innerText": "Garage",
-                                        "text": "\"Garage\"",
-                                        "type": "string"
-                                    }
-                                ],
-                                "type": "macro"
+                                "text": ",",
+                                "type": "comma"
                             },
                             {
-                                "text": "\n",
-                                "type": "br"
+                                "innerText": "Garage",
+                                "text": "\"Garage\"",
+                                "type": "string"
                             }
                         ],
-                        "type": "collapsed"
+                        "type": "macro"
                     }
                 ]
             },
@@ -2127,12 +2112,12 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "TAKE NOTE",
-                        "name": "un",
-                        "text": "[TAKE NOTE]<un|",
+                        "innerText": "GET NOTE",
+                        "name": "tn",
+                        "text": "[GET NOTE]<tn|",
                         "tokens": [
                             {
-                                "text": "TAKE NOTE",
+                                "text": "GET NOTE",
                                 "type": "text"
                             }
                         ],
@@ -2143,12 +2128,12 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "TAKE GUN",
+                        "innerText": "GET GUN",
                         "name": "tg",
-                        "text": "[TAKE GUN]<tg|",
+                        "text": "[GET GUN]<tg|",
                         "tokens": [
                             {
-                                "text": "TAKE GUN",
+                                "text": "GET GUN",
                                 "type": "text"
                             }
                         ],
@@ -2159,28 +2144,12 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "USE GUN",
-                        "name": "ug",
-                        "text": "[USE GUN]<ug|",
+                        "innerText": "GEAR",
+                        "name": "ge",
+                        "text": "[GEAR]<ge|",
                         "tokens": [
                             {
-                                "text": "USE GUN",
-                                "type": "text"
-                            }
-                        ],
-                        "type": "hook"
-                    },
-                    {
-                        "text": " ",
-                        "type": "text"
-                    },
-                    {
-                        "innerText": "SHOOT GUN",
-                        "name": "ug",
-                        "text": "[SHOOT GUN]<ug|",
-                        "tokens": [
-                            {
-                                "text": "SHOOT GUN",
+                                "text": "GEAR",
                                 "type": "text"
                             }
                         ],
@@ -2520,83 +2489,6 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(append: ?c1)[(display: \"Gun_Logic\")]",
-                        "text": "[(append: ?c1)[(display: \"Gun_Logic\")]]",
-                        "tokens": [
-                            {
-                                "innerText": "append: ?c1",
-                                "name": "append",
-                                "text": "(append: ?c1)",
-                                "tokens": [
-                                    {
-                                        "text": "append:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "c1",
-                                        "text": "?c1",
-                                        "type": "hookRef"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "(display: \"Gun_Logic\")",
-                                "text": "[(display: \"Gun_Logic\")]",
-                                "tokens": [
-                                    {
-                                        "innerText": "display: \"Gun_Logic\"",
-                                        "name": "display",
-                                        "text": "(display: \"Gun_Logic\")",
-                                        "tokens": [
-                                            {
-                                                "text": "display:",
-                                                "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "innerText": "Gun_Logic",
-                                                "text": "\"Gun_Logic\"",
-                                                "type": "string"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    }
-                                ],
-                                "type": "hook"
-                            }
-                        ],
-                        "type": "hook"
-                    },
-                    {
-                        "innerText": "click: ?ug",
-                        "name": "click",
-                        "text": "(click: ?ug)",
-                        "tokens": [
-                            {
-                                "text": "click:",
-                                "type": "macroName"
-                            },
-                            {
-                                "text": " ",
-                                "type": "whitespace"
-                            },
-                            {
-                                "name": "ug",
-                                "text": "?ug",
-                                "type": "hookRef"
-                            }
-                        ],
-                        "type": "macro"
-                    },
-                    {
                         "innerText": "(append: ?c1)[(display: \"Gun_Logic2\")]",
                         "text": "[(append: ?c1)[(display: \"Gun_Logic2\")]]",
                         "tokens": [
@@ -2653,9 +2545,9 @@
                         "type": "hook"
                     },
                     {
-                        "innerText": "click: ?un",
+                        "innerText": "click: ?tn",
                         "name": "click",
-                        "text": "(click: ?un)",
+                        "text": "(click: ?tn)",
                         "tokens": [
                             {
                                 "text": "click:",
@@ -2666,8 +2558,8 @@
                                 "type": "whitespace"
                             },
                             {
-                                "name": "un",
-                                "text": "?un",
+                                "name": "tn",
+                                "text": "?tn",
                                 "type": "hookRef"
                             }
                         ],
@@ -2728,6 +2620,87 @@
                             }
                         ],
                         "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "click: ?ge",
+                        "name": "click",
+                        "text": "(click: ?ge)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "ge",
+                                "text": "?ge",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Gear\")]",
+                        "text": "[(append: ?c1)[(display: \"Gear\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Gear\")",
+                                "text": "[(display: \"Gear\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Gear\"",
+                                        "name": "display",
+                                        "text": "(display: \"Gear\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Gear",
+                                                "text": "\"Gear\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
                     }
                 ]
             },
@@ -2778,8 +2751,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $inv's GUN is true)[You already took the GUN.[TAKE GUN]<tg|](else:)[(set: $inv's GUN to true) You take the GUN.[TAKE GUN]<tg|]",
-                        "text": "[(if: $inv's GUN is true)[You already took the GUN.[TAKE GUN]<tg|](else:)[(set: $inv's GUN to true) You take the GUN.[TAKE GUN]<tg|]]",
+                        "innerText": "(if: $inv's GUN is true)[You already took the GUN.](else:)[(set: $inv's GUN to true) You take the GUN.]",
+                        "text": "[(if: $inv's GUN is true)[You already took the GUN.](else:)[(set: $inv's GUN to true) You take the GUN.]]",
                         "tokens": [
                             {
                                 "innerText": "if: $inv's GUN is true",
@@ -2824,24 +2797,12 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "You already took the GUN.[TAKE GUN]<tg|",
-                                "text": "[You already took the GUN.[TAKE GUN]<tg|]",
+                                "innerText": "You already took the GUN.",
+                                "text": "[You already took the GUN.]",
                                 "tokens": [
                                     {
                                         "text": "You already took the GUN.",
                                         "type": "text"
-                                    },
-                                    {
-                                        "innerText": "TAKE GUN",
-                                        "name": "tg",
-                                        "text": "[TAKE GUN]<tg|",
-                                        "tokens": [
-                                            {
-                                                "text": "TAKE GUN",
-                                                "type": "text"
-                                            }
-                                        ],
-                                        "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
@@ -2859,8 +2820,8 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(set: $inv's GUN to true) You take the GUN.[TAKE GUN]<tg|",
-                                "text": "[(set: $inv's GUN to true) You take the GUN.[TAKE GUN]<tg|]",
+                                "innerText": "(set: $inv's GUN to true) You take the GUN.",
+                                "text": "[(set: $inv's GUN to true) You take the GUN.]",
                                 "tokens": [
                                     {
                                         "innerText": "set: $inv's GUN to true",
@@ -2907,18 +2868,6 @@
                                     {
                                         "text": " You take the GUN.",
                                         "type": "text"
-                                    },
-                                    {
-                                        "innerText": "TAKE GUN",
-                                        "name": "tg",
-                                        "text": "[TAKE GUN]<tg|",
-                                        "tokens": [
-                                            {
-                                                "text": "TAKE GUN",
-                                                "type": "text"
-                                            }
-                                        ],
-                                        "type": "hook"
                                     }
                                 ],
                                 "type": "hook"
@@ -2939,24 +2888,12 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "What gun? [TAKE GUN]<tg|",
-                        "text": "[What gun? [TAKE GUN]<tg|]",
+                        "innerText": "What gun? ",
+                        "text": "[What gun? ]",
                         "tokens": [
                             {
                                 "text": "What gun? ",
                                 "type": "text"
-                            },
-                            {
-                                "innerText": "TAKE GUN",
-                                "name": "tg",
-                                "text": "[TAKE GUN]<tg|",
-                                "tokens": [
-                                    {
-                                        "text": "TAKE GUN",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
                             }
                         ],
                         "type": "hook"
@@ -2964,83 +2901,6 @@
                     {
                         "text": " ",
                         "type": "text"
-                    },
-                    {
-                        "innerText": "click: ?tg",
-                        "name": "click",
-                        "text": "(click: ?tg)",
-                        "tokens": [
-                            {
-                                "text": "click:",
-                                "type": "macroName"
-                            },
-                            {
-                                "text": " ",
-                                "type": "whitespace"
-                            },
-                            {
-                                "name": "tg",
-                                "text": "?tg",
-                                "type": "hookRef"
-                            }
-                        ],
-                        "type": "macro"
-                    },
-                    {
-                        "innerText": "(append: ?c1)[(display: \"Gun_Logic\")]",
-                        "text": "[(append: ?c1)[(display: \"Gun_Logic\")]]",
-                        "tokens": [
-                            {
-                                "innerText": "append: ?c1",
-                                "name": "append",
-                                "text": "(append: ?c1)",
-                                "tokens": [
-                                    {
-                                        "text": "append:",
-                                        "type": "macroName"
-                                    },
-                                    {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "name": "c1",
-                                        "text": "?c1",
-                                        "type": "hookRef"
-                                    }
-                                ],
-                                "type": "macro"
-                            },
-                            {
-                                "innerText": "(display: \"Gun_Logic\")",
-                                "text": "[(display: \"Gun_Logic\")]",
-                                "tokens": [
-                                    {
-                                        "innerText": "display: \"Gun_Logic\"",
-                                        "name": "display",
-                                        "text": "(display: \"Gun_Logic\")",
-                                        "tokens": [
-                                            {
-                                                "text": "display:",
-                                                "type": "macroName"
-                                            },
-                                            {
-                                                "text": " ",
-                                                "type": "whitespace"
-                                            },
-                                            {
-                                                "innerText": "Gun_Logic",
-                                                "text": "\"Gun_Logic\"",
-                                                "type": "string"
-                                            }
-                                        ],
-                                        "type": "macro"
-                                    }
-                                ],
-                                "type": "hook"
-                            }
-                        ],
-                        "type": "hook"
                     }
                 ]
             },
@@ -3091,8 +2951,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $inv's NOTE to true) You read the NOTE. Lots of numbers, but easy for your cyborg brain to take in.[TAKE NOTE]<un|",
-                        "text": "[(set: $inv's NOTE to true) You read the NOTE. Lots of numbers, but easy for your cyborg brain to take in.[TAKE NOTE]<un|]",
+                        "innerText": "(set: $inv's NOTE to true) You read the NOTE. Lots of numbers, but easy for your cyborg brain to take in.",
+                        "text": "[(set: $inv's NOTE to true) You read the NOTE. Lots of numbers, but easy for your cyborg brain to take in.]",
                         "tokens": [
                             {
                                 "innerText": "set: $inv's NOTE to true",
@@ -3139,18 +2999,6 @@
                             {
                                 "text": " You read the NOTE. Lots of numbers, but easy for your cyborg brain to take in.",
                                 "type": "text"
-                            },
-                            {
-                                "innerText": "TAKE NOTE",
-                                "name": "un",
-                                "text": "[TAKE NOTE]<un|",
-                                "tokens": [
-                                    {
-                                        "text": "TAKE NOTE",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
                             }
                         ],
                         "type": "hook"
@@ -3168,24 +3016,12 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "What note? [TAKE NOTE]<un|",
-                        "text": "[What note? [TAKE NOTE]<un|]",
+                        "innerText": "What note?",
+                        "text": "[What note?]",
                         "tokens": [
                             {
-                                "text": "What note? ",
+                                "text": "What note?",
                                 "type": "text"
-                            },
-                            {
-                                "innerText": "TAKE NOTE",
-                                "name": "un",
-                                "text": "[TAKE NOTE]<un|",
-                                "tokens": [
-                                    {
-                                        "text": "TAKE NOTE",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
                             }
                         ],
                         "type": "hook"
@@ -3195,9 +3031,21 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "click: ?un",
+                        "innerText": "GET NOTE",
+                        "name": "tn",
+                        "text": "[GET NOTE]<tn|",
+                        "tokens": [
+                            {
+                                "text": "GET NOTE",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "click: ?ut",
                         "name": "click",
-                        "text": "(click: ?un)",
+                        "text": "(click: ?ut)",
                         "tokens": [
                             {
                                 "text": "click:",
@@ -3208,8 +3056,8 @@
                                 "type": "whitespace"
                             },
                             {
-                                "name": "un",
-                                "text": "?un",
+                                "name": "ut",
+                                "text": "?ut",
                                 "type": "hookRef"
                             }
                         ],
@@ -4007,22 +3855,6 @@
                         "tokens": [
                             {
                                 "text": "USE GUN",
-                                "type": "text"
-                            }
-                        ],
-                        "type": "hook"
-                    },
-                    {
-                        "text": " ",
-                        "type": "text"
-                    },
-                    {
-                        "innerText": "SHOOT GUN",
-                        "name": "ug",
-                        "text": "[SHOOT GUN]<ug|",
-                        "tokens": [
-                            {
-                                "text": "SHOOT GUN",
                                 "type": "text"
                             }
                         ],
@@ -5305,44 +5137,12 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "TAKE FOB",
-                        "name": "tf",
-                        "text": "[TAKE FOB]<tf|",
-                        "tokens": [
-                            {
-                                "text": "TAKE FOB",
-                                "type": "text"
-                            }
-                        ],
-                        "type": "hook"
-                    },
-                    {
-                        "text": " ",
-                        "type": "text"
-                    },
-                    {
                         "innerText": "GET FOB",
                         "name": "tf",
                         "text": "[GET FOB]<tf|",
                         "tokens": [
                             {
                                 "text": "GET FOB",
-                                "type": "text"
-                            }
-                        ],
-                        "type": "hook"
-                    },
-                    {
-                        "text": " ",
-                        "type": "text"
-                    },
-                    {
-                        "innerText": "TAKE COAT",
-                        "name": "tc",
-                        "text": "[TAKE COAT]<tc|",
-                        "tokens": [
-                            {
-                                "text": "TAKE COAT",
                                 "type": "text"
                             }
                         ],
@@ -5497,12 +5297,12 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "SHOOT GUN",
-                        "name": "ug",
-                        "text": "[SHOOT GUN]<ug|",
+                        "innerText": "GEAR",
+                        "name": "ge",
+                        "text": "[GEAR]<ge|",
                         "tokens": [
                             {
-                                "text": "SHOOT GUN",
+                                "text": "GEAR",
                                 "type": "text"
                             }
                         ],
@@ -6317,6 +6117,83 @@
                             }
                         ],
                         "type": "hook"
+                    },
+                    {
+                        "innerText": "click: ?ge",
+                        "name": "click",
+                        "text": "(click: ?ge)",
+                        "tokens": [
+                            {
+                                "text": "click:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "ge",
+                                "text": "?ge",
+                                "type": "hookRef"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "(append: ?c1)[(display: \"Gear\")]",
+                        "text": "[(append: ?c1)[(display: \"Gear\")]]",
+                        "tokens": [
+                            {
+                                "innerText": "append: ?c1",
+                                "name": "append",
+                                "text": "(append: ?c1)",
+                                "tokens": [
+                                    {
+                                        "text": "append:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "c1",
+                                        "text": "?c1",
+                                        "type": "hookRef"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "(display: \"Gear\")",
+                                "text": "[(display: \"Gear\")]",
+                                "tokens": [
+                                    {
+                                        "innerText": "display: \"Gear\"",
+                                        "name": "display",
+                                        "text": "(display: \"Gear\")",
+                                        "tokens": [
+                                            {
+                                                "text": "display:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "Gear",
+                                                "text": "\"Gear\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    }
+                                ],
+                                "type": "hook"
+                            }
+                        ],
+                        "type": "hook"
                     }
                 ]
             },
@@ -7013,8 +6890,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $location's WAREHOUSE is true and $infected is true)[(set:$read_log to true) You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]](else-if: $location's WAREHOUSE is true and $infected is false )[You read the LOG. Nothing on here you need right now.](else-if: $location's SERVER is true)[This would be more USEful in the warehouse.]",
-                        "text": "[(if: $location's WAREHOUSE is true and $infected is true)[(set:$read_log to true) You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]](else-if: $location's WAREHOUSE is true and $infected is false )[You read the LOG. Nothing on here you need right now.](else-if: $location's SERVER is true)[This would be more USEful in the warehouse.]]",
+                        "innerText": "(if: $location's WAREHOUSE is true and $infected is true)[(set:$read_log to true) You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]](else-if: $location's WAREHOUSE is true and $infected is false )[You read the LOG. Nothing on here you need right now.](else-if: $location's SERVER is true)[This would be more USEful in the warehouse.]",
+                        "text": "[(if: $location's WAREHOUSE is true and $infected is true)[(set:$read_log to true) You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]](else-if: $location's WAREHOUSE is true and $infected is false )[You read the LOG. Nothing on here you need right now.](else-if: $location's SERVER is true)[This would be more USEful in the warehouse.]]",
                         "tokens": [
                             {
                                 "innerText": "if: $location's WAREHOUSE is true and $infected is true",
@@ -7092,8 +6969,8 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(set:$read_log to true) You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]",
-                                "text": "[(set:$read_log to true) You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]]",
+                                "innerText": "(set:$read_log to true) You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]",
+                                "text": "[(set:$read_log to true) You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]]",
                                 "tokens": [
                                     {
                                         "innerText": "set:$read_log to true",
@@ -7130,22 +7007,6 @@
                                     },
                                     {
                                         "text": " You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. ",
-                                        "type": "text"
-                                    },
-                                    {
-                                        "innerText": "TAKE CURE",
-                                        "name": "tc",
-                                        "text": "[TAKE CURE]<tc|",
-                                        "tokens": [
-                                            {
-                                                "text": "TAKE CURE",
-                                                "type": "text"
-                                            }
-                                        ],
-                                        "type": "hook"
-                                    },
-                                    {
-                                        "text": " ",
                                         "type": "text"
                                     },
                                     {

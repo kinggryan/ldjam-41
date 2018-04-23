@@ -377,20 +377,16 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("OPEN");
 		}
 		yield return text(" ");
-		using (Group("hook", "un")) {
-			yield return text("TAKE NOTE");
+		using (Group("hook", "tn")) {
+			yield return text("GET NOTE");
 		}
 		yield return text(" ");
 		using (Group("hook", "tg")) {
-			yield return text("TAKE GUN");
+			yield return text("GET GUN");
 		}
 		yield return text(" ");
-		using (Group("hook", "ug")) {
-			yield return text("USE GUN");
-		}
-		yield return text(" ");
-		using (Group("hook", "ug")) {
-			yield return text("SHOOT GUN");
+		using (Group("hook", "ge")) {
+			yield return text("GEAR");
 		}
 		yield return text(" ");
 		yield return enchantIntoLink(hookRef("lo"), passage6_Fragment_1);
@@ -398,8 +394,9 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return enchantIntoLink(hookRef("no"), passage6_Fragment_5);
 		yield return enchantIntoLink(hookRef("ha"), passage6_Fragment_7);
 		yield return enchantIntoLink(hookRef("tg"), passage6_Fragment_9);
-		yield return enchantIntoLink(hookRef("ug"), passage6_Fragment_11);
-		yield return enchantIntoLink(hookRef("un"), passage6_Fragment_13);
+		yield return enchantIntoLink(hookRef("tn"), passage6_Fragment_11);
+		yield return text(" ");
+		yield return enchantIntoLink(hookRef("ge"), passage6_Fragment_13);
 		yield break;
 	}
 
@@ -453,7 +450,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage6_Fragment_8()
 	{
-		yield return passage("Gun_Logic");
+		yield return passage("Gun_Logic2");
 		yield break;
 	}
 
@@ -465,7 +462,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage6_Fragment_10()
 	{
-		yield return passage("Gun_Logic2");
+		yield return passage("Note_Logic");
 		yield break;
 	}
 
@@ -477,7 +474,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage6_Fragment_12()
 	{
-		yield return passage("Note_Logic");
+		yield return passage("Gear");
 		yield break;
 	}
 
@@ -501,40 +498,19 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		if(Vars.look_desk == true) {
 			if(Vars.inv["GUN"] == true) {
 				yield return text("You already took the GUN.");
-				using (Group("hook", "tg")) {
-					yield return text("TAKE GUN");
-				}
 			}
 			else {
 				Vars.inv["GUN"]  = true;
 				yield return text(" You take the GUN.");
-				using (Group("hook", "tg")) {
-					yield return text("TAKE GUN");
-				}
 			}
 		}
 		else {
 			yield return text("What gun? ");
-			using (Group("hook", "tg")) {
-				yield return text("TAKE GUN");
-			}
 		}
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("tg"), passage7_Fragment_1);
 		yield break;
 	}
 
-	IStoryThread passage7_Fragment_0()
-	{
-		yield return passage("Gun_Logic");
-		yield break;
-	}
-
-	IStoryThread passage7_Fragment_1()
-	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage7_Fragment_0);
-		yield break;
-	}
 
 	// .............
 	// #8: Note_Logic
@@ -550,18 +526,15 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		if(Vars.look_desk == true) {
 			Vars.inv["NOTE"]  = true;
 			yield return text(" You read the NOTE. Lots of numbers, but easy for your cyborg brain to take in.");
-			using (Group("hook", "un")) {
-				yield return text("TAKE NOTE");
-			}
 		}
 		else {
-			yield return text("What note? ");
-			using (Group("hook", "un")) {
-				yield return text("TAKE NOTE");
-			}
+			yield return text("What note?");
 		}
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("un"), passage8_Fragment_1);
+		using (Group("hook", "tn")) {
+			yield return text("GET NOTE");
+		}
+		yield return enchantIntoLink(hookRef("ut"), passage8_Fragment_1);
 		yield break;
 	}
 
@@ -626,10 +599,6 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return lineBreak();
 		using (Group("hook", "ug")) {
 			yield return text("USE GUN");
-		}
-		yield return text(" ");
-		using (Group("hook", "ug")) {
-			yield return text("SHOOT GUN");
 		}
 		yield return text(" ");
 		yield return enchantIntoLink(hookRef("ug"), passage9_Fragment_1);
@@ -711,15 +680,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		}
 		yield return text(" ");
 		using (Group("hook", "tf")) {
-			yield return text("TAKE FOB");
-		}
-		yield return text(" ");
-		using (Group("hook", "tf")) {
 			yield return text("GET FOB");
-		}
-		yield return text(" ");
-		using (Group("hook", "tc")) {
-			yield return text("TAKE COAT");
 		}
 		yield return text(" ");
 		using (Group("hook", "tc")) {
@@ -758,8 +719,8 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("USE GUN");
 		}
 		yield return text(" ");
-		using (Group("hook", "ug")) {
-			yield return text("SHOOT GUN");
+		using (Group("hook", "ge")) {
+			yield return text("GEAR");
 		}
 		yield return text(" ");
 		yield return enchantIntoLink(hookRef("lo"), passage11_Fragment_1);
@@ -781,6 +742,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return enchantIntoLink(hookRef("ha"), passage11_Fragment_17);
 		yield return text(" ");
 		yield return enchantIntoLink(hookRef("ug"), passage11_Fragment_19);
+		yield return enchantIntoLink(hookRef("ge"), passage11_Fragment_21);
 		yield break;
 	}
 
@@ -904,6 +866,18 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield break;
 	}
 
+	IStoryThread passage11_Fragment_20()
+	{
+		yield return passage("Gear");
+		yield break;
+	}
+
+	IStoryThread passage11_Fragment_21()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage11_Fragment_20);
+		yield break;
+	}
+
 	// .............
 	// #12: Fob_Logic
 
@@ -1012,10 +986,6 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			if(Vars.location["WAREHOUSE"] == true && Vars.infected == true) {
 				Vars.read_log  = true;
 				yield return text(" You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. ");
-				using (Group("hook", "tc")) {
-					yield return text("TAKE CURE");
-				}
-				yield return text(" ");
 				using (Group("hook", "tc")) {
 					yield return text("USE CURE");
 				}
