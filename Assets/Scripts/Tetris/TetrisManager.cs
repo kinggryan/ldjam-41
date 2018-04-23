@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class TetrisManager : MonoBehaviour {
 
+    struct CommandReturnTuple
+    {
+        public readonly LetterGenerator.WeightedCommand command;
+        public readonly string word;
+
+        public CommandReturnTuple(LetterGenerator.WeightedCommand command, string word)
+        {
+            this.command = command;
+            this.word = word;
+        }
+    }
+
     private TetrisDisplay display;
     private TextrisTwinePlayer twinePlayer;
 
@@ -177,9 +189,9 @@ public class TetrisManager : MonoBehaviour {
         {
             var command = GetCommandFromLine(y);
 
-            if (command.command != TwineTextPlayer.Command.None)
+            if (command.command.command != TwineTextPlayer.Command.None)
             {
-                display.UpdateBoardWithCommandOnLine(tetrisBoard, command.name, y);
+                display.UpdateBoardWithCommandOnLine(tetrisBoard, command.word, y);
             }
 
             if(IsLineComplete(y))
@@ -188,15 +200,16 @@ public class TetrisManager : MonoBehaviour {
             }
 
             // Do something with the command
-            if (command.command != TwineTextPlayer.Command.None || IsLineComplete(y))
+            if (command.command.command != TwineTextPlayer.Command.None || IsLineComplete(y))
             {
                 RemoveLineAndMoveAboveLinesDown(y);
                 didEraseLine = true;
             }
 
-            if (command.command != TwineTextPlayer.Command.None)
+            if (command.command.command != TwineTextPlayer.Command.None)
             {
-                twinePlayer.DoCommand(command.command);
+                twinePlayer.DoCommand(command.command.command);
+                twinePlayer.TypeCommand(command.word);
                 return true;
             }
         }
@@ -219,7 +232,7 @@ public class TetrisManager : MonoBehaviour {
         return true;
     }
 
-    LetterGenerator.WeightedCommand GetCommandFromLine(int yCoord)
+    CommandReturnTuple GetCommandFromLine(int yCoord)
     {
         var lineString = "";
 
@@ -254,14 +267,13 @@ public class TetrisManager : MonoBehaviour {
 
                 if (wasFound)
                 {
-                    // HACK; This is not functional and bad but it's faster than doing it the proper way
-                    twinePlayer.TypeCommand(textToUse);
-                    return command;
+                    //twinePlayer.TypeCommand(textToUse);
+                    return new CommandReturnTuple(command, textToUse);
                 }
             }
         }
 
-        return new LetterGenerator.WeightedCommand(TwineTextPlayer.Command.None, "", 0, new string[] { });
+        return new CommandReturnTuple( new LetterGenerator.WeightedCommand(TwineTextPlayer.Command.None, "", 0, new string[] { }), "" );
     }
 
     void RemoveLineAndMoveAboveLinesDown(int yCoord)
