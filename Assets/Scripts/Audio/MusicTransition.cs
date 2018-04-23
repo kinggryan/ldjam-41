@@ -13,8 +13,9 @@ public class MusicTransition : MonoBehaviour {
 	public float vertTargetVol;
 	public float vertStartVol;
 	public float fadeAfterTime;
+	public bool fadeAfterInterval;
+	private float timer = 0;
 	private bool transition = false;
-	public float timer = 0;
 
 	public void ChangeMusic(){
 		print("changing music");
@@ -58,7 +59,7 @@ public class MusicTransition : MonoBehaviour {
 				if (destination.externalVolumeModifier >= vertTargetVol && fadeAfterTime <= 0){
 					transition = false;
 				}
-				else if (timer >= fadeAfterTime){
+				else if (timer >= fadeAfterTime && fadeAfterInterval){
 					destination.externalVolumeModifier -= (Time.deltaTime / transitionTime) * (vertTargetVol - vertStartVol);
 
 					if (destination.externalVolumeModifier <= 0){

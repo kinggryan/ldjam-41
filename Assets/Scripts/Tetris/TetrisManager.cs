@@ -19,10 +19,10 @@ public class TetrisManager : MonoBehaviour {
     public bool playingEnabled;
 
     private TetrisDisplay display;
-    private TextrisTwinePlayer twinePlayer;
+    private TwineTextPlayer twinePlayer;
 
     private int boardSizeX = 10;
-    private int boardSizeY = 26;
+    public int boardSizeY = 26;
 
     private char[,] tetrisBoard;
     private TetrisBlock currentBlock;
@@ -35,7 +35,7 @@ public class TetrisManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         display = Object.FindObjectOfType<TetrisDisplay>();
-        twinePlayer = Object.FindObjectOfType<TextrisTwinePlayer>();
+        twinePlayer = Object.FindObjectOfType<TwineTextPlayer>();
         soundEngine = Object.FindObjectOfType<SoundEngine>();
 
         tetrisBoard = new char[boardSizeX, boardSizeY];
@@ -115,6 +115,10 @@ public class TetrisManager : MonoBehaviour {
             currentBlock = GetNextBlock();
 
         PerformNextDownwardMove();
+        if(CheckForCompleteColumns()){
+            LoseGame();
+        }
+        
     }
 
     void PerformNextDownwardMove()
@@ -128,7 +132,9 @@ public class TetrisManager : MonoBehaviour {
         blockCanKeepMoving = currentBlock.MoveDown(tetrisBoard);
         if(!blockCanKeepMoving)
         {
-            
+            if(currentBlock.IsBlockAbovePlayArea(boardSizeY)){
+                LoseGame();
+            }
             tetrisBoard = currentBlock.AddToBoard(tetrisBoard);
             soundEngine.PlaySoundWithName("BlockLand");
             currentBlock = null;
@@ -221,6 +227,8 @@ public class TetrisManager : MonoBehaviour {
         return didEraseLine;
     }
 
+    
+
     bool IsLineComplete(int yCoord)
     {
        // Debug.Log("Line " + yCoord);
@@ -235,6 +243,36 @@ public class TetrisManager : MonoBehaviour {
 
         return true;
     }
+
+    bool CheckForCompleteColumns(){
+        for (var x = boardSizeX - 1; x >= 0; x--)
+            if(IsColumnComplete(x)){
+                return true;
+            }
+        
+        return false;
+    }
+
+    bool IsColumnComplete(int xCoord)
+        {
+        // Debug.Log("Line " + yCoord);
+            for(var y = 0; y < boardSizeY; y++)
+            {
+            // Debug.Log("is " + tetrisBoard[x, yCoord]);
+                if(tetrisBoard[xCoord,y] == ' ')
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+    void LoseGame(){
+        Debug.Log("GAME OVER");
+        Application.LoadLevel("Lose");
+    }
+
 
     CommandReturnTuple GetCommandFromLine(int yCoord)
     {

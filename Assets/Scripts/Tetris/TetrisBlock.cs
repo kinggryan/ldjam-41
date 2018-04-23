@@ -10,6 +10,15 @@ public class TetrisBlock {
     protected int localOriginX;
     protected int localOriginY;
 
+    public virtual bool IsBlockAbovePlayArea(int playAreaHeight){
+        // Debug.Log("Block position: " + positionY + " areaHeight: " + playAreaHeight);
+        if(positionY >= playAreaHeight - 3){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
 	// Returns true if the rotation was successful
     public virtual bool RotateClockwise(char[,] board)
     {
