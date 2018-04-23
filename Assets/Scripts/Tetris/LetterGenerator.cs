@@ -23,30 +23,28 @@ public static class LetterGenerator {
 
     // SHOULD BE CONST
     public static WeightedCommand[] fullWeightedCommandsList = new WeightedCommand[] {
-        new WeightedCommand( TwineTextPlayer.Command.North, "NORTH", 1, new string[]{ "UP" }),
-        new WeightedCommand( TwineTextPlayer.Command.South, "SOUTH", 1, new string[]{ "DOWN" }),
-        new WeightedCommand( TwineTextPlayer.Command.East, "EAST", 1, new string[]{ "RIGHT" }),
-        new WeightedCommand( TwineTextPlayer.Command.West, "WEST", 1, new string[]{ "LEFT" }),
-        new WeightedCommand( TwineTextPlayer.Command.Open, "OPEN", 1, new string[]{ "UP" }),
+        new WeightedCommand( TwineTextPlayer.Command.North, "NORTH", 1, new string[]{ "UP", "NOR", "OPEN" }),
+        new WeightedCommand( TwineTextPlayer.Command.South, "SOUTH", 1, new string[]{ "DOWN", "SOU" }),
+        new WeightedCommand( TwineTextPlayer.Command.East, "EAST", 1, new string[]{  "EAS" }),
+        new WeightedCommand( TwineTextPlayer.Command.West, "WEST", 1, new string[]{ "LEFT", "WES" }),
+        new WeightedCommand( TwineTextPlayer.Command.Open, "OPEN", 1, new string[]{ }),
         new WeightedCommand( TwineTextPlayer.Command.Hack, "HACK", 1, new string[]{ }),
-        new WeightedCommand( TwineTextPlayer.Command.Look, "LOOK", 1, new string[]{ "SEARCH" }),
-        new WeightedCommand( TwineTextPlayer.Command.Talk, "TALK", 1, new string[]{ "SPEAK" }),
+        new WeightedCommand( TwineTextPlayer.Command.Look, "LOOK", 1, new string[]{ "SEARCH", "PEER", "GAPE", "OGLE", "SCAN", "PROBE", "SEEK", "PEEK" }),
+        new WeightedCommand( TwineTextPlayer.Command.Talk, "TALK", 1, new string[]{ "SPEAK", "HELLO", "CHAT", "GAB", "CONFAB"}),
 
         // And all the item commands
-        new WeightedCommand( TwineTextPlayer.Command.UseTape, "USETAPE", 1, new string[]{"TAPE" }),
-        new WeightedCommand( TwineTextPlayer.Command.UseLog, "USELOG", 1, new string[]{ "LOG"}),
-        new WeightedCommand( TwineTextPlayer.Command.UseGun, "USEGUN", 1, new string[]{"GUN" }),
+        new WeightedCommand( TwineTextPlayer.Command.UseTape, "USETAPE", 1, new string[]{"TAPE" ,"SPOOL" }),
+        new WeightedCommand( TwineTextPlayer.Command.UseLog, "USELOG", 1, new string[]{ "LOG", "RECORD", "BOOK"}),
+        new WeightedCommand( TwineTextPlayer.Command.UseGun, "USEGUN", 1, new string[]{"GUN", "ARM", "GAT" }),
         new WeightedCommand( TwineTextPlayer.Command.UseFob, "USEFOB", 1, new string[]{"FOB" }),
-        new WeightedCommand( TwineTextPlayer.Command.UseBoard, "USEBOARD", 1, new string[]{ "BOARD"}),
-
-        new WeightedCommand( TwineTextPlayer.Command.GetTape, "GETTAPE", 1, new string[]{"TAPE" }),
-        new WeightedCommand( TwineTextPlayer.Command.GetLog, "GETLOG", 1, new string[]{"LOG"}),
-        new WeightedCommand( TwineTextPlayer.Command.GetGun, "GETGUN", 1, new string[]{"GUN" }),
+        new WeightedCommand( TwineTextPlayer.Command.GetTape, "GETTAPE", 1, new string[]{"TAPE","SPOOL" }),
+        new WeightedCommand( TwineTextPlayer.Command.GetLog, "GETLOG", 1, new string[]{"LOG","RECORD", "BOOK"}),
+        new WeightedCommand( TwineTextPlayer.Command.GetGun, "GETGUN", 1, new string[]{"GUN", "ARM", "GAT"}),
         new WeightedCommand( TwineTextPlayer.Command.GetFob, "GETFOB", 1, new string[]{"FOB" }),
-        new WeightedCommand( TwineTextPlayer.Command.GetBoard, "GETBOARD", 1, new string[]{ "BOARD"}),
-        new WeightedCommand( TwineTextPlayer.Command.GetNote, "GETNOTE", 1, new string[]{ "NOTE"}),
-        new WeightedCommand( TwineTextPlayer.Command.GetCoat, "GETCOAT", 1, new string[]{ "COAT"}),
-        new WeightedCommand( TwineTextPlayer.Command.GetCoat, "GEAR", 1, new string[]{ })
+        new WeightedCommand( TwineTextPlayer.Command.GetNote, "GETNOTE", 1, new string[]{ "NOTE", "LETTER"}),
+        new WeightedCommand( TwineTextPlayer.Command.GetCoat, "GETCOAT", 1, new string[]{ "COAT", "CLOTH", "GARB"}),
+        new WeightedCommand( TwineTextPlayer.Command.GetCoat, "END", 1, new string[]{ }),
+        new WeightedCommand( TwineTextPlayer.Command.GetCoat, "GEAR", 1, new string[]{ "TOOL", "STUFF", "BAG"})
 
 
         //North,
