@@ -10,6 +10,11 @@ public class TextrisTwinePlayer : TwineTextPlayer {
     public UnityEngine.UI.Text storyText;
     string targetText = "";
 
+    public override void TypeCommand(string command)
+    {
+        targetText += command + "\n\n";
+    }
+
     private void Update()
     {
         updateTextStepTimer -= Time.deltaTime;
@@ -32,13 +37,13 @@ public class TextrisTwinePlayer : TwineTextPlayer {
 
     public override void DisplayOutput(StoryOutput output)
     {
-        //Debug.Log("Doing output: " + output.Text);
+        Debug.Log("Doing output: " + output.Text);
         if (output is StoryText)
         {
             var text = (StoryText)output;
             if (!string.IsNullOrEmpty(text.Text))
             {
-                targetText += text.Text.ToUpper();
+                targetText += text.Text.Replace('’', '\'');
             }
         }
         else if (output is StoryLink)
@@ -62,7 +67,7 @@ public class TextrisTwinePlayer : TwineTextPlayer {
         }
         else if (output is LineBreak)
         {
-            targetText += "\n";
+            targetText += "\n\n";
         }
         //else if (output is OutputGroup)
         //{

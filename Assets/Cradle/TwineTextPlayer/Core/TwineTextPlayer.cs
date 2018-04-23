@@ -112,7 +112,6 @@ public class TwineTextPlayer : MonoBehaviour {
 
 		if (StartStory)
 			this.Story.Begin();
-			DoCommand(Command.Begin);
 	}
 
 	void OnDestroy()
@@ -272,8 +271,13 @@ public class TwineTextPlayer : MonoBehaviour {
 						
 			}
 		}
+
+        TypeCommand(commandText);
 		return true ; 
 	}
+
+    // HACK: This is bad programming but fuck it
+    public virtual void TypeCommand(string command) { }
 
     public Command[] GetCurrentPossibleCommands()
     {

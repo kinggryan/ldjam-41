@@ -5,7 +5,7 @@ using UnityEngine;
 public class TetrisManager : MonoBehaviour {
 
     private TetrisDisplay display;
-    private TwineTextPlayer twinePlayer;
+    private TextrisTwinePlayer twinePlayer;
 
     private int boardSizeX = 10;
     private int boardSizeY = 26;
@@ -21,7 +21,7 @@ public class TetrisManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         display = Object.FindObjectOfType<TetrisDisplay>();
-        twinePlayer = Object.FindObjectOfType<TwineTextPlayer>();
+        twinePlayer = Object.FindObjectOfType<TextrisTwinePlayer>();
         soundEngine = Object.FindObjectOfType<SoundEngine>();
 
         tetrisBoard = new char[boardSizeX, boardSizeY];
