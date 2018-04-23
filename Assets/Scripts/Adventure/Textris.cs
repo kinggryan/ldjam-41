@@ -124,7 +124,20 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	#endregion
 
 	// .............
+	
+	// Stuff Travis Added
+	private SoundEngine soundEngine;
+	private MusicEngine musicEngine;
+	
+	void Start(){
+		soundEngine = Object.FindObjectOfType<SoundEngine>();
+		musicEngine = Object.FindObjectOfType<MusicEngine>();
+	}
+	
+	
 	// #1: Title
+
+	
 
 	void passage1_Init()
 	{
@@ -367,6 +380,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["SECURITY"]  = false;
 		Vars.location["CLEAN"]  = false;
 		if(! (macros1.history() .Contains("Garage"))) {
+			musicEngine.ChangeMusicWithName("EnterGarage");
 			yield return text("You pound on the hatch. Springs open. You haul yourself out of the tank.");
 			yield return lineBreak();
 			yield return text("You’re in a garage. Door to the NORTH, keypad next to it. CAMERA in the northeast and northwest. A desk with several drawers. Feel something in your pocket. You check, find an audio TAPE.");

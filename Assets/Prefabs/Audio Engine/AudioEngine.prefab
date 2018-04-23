@@ -531,14 +531,14 @@ MonoBehaviour:
   random: 0
   sequence: 0
   playOnAwake: 1
-  volume: 0
+  volume: 1
   pitch: 0
   pitchRandomization: 0
-  fadeInTime: 5
+  fadeInTime: 80
   fadeOutTime: 0
   fadeOutTimer: 1
   audioClip:
-  - {fileID: 8300000, guid: add8742b4d7dedf4684894ba22adc5d1, type: 3}
+  - {fileID: 8300000, guid: 41f0853cfe12f1f47b5a66f70dc07a98, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -568,11 +568,11 @@ MonoBehaviour:
   volume: 1
   pitch: 0
   pitchRandomization: 0
-  fadeInTime: 5
+  fadeInTime: 10
   fadeOutTime: 0
   fadeOutTimer: 1
   audioClip:
-  - {fileID: 8300000, guid: 5e25229a73e879c438d9734c74643f29, type: 3}
+  - {fileID: 8300000, guid: 2b637125d39dc0b4d8c04460e2b26ebe, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -629,8 +629,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b57387a3caa13f049a79050ab3a07109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
-  destination: {fileID: 114057775354726758}
+  source: {fileID: 114495109675411230}
+  destination: {fileID: 114495109675411230}
   transitionTime: 5
   crossfade: 0
   verticalLayer: 1
@@ -660,7 +660,7 @@ MonoBehaviour:
   fadeOutTime: 0
   fadeOutTimer: 1
   audioClip:
-  - {fileID: 8300000, guid: 855c1824d7517f542a3278c1d6f3dae6, type: 3}
+  - {fileID: 8300000, guid: ae976b922b9284a4ea1cf1c131616d4d, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -732,14 +732,14 @@ MonoBehaviour:
   random: 0
   sequence: 0
   playOnAwake: 1
-  volume: 0
+  volume: 1
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 5
   fadeOutTime: 0
   fadeOutTimer: 1
   audioClip:
-  - {fileID: 8300000, guid: fa19d4a8460af97429d3876b6fb23b8d, type: 3}
+  - {fileID: 8300000, guid: 8ef827f6843726e48a1721a05479f245, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -823,7 +823,7 @@ MonoBehaviour:
   fadeOutTime: 0
   fadeOutTimer: 1
   audioClip:
-  - {fileID: 8300000, guid: 1990ba7cbd7b4c44b83fdd18abb54ad1, type: 3}
+  - {fileID: 8300000, guid: a12053f80392e0940bb1f532df140330, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
