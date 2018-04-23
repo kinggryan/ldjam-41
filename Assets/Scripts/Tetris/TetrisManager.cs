@@ -16,6 +16,8 @@ public class TetrisManager : MonoBehaviour {
         }
     }
 
+    public bool playingEnabled;
+
     private TetrisDisplay display;
     private TextrisTwinePlayer twinePlayer;
 
@@ -52,7 +54,9 @@ public class TetrisManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        gameStepTimer -= Time.deltaTime;
+        if(playingEnabled)
+            gameStepTimer -= Time.deltaTime;
+
         if(gameStepTimer <= 0)
         {
             gameStepTimer += gameStepsDuration;
@@ -208,8 +212,8 @@ public class TetrisManager : MonoBehaviour {
 
             if (command.command.command != TwineTextPlayer.Command.None)
             {
-                twinePlayer.DoCommand(command.command.command);
                 twinePlayer.TypeCommand(command.word);
+                twinePlayer.DoCommand(command.command.command);
                 return true;
             }
         }
