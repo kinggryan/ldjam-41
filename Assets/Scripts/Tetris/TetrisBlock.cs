@@ -9,7 +9,22 @@ public class TetrisBlock {
     protected int positionY;
     protected int localOriginX;
     protected int localOriginY;
+    private TetrisManager tetrisManager;
 
+    void Start(){
+        tetrisManager = Object.FindObjectOfType<TetrisManager>();
+    }
+
+    public virtual bool IsBlockAbovePlayArea(int playAreaHeight){
+        Debug.Log("Checking if Blckk in PLay Area. Block position: " + positionY + " areaHeight: " + playAreaHeight);
+        if(positionY >= playAreaHeight - 3){
+            Debug.Log("Block ABOVE PLAY AREA");
+            return true;
+        }else{
+            return false;
+        }
+
+    }
 	// Returns true if the rotation was successful
     public virtual bool RotateClockwise(char[,] board)
     {
