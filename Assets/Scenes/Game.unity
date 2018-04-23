@@ -1245,7 +1245,7 @@ MonoBehaviour:
   AutoDisplay: 1
   ShowNamedLinks: 1
   updateTextStepDuration: 0.05
-  updateTextStepTimer: -427.80597
+  updateTextStepTimer: -428.2127
   storyText: {fileID: 1114789946}
 --- !u!114 &1480000015
 MonoBehaviour:
@@ -1258,10 +1258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27f18305c3b884d129f8992f48fbcadc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoPlay: 0
-  StartPassage: Title
-  AdditionalCues: []
-  DebugMode: 0
 --- !u!1 &1484020992
 GameObject:
   m_ObjectHideFlags: 0

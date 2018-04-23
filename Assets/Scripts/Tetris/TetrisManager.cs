@@ -19,7 +19,7 @@ public class TetrisManager : MonoBehaviour {
     public bool playingEnabled;
 
     private TetrisDisplay display;
-    private TwineTextPlayer twinePlayer;
+    private TextrisTwinePlayer twinePlayer;
 
     private int boardSizeX = 10;
     public int boardSizeY = 26;
@@ -35,7 +35,7 @@ public class TetrisManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         display = Object.FindObjectOfType<TetrisDisplay>();
-        twinePlayer = Object.FindObjectOfType<TwineTextPlayer>();
+        twinePlayer = Object.FindObjectOfType<TextrisTwinePlayer>();
         soundEngine = Object.FindObjectOfType<SoundEngine>();
 
         tetrisBoard = new char[boardSizeX, boardSizeY];
@@ -115,8 +115,14 @@ public class TetrisManager : MonoBehaviour {
             currentBlock = GetNextBlock();
 
         PerformNextDownwardMove();
-        if(CheckForCompleteColumns()){
+
+        if(CheckForCompleteColumns() || CheckForDeathInTwine()){
             LoseGame();
+        }
+
+        if(CheckForWinInTwine())
+        {
+                WinGame();
         }
         
     }
@@ -227,7 +233,52 @@ public class TetrisManager : MonoBehaviour {
         return didEraseLine;
     }
 
-    
+        bool CheckForCompleteColumns()
+        {
+        // Check for complete lines
+        // Go from the top down so we don't have to recheck lines if they move down
+        var didEraseColumn = false;
+        for (var x = boardSizeX - 1; x >= 0; x--)
+        {
+            var command = GetCommandFromColumn(x);
+
+            if (command.command.command != TwineTextPlayer.Command.None)
+            {
+                display.UpdateBoardWithCommandOnLine(tetrisBoard, command.word, x);
+            }
+
+            if(IsColumnComplete(x))
+            {
+                display.UpdateBoardWithCompleteLine(tetrisBoard, x);
+            }
+
+            // Do something with the command
+            if (command.command.command != TwineTextPlayer.Command.None || IsColumnComplete(x))
+            {
+                //RemoveLineAndMoveAboveLinesDown(y);
+                didEraseColumn = true;
+            }
+
+            if (command.command.command != TwineTextPlayer.Command.None)
+            {
+                twinePlayer.TypeCommand(command.word);
+                twinePlayer.DoCommand(command.command.command);
+                return true;
+            }
+        }
+
+        return didEraseColumn;
+    }
+
+    bool CheckForDeathInTwine()
+    {
+        return twinePlayer.GetTwineVarState("game_over");     
+    }
+
+    bool CheckForWinInTwine()
+    {
+        return twinePlayer.GetTwineVarState("win");
+    }
 
     bool IsLineComplete(int yCoord)
     {
@@ -244,14 +295,7 @@ public class TetrisManager : MonoBehaviour {
         return true;
     }
 
-    bool CheckForCompleteColumns(){
-        for (var x = boardSizeX - 1; x >= 0; x--)
-            if(IsColumnComplete(x)){
-                return true;
-            }
-        
-        return false;
-    }
+  
 
     bool IsColumnComplete(int xCoord)
         {
@@ -271,6 +315,11 @@ public class TetrisManager : MonoBehaviour {
     void LoseGame(){
         Debug.Log("GAME OVER");
         Application.LoadLevel("Lose");
+    }
+
+    void WinGame(){
+        Debug.Log("YOU WON");
+        Application.LoadLevel("Win");
     }
 
 
@@ -312,7 +361,6 @@ public class TetrisManager : MonoBehaviour {
                     //twinePlayer.TypeCommand(textToUse);
                     return new CommandReturnTuple(command, textToUse);
                 }
-
                 
             }
         }
@@ -361,7 +409,8 @@ public class TetrisManager : MonoBehaviour {
             }
         }
 
-        return new CommandReturnTuple( new LetterGenerator.WeightedCommand(TwineTextPlayer.Command.None, "", 0, new string[] { }), "" );
+        return new CommandReturnTuple( new LetterGenerator.WeightedCommand(
+            TwineTextPlayer.Command.None, "", 0, new string[] { }), "" );
     }
 
     void RemoveLineAndMoveAboveLinesDown(int yCoord)
