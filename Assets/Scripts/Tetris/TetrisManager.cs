@@ -236,14 +236,32 @@ public class TetrisManager : MonoBehaviour {
         {
             foreach (var command in LetterGenerator.weightedCommandsList)
             {
-                if (lineString.Contains(command.name))
+                var wasFound = lineString.Contains(command.name);
+                var textToUse = command.name;
+                foreach(var alias in command.aliases)
                 {
+                    if(wasFound)
+                    {
+                        break;
+                    }
+
+                    if(lineString.Contains(alias))
+                    {
+                        textToUse = alias;
+                        wasFound = true;
+                    }
+                }
+
+                if (wasFound)
+                {
+                    // HACK; This is not functional and bad but it's faster than doing it the proper way
+                    twinePlayer.TypeCommand(textToUse);
                     return command;
                 }
             }
         }
 
-        return new LetterGenerator.WeightedCommand(TwineTextPlayer.Command.None, "", 0);
+        return new LetterGenerator.WeightedCommand(TwineTextPlayer.Command.None, "", 0, new string[] { });
     }
 
     void RemoveLineAndMoveAboveLinesDown(int yCoord)
