@@ -365,7 +365,8 @@ public class TetrisManager : MonoBehaviour {
             }
         }
 
-        return new CommandReturnTuple( new LetterGenerator.WeightedCommand(TwineTextPlayer.Command.None, "", 0, new string[] { }), "" );
+        return new CommandReturnTuple( new LetterGenerator.WeightedCommand(
+            TwineTextPlayer.Command.None, "", 0, new string[] { }), "" );
     }
 
     CommandReturnTuple GetCommandFromColumn(int xCoord)
