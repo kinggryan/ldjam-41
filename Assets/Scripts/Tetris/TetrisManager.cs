@@ -312,6 +312,52 @@ public class TetrisManager : MonoBehaviour {
                     //twinePlayer.TypeCommand(textToUse);
                     return new CommandReturnTuple(command, textToUse);
                 }
+
+                
+            }
+        }
+
+        return new CommandReturnTuple( new LetterGenerator.WeightedCommand(TwineTextPlayer.Command.None, "", 0, new string[] { }), "" );
+    }
+
+    CommandReturnTuple GetCommandFromColumn(int xCoord)
+    {
+        var columnString = "";
+
+        // Do some stuff to find teh commands
+        for (var y = 0; y < boardSizeX; y++)
+        {
+            if(tetrisBoard[xCoord, y] != ' ')
+            {
+                columnString += tetrisBoard[xCoord, y];
+            }
+        }
+
+        if (columnString.Length != 0)
+        {
+            foreach (var command in LetterGenerator.weightedCommandsList)
+            {
+                var wasFound = columnString.Contains(command.name);
+                var textToUse = command.name;
+                foreach(var alias in command.aliases)
+                {
+                    if(wasFound)
+                    {
+                        break;
+                    }
+
+                    if(columnString.Contains(alias))
+                    {
+                        textToUse = alias;
+                        wasFound = true;
+                    }
+                }
+
+                if (wasFound)
+                {
+                    //twinePlayer.TypeCommand(textToUse);
+                    return new CommandReturnTuple(command, textToUse);
+                }
             }
         }
 

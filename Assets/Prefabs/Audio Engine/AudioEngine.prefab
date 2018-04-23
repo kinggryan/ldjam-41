@@ -11,17 +11,33 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1956187940114248}
   m_IsPrefabParent: 1
---- !u!1 &1128615706902478
+--- !u!1 &1015639636160118
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4962369556155474}
-  - component: {fileID: 114399846588606952}
+  - component: {fileID: 4121381202129610}
+  - component: {fileID: 114057775354726758}
   m_Layer: 0
-  m_Name: Sound Event
+  m_Name: Melody
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1139886404623946
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4517207499401768}
+  - component: {fileID: 114402312805610300}
+  m_Layer: 0
+  m_Name: Drums
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,12 +85,28 @@ GameObject:
   - component: {fileID: 4553598422268622}
   - component: {fileID: 114248446876070428}
   m_Layer: 0
-  m_Name: MusicTransition
+  m_Name: EnterGarage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
+--- !u!1 &1481208245907654
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4850203640689028}
+  - component: {fileID: 114495109675411230}
+  m_Layer: 0
+  m_Name: Bloops
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1483180146990560
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,22 +118,6 @@ GameObject:
   - component: {fileID: 114554837729869470}
   m_Layer: 0
   m_Name: MusicEngine
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1618953324548262
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4391971122275556}
-  - component: {fileID: 114858089033368512}
-  m_Layer: 0
-  m_Name: Sound Event (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,6 +187,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1852714408908752
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4649304307589344}
+  - component: {fileID: 114132866397605752}
+  m_Layer: 0
+  m_Name: Bass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1905235874217852
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4815864110058808}
+  - component: {fileID: 114979379301042582}
+  m_Layer: 0
+  m_Name: Deprivation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1905654458737136
 GameObject:
   m_ObjectHideFlags: 1
@@ -182,6 +230,22 @@ GameObject:
   - component: {fileID: 114878596159602374}
   m_Layer: 0
   m_Name: Passage6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1911288770265612
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4420834171558164}
+  - component: {fileID: 114559854680188624}
+  m_Layer: 0
+  m_Name: Kick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,6 +293,19 @@ Transform:
   m_Father: {fileID: 4505665473088592}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4121381202129610
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1015639636160118}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4997143139426514}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4152782509377852
 Transform:
   m_ObjectHideFlags: 1
@@ -270,18 +347,18 @@ Transform:
   m_Father: {fileID: 4505665473088592}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4391971122275556
+--- !u!4 &4420834171558164
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1618953324548262}
+  m_GameObject: {fileID: 1911288770265612}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4553598422268622}
-  m_RootOrder: 1
+  m_Father: {fileID: 4997143139426514}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4505665473088592
 Transform:
@@ -299,8 +376,22 @@ Transform:
   - {fileID: 4275561756526694}
   - {fileID: 4076788929589412}
   - {fileID: 4005152104318352}
+  - {fileID: 4815864110058808}
   m_Father: {fileID: 4152782509377852}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4517207499401768
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1139886404623946}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4997143139426514}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4553598422268622
 Transform:
@@ -311,11 +402,48 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4962369556155474}
-  - {fileID: 4391971122275556}
+  m_Children: []
+  m_Father: {fileID: 4997143139426514}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4649304307589344
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852714408908752}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
   m_Father: {fileID: 4997143139426514}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4815864110058808
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1905235874217852}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4505665473088592}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4850203640689028
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481208245907654}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4997143139426514}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4875488951039732
 Transform:
@@ -329,19 +457,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4505665473088592}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4962369556155474
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1128615706902478}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4553598422268622}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4990778150609798
 Transform:
@@ -366,6 +481,11 @@ Transform:
   m_LocalPosition: {x: -464.33832, y: -308.19785, z: 0.697339}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4649304307589344}
+  - {fileID: 4121381202129610}
+  - {fileID: 4850203640689028}
+  - {fileID: 4517207499401768}
+  - {fileID: 4420834171558164}
   - {fileID: 4553598422268622}
   m_Father: {fileID: 4152782509377852}
   m_RootOrder: 0
@@ -392,8 +512,78 @@ MonoBehaviour:
     soundEvent: {fileID: 114548484116575816}
   - name: LineClear
     soundEvent: {fileID: 114584035855414010}
+  - name: DeprivationAmbiance
+    soundEvent: {fileID: 114979379301042582}
   - name: passage6
     soundEvent: {fileID: 114878596159602374}
+--- !u!114 &114057775354726758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1015639636160118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loop: 1
+  random: 0
+  sequence: 0
+  playOnAwake: 1
+  volume: 0
+  pitch: 0
+  pitchRandomization: 0
+  fadeInTime: 5
+  fadeOutTime: 0
+  fadeOutTimer: 1
+  audioClip:
+  - {fileID: 8300000, guid: add8742b4d7dedf4684894ba22adc5d1, type: 3}
+  waitTime: 0
+  waitRange: 0
+  listener: {fileID: 0}
+  threeDee: 0
+  threeDeeMultiplier: 1
+  panMultiplier: 0
+  externalVolumeModifier: 1
+  externalPitchModifier: 0
+  output: {fileID: 0}
+  elementToLoop: 0
+  playerXDistance: 0
+--- !u!114 &114132866397605752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852714408908752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loop: 1
+  random: 0
+  sequence: 0
+  playOnAwake: 1
+  volume: 1
+  pitch: 0
+  pitchRandomization: 0
+  fadeInTime: 5
+  fadeOutTime: 0
+  fadeOutTimer: 1
+  audioClip:
+  - {fileID: 8300000, guid: 5e25229a73e879c438d9734c74643f29, type: 3}
+  waitTime: 0
+  waitRange: 0
+  listener: {fileID: 0}
+  threeDee: 0
+  threeDeeMultiplier: 1
+  panMultiplier: 0
+  externalVolumeModifier: 1
+  externalPitchModifier: 0
+  output: {fileID: 0}
+  elementToLoop: 0
+  playerXDistance: 0
 --- !u!114 &114214780705460502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -439,8 +629,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b57387a3caa13f049a79050ab3a07109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 114858089033368512}
-  destination: {fileID: 114858089033368512}
+  source: {fileID: 0}
+  destination: {fileID: 114057775354726758}
   transitionTime: 5
   crossfade: 0
   verticalLayer: 1
@@ -448,12 +638,12 @@ MonoBehaviour:
   vertStartVol: 0
   fadeAfterTime: 1
   fadeAfterInterval: 0
---- !u!114 &114399846588606952
+--- !u!114 &114402312805610300
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1128615706902478}
+  m_GameObject: {fileID: 1139886404623946}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
@@ -463,14 +653,14 @@ MonoBehaviour:
   random: 0
   sequence: 0
   playOnAwake: 1
-  volume: 1
+  volume: 0
   pitch: 0
   pitchRandomization: 0
-  fadeInTime: 0
+  fadeInTime: 5
   fadeOutTime: 0
   fadeOutTimer: 1
   audioClip:
-  - {fileID: 8300000, guid: a6b944e1964b1a746bd1bc06c9f0339c, type: 3}
+  - {fileID: 8300000, guid: 855c1824d7517f542a3278c1d6f3dae6, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -527,6 +717,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89df12158c1ec4c48845bd4620cc2847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114495109675411230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481208245907654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loop: 1
+  random: 0
+  sequence: 0
+  playOnAwake: 1
+  volume: 0
+  pitch: 0
+  pitchRandomization: 0
+  fadeInTime: 5
+  fadeOutTime: 0
+  fadeOutTimer: 1
+  audioClip:
+  - {fileID: 8300000, guid: fa19d4a8460af97429d3876b6fb23b8d, type: 3}
+  waitTime: 0
+  waitRange: 0
+  listener: {fileID: 0}
+  threeDee: 0
+  threeDeeMultiplier: 1
+  panMultiplier: 0
+  externalVolumeModifier: 1
+  externalPitchModifier: 0
+  output: {fileID: 0}
+  elementToLoop: 0
+  playerXDistance: 0
 --- !u!114 &114548484116575816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -575,6 +799,42 @@ MonoBehaviour:
   events:
   - name: GameStart
     transition: {fileID: 114248446876070428}
+  - name: EnterGarage
+    transition: {fileID: 114248446876070428}
+--- !u!114 &114559854680188624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1911288770265612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loop: 1
+  random: 0
+  sequence: 0
+  playOnAwake: 1
+  volume: 0
+  pitch: 0
+  pitchRandomization: 0
+  fadeInTime: 5
+  fadeOutTime: 0
+  fadeOutTimer: 1
+  audioClip:
+  - {fileID: 8300000, guid: 1990ba7cbd7b4c44b83fdd18abb54ad1, type: 3}
+  waitTime: 0
+  waitRange: 0
+  listener: {fileID: 0}
+  threeDee: 0
+  threeDeeMultiplier: 1
+  panMultiplier: 0
+  externalVolumeModifier: 1
+  externalPitchModifier: 0
+  output: {fileID: 0}
+  elementToLoop: 0
+  playerXDistance: 0
 --- !u!114 &114584035855414010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -598,40 +858,6 @@ MonoBehaviour:
   fadeOutTimer: 1
   audioClip:
   - {fileID: 8300000, guid: a9191f77a77c57244af6c058afaff2b1, type: 3}
-  waitTime: 0
-  waitRange: 0
-  listener: {fileID: 0}
-  threeDee: 0
-  threeDeeMultiplier: 1
-  panMultiplier: 0
-  externalVolumeModifier: 1
-  externalPitchModifier: 0
-  output: {fileID: 0}
-  elementToLoop: 0
-  playerXDistance: 0
---- !u!114 &114858089033368512
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1618953324548262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loop: 1
-  random: 0
-  sequence: 1
-  playOnAwake: 1
-  volume: 1
-  pitch: 0
-  pitchRandomization: 0
-  fadeInTime: 0
-  fadeOutTime: 0
-  fadeOutTimer: 1
-  audioClip:
-  - {fileID: 8300000, guid: 929f3fd510dcec143abd03f014f8909b, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -700,6 +926,40 @@ MonoBehaviour:
   fadeOutTimer: 1
   audioClip:
   - {fileID: 8300000, guid: d0e8db122b115d94583a6894c81c1d39, type: 3}
+  waitTime: 0
+  waitRange: 0
+  listener: {fileID: 0}
+  threeDee: 0
+  threeDeeMultiplier: 1
+  panMultiplier: 0
+  externalVolumeModifier: 1
+  externalPitchModifier: 0
+  output: {fileID: 0}
+  elementToLoop: 0
+  playerXDistance: 0
+--- !u!114 &114979379301042582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1905235874217852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loop: 1
+  random: 0
+  sequence: 0
+  playOnAwake: 0
+  volume: 1
+  pitch: 0
+  pitchRandomization: 0
+  fadeInTime: 2
+  fadeOutTime: 0
+  fadeOutTimer: 1
+  audioClip:
+  - {fileID: 8300000, guid: 22895435eff0c1248906f4386403686b, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
