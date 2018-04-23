@@ -116,7 +116,7 @@ public class TetrisManager : MonoBehaviour {
 
         PerformNextDownwardMove();
 
-        if(CheckForCompleteColumns() || CheckForDeathInTwine()){
+        if(CheckForDeathInTwine()){
             LoseGame();
         }
 
@@ -144,7 +144,7 @@ public class TetrisManager : MonoBehaviour {
             tetrisBoard = currentBlock.AddToBoard(tetrisBoard);
             soundEngine.PlaySoundWithName("BlockLand");
             currentBlock = null;
-            if(CheckForCompleteLines())
+            if(CheckForCompleteLines() || CheckForCompleteColumns())
             {
                 gameStepTimer += lineCompleteHangDuration;
                 shouldUpdateBoard = false;
@@ -235,6 +235,7 @@ public class TetrisManager : MonoBehaviour {
 
         bool CheckForCompleteColumns()
         {
+            Debug.Log("Checking For Complete Columns");
         // Check for complete lines
         // Go from the top down so we don't have to recheck lines if they move down
         var didEraseColumn = false;
@@ -244,12 +245,12 @@ public class TetrisManager : MonoBehaviour {
 
             if (command.command.command != TwineTextPlayer.Command.None)
             {
-                display.UpdateBoardWithCommandOnLine(tetrisBoard, command.word, x);
+                display.UpdateBoardWithCommandOnColumn(tetrisBoard, command.word, x);
             }
 
             if(IsColumnComplete(x))
             {
-                display.UpdateBoardWithCompleteLine(tetrisBoard, x);
+                display.UpdateBoardWithCompleteColumn(tetrisBoard, x);
             }
 
             // Do something with the command
@@ -371,10 +372,11 @@ public class TetrisManager : MonoBehaviour {
 
     CommandReturnTuple GetCommandFromColumn(int xCoord)
     {
+        Debug.Log("Checking column " + xCoord + " for Commands");
         var columnString = "";
 
         // Do some stuff to find teh commands
-        for (var y = 0; y < boardSizeX; y++)
+        for (var y = boardSizeY - 1; y >= 0; y--)
         {
             if(tetrisBoard[xCoord, y] != ' ')
             {
@@ -384,6 +386,7 @@ public class TetrisManager : MonoBehaviour {
 
         if (columnString.Length != 0)
         {
+            Debug.Log("CollectionBase string:" + columnString);
             foreach (var command in LetterGenerator.weightedCommandsList)
             {
                 var wasFound = columnString.Contains(command.name);
@@ -392,6 +395,7 @@ public class TetrisManager : MonoBehaviour {
                 {
                     if(wasFound)
                     {
+                        Debug.Log("Command Found In Column " + xCoord);
                         break;
                     }
 
