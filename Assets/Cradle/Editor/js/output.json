@@ -1,5 +1,10 @@
 {
-    "console": [],
+    "console": [
+        {
+            "type": "message",
+            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:92:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:92:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:41837\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:45808\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:96:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:98:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:98:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:98:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:98:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:99:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:82:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:82:36747 undefined"
+        }
+    ],
     "result": {
         "passages": [
             {
@@ -106,24 +111,12 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.[LOOK]<lo|(set: $look_desk to true)",
-                        "text": "[You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.[LOOK]<lo|(set: $look_desk to true)]",
+                        "innerText": "You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.(set: $look_desk to true)",
+                        "text": "[You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.(set: $look_desk to true)]",
                         "tokens": [
                             {
                                 "text": "You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.",
                                 "type": "text"
-                            },
-                            {
-                                "innerText": "LOOK",
-                                "name": "lo",
-                                "text": "[LOOK]<lo|",
-                                "tokens": [
-                                    {
-                                        "text": "LOOK",
-                                        "type": "text"
-                                    }
-                                ],
-                                "type": "hook"
                             },
                             {
                                 "innerText": "set: $look_desk to true",
@@ -164,10 +157,6 @@
                             }
                         ],
                         "type": "hook"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
                     },
                     {
                         "innerText": "if: $location's WAREHOUSE is true",
@@ -260,10 +249,6 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "innerText": "if: $location's SERVER is true",
                         "name": "if",
                         "text": "(if: $location's SERVER is true)",
@@ -317,10 +302,6 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "innerText": "if: $location's SECURITY is true",
                         "name": "if",
                         "text": "(if: $location's SECURITY is true)",
@@ -363,8 +344,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $guard is false)[You have a closer look at the calendar. It’s for the current year, 198X. You see that there’s a date circled that says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.] (else:)[(set: $body to it - 1)You try, but the guard shoots you before you can!]",
-                        "text": "[(if: $guard is false)[You have a closer look at the calendar. It’s for the current year, 198X. You see that there’s a date circled that says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.] (else:)[(set: $body to it - 1)You try, but the guard shoots you before you can!]]",
+                        "innerText": "(if: $guard is false)[You have a closer look at the calendar. It’s for the current year, 198X. You see that there’s a date circled that says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.] (else:)[(set: $body to it - 1) You try, but the guard shoots you before you can!]",
+                        "text": "[(if: $guard is false)[You have a closer look at the calendar. It’s for the current year, 198X. You see that there’s a date circled that says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.] (else:)[(set: $body to it - 1) You try, but the guard shoots you before you can!]]",
                         "tokens": [
                             {
                                 "innerText": "if: $guard is false",
@@ -431,8 +412,8 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(set: $body to it - 1)You try, but the guard shoots you before you can!",
-                                "text": "[(set: $body to it - 1)You try, but the guard shoots you before you can!]",
+                                "innerText": "(set: $body to it - 1) You try, but the guard shoots you before you can!",
+                                "text": "[(set: $body to it - 1) You try, but the guard shoots you before you can!]",
                                 "tokens": [
                                     {
                                         "innerText": "set: $body to it - 1",
@@ -489,7 +470,7 @@
                                         "type": "macro"
                                     },
                                     {
-                                        "text": "You try, but the guard shoots you before you can!",
+                                        "text": " You try, but the guard shoots you before you can!",
                                         "type": "text"
                                     }
                                 ],
@@ -503,8 +484,20 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "innerText": "LOOK",
+                        "name": "lo",
+                        "text": "[LOOK]<lo|",
+                        "tokens": [
+                            {
+                                "text": "LOOK",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?lo",
@@ -584,8 +577,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "if: $body == 2",
@@ -641,8 +634,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "if: $body == 1",
@@ -698,8 +691,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "if: $body <= 0",
@@ -870,6 +863,10 @@
                             }
                         ],
                         "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?ut",
@@ -1102,10 +1099,6 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "innerText": "if: $location's WAREHOUSE is true",
                         "name": "if",
                         "text": "(if: $location's WAREHOUSE is true)",
@@ -1240,10 +1233,6 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "innerText": "NORTH",
                         "name": "no",
                         "text": "[NORTH]<no|",
@@ -1360,6 +1349,10 @@
                 "Tags": "",
                 "Tokens": [
                     {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
                         "innerText": "if: $location's WAREHOUSE is true",
                         "name": "if",
                         "text": "(if: $location's WAREHOUSE is true)",
@@ -1413,8 +1406,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "if: $location's GARAGE is true",
@@ -1470,8 +1463,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "if: $location's SERVER is true and $infected is false",
@@ -1549,8 +1542,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $infected to true)(set: $power to true)You crack off the tip of your middle finger and run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. When you find the power controls for the elevator, you switch them on.\n\nAs you disconnect from the admin terminal, you feel it transfer a few packets your way.\n\nYou notice strange data in your T.E.T./R.I.S. implant. You’ve been infected with malware! You need to find an anti-virus CURE, fast!",
-                        "text": "[(set: $infected to true)(set: $power to true)You crack off the tip of your middle finger and run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. When you find the power controls for the elevator, you switch them on.\n\nAs you disconnect from the admin terminal, you feel it transfer a few packets your way.\n\nYou notice strange data in your T.E.T./R.I.S. implant. You’ve been infected with malware! You need to find an anti-virus CURE, fast!]",
+                        "innerText": "(set: $infected to true)(set: $power to true)You crack off the tip of your middle finger and run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. When you find the power controls for the elevator, you switch them on.\nAs you disconnect from the admin terminal, you feel it transfer a few packets your way.\nYou notice strange data in your T.E.T./R.I.S. implant. You’ve been infected with malware! You need to find an anti-virus CURE, fast!",
+                        "text": "[(set: $infected to true)(set: $power to true)You crack off the tip of your middle finger and run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. When you find the power controls for the elevator, you switch them on.\nAs you disconnect from the admin terminal, you feel it transfer a few packets your way.\nYou notice strange data in your T.E.T./R.I.S. implant. You’ve been infected with malware! You need to find an anti-virus CURE, fast!]",
                         "tokens": [
                             {
                                 "innerText": "set: $infected to true",
@@ -1635,16 +1628,8 @@
                                 "type": "br"
                             },
                             {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
                                 "text": "As you disconnect from the admin terminal, you feel it transfer a few packets your way.",
                                 "type": "text"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
                             },
                             {
                                 "text": "\n",
@@ -1672,6 +1657,10 @@
                             }
                         ],
                         "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?ha",
@@ -2933,11 +2922,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "What gun?[TAKE GUN]<tg|",
-                        "text": "[What gun?[TAKE GUN]<tg|]",
+                        "innerText": "What gun? [TAKE GUN]<tg|",
+                        "text": "[What gun? [TAKE GUN]<tg|]",
                         "tokens": [
                             {
-                                "text": "What gun?",
+                                "text": "What gun? ",
                                 "type": "text"
                             },
                             {
@@ -2954,6 +2943,10 @@
                             }
                         ],
                         "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?tg",
@@ -3158,11 +3151,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "What note?[TAKE NOTE]<un|",
-                        "text": "[What note?[TAKE NOTE]<un|]",
+                        "innerText": "What note? [TAKE NOTE]<un|",
+                        "text": "[What note? [TAKE NOTE]<un|]",
                         "tokens": [
                             {
-                                "text": "What note?",
+                                "text": "What note? ",
                                 "type": "text"
                             },
                             {
@@ -3179,6 +3172,10 @@
                             }
                         ],
                         "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?un",
@@ -3264,6 +3261,10 @@
                 "Pid": "9",
                 "Tags": "",
                 "Tokens": [
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
                     {
                         "innerText": "if: $inv's GUN is true",
                         "name": "if",
@@ -3928,10 +3929,6 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "innerText": "USE GUN",
                         "name": "ug",
                         "text": "[USE GUN]<ug|",
@@ -4041,14 +4038,6 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "innerText": "if: $body == 2",
                         "name": "if",
                         "text": "(if: $body == 2)",
@@ -4102,10 +4091,6 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "innerText": "if: $body == 1",
                         "name": "if",
                         "text": "(if: $body == 1)",
@@ -4157,10 +4142,6 @@
                             }
                         ],
                         "type": "hook"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
                     },
                     {
                         "innerText": "if: $body <= 0",
@@ -5089,16 +5070,8 @@
                         "type": "macro"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "You enter a warehouse. There are shelves of boxes and equipment towering over you. To the NORTH, there is an elevator with no power, sealed with a security door. Next to the elevator is a rack with some white lab COATS on it. To the EAST, there is a door with a sign on it that says “Security Room.” To the WEST, there is a door with a sign on it that says “Server Room.",
+                        "text": "You enter a warehouse. There are shelves of boxes and equipment towering over you. To the NORTH, there is an elevator with no power, sealed with a security door. Next to the elevator is a rack with some white lab COATS on it. To the EAST, there is a door with a sign on it that says “Security Room.” To the WEST, there is a door with a sign on it that says “Server Room. ",
                         "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
                     },
                     {
                         "innerText": "if: $guard is true",
@@ -5386,10 +5359,6 @@
                         "type": "text"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "innerText": "click: ?lo",
                         "name": "click",
                         "text": "(click: ?lo)",
@@ -5467,8 +5436,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?tf",
@@ -5548,8 +5517,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?tc",
@@ -5629,8 +5598,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?ul",
@@ -5710,8 +5679,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?no",
@@ -5791,8 +5760,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?wo",
@@ -5872,8 +5841,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?eo",
@@ -5953,8 +5922,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?so",
@@ -6034,8 +6003,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?ha",
@@ -6115,8 +6084,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?ug",
@@ -6844,6 +6813,10 @@
                 "Tags": "",
                 "Tokens": [
                     {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
                         "innerText": "if: $inv's LOG is true",
                         "name": "if",
                         "text": "(if: $inv's LOG is true)",
@@ -7487,10 +7460,6 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "innerText": "if: $location's WAREHOUSE is true",
                         "name": "if",
                         "text": "(if: $location's WAREHOUSE is true)",
@@ -7907,10 +7876,6 @@
                         "type": "macro"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "text": "You walk into the Security Room. You see a console of security monitors, currently malfunctioning. A guard is crouching under the console, haplessly trying to repair them. There is a large calendar on the wall",
                         "type": "text"
                     },
@@ -8065,17 +8030,9 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "name": "c1",
                         "text": "[]<c1|",
                         "type": "hook"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
                     },
                     {
                         "text": "\n",
@@ -8158,8 +8115,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?ta",
@@ -8239,8 +8196,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?ug",
@@ -8320,8 +8277,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?lo",
@@ -8401,8 +8358,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?wo",
@@ -8488,10 +8445,6 @@
                 "Pid": "18",
                 "Tags": "",
                 "Tokens": [
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
                     {
                         "innerText": "if: $location's WAREHOUSE is true",
                         "name": "if",
@@ -8909,11 +8862,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "You enter the Server Room. There are banks of computers, the collective whirring of their fans creating a loud hum. In front of you, there is an administrative terminal. Along the wall, there is a CABINET.",
+                        "text": " You enter the Server Room. There are banks of computers, the collective whirring of their fans creating a loud hum. In front of you, there is an administrative terminal. Along the wall, there is a CABINET.",
                         "type": "text"
                     },
                     {
@@ -9070,8 +9019,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?lo",
@@ -9151,10 +9100,6 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "innerText": "click: ?ha",
                         "name": "click",
                         "text": "(click: ?ha)",
@@ -9232,8 +9177,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?uf",
@@ -9313,8 +9258,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?ug",
@@ -9394,8 +9339,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?tl",
@@ -9475,8 +9420,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?ul",
@@ -9556,8 +9501,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?eo",
@@ -9718,10 +9663,6 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "innerText": "SOUTH",
                         "name": "so",
                         "text": "[SOUTH]<so|",
@@ -9821,6 +9762,10 @@
                 "Pid": "21",
                 "Tags": "",
                 "Tokens": [
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
                     {
                         "innerText": "if: $inv's FOB is true",
                         "name": "if",
@@ -10021,10 +9966,6 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "innerText": "USE FOB",
                         "name": "uf",
                         "text": "[USE FOB]<uf|",
@@ -10039,14 +9980,6 @@
                     {
                         "text": " ",
                         "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
                     },
                     {
                         "innerText": "click: ?uf",
@@ -10418,10 +10351,6 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "innerText": "GET LOG",
                         "name": "tl",
                         "text": "[GET LOG]<tl|",
@@ -10448,14 +10377,6 @@
                             }
                         ],
                         "type": "hook"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
                     },
                     {
                         "innerText": "click: ?tl",
@@ -10541,6 +10462,10 @@
                 "Pid": "23",
                 "Tags": "",
                 "Tokens": [
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
                     {
                         "innerText": "if: $location's SECURITY is true",
                         "name": "if",
@@ -10878,6 +10803,10 @@
                         "type": "hook"
                     },
                     {
+                        "text": " ",
+                        "type": "text"
+                    },
+                    {
                         "text": "\n",
                         "type": "br"
                     },
@@ -10894,8 +10823,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "click: ?ta",
@@ -10975,8 +10904,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "if: $body == 2",
@@ -11032,8 +10961,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "if: $body == 1",
@@ -11089,8 +11018,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "if: $body <= 0",
