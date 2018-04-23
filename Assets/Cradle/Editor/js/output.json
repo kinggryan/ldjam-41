@@ -2,7 +2,7 @@
     "console": [
         {
             "type": "message",
-            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:99:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:99:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:41837\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:103:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:106:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:89:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:89:36747 undefined"
+            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:101:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:101:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:41837\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:91:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:91:36747 undefined"
         }
     ],
     "result": {
@@ -524,6 +524,10 @@
                             }
                         ],
                         "type": "hook"
+                    },
+                    {
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "LOOK",
@@ -3818,8 +3822,8 @@
                 "Tags": "startup",
                 "Tokens": [
                     {
-                        "innerText": "\n(set: $inv to (dm: \"GUN\", false, \"NOTE\", false, \"FOB\", false, \"COAT\", false, \"LOG\", false))\n(set: $location to (dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false, \"CLEAN\", false))\n\n(set: $infected to false)\n(set: $open_cab to false)\n(set: $power to false)\n(set: $ser_door to false)\n(set: $HP to 3)\n(set: $guard to false)\n(set: $dead_g to false)\n(set: $game_over to false)\n(set: $lab_c to 0)\n(set: $win to false)\n(set: $open_clean to false)\n",
-                        "text": "{\n(set: $inv to (dm: \"GUN\", false, \"NOTE\", false, \"FOB\", false, \"COAT\", false, \"LOG\", false))\n(set: $location to (dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false, \"CLEAN\", false))\n\n(set: $infected to false)\n(set: $open_cab to false)\n(set: $power to false)\n(set: $ser_door to false)\n(set: $HP to 3)\n(set: $guard to false)\n(set: $dead_g to false)\n(set: $game_over to false)\n(set: $lab_c to 0)\n(set: $win to false)\n(set: $open_clean to false)\n}",
+                        "innerText": "\n(set: $inv to (dm: \"GUN\", false, \"NOTE\", false, \"FOB\", false, \"COAT\", false, \"LOG\", false))\n(set: $location to (dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false, \"LAB\", false, \"CLEAN\", false))\n\n(set: $infected to false)\n(set: $open_cab to false)\n(set: $power to false)\n(set: $ser_door to false)\n(set: $HP to 3)\n(set: $guard to false)\n(set: $dead_g to false)\n(set: $game_over to false)\n(set: $lab_c to 0)\n(set: $win to false)\n(set: $open_clean to false)\n",
+                        "text": "{\n(set: $inv to (dm: \"GUN\", false, \"NOTE\", false, \"FOB\", false, \"COAT\", false, \"LOG\", false))\n(set: $location to (dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false, \"LAB\", false, \"CLEAN\", false))\n\n(set: $infected to false)\n(set: $open_cab to false)\n(set: $power to false)\n(set: $ser_door to false)\n(set: $HP to 3)\n(set: $guard to false)\n(set: $dead_g to false)\n(set: $game_over to false)\n(set: $lab_c to 0)\n(set: $win to false)\n(set: $open_clean to false)\n}",
                         "tokens": [
                             {
                                 "text": "\n",
@@ -3996,9 +4000,9 @@
                                 "type": "br"
                             },
                             {
-                                "innerText": "set: $location to (dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false, \"CLEAN\", false)",
+                                "innerText": "set: $location to (dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false, \"LAB\", false, \"CLEAN\", false)",
                                 "name": "set",
-                                "text": "(set: $location to (dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false, \"CLEAN\", false))",
+                                "text": "(set: $location to (dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false, \"LAB\", false, \"CLEAN\", false))",
                                 "tokens": [
                                     {
                                         "text": "set:",
@@ -4026,9 +4030,9 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "innerText": "dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false, \"CLEAN\", false",
+                                        "innerText": "dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false, \"LAB\", false, \"CLEAN\", false",
                                         "name": "dm",
-                                        "text": "(dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false, \"CLEAN\", false)",
+                                        "text": "(dm: \"GARAGE\", true, \"WAREHOUSE\", false, \"SECURITY\", false, \"SERVER\", false, \"LAB\", false, \"CLEAN\", false)",
                                         "tokens": [
                                             {
                                                 "text": "dm:",
@@ -4116,6 +4120,31 @@
                                             {
                                                 "innerText": "SERVER",
                                                 "text": "\"SERVER\"",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "text": ",",
+                                                "type": "comma"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "text": "false",
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "text": ",",
+                                                "type": "comma"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "whitespace"
+                                            },
+                                            {
+                                                "innerText": "LAB",
+                                                "text": "\"LAB\"",
                                                 "type": "string"
                                             },
                                             {
