@@ -19,7 +19,7 @@ public class TetrisManager : MonoBehaviour {
     public bool playingEnabled;
 
     private TetrisDisplay display;
-    private TwineTextPlayer twinePlayer;
+    private TextrisTwinePlayer twinePlayer;
 
     private int boardSizeX = 10;
     public int boardSizeY = 26;
@@ -35,7 +35,7 @@ public class TetrisManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         display = Object.FindObjectOfType<TetrisDisplay>();
-        twinePlayer = Object.FindObjectOfType<TwineTextPlayer>();
+        twinePlayer = Object.FindObjectOfType<TextrisTwinePlayer>();
         soundEngine = Object.FindObjectOfType<SoundEngine>();
 
         tetrisBoard = new char[boardSizeX, boardSizeY];
@@ -315,7 +315,8 @@ public class TetrisManager : MonoBehaviour {
             }
         }
 
-        return new CommandReturnTuple( new LetterGenerator.WeightedCommand(TwineTextPlayer.Command.None, "", 0, new string[] { }), "" );
+        return new CommandReturnTuple( new LetterGenerator.WeightedCommand(
+            TwineTextPlayer.Command.None, "", 0, new string[] { }), "" );
     }
 
     void RemoveLineAndMoveAboveLinesDown(int yCoord)
