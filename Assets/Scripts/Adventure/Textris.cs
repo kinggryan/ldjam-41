@@ -118,8 +118,9 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage1_Main()
 	{
+		yield return lineBreak();
 		yield return text("You wake up, floating. It's dark. Where are you? Can't remember. Is this death? You move your arm, feel water splash. Not death. Sensory deprivation tank. The hatch is above you. Could probably OPEN it.");
-		yield return link("OPEN ", "Garage", null);
+		yield return link("OPEN", "Garage", null);
 		yield break;
 	}
 

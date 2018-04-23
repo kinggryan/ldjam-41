@@ -319,6 +319,11 @@ public class TwineTextPlayer : MonoBehaviour {
         return commandsList.ToArray();
     }
 
+    public bool GetTwineVarState(string find)
+    {
+    	return this.Story.Vars[find];
+    }
+
 
 }
 

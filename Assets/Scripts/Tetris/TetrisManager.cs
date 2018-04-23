@@ -115,8 +115,14 @@ public class TetrisManager : MonoBehaviour {
             currentBlock = GetNextBlock();
 
         PerformNextDownwardMove();
-        if(CheckForCompleteColumns()){
+
+        if(CheckForCompleteColumns() || CheckForDeathInTwine()){
             LoseGame();
+        }
+
+        if(CheckForWinInTwine())
+        {
+                //Go to Win Scence
         }
         
     }
@@ -227,7 +233,15 @@ public class TetrisManager : MonoBehaviour {
         return didEraseLine;
     }
 
-    
+    bool CheckForDeathInTwine()
+    {
+        return twinePlayer.GetTwineVarState("game_over");     
+    }
+
+    bool CheckForWinInTwine()
+    {
+        return twinePlayer.GetTwineVarState("win");
+    }
 
     bool IsLineComplete(int yCoord)
     {
