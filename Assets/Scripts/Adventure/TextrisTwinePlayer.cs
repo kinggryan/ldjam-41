@@ -51,10 +51,22 @@ public class TextrisTwinePlayer : TwineTextPlayer {
 
     public override void DisplayOutput(StoryOutput output)
     {
-    //    Debug.Log("Doing output: " + output.Text);
+        
+
         if (output is StoryText)
         {
             var text = (StoryText)output;
+
+            // HACK: Don't knwo why the fuck this is needed but the links are being interpretted as story text so....
+            foreach(var commandStr in commandToNameMap.Values)
+            {
+                if(commandStr.Contains(text.Text))
+                {
+                    return;
+                }
+            }
+    
+            //Debug.Log("Printing text for story text:" + text.Text);
             if (!string.IsNullOrEmpty(text.Text))
             {
                 targetStoryText += text.Text.Replace('’', '\'');

@@ -1,10 +1,5 @@
 {
-    "console": [
-        {
-            "type": "message",
-            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:92:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:92:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:41837\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:45808\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:96:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:98:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:98:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:98:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:98:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:99:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:82:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:82:36747 undefined"
-        }
-    ],
+    "console": [],
     "result": {
         "passages": [
             {
@@ -13,11 +8,11 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "innerText": "You wake up, floating in the dark. Where are you? When are you? Is this death? You move your arm, and you feel water splash. Oh, sweet. Nah, it’s all good, you’re just floating in a sensory deprivation tank! The hatch is above you. You could probably OPEN it.\n[[OPEN ->Garage]]\n",
-                        "text": "{You wake up, floating in the dark. Where are you? When are you? Is this death? You move your arm, and you feel water splash. Oh, sweet. Nah, it’s all good, you’re just floating in a sensory deprivation tank! The hatch is above you. You could probably OPEN it.\n[[OPEN ->Garage]]\n}",
+                        "innerText": "You wake up, floating. It's dark. Where are you? Can't remember. Is this death? You move your arm, feel water splash. Not death. Sensory deprivation tank. The hatch is above you. Could probably OPEN it.\n[[OPEN ->Garage]]\n",
+                        "text": "{You wake up, floating. It's dark. Where are you? Can't remember. Is this death? You move your arm, feel water splash. Not death. Sensory deprivation tank. The hatch is above you. Could probably OPEN it.\n[[OPEN ->Garage]]\n}",
                         "tokens": [
                             {
-                                "text": "You wake up, floating in the dark. Where are you? When are you? Is this death? You move your arm, and you feel water splash. Oh, sweet. Nah, it’s all good, you’re just floating in a sensory deprivation tank! The hatch is above you. You could probably OPEN it.",
+                                "text": "You wake up, floating. It's dark. Where are you? Can't remember. Is this death? You move your arm, feel water splash. Not death. Sensory deprivation tank. The hatch is above you. Could probably OPEN it.",
                                 "type": "text"
                             },
                             {
@@ -111,11 +106,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.(set: $look_desk to true)",
-                        "text": "[You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.(set: $look_desk to true)]",
+                        "innerText": "You search the desk, opening all the drawers. There’s a NOTE, long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. There’s a GUN.(set: $look_desk to true)",
+                        "text": "[You search the desk, opening all the drawers. There’s a NOTE, long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. There’s a GUN.(set: $look_desk to true)]",
                         "tokens": [
                             {
-                                "text": "You search the desk, opening all the drawers. There’s a NOTE with a long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. Other than that, there’s just a bunch of assorted office supplies. Oh, and there’s a GUN.",
+                                "text": "You search the desk, opening all the drawers. There’s a NOTE, long string of numbers written on it. There’s a tape player, which you could USE to play the TAPE. There’s a GUN.",
                                 "type": "text"
                             },
                             {
@@ -201,8 +196,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $look_shelf to true) The shelves are organized with a sequence of labels reading AA, AB, AC, etc. all the way down to ZZ. As you’re studying the shelves, you notice that someone has left a key FOB on the shelf next to you.",
-                        "text": "[(set: $look_shelf to true) The shelves are organized with a sequence of labels reading AA, AB, AC, etc. all the way down to ZZ. As you’re studying the shelves, you notice that someone has left a key FOB on the shelf next to you.]",
+                        "innerText": "(set: $look_shelf to true) Shelves are organized with a sequence of labels, reading AA, AB, AC, etc. down to ZZ. You look at the shelf next to you. Someone left a key FOB there.",
+                        "text": "[(set: $look_shelf to true) Shelves are organized with a sequence of labels, reading AA, AB, AC, etc. down to ZZ. You look at the shelf next to you. Someone left a key FOB there.]",
                         "tokens": [
                             {
                                 "innerText": "set: $look_shelf to true",
@@ -242,7 +237,7 @@
                                 "type": "macro"
                             },
                             {
-                                "text": " The shelves are organized with a sequence of labels reading AA, AB, AC, etc. all the way down to ZZ. As you’re studying the shelves, you notice that someone has left a key FOB on the shelf next to you.",
+                                "text": " Shelves are organized with a sequence of labels, reading AA, AB, AC, etc. down to ZZ. You look at the shelf next to you. Someone left a key FOB there.",
                                 "type": "text"
                             }
                         ],
@@ -291,11 +286,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "The cabinet is secured with an electronic padlock. Must be some pretty valuable stuff in there.",
-                        "text": "[The cabinet is secured with an electronic padlock. Must be some pretty valuable stuff in there.]",
+                        "innerText": "Cabinet is secured with an electronic padlock. Must be valuable stuff in there.",
+                        "text": "[Cabinet is secured with an electronic padlock. Must be valuable stuff in there.]",
                         "tokens": [
                             {
-                                "text": "The cabinet is secured with an electronic padlock. Must be some pretty valuable stuff in there.",
+                                "text": "Cabinet is secured with an electronic padlock. Must be valuable stuff in there.",
                                 "type": "text"
                             }
                         ],
@@ -344,8 +339,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $guard is false)[You have a closer look at the calendar. It’s for the current year, 198X. You see that there’s a date circled that says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.] (else:)[(set: $body to it - 1) You try, but the guard shoots you before you can!]",
-                        "text": "[(if: $guard is false)[You have a closer look at the calendar. It’s for the current year, 198X. You see that there’s a date circled that says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.] (else:)[(set: $body to it - 1) You try, but the guard shoots you before you can!]]",
+                        "innerText": "(if: $guard is false)[You look closer at the calendar. Current year, 198X. A date circled says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.] (else:)[(set: $body to it - 1) You try, but the guard shoots you before you can!]",
+                        "text": "[(if: $guard is false)[You look closer at the calendar. Current year, 198X. A date circled says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.] (else:)[(set: $body to it - 1) You try, but the guard shoots you before you can!]]",
                         "tokens": [
                             {
                                 "innerText": "if: $guard is false",
@@ -385,11 +380,11 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "You have a closer look at the calendar. It’s for the current year, 198X. You see that there’s a date circled that says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.",
-                                "text": "[You have a closer look at the calendar. It’s for the current year, 198X. You see that there’s a date circled that says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.]",
+                                "innerText": "You look closer at the calendar. Current year, 198X. A date circled says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.",
+                                "text": "[You look closer at the calendar. Current year, 198X. A date circled says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.]",
                                 "tokens": [
                                     {
-                                        "text": "You have a closer look at the calendar. It’s for the current year, 198X. You see that there’s a date circled that says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.",
+                                        "text": "You look closer at the calendar. Current year, 198X. A date circled says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.",
                                         "type": "text"
                                     }
                                 ],
@@ -791,11 +786,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "You need a tape player to play the tape. [USE TAPE]<ut|",
-                        "text": "[You need a tape player to play the tape. [USE TAPE]<ut|]",
+                        "innerText": "You need a tape player to play the TAPE. [USE TAPE]<ut|",
+                        "text": "[You need a tape player to play the TAPE. [USE TAPE]<ut|]",
                         "tokens": [
                             {
-                                "text": "You need a tape player to play the tape. ",
+                                "text": "You need a tape player to play the TAPE. ",
                                 "type": "text"
                             },
                             {
@@ -826,11 +821,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "You pull the tape player out of the desk drawer and put the audio TAPE inside it. You hit play. A gravelly voice starts talking.\nHello agent, this is your commander. We have sent you to Moscow to infiltrate a research facility that, we believe, is developing a machine that can alter people’s minds. You have been outfitted with the cyborg implant Total Environmental Transcription/Reactive Information Synthesis, or T.E.T./R.I.S., to aid in your mission. It will allow you to quickly analyze your surroundings and determine your best courses of action. To aid you, we have temporarily disabled the facility’s cameras. Good luck.\nThe tape ends. [USE TAPE]<ut|",
-                        "text": "[You pull the tape player out of the desk drawer and put the audio TAPE inside it. You hit play. A gravelly voice starts talking.\nHello agent, this is your commander. We have sent you to Moscow to infiltrate a research facility that, we believe, is developing a machine that can alter people’s minds. You have been outfitted with the cyborg implant Total Environmental Transcription/Reactive Information Synthesis, or T.E.T./R.I.S., to aid in your mission. It will allow you to quickly analyze your surroundings and determine your best courses of action. To aid you, we have temporarily disabled the facility’s cameras. Good luck.\nThe tape ends. [USE TAPE]<ut|]",
+                        "innerText": "You put the TAPE into the player, hit play. A gravelly voice. Familiar.\nGood day agent, this is your commander. You are in Moscow to infiltrate a research facility that is developing a machine that can alter people’s minds. You have been outfitted with the cyborg implant Total Environmental Transcription/Reactive Information Synthesis, or T.E.T./R.I.S., to aid in your mission. We have also disrupted the facility’s cameras. Good luck.\nTape ends. [USE TAPE]<ut|",
+                        "text": "[You put the TAPE into the player, hit play. A gravelly voice. Familiar.\nGood day agent, this is your commander. You are in Moscow to infiltrate a research facility that is developing a machine that can alter people’s minds. You have been outfitted with the cyborg implant Total Environmental Transcription/Reactive Information Synthesis, or T.E.T./R.I.S., to aid in your mission. We have also disrupted the facility’s cameras. Good luck.\nTape ends. [USE TAPE]<ut|]",
                         "tokens": [
                             {
-                                "text": "You pull the tape player out of the desk drawer and put the audio TAPE inside it. You hit play. A gravelly voice starts talking.",
+                                "text": "You put the TAPE into the player, hit play. A gravelly voice. Familiar.",
                                 "type": "text"
                             },
                             {
@@ -838,7 +833,7 @@
                                 "type": "br"
                             },
                             {
-                                "text": "Hello agent, this is your commander. We have sent you to Moscow to infiltrate a research facility that, we believe, is developing a machine that can alter people’s minds. You have been outfitted with the cyborg implant Total Environmental Transcription/Reactive Information Synthesis, or T.E.T./R.I.S., to aid in your mission. It will allow you to quickly analyze your surroundings and determine your best courses of action. To aid you, we have temporarily disabled the facility’s cameras. Good luck.",
+                                "text": "Good day agent, this is your commander. You are in Moscow to infiltrate a research facility that is developing a machine that can alter people’s minds. You have been outfitted with the cyborg implant Total Environmental Transcription/Reactive Information Synthesis, or T.E.T./R.I.S., to aid in your mission. We have also disrupted the facility’s cameras. Good luck.",
                                 "type": "text"
                             },
                             {
@@ -846,7 +841,7 @@
                                 "type": "br"
                             },
                             {
-                                "text": "The tape ends. ",
+                                "text": "Tape ends. ",
                                 "type": "text"
                             },
                             {
@@ -999,8 +994,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $inv's NOTE is true)[(go-to: \"Warehouse\")](else:)[The door won’t open. Looks like you need a password for this keypad.]",
-                        "text": "[(if: $inv's NOTE is true)[(go-to: \"Warehouse\")](else:)[The door won’t open. Looks like you need a password for this keypad.]]",
+                        "innerText": "(if: $inv's NOTE is true)[(go-to: \"Warehouse\")](else:)[Door won’t open. You need a password for this keypad.]",
+                        "text": "[(if: $inv's NOTE is true)[(go-to: \"Warehouse\")](else:)[Door won’t open. You need a password for this keypad.]]",
                         "tokens": [
                             {
                                 "innerText": "if: $inv's NOTE is true",
@@ -1085,11 +1080,11 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "The door won’t open. Looks like you need a password for this keypad.",
-                                "text": "[The door won’t open. Looks like you need a password for this keypad.]",
+                                "innerText": "Door won’t open. You need a password for this keypad.",
+                                "text": "[Door won’t open. You need a password for this keypad.]",
                                 "tokens": [
                                     {
-                                        "text": "The door won’t open. Looks like you need a password for this keypad.",
+                                        "text": "Door won’t open. You need a password for this keypad.",
                                         "type": "text"
                                     }
                                 ],
@@ -1395,11 +1390,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "You try to HACK the elevator, but the power is out and the security barrier is enabled. To use the elevator, you’ll need to turn the power on in the Server Room and disable the security barrier in the Security Room.",
-                        "text": "[You try to HACK the elevator, but the power is out and the security barrier is enabled. To use the elevator, you’ll need to turn the power on in the Server Room and disable the security barrier in the Security Room.]",
+                        "innerText": "You try to HACK the elevator, but no use. Need to turn the power on in the Server Room and disable the security barrier in the Security Room first.",
+                        "text": "[You try to HACK the elevator, but no use. Need to turn the power on in the Server Room and disable the security barrier in the Security Room first.]",
                         "tokens": [
                             {
-                                "text": "You try to HACK the elevator, but the power is out and the security barrier is enabled. To use the elevator, you’ll need to turn the power on in the Server Room and disable the security barrier in the Security Room.",
+                                "text": "You try to HACK the elevator, but no use. Need to turn the power on in the Server Room and disable the security barrier in the Security Room first.",
                                 "type": "text"
                             }
                         ],
@@ -1452,11 +1447,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "You try to HACK the keypad next to the door. You don’t get the door open, but you do learn that the password is long, and would be difficult to remember for underpaid guards.",
-                        "text": "[You try to HACK the keypad next to the door. You don’t get the door open, but you do learn that the password is long, and would be difficult to remember for underpaid guards.]",
+                        "innerText": "You try to HACK the keypad next to the door. Door doesn't open, but you learn the password is long. Too long for underpaid guards to remember.",
+                        "text": "[You try to HACK the keypad next to the door. Door doesn't open, but you learn the password is long. Too long for underpaid guards to remember.]",
                         "tokens": [
                             {
-                                "text": "You try to HACK the keypad next to the door. You don’t get the door open, but you do learn that the password is long, and would be difficult to remember for underpaid guards.",
+                                "text": "You try to HACK the keypad next to the door. Door doesn't open, but you learn the password is long. Too long for underpaid guards to remember.",
                                 "type": "text"
                             }
                         ],
@@ -1542,8 +1537,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $infected to true)(set: $power to true)You crack off the tip of your middle finger and run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. When you find the power controls for the elevator, you switch them on.\nAs you disconnect from the admin terminal, you feel it transfer a few packets your way.\nYou notice strange data in your T.E.T./R.I.S. implant. You’ve been infected with malware! You need to find an anti-virus CURE, fast!",
-                        "text": "[(set: $infected to true)(set: $power to true)You crack off the tip of your middle finger and run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. When you find the power controls for the elevator, you switch them on.\nAs you disconnect from the admin terminal, you feel it transfer a few packets your way.\nYou notice strange data in your T.E.T./R.I.S. implant. You’ve been infected with malware! You need to find an anti-virus CURE, fast!]",
+                        "innerText": "(set: $infected to true)(set: $power to true)You crack off your middle finger, run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. You find the power controls for the elevator, switch them on.\nAs you disconnect from the admin terminal, you feel it transfer some packets your way.\nYou notice strange data in your T.E.T./R.I.S. implant. A malware infection! You need to find an anti-virus CURE, fast!",
+                        "text": "[(set: $infected to true)(set: $power to true)You crack off your middle finger, run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. You find the power controls for the elevator, switch them on.\nAs you disconnect from the admin terminal, you feel it transfer some packets your way.\nYou notice strange data in your T.E.T./R.I.S. implant. A malware infection! You need to find an anti-virus CURE, fast!]",
                         "tokens": [
                             {
                                 "innerText": "set: $infected to true",
@@ -1620,7 +1615,7 @@
                                 "type": "macro"
                             },
                             {
-                                "text": "You crack off the tip of your middle finger and run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. When you find the power controls for the elevator, you switch them on.",
+                                "text": "You crack off your middle finger, run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. You find the power controls for the elevator, switch them on.",
                                 "type": "text"
                             },
                             {
@@ -1628,7 +1623,7 @@
                                 "type": "br"
                             },
                             {
-                                "text": "As you disconnect from the admin terminal, you feel it transfer a few packets your way.",
+                                "text": "As you disconnect from the admin terminal, you feel it transfer some packets your way.",
                                 "type": "text"
                             },
                             {
@@ -1636,7 +1631,7 @@
                                 "type": "br"
                             },
                             {
-                                "text": "You notice strange data in your T.E.T./R.I.S. implant. You’ve been infected with malware! You need to find an anti-virus CURE, fast!",
+                                "text": "You notice strange data in your T.E.T./R.I.S. implant. A malware infection! You need to find an anti-virus CURE, fast!",
                                 "type": "text"
                             }
                         ],
@@ -1975,11 +1970,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "You pound on the hatch until it springs open. You haul yourself out of the tank.\nYou’re in a garage. There is a door to the NORTH, with a keypad next to it. There is a CAMERA in the northwest corner, and another in the northeast. There is a desk with several drawers. You feel something in your pocket. When you check to see what it is, you find an audio TAPE.",
-                        "text": "[You pound on the hatch until it springs open. You haul yourself out of the tank.\nYou’re in a garage. There is a door to the NORTH, with a keypad next to it. There is a CAMERA in the northwest corner, and another in the northeast. There is a desk with several drawers. You feel something in your pocket. When you check to see what it is, you find an audio TAPE.]",
+                        "innerText": "You pound on the hatch. Springs open. You haul yourself out of the tank.\nYou’re in a garage. Door to the NORTH, keypad next to it. CAMERA in the northeast and northwest. A desk with several drawers. Feel something in your pocket. You check, find an audio TAPE.",
+                        "text": "[You pound on the hatch. Springs open. You haul yourself out of the tank.\nYou’re in a garage. Door to the NORTH, keypad next to it. CAMERA in the northeast and northwest. A desk with several drawers. Feel something in your pocket. You check, find an audio TAPE.]",
                         "tokens": [
                             {
-                                "text": "You pound on the hatch until it springs open. You haul yourself out of the tank.",
+                                "text": "You pound on the hatch. Springs open. You haul yourself out of the tank.",
                                 "type": "text"
                             },
                             {
@@ -1987,7 +1982,7 @@
                                 "type": "br"
                             },
                             {
-                                "text": "You’re in a garage. There is a door to the NORTH, with a keypad next to it. There is a CAMERA in the northwest corner, and another in the northeast. There is a desk with several drawers. You feel something in your pocket. When you check to see what it is, you find an audio TAPE.",
+                                "text": "You’re in a garage. Door to the NORTH, keypad next to it. CAMERA in the northeast and northwest. A desk with several drawers. Feel something in your pocket. You check, find an audio TAPE.",
                                 "type": "text"
                             }
                         ],
@@ -2006,11 +2001,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "You’re in a garage. There is a door to the NORTH, with a keypad next to it. There is a CAMERA in the northwest corner, and another in the northeast. There is a desk with several drawers.",
-                        "text": "[You’re in a garage. There is a door to the NORTH, with a keypad next to it. There is a CAMERA in the northwest corner, and another in the northeast. There is a desk with several drawers.]",
+                        "innerText": "You’re in a garage. Door to the NORTH, keypad next to it. CAMERA in the northeast and northwest. A desk with several drawers.",
+                        "text": "[You’re in a garage. Door to the NORTH, keypad next to it. CAMERA in the northeast and northwest. A desk with several drawers.]",
                         "tokens": [
                             {
-                                "text": "You’re in a garage. There is a door to the NORTH, with a keypad next to it. There is a CAMERA in the northwest corner, and another in the northeast. There is a desk with several drawers.",
+                                "text": "You’re in a garage. Door to the NORTH, keypad next to it. CAMERA in the northeast and northwest. A desk with several drawers.",
                                 "type": "text"
                             }
                         ],
@@ -3074,8 +3069,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $inv's NOTE to true) You read the NOTE. Your cyborg brain easily memorizes the long string of numbers.[TAKE NOTE]<un|",
-                        "text": "[(set: $inv's NOTE to true) You read the NOTE. Your cyborg brain easily memorizes the long string of numbers.[TAKE NOTE]<un|]",
+                        "innerText": "(set: $inv's NOTE to true) You read the NOTE. Lots of numbers, but easy for your cyborg brain to take in.[TAKE NOTE]<un|",
+                        "text": "[(set: $inv's NOTE to true) You read the NOTE. Lots of numbers, but easy for your cyborg brain to take in.[TAKE NOTE]<un|]",
                         "tokens": [
                             {
                                 "innerText": "set: $inv's NOTE to true",
@@ -3120,7 +3115,7 @@
                                 "type": "macro"
                             },
                             {
-                                "text": " You read the NOTE. Your cyborg brain easily memorizes the long string of numbers.",
+                                "text": " You read the NOTE. Lots of numbers, but easy for your cyborg brain to take in.",
                                 "type": "text"
                             },
                             {
@@ -3308,8 +3303,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $location's GARAGE is true)[You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.] (else-if: $location's WAREHOUSE is true)[You fire at the security barrier on the elevator, but even your military-grade APEX rounds don’t leave a mark.] (else-if: $location's SERVER is true and $open_cab is false)[(set: $open_cab to true) You fire a shot at the cabinet’s electronic padlock, shooting it clean off. The cabinet is open.] (else-if: $location's SECURITY is true)[(if: $guard is false)[Hey! Don't just shoot the guy!](else:)[(set: $guard to false) (set: $ser_door to true)(set: $dead_g to true)You SHOOT the guard with your gun. His body armor seems to absorb the blow, but the force from the bullet flings him back and knocks him out, flipping a switch on the console. You hear the elevator security door retract in the warehouse.]]",
-                        "text": "[(if: $location's GARAGE is true)[You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.] (else-if: $location's WAREHOUSE is true)[You fire at the security barrier on the elevator, but even your military-grade APEX rounds don’t leave a mark.] (else-if: $location's SERVER is true and $open_cab is false)[(set: $open_cab to true) You fire a shot at the cabinet’s electronic padlock, shooting it clean off. The cabinet is open.] (else-if: $location's SECURITY is true)[(if: $guard is false)[Hey! Don't just shoot the guy!](else:)[(set: $guard to false) (set: $ser_door to true)(set: $dead_g to true)You SHOOT the guard with your gun. His body armor seems to absorb the blow, but the force from the bullet flings him back and knocks him out, flipping a switch on the console. You hear the elevator security door retract in the warehouse.]]]",
+                        "innerText": "(if: $location's GARAGE is true)[You SHOOT out the cameras. Privacy. Rare thing these days.] (else-if: $location's WAREHOUSE is true)[You SHOOT the security barrier. No effect. Strong stuff.] (else-if: $location's SERVER is true and $open_cab is false)[(set: $open_cab to true) You SHOOT the padlock clean off. Cabinet open.] (else-if: $location's SECURITY is true)[(if: $guard is false)[Hey! Don't just shoot the guy!](else:)[(set: $guard to false) (set: $ser_door to true)(set: $dead_g to true)You SHOOT the guard. His body armor takes the hit, but the shot flings him back. He hits a switch on the console. He's out cold. You hear the elevator security door retract in the warehouse. Convenient.]]",
+                        "text": "[(if: $location's GARAGE is true)[You SHOOT out the cameras. Privacy. Rare thing these days.] (else-if: $location's WAREHOUSE is true)[You SHOOT the security barrier. No effect. Strong stuff.] (else-if: $location's SERVER is true and $open_cab is false)[(set: $open_cab to true) You SHOOT the padlock clean off. Cabinet open.] (else-if: $location's SECURITY is true)[(if: $guard is false)[Hey! Don't just shoot the guy!](else:)[(set: $guard to false) (set: $ser_door to true)(set: $dead_g to true)You SHOOT the guard. His body armor takes the hit, but the shot flings him back. He hits a switch on the console. He's out cold. You hear the elevator security door retract in the warehouse. Convenient.]]]",
                         "tokens": [
                             {
                                 "innerText": "if: $location's GARAGE is true",
@@ -3354,11 +3349,11 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.",
-                                "text": "[You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.]",
+                                "innerText": "You SHOOT out the cameras. Privacy. Rare thing these days.",
+                                "text": "[You SHOOT out the cameras. Privacy. Rare thing these days.]",
                                 "tokens": [
                                     {
-                                        "text": "You use your GUN to SHOOT out the cameras. Privacy is a rare thing these days.",
+                                        "text": "You SHOOT out the cameras. Privacy. Rare thing these days.",
                                         "type": "text"
                                     }
                                 ],
@@ -3411,11 +3406,11 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "You fire at the security barrier on the elevator, but even your military-grade APEX rounds don’t leave a mark.",
-                                "text": "[You fire at the security barrier on the elevator, but even your military-grade APEX rounds don’t leave a mark.]",
+                                "innerText": "You SHOOT the security barrier. No effect. Strong stuff.",
+                                "text": "[You SHOOT the security barrier. No effect. Strong stuff.]",
                                 "tokens": [
                                     {
-                                        "text": "You fire at the security barrier on the elevator, but even your military-grade APEX rounds don’t leave a mark.",
+                                        "text": "You SHOOT the security barrier. No effect. Strong stuff.",
                                         "type": "text"
                                     }
                                 ],
@@ -3501,8 +3496,8 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(set: $open_cab to true) You fire a shot at the cabinet’s electronic padlock, shooting it clean off. The cabinet is open.",
-                                "text": "[(set: $open_cab to true) You fire a shot at the cabinet’s electronic padlock, shooting it clean off. The cabinet is open.]",
+                                "innerText": "(set: $open_cab to true) You SHOOT the padlock clean off. Cabinet open.",
+                                "text": "[(set: $open_cab to true) You SHOOT the padlock clean off. Cabinet open.]",
                                 "tokens": [
                                     {
                                         "innerText": "set: $open_cab to true",
@@ -3542,7 +3537,7 @@
                                         "type": "macro"
                                     },
                                     {
-                                        "text": " You fire a shot at the cabinet’s electronic padlock, shooting it clean off. The cabinet is open.",
+                                        "text": " You SHOOT the padlock clean off. Cabinet open.",
                                         "type": "text"
                                     }
                                 ],
@@ -3595,8 +3590,8 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(if: $guard is false)[Hey! Don't just shoot the guy!](else:)[(set: $guard to false) (set: $ser_door to true)(set: $dead_g to true)You SHOOT the guard with your gun. His body armor seems to absorb the blow, but the force from the bullet flings him back and knocks him out, flipping a switch on the console. You hear the elevator security door retract in the warehouse.]",
-                                "text": "[(if: $guard is false)[Hey! Don't just shoot the guy!](else:)[(set: $guard to false) (set: $ser_door to true)(set: $dead_g to true)You SHOOT the guard with your gun. His body armor seems to absorb the blow, but the force from the bullet flings him back and knocks him out, flipping a switch on the console. You hear the elevator security door retract in the warehouse.]]",
+                                "innerText": "(if: $guard is false)[Hey! Don't just shoot the guy!](else:)[(set: $guard to false) (set: $ser_door to true)(set: $dead_g to true)You SHOOT the guard. His body armor takes the hit, but the shot flings him back. He hits a switch on the console. He's out cold. You hear the elevator security door retract in the warehouse. Convenient.]",
+                                "text": "[(if: $guard is false)[Hey! Don't just shoot the guy!](else:)[(set: $guard to false) (set: $ser_door to true)(set: $dead_g to true)You SHOOT the guard. His body armor takes the hit, but the shot flings him back. He hits a switch on the console. He's out cold. You hear the elevator security door retract in the warehouse. Convenient.]]",
                                 "tokens": [
                                     {
                                         "innerText": "if: $guard is false",
@@ -3659,8 +3654,8 @@
                                         "type": "macro"
                                     },
                                     {
-                                        "innerText": "(set: $guard to false) (set: $ser_door to true)(set: $dead_g to true)You SHOOT the guard with your gun. His body armor seems to absorb the blow, but the force from the bullet flings him back and knocks him out, flipping a switch on the console. You hear the elevator security door retract in the warehouse.",
-                                        "text": "[(set: $guard to false) (set: $ser_door to true)(set: $dead_g to true)You SHOOT the guard with your gun. His body armor seems to absorb the blow, but the force from the bullet flings him back and knocks him out, flipping a switch on the console. You hear the elevator security door retract in the warehouse.]",
+                                        "innerText": "(set: $guard to false) (set: $ser_door to true)(set: $dead_g to true)You SHOOT the guard. His body armor takes the hit, but the shot flings him back. He hits a switch on the console. He's out cold. You hear the elevator security door retract in the warehouse. Convenient.",
+                                        "text": "[(set: $guard to false) (set: $ser_door to true)(set: $dead_g to true)You SHOOT the guard. His body armor takes the hit, but the shot flings him back. He hits a switch on the console. He's out cold. You hear the elevator security door retract in the warehouse. Convenient.]",
                                         "tokens": [
                                             {
                                                 "innerText": "set: $guard to false",
@@ -3778,7 +3773,7 @@
                                                 "type": "macro"
                                             },
                                             {
-                                                "text": "You SHOOT the guard with your gun. His body armor seems to absorb the blow, but the force from the bullet flings him back and knocks him out, flipping a switch on the console. You hear the elevator security door retract in the warehouse.",
+                                                "text": "You SHOOT the guard. His body armor takes the hit, but the shot flings him back. He hits a switch on the console. He's out cold. You hear the elevator security door retract in the warehouse. Convenient.",
                                                 "type": "text"
                                             }
                                         ],
@@ -3833,8 +3828,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $body to it - 1) What gun? You try, but the guard shoots you before you can!",
-                        "text": "[(set: $body to it - 1) What gun? You try, but the guard shoots you before you can!]",
+                        "innerText": "(set: $body to it - 1) What gun? You try, but the guard shoots you!",
+                        "text": "[(set: $body to it - 1) What gun? You try, but the guard shoots you!]",
                         "tokens": [
                             {
                                 "innerText": "set: $body to it - 1",
@@ -3891,7 +3886,7 @@
                                 "type": "macro"
                             },
                             {
-                                "text": " What gun? You try, but the guard shoots you before you can!",
+                                "text": " What gun? You try, but the guard shoots you!",
                                 "type": "text"
                             }
                         ],
@@ -5070,7 +5065,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": "You enter a warehouse. There are shelves of boxes and equipment towering over you. To the NORTH, there is an elevator with no power, sealed with a security door. Next to the elevator is a rack with some white lab COATS on it. To the EAST, there is a door with a sign on it that says “Security Room.” To the WEST, there is a door with a sign on it that says “Server Room. ",
+                        "text": "You enter a warehouse. Shelves of boxes and equipment. To the NORTH, an elevator with no power, sealed with a security door. Next to elevator, a rack with white lab COATS on it. To the EAST, a door labeled “Security Room.” To the WEST, a door labeled “Server Room.\" ",
                         "type": "text"
                     },
                     {
@@ -5111,11 +5106,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "It doesn't look like the guard is following you. He must be pretty drunk",
-                        "text": "[It doesn't look like the guard is following you. He must be pretty drunk]",
+                        "innerText": "Doesn't look like the guard is following you. Must be pretty drunk",
+                        "text": "[Doesn't look like the guard is following you. Must be pretty drunk]",
                         "tokens": [
                             {
-                                "text": "It doesn't look like the guard is following you. He must be pretty drunk",
+                                "text": "Doesn't look like the guard is following you. Must be pretty drunk",
                                 "type": "text"
                             }
                         ],
@@ -6218,8 +6213,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $look_shelf is true)[(if: $inv's FOB is false)[(set: $inv's FOB to true) You nab the key FOB. This should be able to unlock something.](else:)[You already have the FOB.]](else:)[What fob?][TAKE FOB]<tf| [GET FOB]<tf| (click: ?tf)[(append: ?c1)[(display: \"Fob_Logic\")]]",
-                        "text": "[(if: $look_shelf is true)[(if: $inv's FOB is false)[(set: $inv's FOB to true) You nab the key FOB. This should be able to unlock something.](else:)[You already have the FOB.]](else:)[What fob?][TAKE FOB]<tf| [GET FOB]<tf| (click: ?tf)[(append: ?c1)[(display: \"Fob_Logic\")]]]",
+                        "innerText": "(if: $look_shelf is true)[(if: $inv's FOB is false)[(set: $inv's FOB to true) You nab the key FOB. Should be able to unlock something.](else:)[You already have the FOB.]](else:)[What fob?][TAKE FOB]<tf| [GET FOB]<tf| (click: ?tf)[(append: ?c1)[(display: \"Fob_Logic\")]]",
+                        "text": "[(if: $look_shelf is true)[(if: $inv's FOB is false)[(set: $inv's FOB to true) You nab the key FOB. Should be able to unlock something.](else:)[You already have the FOB.]](else:)[What fob?][TAKE FOB]<tf| [GET FOB]<tf| (click: ?tf)[(append: ?c1)[(display: \"Fob_Logic\")]]]",
                         "tokens": [
                             {
                                 "innerText": "if: $look_shelf is true",
@@ -6259,8 +6254,8 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(if: $inv's FOB is false)[(set: $inv's FOB to true) You nab the key FOB. This should be able to unlock something.](else:)[You already have the FOB.]",
-                                "text": "[(if: $inv's FOB is false)[(set: $inv's FOB to true) You nab the key FOB. This should be able to unlock something.](else:)[You already have the FOB.]]",
+                                "innerText": "(if: $inv's FOB is false)[(set: $inv's FOB to true) You nab the key FOB. Should be able to unlock something.](else:)[You already have the FOB.]",
+                                "text": "[(if: $inv's FOB is false)[(set: $inv's FOB to true) You nab the key FOB. Should be able to unlock something.](else:)[You already have the FOB.]]",
                                 "tokens": [
                                     {
                                         "innerText": "if: $inv's FOB is false",
@@ -6305,8 +6300,8 @@
                                         "type": "macro"
                                     },
                                     {
-                                        "innerText": "(set: $inv's FOB to true) You nab the key FOB. This should be able to unlock something.",
-                                        "text": "[(set: $inv's FOB to true) You nab the key FOB. This should be able to unlock something.]",
+                                        "innerText": "(set: $inv's FOB to true) You nab the key FOB. Should be able to unlock something.",
+                                        "text": "[(set: $inv's FOB to true) You nab the key FOB. Should be able to unlock something.]",
                                         "tokens": [
                                             {
                                                 "innerText": "set: $inv's FOB to true",
@@ -6351,7 +6346,7 @@
                                                 "type": "macro"
                                             },
                                             {
-                                                "text": " You nab the key FOB. This should be able to unlock something.",
+                                                "text": " You nab the key FOB. Should be able to unlock something.",
                                                 "type": "text"
                                             }
                                         ],
@@ -6572,8 +6567,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $inv's COAT is false)[(set: $inv's COAT to true) You take a white lab COAT from the rack and put it on. You look sciencey.](else:)[You already have the COAT.][TAKE COAT]<tc| [GET COAT]<tc| (click: ?tc)[(append: ?c1)[(display: \"Coat_Logic\")]]",
-                        "text": "[(if: $inv's COAT is false)[(set: $inv's COAT to true) You take a white lab COAT from the rack and put it on. You look sciencey.](else:)[You already have the COAT.][TAKE COAT]<tc| [GET COAT]<tc| (click: ?tc)[(append: ?c1)[(display: \"Coat_Logic\")]]]",
+                        "innerText": "(if: $inv's COAT is false)[(set: $inv's COAT to true) You take a white lab COAT from the rack, put it on. Feels sciencey.](else:)[You already have the COAT.][TAKE COAT]<tc| [GET COAT]<tc| (click: ?tc)[(append: ?c1)[(display: \"Coat_Logic\")]]",
+                        "text": "[(if: $inv's COAT is false)[(set: $inv's COAT to true) You take a white lab COAT from the rack, put it on. Feels sciencey.](else:)[You already have the COAT.][TAKE COAT]<tc| [GET COAT]<tc| (click: ?tc)[(append: ?c1)[(display: \"Coat_Logic\")]]]",
                         "tokens": [
                             {
                                 "innerText": "if: $inv's COAT is false",
@@ -6618,8 +6613,8 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(set: $inv's COAT to true) You take a white lab COAT from the rack and put it on. You look sciencey.",
-                                "text": "[(set: $inv's COAT to true) You take a white lab COAT from the rack and put it on. You look sciencey.]",
+                                "innerText": "(set: $inv's COAT to true) You take a white lab COAT from the rack, put it on. Feels sciencey.",
+                                "text": "[(set: $inv's COAT to true) You take a white lab COAT from the rack, put it on. Feels sciencey.]",
                                 "tokens": [
                                     {
                                         "innerText": "set: $inv's COAT to true",
@@ -6664,7 +6659,7 @@
                                         "type": "macro"
                                     },
                                     {
-                                        "text": " You take a white lab COAT from the rack and put it on. You look sciencey.",
+                                        "text": " You take a white lab COAT from the rack, put it on. Feels sciencey.",
                                         "type": "text"
                                     }
                                 ],
@@ -6859,8 +6854,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $location's WAREHOUSE is true and $infected is true)[(set:$read_log to true) You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]](else-if: $location's WAREHOUSE is true and $infected is false )[You read the log but find nothing that you need at the moment.](else-if: $location's SERVER is true)[This would be more USEful in the warehouse.]",
-                        "text": "[(if: $location's WAREHOUSE is true and $infected is true)[(set:$read_log to true) You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]](else-if: $location's WAREHOUSE is true and $infected is false )[You read the log but find nothing that you need at the moment.](else-if: $location's SERVER is true)[This would be more USEful in the warehouse.]]",
+                        "innerText": "(if: $location's WAREHOUSE is true and $infected is true)[(set:$read_log to true) You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]](else-if: $location's WAREHOUSE is true and $infected is false )[You read the LOG. Nothing on here you need right now.](else-if: $location's SERVER is true)[This would be more USEful in the warehouse.]",
+                        "text": "[(if: $location's WAREHOUSE is true and $infected is true)[(set:$read_log to true) You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]](else-if: $location's WAREHOUSE is true and $infected is false )[You read the LOG. Nothing on here you need right now.](else-if: $location's SERVER is true)[This would be more USEful in the warehouse.]]",
                         "tokens": [
                             {
                                 "innerText": "if: $location's WAREHOUSE is true and $infected is true",
@@ -6938,8 +6933,8 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(set:$read_log to true) You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]",
-                                "text": "[(set:$read_log to true) You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]]",
+                                "innerText": "(set:$read_log to true) You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]",
+                                "text": "[(set:$read_log to true) You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. [TAKE CURE]<tc| [USE CURE]<tc| (click: ?tc)[(append: ?c1)[(display: \"Cure_Logic\")]]]",
                                 "tokens": [
                                     {
                                         "innerText": "set:$read_log to true",
@@ -6975,7 +6970,7 @@
                                         "type": "macro"
                                     },
                                     {
-                                        "text": " You frantically read the LOG to find where the CURE is located. You see that there’s a box of it on shelf VB. You rush over and find the box, tearing it open to reveal sticks of CURE. ",
+                                        "text": " You search the LOG to find the CURE. Box of it on shelf VB. You rush over, find the box, tear it open. See sticks of CURE. ",
                                         "type": "text"
                                     },
                                     {
@@ -7170,11 +7165,11 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "You read the log but find nothing that you need at the moment.",
-                                "text": "[You read the log but find nothing that you need at the moment.]",
+                                "innerText": "You read the LOG. Nothing on here you need right now.",
+                                "text": "[You read the LOG. Nothing on here you need right now.]",
                                 "tokens": [
                                     {
-                                        "text": "You read the log but find nothing that you need at the moment.",
+                                        "text": "You read the LOG. Nothing on here you need right now.",
                                         "type": "text"
                                     }
                                 ],
@@ -7405,8 +7400,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $infected to false)You grab a stick of CURE and insert it into one of your data drives. That sweet, sweet anti-virus gets all the malware out of your system.",
-                        "text": "[(set: $infected to false)You grab a stick of CURE and insert it into one of your data drives. That sweet, sweet anti-virus gets all the malware out of your system.]",
+                        "innerText": "(set: $infected to false)You grab a stick of CURE, insert it into your data drive. Ahhhh. Sweet anti-virus. Gets all the malware out.",
+                        "text": "[(set: $infected to false)You grab a stick of CURE, insert it into your data drive. Ahhhh. Sweet anti-virus. Gets all the malware out.]",
                         "tokens": [
                             {
                                 "innerText": "set: $infected to false",
@@ -7446,7 +7441,7 @@
                                 "type": "macro"
                             },
                             {
-                                "text": "You grab a stick of CURE and insert it into one of your data drives. That sweet, sweet anti-virus gets all the malware out of your system.",
+                                "text": "You grab a stick of CURE, insert it into your data drive. Ahhhh. Sweet anti-virus. Gets all the malware out.",
                                 "type": "text"
                             }
                         ],
@@ -7876,7 +7871,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": "You walk into the Security Room. You see a console of security monitors, currently malfunctioning. A guard is crouching under the console, haplessly trying to repair them. There is a large calendar on the wall",
+                        "text": "You walk into the Security Room. Console of security monitors, currently malfunctioning. Guard crouching under the console, trying to repair them. Large calendar on the wall.",
                         "type": "text"
                     },
                     {
@@ -7884,7 +7879,7 @@
                         "type": "br"
                     },
                     {
-                        "text": "As you enter, the guard notices you. He quickly stands up and his hand goes for a gun at his side. He speaks Russian, which your T.E.T./R.I.S. translates. “Identify yourself!” he barks at you.",
+                        "text": "The guard notices you. He stands up, hand goes for a gun at his side. He speaks Russian, which your T.E.T./R.I.S. translates. “Identify yourself!”",
                         "type": "text"
                     },
                     {
@@ -7934,11 +7929,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "You see the guard’s eyes study your white lab COAT. He takes his hand away from his gun. “Ah, sorry. You must be one of the staff. Can never remember what you scientists look like. Can’t remember much of anything these days, really. Maybe I should lay off drinking? Eh, anyway, do you need to get to the basement?\"",
-                        "text": "[You see the guard’s eyes study your white lab COAT. He takes his hand away from his gun. “Ah, sorry. You must be one of the staff. Can never remember what you scientists look like. Can’t remember much of anything these days, really. Maybe I should lay off drinking? Eh, anyway, do you need to get to the basement?\"]",
+                        "innerText": "The guard’s eyes study your white lab COAT. Hand moves away from gun. “Sorry. Can never remember what you scientists look like. Can’t remember much of anything these days, really. Maybe I should lay off drinking. Anyway, you need to get to the basement?\"",
+                        "text": "[The guard’s eyes study your white lab COAT. Hand moves away from gun. “Sorry. Can never remember what you scientists look like. Can’t remember much of anything these days, really. Maybe I should lay off drinking. Anyway, you need to get to the basement?\"]",
                         "tokens": [
                             {
-                                "text": "You see the guard’s eyes study your white lab COAT. He takes his hand away from his gun. “Ah, sorry. You must be one of the staff. Can never remember what you scientists look like. Can’t remember much of anything these days, really. Maybe I should lay off drinking? Eh, anyway, do you need to get to the basement?\"",
+                                "text": "The guard’s eyes study your white lab COAT. Hand moves away from gun. “Sorry. Can never remember what you scientists look like. Can’t remember much of anything these days, really. Maybe I should lay off drinking. Anyway, you need to get to the basement?\"",
                                 "type": "text"
                             }
                         ],
@@ -8862,7 +8857,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": " You enter the Server Room. There are banks of computers, the collective whirring of their fans creating a loud hum. In front of you, there is an administrative terminal. Along the wall, there is a CABINET.",
+                        "text": " You enter the Server Room. Banks of computers, loud hum from the fans. In front of you, an administrative terminal. Along the wall, a cabinet.",
                         "type": "text"
                     },
                     {
@@ -9809,8 +9804,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $location's SERVER is true and $open_cab is false)[(set: $open_cab to true) You tap the key FOB you found onto the cabinet’s electronic padlock. The cabinet swings open. Inside you find a bunch of cables and dongles, along with a LOG of warehouse contents.]",
-                        "text": "[(if: $location's SERVER is true and $open_cab is false)[(set: $open_cab to true) You tap the key FOB you found onto the cabinet’s electronic padlock. The cabinet swings open. Inside you find a bunch of cables and dongles, along with a LOG of warehouse contents.]]",
+                        "innerText": "(if: $location's SERVER is true and $open_cab is false)[(set: $open_cab to true) You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles, a LOG of warehouse contents.]",
+                        "text": "[(if: $location's SERVER is true and $open_cab is false)[(set: $open_cab to true) You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles, a LOG of warehouse contents.]]",
                         "tokens": [
                             {
                                 "innerText": "if: $location's SERVER is true and $open_cab is false",
@@ -9888,8 +9883,8 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(set: $open_cab to true) You tap the key FOB you found onto the cabinet’s electronic padlock. The cabinet swings open. Inside you find a bunch of cables and dongles, along with a LOG of warehouse contents.",
-                                "text": "[(set: $open_cab to true) You tap the key FOB you found onto the cabinet’s electronic padlock. The cabinet swings open. Inside you find a bunch of cables and dongles, along with a LOG of warehouse contents.]",
+                                "innerText": "(set: $open_cab to true) You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles, a LOG of warehouse contents.",
+                                "text": "[(set: $open_cab to true) You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles, a LOG of warehouse contents.]",
                                 "tokens": [
                                     {
                                         "innerText": "set: $open_cab to true",
@@ -9929,7 +9924,7 @@
                                         "type": "macro"
                                     },
                                     {
-                                        "text": " You tap the key FOB you found onto the cabinet’s electronic padlock. The cabinet swings open. Inside you find a bunch of cables and dongles, along with a LOG of warehouse contents.",
+                                        "text": " You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles, a LOG of warehouse contents.",
                                         "type": "text"
                                     }
                                 ],
@@ -10184,8 +10179,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $inv's LOG to true)You take the warehouse LOG. You should be able to find anything in the warehouse with this.",
-                        "text": "[(set: $inv's LOG to true)You take the warehouse LOG. You should be able to find anything in the warehouse with this.]",
+                        "innerText": "(set: $inv's LOG to true)You take the warehouse LOG. Should be able to find anything in the warehouse with this.",
+                        "text": "[(set: $inv's LOG to true)You take the warehouse LOG. Should be able to find anything in the warehouse with this.]",
                         "tokens": [
                             {
                                 "innerText": "set: $inv's LOG to true",
@@ -10230,7 +10225,7 @@
                                 "type": "macro"
                             },
                             {
-                                "text": "You take the warehouse LOG. You should be able to find anything in the warehouse with this.",
+                                "text": "You take the warehouse LOG. Should be able to find anything in the warehouse with this.",
                                 "type": "text"
                             }
                         ],
@@ -10509,8 +10504,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $guard is false and $dead_g is false)[(if: $ser_door is false)[(set: $ser_door to true)”I’ll disable the security door on the elevator for you. Be careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.” The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.](else:)[The guard is passed out. It doesn't look like he can talk right now.]](else-if: $dead_g is false)[(set: $body to it - 1)You try, but the guard shoots you before you can!]",
-                        "text": "[(if: $guard is false and $dead_g is false)[(if: $ser_door is false)[(set: $ser_door to true)”I’ll disable the security door on the elevator for you. Be careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.” The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.](else:)[The guard is passed out. It doesn't look like he can talk right now.]](else-if: $dead_g is false)[(set: $body to it - 1)You try, but the guard shoots you before you can!]]",
+                        "innerText": "(if: $guard is false and $dead_g is false)[(if: $ser_door is false)[(set: $ser_door to true)”I’ll disable the security door on the elevator. Careful working too hard down there. I don’t want to have to drag you up here unconscious and screaming again.” Guard flips a switch on the console, you hear the elevator security door retract in the warehouse.](else:)[Guard is passed out. Doesn't look like he can talk right now.]](else-if: $dead_g is false)[(set: $body to it - 1)You try, but the guard shoots you before you can!]",
+                        "text": "[(if: $guard is false and $dead_g is false)[(if: $ser_door is false)[(set: $ser_door to true)”I’ll disable the security door on the elevator. Careful working too hard down there. I don’t want to have to drag you up here unconscious and screaming again.” Guard flips a switch on the console, you hear the elevator security door retract in the warehouse.](else:)[Guard is passed out. Doesn't look like he can talk right now.]](else-if: $dead_g is false)[(set: $body to it - 1)You try, but the guard shoots you before you can!]]",
                         "tokens": [
                             {
                                 "innerText": "if: $guard is false and $dead_g is false",
@@ -10583,8 +10578,8 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(if: $ser_door is false)[(set: $ser_door to true)”I’ll disable the security door on the elevator for you. Be careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.” The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.](else:)[The guard is passed out. It doesn't look like he can talk right now.]",
-                                "text": "[(if: $ser_door is false)[(set: $ser_door to true)”I’ll disable the security door on the elevator for you. Be careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.” The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.](else:)[The guard is passed out. It doesn't look like he can talk right now.]]",
+                                "innerText": "(if: $ser_door is false)[(set: $ser_door to true)”I’ll disable the security door on the elevator. Careful working too hard down there. I don’t want to have to drag you up here unconscious and screaming again.” Guard flips a switch on the console, you hear the elevator security door retract in the warehouse.](else:)[Guard is passed out. Doesn't look like he can talk right now.]",
+                                "text": "[(if: $ser_door is false)[(set: $ser_door to true)”I’ll disable the security door on the elevator. Careful working too hard down there. I don’t want to have to drag you up here unconscious and screaming again.” Guard flips a switch on the console, you hear the elevator security door retract in the warehouse.](else:)[Guard is passed out. Doesn't look like he can talk right now.]]",
                                 "tokens": [
                                     {
                                         "innerText": "if: $ser_door is false",
@@ -10624,8 +10619,8 @@
                                         "type": "macro"
                                     },
                                     {
-                                        "innerText": "(set: $ser_door to true)”I’ll disable the security door on the elevator for you. Be careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.” The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.",
-                                        "text": "[(set: $ser_door to true)”I’ll disable the security door on the elevator for you. Be careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.” The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.]",
+                                        "innerText": "(set: $ser_door to true)”I’ll disable the security door on the elevator. Careful working too hard down there. I don’t want to have to drag you up here unconscious and screaming again.” Guard flips a switch on the console, you hear the elevator security door retract in the warehouse.",
+                                        "text": "[(set: $ser_door to true)”I’ll disable the security door on the elevator. Careful working too hard down there. I don’t want to have to drag you up here unconscious and screaming again.” Guard flips a switch on the console, you hear the elevator security door retract in the warehouse.]",
                                         "tokens": [
                                             {
                                                 "innerText": "set: $ser_door to true",
@@ -10665,7 +10660,7 @@
                                                 "type": "macro"
                                             },
                                             {
-                                                "text": "”I’ll disable the security door on the elevator for you. Be careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.” The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.",
+                                                "text": "”I’ll disable the security door on the elevator. Careful working too hard down there. I don’t want to have to drag you up here unconscious and screaming again.” Guard flips a switch on the console, you hear the elevator security door retract in the warehouse.",
                                                 "type": "text"
                                             }
                                         ],
@@ -10684,11 +10679,11 @@
                                         "type": "macro"
                                     },
                                     {
-                                        "innerText": "The guard is passed out. It doesn't look like he can talk right now.",
-                                        "text": "[The guard is passed out. It doesn't look like he can talk right now.]",
+                                        "innerText": "Guard is passed out. Doesn't look like he can talk right now.",
+                                        "text": "[Guard is passed out. Doesn't look like he can talk right now.]",
                                         "tokens": [
                                             {
-                                                "text": "The guard is passed out. It doesn't look like he can talk right now.",
+                                                "text": "Guard is passed out. Doesn't look like he can talk right now.",
                                                 "type": "text"
                                             }
                                         ],

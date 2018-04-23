@@ -10,24 +10,43 @@ public static class LetterGenerator {
         public readonly TwineTextPlayer.Command command;
         public readonly string name;
         public readonly float weight;
+        public readonly string[] aliases;
 
-        public WeightedCommand(TwineTextPlayer.Command command, string name, float weight)
+        public WeightedCommand(TwineTextPlayer.Command command, string name, float weight, string[] aliases)
         {
             this.command = command;
             this.name = name;
             this.weight = weight;
+            this.aliases = aliases;
         }
     }
 
     // SHOULD BE CONST
     public static WeightedCommand[] fullWeightedCommandsList = new WeightedCommand[] {
-        new WeightedCommand( TwineTextPlayer.Command.North, "NORTH", 1),
-        new WeightedCommand( TwineTextPlayer.Command.South, "SOUTH", 1),
-        new WeightedCommand( TwineTextPlayer.Command.East, "EAST", 1),
-        new WeightedCommand( TwineTextPlayer.Command.West, "WEST", 1),
-        new WeightedCommand( TwineTextPlayer.Command.Open, "OPEN", 1),
-        new WeightedCommand( TwineTextPlayer.Command.Hack, "HACK", 1),
-        new WeightedCommand( TwineTextPlayer.Command.Look, "LOOK", 1)
+        new WeightedCommand( TwineTextPlayer.Command.North, "NORTH", 1, new string[]{ "UP" }),
+        new WeightedCommand( TwineTextPlayer.Command.South, "SOUTH", 1, new string[]{ "DOWN" }),
+        new WeightedCommand( TwineTextPlayer.Command.East, "EAST", 1, new string[]{ "RIGHT" }),
+        new WeightedCommand( TwineTextPlayer.Command.West, "WEST", 1, new string[]{ "LEFT" }),
+        new WeightedCommand( TwineTextPlayer.Command.Open, "OPEN", 1, new string[]{ "UP" }),
+        new WeightedCommand( TwineTextPlayer.Command.Hack, "HACK", 1, new string[]{ }),
+        new WeightedCommand( TwineTextPlayer.Command.Look, "LOOK", 1, new string[]{ "SEARCH" }),
+        new WeightedCommand( TwineTextPlayer.Command.Talk, "TALK", 1, new string[]{ "SPEAK" }),
+
+        // And all the item commands
+        new WeightedCommand( TwineTextPlayer.Command.UseTape, "USETAPE", 1, new string[]{ }),
+        new WeightedCommand( TwineTextPlayer.Command.UseLog, "USELOG", 1, new string[]{ }),
+        new WeightedCommand( TwineTextPlayer.Command.UseGun, "USEGUN", 1, new string[]{ }),
+        new WeightedCommand( TwineTextPlayer.Command.UseFob, "USEFOB", 1, new string[]{ }),
+        new WeightedCommand( TwineTextPlayer.Command.UseBoard, "USEBOARD", 1, new string[]{ }),
+
+        new WeightedCommand( TwineTextPlayer.Command.GetTape, "GETTAPE", 1, new string[]{ }),
+        new WeightedCommand( TwineTextPlayer.Command.GetLog, "GETLOG", 1, new string[]{ }),
+        new WeightedCommand( TwineTextPlayer.Command.GetGun, "GETGUN", 1, new string[]{ }),
+        new WeightedCommand( TwineTextPlayer.Command.GetFob, "GETFOB", 1, new string[]{ }),
+        new WeightedCommand( TwineTextPlayer.Command.GetBoard, "GETBOARD", 1, new string[]{ }),
+        new WeightedCommand( TwineTextPlayer.Command.GetNote, "GETNOTE", 1, new string[]{ }),
+        new WeightedCommand( TwineTextPlayer.Command.GetCoat, "GETCOAT", 1, new string[]{ })
+
 
         //North,
         //South,
@@ -47,7 +66,7 @@ public static class LetterGenerator {
         // HACK: we should jsut prevent this from happening at the start of the story but whatever
         if(commands.Length == 0)
         {
-            weightedCommandsList = new WeightedCommand[] { new WeightedCommand(TwineTextPlayer.Command.Open, "OPEN", 1) };
+            weightedCommandsList = new WeightedCommand[] { new WeightedCommand(TwineTextPlayer.Command.Open, "OPEN", 1, new string[] { }) };
             weightedCommandTotal = 0;
             return;
         }
@@ -61,7 +80,7 @@ public static class LetterGenerator {
                 if(weightedCommand.command == command)
                 {
                     newWeightedList.Add(weightedCommand);
-                    Debug.Log("Adding " + weightedCommand.name + " to commands list.");
+                    // Debug.Log("Adding " + weightedCommand.name + " to commands list.");
                 }
             }
         }

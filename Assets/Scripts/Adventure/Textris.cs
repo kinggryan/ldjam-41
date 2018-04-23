@@ -57,6 +57,12 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	public readonly Cradle.StoryFormats.Harlowe.HarloweRuntimeMacros macros1;
 
+	private SoundEngine soundEngine;
+
+	void Start () {
+        soundEngine = Object.FindObjectOfType<SoundEngine>();
+	}
+
 	@Textris()
 	{
 		this.StartPassage = "Title";
@@ -307,6 +313,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["SERVER"]  = false;
 		Vars.location["SECURITY"]  = false;
 		if(! (macros1.history() .Contains("Garage"))) {
+			soundEngine.PlaySoundWithName("passage6");
 			yield return text("You pound on the hatch until it springs open. You haul yourself out of the tank.");
 			yield return lineBreak();
 			yield return text("You’re in a garage. There is a door to the NORTH, with a keypad next to it. There is a CAMERA in the northwest corner, and another in the northeast. There is a desk with several drawers. You feel something in your pocket. When you check to see what it is, you find an audio TAPE.");
