@@ -116,7 +116,7 @@ public class TetrisManager : MonoBehaviour {
 
         PerformNextDownwardMove();
 
-        if(CheckForCompleteColumns() || CheckForDeathInTwine()){
+        if(CheckForDeathInTwine()){
             LoseGame();
         }
 
@@ -144,7 +144,7 @@ public class TetrisManager : MonoBehaviour {
             tetrisBoard = currentBlock.AddToBoard(tetrisBoard);
             soundEngine.PlaySoundWithName("BlockLand");
             currentBlock = null;
-            if(CheckForCompleteLines())
+            if(CheckForCompleteLines() || CheckForCompleteColumns())
             {
                 gameStepTimer += lineCompleteHangDuration;
                 shouldUpdateBoard = false;
@@ -233,6 +233,44 @@ public class TetrisManager : MonoBehaviour {
         return didEraseLine;
     }
 
+        bool CheckForCompleteColumns()
+        {
+            Debug.Log("Checking For Complete Columns");
+        // Check for complete lines
+        // Go from the top down so we don't have to recheck lines if they move down
+        var didEraseColumn = false;
+        for (var x = boardSizeX - 1; x >= 0; x--)
+        {
+            var command = GetCommandFromColumn(x);
+
+            if (command.command.command != TwineTextPlayer.Command.None)
+            {
+                display.UpdateBoardWithCommandOnColumn(tetrisBoard, command.word, x);
+            }
+
+            if(IsColumnComplete(x))
+            {
+                display.UpdateBoardWithCompleteColumn(tetrisBoard, x);
+            }
+
+            // Do something with the command
+            if (command.command.command != TwineTextPlayer.Command.None || IsColumnComplete(x))
+            {
+                //RemoveLineAndMoveAboveLinesDown(y);
+                didEraseColumn = true;
+            }
+
+            if (command.command.command != TwineTextPlayer.Command.None)
+            {
+                twinePlayer.TypeCommand(command.word);
+                twinePlayer.DoCommand(command.command.command);
+                return true;
+            }
+        }
+
+        return didEraseColumn;
+    }
+
     bool CheckForDeathInTwine()
     {
         return twinePlayer.GetTwineVarState("game_over");     
@@ -258,14 +296,7 @@ public class TetrisManager : MonoBehaviour {
         return true;
     }
 
-    bool CheckForCompleteColumns(){
-        for (var x = boardSizeX - 1; x >= 0; x--)
-            if(IsColumnComplete(x)){
-                return true;
-            }
-        
-        return false;
-    }
+  
 
     bool IsColumnComplete(int xCoord)
         {
@@ -320,6 +351,55 @@ public class TetrisManager : MonoBehaviour {
                     }
 
                     if(lineString.Contains(alias))
+                    {
+                        textToUse = alias;
+                        wasFound = true;
+                    }
+                }
+
+                if (wasFound)
+                {
+                    //twinePlayer.TypeCommand(textToUse);
+                    return new CommandReturnTuple(command, textToUse);
+                }
+                
+            }
+        }
+
+        return new CommandReturnTuple( new LetterGenerator.WeightedCommand(
+            TwineTextPlayer.Command.None, "", 0, new string[] { }), "" );
+    }
+
+    CommandReturnTuple GetCommandFromColumn(int xCoord)
+    {
+        Debug.Log("Checking column " + xCoord + " for Commands");
+        var columnString = "";
+
+        // Do some stuff to find teh commands
+        for (var y = boardSizeY - 1; y >= 0; y--)
+        {
+            if(tetrisBoard[xCoord, y] != ' ')
+            {
+                columnString += tetrisBoard[xCoord, y];
+            }
+        }
+
+        if (columnString.Length != 0)
+        {
+            Debug.Log("CollectionBase string:" + columnString);
+            foreach (var command in LetterGenerator.weightedCommandsList)
+            {
+                var wasFound = columnString.Contains(command.name);
+                var textToUse = command.name;
+                foreach(var alias in command.aliases)
+                {
+                    if(wasFound)
+                    {
+                        Debug.Log("Command Found In Column " + xCoord);
+                        break;
+                    }
+
+                    if(columnString.Contains(alias))
                     {
                         textToUse = alias;
                         wasFound = true;

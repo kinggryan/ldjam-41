@@ -46,9 +46,21 @@ public class TetrisDisplay : MonoBehaviour {
         HighlightLine(board, yCoord);
     }
 
+    public void UpdateBoardWithCommandOnColumn(char[,] board, string command, int xCoord)
+    {
+        UpdateBoard(board, null);
+        HighLightWordInColumn(board, command, xCoord);
+        HighlightColumn(board, xCoord);
+    }
+
     public void UpdateBoardWithCompleteLine(char[,] board, int yCoord)
     {
         HighlightLine(board, yCoord);
+    }
+
+    public void UpdateBoardWithCompleteColumn(char[,] board, int xCoord)
+    {
+        HighlightColumn(board, xCoord);
     }
 
     void HighLightWord(char[,] board, string word, int yCoord)
@@ -75,6 +87,32 @@ public class TetrisDisplay : MonoBehaviour {
         commandText.text = textString;
     }
 
+    void HighLightWordInColumn(char[,] board, string word, int xCoord)
+    {
+        var textString = "";
+        var currentWordIndex = 0;
+        for (var x = board.GetLength(0) - 1; x >= 0; x--)
+        {
+            for (var y = 0; y < board.GetLength(1); y++)
+            {
+                if(currentWordIndex < word.Length && xCoord == x && board[x, y] == word[currentWordIndex])
+                {
+                    textString += board[x, y];
+                    currentWordIndex++;
+                } else
+                {
+                    textString += ' ';
+                }
+            }
+            textString += "\n";
+        }
+
+        //Debug.Log("Highlighting word with " + textString);
+        commandText.text = textString;
+
+        Debug.Log("WORD HIGLIGHTED?");
+    }
+
     void HighlightLine(char[,] board, int yCoord)
     {
         var textString = "";
@@ -97,5 +135,30 @@ public class TetrisDisplay : MonoBehaviour {
         }
 
         lineCompleteText.text = textString;
+    }
+
+    void HighlightColumn(char[,] board, int xCoord)
+    {
+        var textString = "";
+        var currentWordIndex = 0;
+        for (var x = board.GetLength(0) - 1; x >= 0; x--)
+        {
+            for (var y = 0; y < board.GetLength(1); y++)
+            {
+                if (xCoord == x)
+                {
+                    textString += board[x, y];
+                    currentWordIndex++;
+                }
+                else
+                {
+                    textString += ' ';
+                }
+            }
+            textString += "\n";
+        }
+
+        lineCompleteText.text = textString;
+        Debug.Log("COLUMN HIGLIGHTED?");
     }
 }

@@ -52,23 +52,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loop: 0
-  random: 1
+  random: 0
   sequence: 0
-  playOnAwake: 1
-  volume: 0.218
+  playOnAwake: 0
+  volume: 1
   pitch: 0
-  pitchRandomization: 12
+  pitchRandomization: 0
   fadeInTime: 0
   fadeOutTime: 0
   fadeOutTimer: 1
   audioClip:
-  - {fileID: 8300000, guid: 288d7b709a0f0d04a9c3ffae49dcc77f, type: 3}
-  - {fileID: 8300000, guid: 70ada824deb84c34b97eb05792be8c6d, type: 3}
-  - {fileID: 8300000, guid: 9ef543fe80133134396d84329771669e, type: 3}
-  - {fileID: 8300000, guid: 869536a3c6ec03045b6b866a9e1e9a06, type: 3}
-  - {fileID: 8300000, guid: 2f80437c8094a0c4b859cb3ea593803c, type: 3}
-  - {fileID: 8300000, guid: 9259d724108c41a4dbe9e110b5bb5851, type: 3}
-  - {fileID: 8300000, guid: 60a537abb6494324f96b94b0d50c8a91, type: 3}
+  - {fileID: 0}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -79,3 +73,4 @@ MonoBehaviour:
   externalPitchModifier: 0
   output: {fileID: 0}
   elementToLoop: 0
+  playerXDistance: 0
