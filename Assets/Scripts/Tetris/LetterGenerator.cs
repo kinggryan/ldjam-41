@@ -128,7 +128,7 @@ public static class LetterGenerator {
             return GetSubstringFromCommands(length);
         }
 
-        Debug.Log("returning " + substr);
+        //Debug.Log("returning " + substr);
 
         // Reverse it if needed
         if(substr[0] != letter)

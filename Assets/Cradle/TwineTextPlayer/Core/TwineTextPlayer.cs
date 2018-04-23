@@ -254,10 +254,11 @@ public class TwineTextPlayer : MonoBehaviour {
 	public bool DoCommand(Command command)
 	{	
 		var commandText = commandToNameMap[command];
+        this.TypeCommand(commandText);
 
         //Debug.Log("Looking for command text '" + commandText + "'");
 
-		var links = this.Story.GetCurrentLinks();
+        var links = this.Story.GetCurrentLinks();
 		if (links != null)
 		{
 			foreach (StoryLink link in links)
