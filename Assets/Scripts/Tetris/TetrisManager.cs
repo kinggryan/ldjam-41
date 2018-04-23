@@ -122,7 +122,7 @@ public class TetrisManager : MonoBehaviour {
 
         if(CheckForWinInTwine())
         {
-                //Go to Win Scence
+                WinGame();
         }
         
     }
@@ -285,6 +285,11 @@ public class TetrisManager : MonoBehaviour {
     void LoseGame(){
         Debug.Log("GAME OVER");
         Application.LoadLevel("Lose");
+    }
+
+    void WinGame(){
+        Debug.Log("YOU WON");
+        Application.LoadLevel("Win");
     }
 
 
