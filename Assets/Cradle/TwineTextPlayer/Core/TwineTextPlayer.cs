@@ -21,6 +21,7 @@ public class TwineTextPlayer : MonoBehaviour {
 	public enum Command
 	{
         Begin,
+
         North,
         South,
         East,
@@ -28,34 +29,27 @@ public class TwineTextPlayer : MonoBehaviour {
         Open,
         Hack,
         Look,
+        Talk,
+        
+        // The item ones
+        UseTape,
+        UseGun,
+        UseFob,
+        UseLog,
+        UseBoard,
+
+        GetTape,
+        GetNote,
+        GetGun,
+        GetFob,
+        GetCoat,
+        GetLog,
+        GetBoard,
+
         None
+}
 
-//        USE <item>
-//GET/TAKE <item>
-//LOOK
-//HACK
-//OPEN
-//TALK
-//SHOOT
-//GEAR (brings up inventory)
-//Directions:
-//NORTH
-//SOUTH
-//EAST
-//WEST
-//Items:
-//TAPE
-//NOTE(does not get USEd)
-//GUN
-//FOB
-//COAT(does not get USEd)
-//LOG
-//BOARD
-
-
-    }
-
-    Dictionary<Command, string> commandToNameMap = new Dictionary<Command, string>
+    protected Dictionary<Command, string> commandToNameMap = new Dictionary<Command, string>
     {
         { Command.Begin, "Begin." },
         { Command.North, "NORTH" },
@@ -65,10 +59,23 @@ public class TwineTextPlayer : MonoBehaviour {
         { Command.Open, "OPEN" },
         { Command.Hack, "HACK" },
         { Command.Look, "LOOK" },
+        { Command.Talk, "TALK" },
+        { Command.UseTape, "USE TAPE" },
+        { Command.UseGun, "USE GUN" },
+        { Command.UseFob, "USE FOB" },
+        { Command.UseLog, "USE LOG" },
+        { Command.UseBoard, "USE BOARD" },
+        { Command.GetTape, "TAKE TAPE" },
+        { Command.GetNote, "TAKE NOTE" },
+        { Command.GetGun, "TAKE GUN" },
+        { Command.GetFob, "TAKE FOB" },
+        { Command.GetCoat, "TAKE COAT" },
+        { Command.GetLog, "TAKE LOG" },
+        { Command.GetBoard, "TAKE BOARD" },
         { Command.None, "" }
     };
 
-    Dictionary<string, Command> nameToCommandMap = new Dictionary<string, Command>
+    protected Dictionary<string, Command> nameToCommandMap = new Dictionary<string, Command>
     {
         { "Begin.", Command.Begin },
         { "NORTH", Command.North },
@@ -77,6 +84,19 @@ public class TwineTextPlayer : MonoBehaviour {
         { "EAST", Command.East },
         { "OPEN", Command.Open },
         { "HACK", Command.Hack },
+        { "TALK", Command.Talk },
+        { "USE TAPE", Command.UseTape },
+        { "USE GUN", Command.UseGun },
+        { "USE FOB", Command.UseFob },
+        { "USE LOG", Command.UseLog },
+        { "USE BOARD", Command.UseBoard },
+        { "TAKE TAPE", Command.GetTape },
+        { "TAKE NOTE", Command.GetNote },
+        { "TAKE GUN", Command.GetGun },
+        { "TAKE FOB", Command.GetFob },
+        { "TAKE COAT", Command.GetCoat },
+        { "TAKE LOG", Command.GetLog },
+        { "TAKE BOARD", Command.GetBoard },
         { "LOOK", Command.Look }
     };
 
@@ -252,9 +272,11 @@ public class TwineTextPlayer : MonoBehaviour {
 
 
 	public bool DoCommand(Command command)
-	{	
+	{
+        Debug.Log("Doing command " + command);
+
 		var commandText = commandToNameMap[command];
-        this.TypeCommand(commandText);
+        // this.TypeCommand(commandText);
 
         //Debug.Log("Looking for command text '" + commandText + "'");
 
@@ -273,7 +295,6 @@ public class TwineTextPlayer : MonoBehaviour {
 			}
 		}
 
-        TypeCommand(commandText);
 		return true ; 
 	}
 

@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class TetrisManager : MonoBehaviour {
 
+    struct CommandReturnTuple
+    {
+        public readonly LetterGenerator.WeightedCommand command;
+        public readonly string word;
+
+        public CommandReturnTuple(LetterGenerator.WeightedCommand command, string word)
+        {
+            this.command = command;
+            this.word = word;
+        }
+    }
+
+    public bool playingEnabled;
+
     private TetrisDisplay display;
     private TextrisTwinePlayer twinePlayer;
 
@@ -40,7 +54,9 @@ public class TetrisManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        gameStepTimer -= Time.deltaTime;
+        if(playingEnabled)
+            gameStepTimer -= Time.deltaTime;
+
         if(gameStepTimer <= 0)
         {
             gameStepTimer += gameStepsDuration;
@@ -177,9 +193,9 @@ public class TetrisManager : MonoBehaviour {
         {
             var command = GetCommandFromLine(y);
 
-            if (command.command != TwineTextPlayer.Command.None)
+            if (command.command.command != TwineTextPlayer.Command.None)
             {
-                display.UpdateBoardWithCommandOnLine(tetrisBoard, command.name, y);
+                display.UpdateBoardWithCommandOnLine(tetrisBoard, command.word, y);
             }
 
             if(IsLineComplete(y))
@@ -188,15 +204,16 @@ public class TetrisManager : MonoBehaviour {
             }
 
             // Do something with the command
-            if (command.command != TwineTextPlayer.Command.None || IsLineComplete(y))
+            if (command.command.command != TwineTextPlayer.Command.None || IsLineComplete(y))
             {
                 RemoveLineAndMoveAboveLinesDown(y);
                 didEraseLine = true;
             }
 
-            if (command.command != TwineTextPlayer.Command.None)
+            if (command.command.command != TwineTextPlayer.Command.None)
             {
-                twinePlayer.DoCommand(command.command);
+                twinePlayer.TypeCommand(command.word);
+                twinePlayer.DoCommand(command.command.command);
                 return true;
             }
         }
@@ -219,7 +236,7 @@ public class TetrisManager : MonoBehaviour {
         return true;
     }
 
-    LetterGenerator.WeightedCommand GetCommandFromLine(int yCoord)
+    CommandReturnTuple GetCommandFromLine(int yCoord)
     {
         var lineString = "";
 
@@ -236,14 +253,31 @@ public class TetrisManager : MonoBehaviour {
         {
             foreach (var command in LetterGenerator.weightedCommandsList)
             {
-                if (lineString.Contains(command.name))
+                var wasFound = lineString.Contains(command.name);
+                var textToUse = command.name;
+                foreach(var alias in command.aliases)
                 {
-                    return command;
+                    if(wasFound)
+                    {
+                        break;
+                    }
+
+                    if(lineString.Contains(alias))
+                    {
+                        textToUse = alias;
+                        wasFound = true;
+                    }
+                }
+
+                if (wasFound)
+                {
+                    //twinePlayer.TypeCommand(textToUse);
+                    return new CommandReturnTuple(command, textToUse);
                 }
             }
         }
 
-        return new LetterGenerator.WeightedCommand(TwineTextPlayer.Command.None, "", 0);
+        return new CommandReturnTuple( new LetterGenerator.WeightedCommand(TwineTextPlayer.Command.None, "", 0, new string[] { }), "" );
     }
 
     void RemoveLineAndMoveAboveLinesDown(int yCoord)
