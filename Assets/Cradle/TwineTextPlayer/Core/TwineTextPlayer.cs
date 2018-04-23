@@ -45,6 +45,7 @@ public class TwineTextPlayer : MonoBehaviour {
         GetCoat,
         GetLog,
         GetBoard,
+        Gear,
 
         None
 }
@@ -65,13 +66,14 @@ public class TwineTextPlayer : MonoBehaviour {
         { Command.UseFob, "USE FOB" },
         { Command.UseLog, "USE LOG" },
         { Command.UseBoard, "USE BOARD" },
-        { Command.GetTape, "TAKE TAPE" },
-        { Command.GetNote, "TAKE NOTE" },
-        { Command.GetGun, "TAKE GUN" },
-        { Command.GetFob, "TAKE FOB" },
-        { Command.GetCoat, "TAKE COAT" },
-        { Command.GetLog, "TAKE LOG" },
-        { Command.GetBoard, "TAKE BOARD" },
+        { Command.GetTape, "GET TAPE" },
+        { Command.GetNote, "GET NOTE" },
+        { Command.GetGun, "GET GUN" },
+        { Command.GetFob, "GET FOB" },
+        { Command.GetCoat, "GET COAT" },
+        { Command.GetLog, "GET LOG" },
+        { Command.GetBoard, "GET BOARD" },
+        { Command.Gear, "GEAR" },
         { Command.None, "" }
     };
 
@@ -90,13 +92,14 @@ public class TwineTextPlayer : MonoBehaviour {
         { "USE FOB", Command.UseFob },
         { "USE LOG", Command.UseLog },
         { "USE BOARD", Command.UseBoard },
-        { "TAKE TAPE", Command.GetTape },
-        { "TAKE NOTE", Command.GetNote },
-        { "TAKE GUN", Command.GetGun },
-        { "TAKE FOB", Command.GetFob },
-        { "TAKE COAT", Command.GetCoat },
-        { "TAKE LOG", Command.GetLog },
-        { "TAKE BOARD", Command.GetBoard },
+        { "GET TAPE", Command.GetTape },
+        { "GET NOTE", Command.GetNote },
+        { "GET GUN", Command.GetGun },
+        { "GET FOB", Command.GetFob },
+        { "GET COAT", Command.GetCoat },
+        { "GET LOG", Command.GetLog },
+        { "GET BOARD", Command.GetBoard },
+        { "GEAR", Command.Gear },
         { "LOOK", Command.Look }
     };
 
