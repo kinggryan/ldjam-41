@@ -120,17 +120,17 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	#endregion
 
 	// Sound Stuff
-	private SoundEngine soundEngine;
-	private MusicEngine musicEngine;
 
-	void Start(){
-		soundEngine = Object.FindObjectOfType<SoundEngine>();
-		musicEngine = Object.FindObjectOfType<MusicEngine>();
+	private SoundEngine soundEngine;
+    private MusicEngine musicEngine;
+
+    void Start(){
+        soundEngine = Object.FindObjectOfType<SoundEngine>();
+        musicEngine = Object.FindObjectOfType<MusicEngine>();
 	}
 
-	// .............
+
 	// #1: Title
-	
 
 	void passage1_Init()
 	{
