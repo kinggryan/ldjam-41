@@ -14,7 +14,7 @@ public class SoundEngine : MonoBehaviour {
 
 	public EventAndName[] events;
 
-	void Awake ()
+	/* void Awake ()
     {
         if (instance != null && instance != this)
         {
@@ -27,7 +27,7 @@ public class SoundEngine : MonoBehaviour {
         }
 
         GameObject.DontDestroyOnLoad(gameObject);
-    }
+    } */
     
 
 	public void PlaySoundWithName(string name) {

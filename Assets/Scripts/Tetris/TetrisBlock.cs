@@ -14,9 +14,9 @@ public class TetrisBlock {
         // Debug.Log("Block position: " + positionY + " areaHeight: " + playAreaHeight);
         if(positionY >= playAreaHeight - 3){
             return true;
-        }else{
-            return false;
         }
+        return false;
+        
 
     }
 	// Returns true if the rotation was successful

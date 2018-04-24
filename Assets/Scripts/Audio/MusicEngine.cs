@@ -12,9 +12,9 @@ public class MusicEngine : MonoBehaviour {
 
 	public TransitionAndName[] events;
 
-		void Awake(){
+		/* void Awake(){
 		GameObject.DontDestroyOnLoad(gameObject);
-	}
+		} */
     
 	public void ChangeMusicWithName(string name) {
 		print("Picking sound");

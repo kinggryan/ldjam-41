@@ -1215,7 +1215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8272840e71f1744d961fae1fdcfe562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Story: {fileID: 0}
+  Story: {fileID: 1480000014}
   Container: {fileID: 1135014422}
   LinkTemplate: {fileID: 1137224174}
   WordTemplate: {fileID: 72744289}
@@ -1224,7 +1224,7 @@ MonoBehaviour:
   AutoDisplay: 1
   ShowNamedLinks: 1
   updateTextStepDuration: 0.05
-  updateTextStepTimer: -428.9255
+  updateTextStepTimer: -429.20566
   storyText: {fileID: 1114789946}
 --- !u!114 &1480000014
 MonoBehaviour:

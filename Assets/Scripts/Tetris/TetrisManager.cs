@@ -235,7 +235,7 @@ public class TetrisManager : MonoBehaviour {
 
         bool CheckForCompleteColumns()
         {
-            Debug.Log("Checking For Complete Columns");
+        //Debug.Log("Checking For Complete Columns");
         // Check for complete lines
         // Go from the top down so we don't have to recheck lines if they move down
         var didEraseColumn = false;
@@ -372,7 +372,7 @@ public class TetrisManager : MonoBehaviour {
 
     CommandReturnTuple GetCommandFromColumn(int xCoord)
     {
-        Debug.Log("Checking column " + xCoord + " for Commands");
+        //Debug.Log("Checking column " + xCoord + " for Commands");
         var columnString = "";
 
         // Do some stuff to find teh commands
@@ -386,7 +386,7 @@ public class TetrisManager : MonoBehaviour {
 
         if (columnString.Length != 0)
         {
-            Debug.Log("CollectionBase string:" + columnString);
+            //Debug.Log("CollectionBase string:" + columnString);
             foreach (var command in LetterGenerator.weightedCommandsList)
             {
                 var wasFound = columnString.Contains(command.name);
@@ -395,7 +395,7 @@ public class TetrisManager : MonoBehaviour {
                 {
                     if(wasFound)
                     {
-                        Debug.Log("Command Found In Column " + xCoord);
+                        //Debug.Log("Command Found In Column " + xCoord);
                         break;
                     }
 

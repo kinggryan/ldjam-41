@@ -54,11 +54,11 @@ public class CustomFade : MonoBehaviour {
 
 	}
 
-	void OnLevelWasLoaded(int level) {
+	/*void OnLevelWasLoaded(int level) {
         print("Loaded level " + level);
 		if (level == 1){
             fade = true;
 		}
-	}
+	}*/
 
 }
