@@ -182,6 +182,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		if(Vars.location["CLEAN"] == true) {
 			yield return text("You look over at the tall machine. The cabient reads “Copyright 198X Sensum Delere Games”. The scene shows a menu for a game called Polymathia, but doesn’t seem like there’s any way to start the game.");
 		}
+		yield return text(" ");
 		using (Group("hook", "lo")) {
 			yield return text("LOOK");
 		}
@@ -617,7 +618,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	IStoryThread passage10_Main()
 	{
 		Vars.inv  = macros1.dm("GUN", false, "NOTE", false, "FOB", false, "COAT", false, "LOG", false);
-		Vars.location  = macros1.dm("GARAGE", true, "WAREHOUSE", false, "SECURITY", false, "SERVER", false, "CLEAN", false);
+		Vars.location  = macros1.dm("GARAGE", true, "WAREHOUSE", false, "SECURITY", false, "SERVER", false, "LAB", false, "CLEAN", false);
 		Vars.infected  = false;
 		Vars.open_cab  = false;
 		Vars.power  = false;
