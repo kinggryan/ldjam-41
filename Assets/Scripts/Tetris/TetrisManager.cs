@@ -256,7 +256,7 @@ public class TetrisManager : MonoBehaviour {
             // Do something with the command
             if (command.command.command != TwineTextPlayer.Command.None || IsColumnComplete(x))
             {
-                //RemoveLineAndMoveAboveLinesDown(y);
+                RemoveColumnAndMoveAboveCharactersDown(x);
                 didEraseColumn = true;
             }
 
@@ -425,6 +425,18 @@ public class TetrisManager : MonoBehaviour {
             for(var x = 0; x < boardSizeX; x++)
             {
                 tetrisBoard[x, y] = tetrisBoard[x, y + 1];
+            }
+        }
+        soundEngine.PlaySoundWithName("LineClear");
+    }
+
+    void RemoveColumnAndMoveAboveCharactersDown(int xCoord){
+        Debug.Log("Trying to remove column");
+        for(var x = xCoord; x < boardSizeX - 1;  x++)
+        {
+            for(var y = 0; y < boardSizeY; y++)
+            {
+                tetrisBoard[x, y] = tetrisBoard[x + 1, y];
             }
         }
         soundEngine.PlaySoundWithName("LineClear");
