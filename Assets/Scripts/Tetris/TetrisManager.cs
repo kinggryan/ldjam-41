@@ -31,12 +31,14 @@ public class TetrisManager : MonoBehaviour {
     private float gameStepTimer;
     private float lineCompleteHangDuration = 1.5f;
     private SoundEngine soundEngine;
+    private MusicEngine musicEngine;
 
 	// Use this for initialization
 	void Start () {
         display = Object.FindObjectOfType<TetrisDisplay>();
         twinePlayer = Object.FindObjectOfType<TextrisTwinePlayer>();
         soundEngine = Object.FindObjectOfType<SoundEngine>();
+        musicEngine = Object.FindObjectOfType<MusicEngine>();
 
         tetrisBoard = new char[boardSizeX, boardSizeY];
         for (var x = 0; x < boardSizeX; x++)
@@ -315,7 +317,17 @@ public class TetrisManager : MonoBehaviour {
 
     void LoseGame(){
         Debug.Log("GAME OVER");
+        TurnDownAllInstrumentsExceptBass();
         Application.LoadLevel("Lose");
+        
+    }
+
+    void TurnDownAllInstrumentsExceptBass(){
+        musicEngine.ChangeMusicWithName("MelodyDown");
+        musicEngine.ChangeMusicWithName("BloopsDown");
+        musicEngine.ChangeMusicWithName("KickDown");
+        musicEngine.ChangeMusicWithName("DrumsDown");
+        musicEngine.ChangeMusicWithName("CymbalDown");
     }
 
     void WinGame(){

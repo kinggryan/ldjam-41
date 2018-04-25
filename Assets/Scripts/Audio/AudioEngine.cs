@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioEngine : MonoBehaviour {
 
 	static AudioEngine instance = null;
+    private MusicEngine musicEngine;
 
 	
 	void Awake ()
@@ -20,6 +21,11 @@ public class AudioEngine : MonoBehaviour {
         }
 
         GameObject.DontDestroyOnLoad(gameObject);
+    }
+
+    void Start(){
+        musicEngine = Object.FindObjectOfType<MusicEngine>();
+        musicEngine.ChangeMusicWithName("BassUp");
     }
     
 }
