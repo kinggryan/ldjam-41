@@ -43,8 +43,8 @@ public static class LetterGenerator {
         new WeightedCommand( TwineTextPlayer.Command.GetFob, "GETFOB", 1, new string[]{"FOB" }),
         new WeightedCommand( TwineTextPlayer.Command.GetNote, "GETNOTE", 1, new string[]{ "NOTE", "LETTER"}),
         new WeightedCommand( TwineTextPlayer.Command.GetCoat, "GETCOAT", 1, new string[]{ "COAT", "CLOTH", "GARB"}),
-        new WeightedCommand( TwineTextPlayer.Command.GetCoat, "END", 1, new string[]{ }),
-        new WeightedCommand( TwineTextPlayer.Command.GetCoat, "GEAR", 1, new string[]{ "TOOL", "STUFF", "BAG"})
+        new WeightedCommand( TwineTextPlayer.Command.GetEnd, "END", 1, new string[]{ }),
+        new WeightedCommand( TwineTextPlayer.Command.GetGear, "GEAR", 1, new string[]{ "TOOL", "STUFF", "BAG"})
 
 
         //North,
