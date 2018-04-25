@@ -1027,6 +1027,16 @@ Prefab:
       propertyPath: vertTargetVol
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114435188788970198, guid: 44b72ad9a46488344b25e3afd5373c3a,
+        type: 2}
+      propertyPath: volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114292248613711838, guid: 44b72ad9a46488344b25e3afd5373c3a,
+        type: 2}
+      propertyPath: vertTargetVol
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
   m_IsPrefabParent: 0
