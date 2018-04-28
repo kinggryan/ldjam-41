@@ -43,4 +43,19 @@ public class MusicCues : MonoBehaviour {
 		// ...
 	}
 
+	void Warehouse_Enter(){
+
+	
+	}
+
+	void Warehouse_Update()
+	{
+	// Runs every frame like a normal Update method,
+	// but only when the current passage is Garage
+	}
+
+	void Warehouse_Exit(){	
+		
+	}
+
 }
