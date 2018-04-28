@@ -57,7 +57,7 @@ public class MusicTransition : MonoBehaviour {
 			} 
 			else if (verticalLayer){
 				if (vertTargetVol >= vertStartVol){
-					Debug.Log("Turning UP");
+					//Debug.Log("Turning UP");
 					if (destination.externalVolumeModifier >= vertTargetVol && fadeAfterTime <= 0){
 						transition = false;
 					}

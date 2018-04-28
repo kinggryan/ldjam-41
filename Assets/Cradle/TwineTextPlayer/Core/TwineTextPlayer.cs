@@ -296,6 +296,7 @@ public class TwineTextPlayer : MonoBehaviour {
                 {
                     //Debug.Log("Doing link!");
                     this.Story.DoLink(link);
+                    break;
                 }
 						
 			}

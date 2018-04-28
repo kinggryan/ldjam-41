@@ -16,8 +16,9 @@ public class TetrisManager : MonoBehaviour {
         }
     }
 
-    public bool playingEnabled;
+    public int playDelayFrames;
 
+    private WakeUpTetris pauser;
     private TetrisDisplay display;
     private TextrisTwinePlayer twinePlayer;
 
@@ -39,6 +40,7 @@ public class TetrisManager : MonoBehaviour {
         twinePlayer = Object.FindObjectOfType<TextrisTwinePlayer>();
         soundEngine = Object.FindObjectOfType<SoundEngine>();
         musicEngine = Object.FindObjectOfType<MusicEngine>();
+        pauser = Object.FindObjectOfType<WakeUpTetris>();
 
         tetrisBoard = new char[boardSizeX, boardSizeY];
         for (var x = 0; x < boardSizeX; x++)
@@ -56,16 +58,23 @@ public class TetrisManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(playingEnabled)
-            gameStepTimer -= Time.deltaTime;
-
-        if(gameStepTimer <= 0)
+        // The delay frames are negative when the game is paused and positive when pausing is ending.
+        // This means that when 0, game play should proceed as normal
+        if(playDelayFrames == 0)
         {
-            gameStepTimer += gameStepsDuration;
-            PerformNextGameStep();
-        }
+            gameStepTimer -= Time.deltaTime;
+            if (gameStepTimer <= 0)
+            {
+                gameStepTimer += gameStepsDuration;
+                PerformNextGameStep();
+            }
 
-        PerformPlayerControlledMovement();
+            PerformPlayerControlledMovement();
+        }
+        else if(playDelayFrames > 0)
+        {
+            playDelayFrames -= 1;
+        }
 	}
 
     void PerformPlayerControlledMovement()
@@ -228,6 +237,7 @@ public class TetrisManager : MonoBehaviour {
             {
                 twinePlayer.TypeCommand(command.word);
                 twinePlayer.DoCommand(command.command.command);
+                pauser.PausePlay();
                 return true;
             }
         }
@@ -235,8 +245,8 @@ public class TetrisManager : MonoBehaviour {
         return didEraseLine;
     }
 
-        bool CheckForCompleteColumns()
-        {
+    bool CheckForCompleteColumns()
+    {
         //Debug.Log("Checking For Complete Columns");
         // Check for complete lines
         // Go from the top down so we don't have to recheck lines if they move down
@@ -264,8 +274,10 @@ public class TetrisManager : MonoBehaviour {
 
             if (command.command.command != TwineTextPlayer.Command.None)
             {
+                Debug.Log("FUCKING PAUSE");
                 twinePlayer.TypeCommand(command.word);
                 twinePlayer.DoCommand(command.command.command);
+                pauser.PausePlay();
                 return true;
             }
         }
@@ -452,5 +464,20 @@ public class TetrisManager : MonoBehaviour {
             }
         }
         soundEngine.PlaySoundWithName("LineClear");
+    }
+
+    public void PausePlay()
+    {
+        playDelayFrames = -1;
+    }
+
+    public void ResumePlay()
+    {
+        playDelayFrames = 0;
+    }
+
+    public bool IsPaused()
+    {
+        return playDelayFrames == -1;
     }
 }

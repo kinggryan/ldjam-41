@@ -4,13 +4,52 @@ using UnityEngine;
 
 public class WakeUpTetris : MonoBehaviour {
 
+    public GameObject pressButtonToPlayParent;
+    public UnityEngine.UI.Text[] gameTextToFadeOut;
     public TetrisManager tetris;
+    public Color fadedOutGameTextColor;
+    public Color fadedInGameTextColor;
+    public float minPauseDuration = 10f;
 
-	// Update is called once per frame
-	void Update () {
-		if(Input.GetButtonDown("left") || Input.GetButtonDown("right") || Input.GetButtonDown("up") || Input.GetButtonDown("down") || Input.GetButtonDown("rotateclockwise") || Input.GetButtonDown("rotatecounterclockwise") )
+    private float pauseTimer;
+
+    private void Start()
+    {
+        fadedInGameTextColor = gameTextToFadeOut[0].color;
+        PausePlay();
+    }
+
+    // Update is called once per frame
+    void Update () {
+        pauseTimer += Time.deltaTime;
+        if (pauseTimer >= minPauseDuration && tetris.IsPaused() && (Input.GetButtonUp("left") || Input.GetButtonUp("right") || Input.GetButtonUp("up") || Input.GetButtonUp("down") || Input.GetButtonUp("rotateclockwise") || Input.GetButtonUp("rotatecounterclockwise") ))
         {
-            tetris.playingEnabled = true;
+            BeginPlay();
         }
 	}
+
+    public void PausePlay()
+    {
+        pauseTimer = 0;
+        Debug.Log("Pausing play");
+        tetris.PausePlay();
+        pressButtonToPlayParent.SetActive(true);
+        // Fade in text
+        foreach (var text in gameTextToFadeOut)
+        {
+            text.color = fadedOutGameTextColor;
+        }
+    }
+
+    void BeginPlay()
+    {
+        Debug.Log("Resuming play");
+        pressButtonToPlayParent.SetActive(false);
+        tetris.ResumePlay();
+        // Fade in text
+        foreach (var text in gameTextToFadeOut)
+        {
+            text.color = fadedInGameTextColor;
+        }
+    }
 }
