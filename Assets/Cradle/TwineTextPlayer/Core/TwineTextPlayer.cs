@@ -328,6 +328,5 @@ public class TwineTextPlayer : MonoBehaviour {
     	return this.Story.Vars[find];
     }
 
-
 }
 

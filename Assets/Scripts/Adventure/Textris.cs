@@ -119,14 +119,14 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	// ---------------
 	#endregion
 
-	// Sound Stuff
+	
 
-	private SoundEngine soundEngine;
-    private MusicEngine musicEngine;
+	
+ 
 
     void Start(){
-        soundEngine = Object.FindObjectOfType<SoundEngine>();
-        musicEngine = Object.FindObjectOfType<MusicEngine>();
+        
+    
 	}
 
 
@@ -315,7 +315,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		}
 		yield return text(" ");
 		if(Vars.location["GARAGE"] == true) {
-			musicEngine.ChangeMusicWithName("BloopsUpAndFade");
+			
 			yield return text("You try to HACK the keypad next to the door. Door doesn't open, but you learn the password is long. Too long for underpaid guards to remember.");
 		}
 		yield return text(" ");
@@ -326,7 +326,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return lineBreak();
 			yield return text("As you disconnect from the admin terminal, you feel it transfer some packets your way.");
 			yield return lineBreak();
-			musicEngine.ChangeMusicWithName("DrumsUp");
+			
 			yield return text("You notice strange data in your T.E.T./R.I.S. implant. A malware infection! You need to find an anti-virus CURE, fast!");
 		}
 		if(Vars.location["CLEAN"] == true) {
@@ -368,7 +368,6 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["SECURITY"]  = false;
 		Vars.location["CLEAN"]  = false;
 		if(! (macros1.history() .Contains("Garage"))) {
-			musicEngine.ChangeMusicWithName("KickUp");
 			yield return text("You pound on the hatch. Springs open. You haul yourself out of the tank.");
 			yield return lineBreak();
 			yield return text("You’re in a garage. Door to the NORTH, keypad next to it. CAMERA in the northeast and northwest. A desk with several drawers. Feel something in your pocket. You check, find an audio TAPE.");
@@ -650,7 +649,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["SERVER"]  = false;
 		Vars.location["SECURITY"]  = false;
 		Vars.location["CLEAN"]  = false;
-		musicEngine.ChangeMusicWithName("CymbalUp");
+		
 		yield return text("You enter a warehouse. Shelves of boxes and equipment. To the NORTH, an elevator with no power, sealed with a security door. Next to elevator, a rack with white lab COATS on it. To the EAST, a door labeled “Security Room.” To the WEST, a door labeled “Server Room.\" ");
 		yield return text("You enter a warehouse. Shelves of boxes and equipment. To the NORTH, an elevator with no power, sealed with a security door. Next to elevator, a rack with white lab COATS on it. To the EAST, a door labeled \"Security Room.\" To the WEST, a door labeled \"Server Room.\" ");
 		if(Vars.guard == true) {
@@ -998,7 +997,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return lineBreak();
 		if(Vars.read_log == true) {
 			Vars.infected  = false;
-			musicEngine.ChangeMusicWithName("DrumsDown");
+			
 			yield return text("You grab a stick of CURE, insert it into your data drive. Ahhhh. Sweet anti-virus. Gets all the malware out.");
 		}
 		yield break;
@@ -1057,8 +1056,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["SERVER"]  = false;
 		Vars.location["SECURITY"]  = true;
 		Vars.location["CLEAN"]  = false;
-		musicEngine.ChangeMusicWithName("BloopsUp");
-		musicEngine.ChangeMusicWithName("CymbalDown");
+		
 		yield return text("You walk into the Security Room. Console of security monitors, currently malfunctioning. Guard crouching under the console, trying to repair them. Large calendar on the wall.");
 		yield return lineBreak();
 		yield return text("The guard notices you. He stands up, hand goes for a gun at his side. He speaks Russian, which your T.E.T./R.I.S. translates. “Identify yourself!”");
@@ -1215,8 +1213,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["SERVER"]  = true;
 		Vars.location["SECURITY"]  = false;
 		Vars.location["CLEAN"]  = false;
-		musicEngine.ChangeMusicWithName("BloopsUp");
-		musicEngine.ChangeMusicWithName("CymbalDown");
+	
 		yield return text("You enter the Server Room. Banks of computers, loud hum from the fans. In front of you, an administrative terminal. Along the wall, a cabinet.");
 		using (Group("hook", "lo")) {
 			yield return text("LOOK");
