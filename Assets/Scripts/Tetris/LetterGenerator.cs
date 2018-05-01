@@ -61,7 +61,7 @@ public static class LetterGenerator {
         // HACK: we should jsut prevent this from happening at the start of the story but whatever
         if(commands.Length == 0)
         {
-            weightedCommandsList = new WeightedCommand[] { new WeightedCommand(TwineTextPlayer.Command.Open, "OPEN", 1, new string[] { }) };
+            weightedCommandsList = new WeightedCommand[] { new WeightedCommand(TwineTextPlayer.Command.Hack, "HACK", 1, new string[] { }) };
             weightedCommandTotal = 0;
             return;
         }
