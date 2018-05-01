@@ -25,12 +25,14 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		public VarDefs()
 		{
 			VarDef("location", () => this.@location, val => this.@location = val);
+			VarDef("tut_open", () => this.@tut_open, val => this.@tut_open = val);
+			VarDef("inv", () => this.@inv, val => this.@inv = val);
 			VarDef("guard", () => this.@guard, val => this.@guard = val);
 			VarDef("HP", () => this.@HP, val => this.@HP = val);
 			VarDef("game_over", () => this.@game_over, val => this.@game_over = val);
-			VarDef("inv", () => this.@inv, val => this.@inv = val);
 			VarDef("power", () => this.@power, val => this.@power = val);
 			VarDef("ser_door", () => this.@ser_door, val => this.@ser_door = val);
+			VarDef("tut_look", () => this.@tut_look, val => this.@tut_look = val);
 			VarDef("infected", () => this.@infected, val => this.@infected = val);
 			VarDef("dead_g", () => this.@dead_g, val => this.@dead_g = val);
 			VarDef("open_cab", () => this.@open_cab, val => this.@open_cab = val);
@@ -38,16 +40,18 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			VarDef("win", () => this.@win, val => this.@win = val);
 			VarDef("open_clean", () => this.@open_clean, val => this.@open_clean = val);
 			VarDef("cor_ans", () => this.@cor_ans, val => this.@cor_ans = val);
-			VarDef("cor_and", () => this.@cor_and, val => this.@cor_and = val);
+			VarDef("tut_dum", () => this.@tut_dum, val => this.@tut_dum = val);
 		}
 
 		public StoryVar @location;
+		public StoryVar @tut_open;
+		public StoryVar @inv;
 		public StoryVar @guard;
 		public StoryVar @HP;
 		public StoryVar @game_over;
-		public StoryVar @inv;
 		public StoryVar @power;
 		public StoryVar @ser_door;
+		public StoryVar @tut_look;
 		public StoryVar @infected;
 		public StoryVar @dead_g;
 		public StoryVar @open_cab;
@@ -55,7 +59,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		public StoryVar @win;
 		public StoryVar @open_clean;
 		public StoryVar @cor_ans;
-		public StoryVar @cor_and;
+		public StoryVar @tut_dum;
 	}
 
 	public new VarDefs Vars
@@ -108,7 +112,6 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		passage26_Init();
 		passage27_Init();
 		passage28_Init();
-		passage29_Init();
 	}
 
 	// ---------------
@@ -124,12 +127,36 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage1_Main()
 	{
+		Vars.location["GARAGE"]  = false;
+		Vars.location["WAREHOUSE"]  = false;
+		Vars.location["SERVER"]  = false;
+		Vars.location["SECURITY"]  = false;
+		Vars.location["CLEAN"]  = false;
+		yield return text("Improper shutdown detected. System check initiated…");
 		yield return lineBreak();
-		yield return text("You wake up, floating. It's dark. Where are you? Can't remember. Is this death? You move your arm, feel water splash. Not death. Sensory deprivation tank. The hatch is above you. Could probably OPEN it.");
-		yield return link("OPEN", "Garage", null);
+		yield return lineBreak();
+		yield return text("Testing command module. Manipulate data using anchor thoughts W, A, S, D, <, and >. Enter command HACK. ");
+		using (Group("hook", "ha")) {
+			yield return text("HACK");
+		}
+		yield return enchantIntoLink(hookRef("ha"), passage1_Fragment_1);
+		yield return lineBreak();
+		using (Group("hook", "c1")) {
+		}
 		yield break;
 	}
 
+	IStoryThread passage1_Fragment_0()
+	{
+		yield return passage("Hack_Logic");
+		yield break;
+	}
+
+	IStoryThread passage1_Fragment_1()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage1_Fragment_0);
+		yield break;
+	}
 
 	// .............
 	// #2: Look_Logic
@@ -141,67 +168,90 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage2_Main()
 	{
-		yield return lineBreak();
+		if(Vars.location["TITLE"] == true) {
+			if(Vars.tut_open == false) {
+				Vars.tut_open  = true;
+				yield return text(" You wake up, floating. It's dark. Where are you? Can't remember. Is this death? You move your arm, feel water splash. Not death. Sensory deprivation tank. The hatch is above you. Could probably OPEN it.");
+			}
+			else {
+				yield return text("Incorrect command.");
+			}
+			yield return text(" ");
+			using (Group("hook", "ha")) {
+				yield return text("HACK");
+			}
+			yield return enchantIntoLink(hookRef("ha"), passage2_Fragment_1);
+			yield return text(" ");
+			using (Group("hook", "op")) {
+				yield return text("OPEN");
+			}
+			yield return text(" ");
+			yield return enchantIntoLink(hookRef("op"), passage2_Fragment_2);
+			yield return text(" ");
+			using (Group("hook", "lo")) {
+				yield return text("LOOK");
+			}
+			yield return text(" ");
+			yield return enchantIntoLink(hookRef("lo"), passage2_Fragment_4);
+		}
+		yield return text(" ");
 		if(Vars.location["GARAGE"] == true) {
-			yield return text("You search the desk, opening all the drawers. There’s a NOTE, long string of numbers written on it. ");
-			using (Group("hook", "tn")) {
-				yield return text("GET NOTE");
-			}
-			yield return text(" ");
-			yield return enchantIntoLink(hookRef("tn"), passage2_Fragment_1);
+			yield return text("You search the desk, opening all the drawers. There's a NOTE. You read it. Lots of numbers, but easy for your cyborg brain to take in. ");
+			Vars.inv["NOTE"]  = true;
 		}
+		yield return text(" ");
 		if(Vars.location["WAREHOUSE"] == true) {
-			yield return text(" Shelves are organized with a sequence of labels, reading AA, AB, AC, etc. down to ZZ. You look at the shelf next to you. Someone left a GUN there. ");
-			using (Group("hook", "tg")) {
-				yield return text("GET GUN");
+			yield return text(" Shelves are organized with a sequence of labels, reading AA, AB, AC, etc. down to ZZ. You look at the shelf next to you. ");
+			if(Vars.inv["GUN"] == false) {
+				yield return text("Someone left a GUN there. ");
+				using (Group("hook", "tg")) {
+					yield return text("GET GUN");
+				}
+				yield return text(" ");
+				yield return enchantIntoLink(hookRef("tg"), passage2_Fragment_6);
 			}
-			yield return text(" ");
-			yield return enchantIntoLink(hookRef("tg"), passage2_Fragment_3);
 		}
+		yield return text(" ");
 		if(Vars.location["SERVER"] == true) {
 			yield return text("Cabinet is secured with an electronic padlock. Must be valuable stuff in there.");
 		}
+		yield return text(" ");
 		if(Vars.location["SECURITY"] == true) {
 			if(Vars.guard == false) {
-				yield return text("You look closer at the calendar. Current year, 198X. A date circled says “SHIPMENT TO PORTLAND, OR.” about 3 weeks away.");
+				yield return text("You look closer at the calendar. Current year, 198X. A date circled says 'SHIPMENT TO PORTLAND, OR.' about 3 weeks away.");
 			}
 			yield return text(" ");
 			if(Vars.guard == true) {
 				Vars.HP  = Vars.HP - 1;
-				yield return text(" You try, but the guard shoots you before you can!");
+				yield return text(" You try, but the guard shoots you before you can! ");
+				yield return lineBreak();
+				if(Vars.HP == 2) {
+					yield return text("YOU ARE PRETTY HURT, MAN");
+				}
+				yield return text(" ");
+				if(Vars.HP == 1) {
+					yield return text("YOU ARE BASICALLY DEAD");
+				}
+				yield return text(" ");
+				if(Vars.HP <= 0) {
+					Vars.game_over  = true;
+					yield return text("GAME OVER");
+				}
 			}
 		}
 		if(Vars.location["LAB"] == true) {
-			yield return text("The projector flickers on. Hologram of a head appears. It speaks. “Greetings. Please interact and submit to Turing test.");
+			yield return text("The projector flickers on. Hologram of a head appears. It speaks. 'Greetings, Please interact and submit to Turing test.'");
 		}
 		if(Vars.location["CLEAN"] == true) {
-			yield return text("You look over at the tall machine. The cabient reads “Copyright 198X Sensum Delere Games”. The scene shows a menu for a game called Polymathia, but doesn’t seem like there’s any way to start the game.");
+			yield return text("You look over at the tall machine. The cabient reads 'Copyright 198X Sensum Delere Games'. The scene shows a menu for a game called Polymathia, but doesn't seem like there's any way to start the game.");
 		}
-		yield return text(" ");
-		using (Group("hook", "lo")) {
-			yield return text("LOOK");
-		}
-		yield return text(" ");
-		yield return enchantIntoLink(hookRef("lo"), passage2_Fragment_5);
-		yield return text(" ");
-		if(Vars.HP == 2) {
-			yield return text("YOU ARE PRETTY HURT, MAN");
-		}
-		yield return text(" ");
-		if(Vars.HP == 1) {
-			yield return text("YOU ARE BASICALLY DEAD");
-		}
-		yield return text(" ");
-		if(Vars.HP <= 0) {
-			Vars.game_over  = true;
-			yield return text("GAME OVER");
-		}
+		yield return text("  ");
 		yield break;
 	}
 
 	IStoryThread passage2_Fragment_0()
 	{
-		yield return passage("Note_Logic");
+		yield return passage("Hack_Logic");
 		yield break;
 	}
 
@@ -213,25 +263,31 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage2_Fragment_2()
 	{
-		yield return passage("Gun_Logic");
+		yield return abort(goToPassage: "Garage");
 		yield break;
 	}
 
 	IStoryThread passage2_Fragment_3()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage2_Fragment_2);
+		yield return passage("Look_Logic");
 		yield break;
 	}
 
 	IStoryThread passage2_Fragment_4()
 	{
-		yield return passage("Look_Logic");
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage2_Fragment_3);
 		yield break;
 	}
 
 	IStoryThread passage2_Fragment_5()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage2_Fragment_4);
+		yield return passage("Gun_Logic");
+		yield break;
+	}
+
+	IStoryThread passage2_Fragment_6()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage2_Fragment_5);
 		yield break;
 	}
 
@@ -296,39 +352,73 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	IStoryThread passage4_Main()
 	{
 		yield return lineBreak();
-		if(Vars.location["GARAGE"] == true) {
-			yield return text("You try to HACK the keypad next to the door. Door doesn't open, but you learn the password is long. Too long for underpaid guards to remember.");
+		if(Vars.location["TITLE"] == true) {
+			if(Vars.tut_look == false) {
+				Vars.tut_look  = true;
+				yield return text("System check complete. Critical message found in root directory. Playing message:");
+				yield return lineBreak();
+				yield return lineBreak();
+				yield return text("Hello agent, this is your commander. We have sent you to Moscow to infiltrate a research facility that, we believe, is developing a machine that can alter people’s minds. You have been outfitted with the cyborg implant Total Environmental Transcription/Reactive Information Synthesis, or T.E.T./R.I.S., to aid in your mission. It will allow you to quickly analyze your surroundings and determine your best courses of action. To aid you, we have temporarily disabled the facility’s cameras. Good luck, agent.");
+				yield return lineBreak();
+				yield return lineBreak();
+				yield return text("End of message. Enter command LOOK to engage sensory data collection when ready.");
+			}
+			else {
+				yield return text("Incorrect command.");
+			}
+			yield return text(" ");
+			using (Group("hook", "lo")) {
+				yield return text("LOOK");
+			}
+			yield return enchantIntoLink(hookRef("lo"), passage4_Fragment_1);
+			yield return text(" ");
+			using (Group("hook", "ha")) {
+				yield return text("HACK");
+			}
+			yield return text(" ");
+			yield return enchantIntoLink(hookRef("ha"), passage4_Fragment_3);
 		}
-		yield return text(" ");
-		if(Vars.location["SERVER"] == true && Vars.infected == false) {
-			Vars.infected  = true;
-			Vars.power  = true;
-			yield return text("You crack off your middle finger, run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. You find the power controls for the elevator, switch them on.");
-			yield return lineBreak();
-			yield return text("As you disconnect from the admin terminal, you feel it transfer some packets your way.");
-			yield return lineBreak();
-			yield return text("You notice strange data in your T.E.T./R.I.S. implant. A malware infection! You need to find an anti-virus CURE, fast!");
+		if(Vars.location["SERVER"] == true) {
+			if(Vars.infected == false && Vars.inv["CURE"] == false) {
+				Vars.infected  = true;
+				Vars.power  = true;
+				yield return text("You crack off your middle finger, run a wire from it into the admin terminal. You begin to HACK into the facility’s electrical systems. You find the power controls for the elevator, switch them on.");
+				yield return lineBreak();
+				yield return text("As you disconnect from the admin terminal, you feel it transfer some packets your way.");
+				yield return lineBreak();
+				yield return text("You notice strange data in your T.E.T./R.I.S. implant. A malware infection! You need to find an anti-virus cure, fast!");
+			}
+			else {
+				yield return text("You should probably leave the terminal alone.");
+			}
 		}
 		if(Vars.location["CLEAN"] == true) {
 			yield return abort(goToPassage: "End");
 		}
-		using (Group("hook", "ha")) {
-			yield return text("HACK");
-		}
-		yield return text(" ");
-		yield return enchantIntoLink(hookRef("ha"), passage4_Fragment_1);
 		yield break;
 	}
 
 	IStoryThread passage4_Fragment_0()
 	{
-		yield return passage("Hack_Logic");
+		yield return passage("Look_Logic");
 		yield break;
 	}
 
 	IStoryThread passage4_Fragment_1()
 	{
 		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage4_Fragment_0);
+		yield break;
+	}
+
+	IStoryThread passage4_Fragment_2()
+	{
+		yield return passage("Hack_Logic");
+		yield break;
+	}
+
+	IStoryThread passage4_Fragment_3()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage4_Fragment_2);
 		yield break;
 	}
 
@@ -347,14 +437,10 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["SERVER"]  = false;
 		Vars.location["SECURITY"]  = false;
 		Vars.location["CLEAN"]  = false;
-		if(! (macros1.history() .Contains("Garage"))) {
-			yield return text("You pound on the hatch. Springs open. You haul yourself out of the tank.");
-			yield return lineBreak();
-			yield return text("You’re in a garage. Door to the NORTH, keypad next to it. A desk with several drawers.");
-		}
-		else {
-			yield return text("You’re in a garage. Door to the NORTH, keypad next to it. A desk with several drawers.");
-		}
+		Vars.location["TITLE"]  = false;
+		yield return text(" You pound on the hatch. Springs open. You haul yourself out of the tank.");
+		yield return lineBreak();
+		yield return text("You’re in a garage. Door to the NORTH, a keypad next to it. A desk with several drawers to LOOK at. ");
 		using (Group("hook", "lo")) {
 			yield return text("LOOK");
 		}
@@ -363,18 +449,13 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("NORTH");
 		}
 		yield return text(" ");
-		using (Group("hook", "ha")) {
-			yield return text("HACK");
-		}
-		yield return text(" ");
 		using (Group("hook", "ge")) {
 			yield return text("GEAR");
 		}
 		yield return text(" ");
 		yield return enchantIntoLink(hookRef("lo"), passage5_Fragment_1);
 		yield return enchantIntoLink(hookRef("no"), passage5_Fragment_3);
-		yield return enchantIntoLink(hookRef("ha"), passage5_Fragment_5);
-		yield return enchantIntoLink(hookRef("ge"), passage5_Fragment_7);
+		yield return enchantIntoLink(hookRef("ge"), passage5_Fragment_5);
 		yield return lineBreak();
 		using (Group("hook", "c1")) {
 		}
@@ -407,25 +488,13 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage5_Fragment_4()
 	{
-		yield return passage("Hack_Logic");
+		yield return passage("Gear");
 		yield break;
 	}
 
 	IStoryThread passage5_Fragment_5()
 	{
 		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage5_Fragment_4);
-		yield break;
-	}
-
-	IStoryThread passage5_Fragment_6()
-	{
-		yield return passage("Gear");
-		yield break;
-	}
-
-	IStoryThread passage5_Fragment_7()
-	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage5_Fragment_6);
 		yield break;
 	}
 
@@ -454,33 +523,14 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 
 	// .............
-	// #7: Note_Logic
+	// #7: Gun_Logic2
 
 	void passage7_Init()
 	{
-		this.Passages[@"Note_Logic"] = new StoryPassage(@"Note_Logic", new string[]{  }, passage7_Main);
+		this.Passages[@"Gun_Logic2"] = new StoryPassage(@"Gun_Logic2", new string[]{  }, passage7_Main);
 	}
 
 	IStoryThread passage7_Main()
-	{
-		yield return lineBreak();
-		using (Group("hook", "")) {
-			Vars.inv["NOTE"]  = true;
-			yield return text(" You read the NOTE. Lots of numbers, but easy for your cyborg brain to take in.");
-		}
-		yield break;
-	}
-
-
-	// .............
-	// #8: Gun_Logic2
-
-	void passage8_Init()
-	{
-		this.Passages[@"Gun_Logic2"] = new StoryPassage(@"Gun_Logic2", new string[]{  }, passage8_Main);
-	}
-
-	IStoryThread passage8_Main()
 	{
 		yield return lineBreak();
 		if(Vars.inv["GUN"] == true) {
@@ -499,54 +549,35 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		}
 		if(Vars.location["SECURITY"] == true && Vars.inv["GUN"] == false && Vars.guard == true) {
 			Vars.HP  = Vars.HP - 1;
-			yield return text(" What gun? You try, but the guard shoots you!");
-		}
-		yield return text(" ");
-		if(Vars.inv["GUN"] == false) {
-			yield return text("What gun?");
-		}
-		using (Group("hook", "ug")) {
-			yield return text("USE GUN");
-		}
-		yield return text(" ");
-		yield return enchantIntoLink(hookRef("ug"), passage8_Fragment_1);
-		if(Vars.HP == 2) {
-			yield return text("YOU ARE PRETTY HURT, MAN");
-		}
-		if(Vars.HP == 1) {
-			yield return text("YOU ARE BASICALLY DEAD");
-		}
-		if(Vars.HP <= 0) {
-			Vars.game_over  = true;
-			yield return text(" GAME OVER");
+			yield return text(" What gun? You try, but the guard shoots you! ");
+			yield return lineBreak();
+			if(Vars.HP == 2) {
+				yield return text("YOU ARE PRETTY HURT, MAN");
+			}
+			if(Vars.HP == 1) {
+				yield return text("YOU ARE BASICALLY DEAD");
+			}
+			if(Vars.HP <= 0) {
+				Vars.game_over  = true;
+				yield return text(" GAME OVER");
+			}
 		}
 		yield break;
 	}
 
-	IStoryThread passage8_Fragment_0()
-	{
-		yield return passage("Gun_Logic2");
-		yield break;
-	}
-
-	IStoryThread passage8_Fragment_1()
-	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage8_Fragment_0);
-		yield break;
-	}
 
 	// .............
-	// #9: Init
+	// #8: Init
 
-	void passage9_Init()
+	void passage8_Init()
 	{
-		this.Passages[@"Init"] = new StoryPassage(@"Init", new string[]{ "startup", }, passage9_Main);
+		this.Passages[@"Init"] = new StoryPassage(@"Init", new string[]{ "startup", }, passage8_Main);
 	}
 
-	IStoryThread passage9_Main()
+	IStoryThread passage8_Main()
 	{
-		Vars.inv  = macros1.dm("GUN", false, "NOTE", false, "FOB", false, "COAT", false);
-		Vars.location  = macros1.dm("GARAGE", true, "WAREHOUSE", false, "SECURITY", false, "SERVER", false, "LAB", false, "CLEAN", false);
+		Vars.inv  = macros1.dm("GUN", false, "NOTE", false, "FOB", false, "COAT", false, "CURE", false);
+		Vars.location  = macros1.dm("TITLE", true, "GARAGE", false, "WAREHOUSE", false, "SECURITY", false, "SERVER", false, "LAB", false, "CLEAN", false);
 		Vars.infected  = false;
 		Vars.open_cab  = false;
 		Vars.power  = false;
@@ -558,26 +589,31 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.lab_c  = 0;
 		Vars.win  = false;
 		Vars.open_clean  = false;
+		Vars.cor_ans  = "NONE";
+		Vars.tut_dum  = false;
+		Vars.tut_look  = false;
+		Vars.tut_open  = false;
 		yield break;
 	}
 
 
 	// .............
-	// #10: Warehouse
+	// #9: Warehouse
 
-	void passage10_Init()
+	void passage9_Init()
 	{
-		this.Passages[@"Warehouse"] = new StoryPassage(@"Warehouse", new string[]{  }, passage10_Main);
+		this.Passages[@"Warehouse"] = new StoryPassage(@"Warehouse", new string[]{  }, passage9_Main);
 	}
 
-	IStoryThread passage10_Main()
+	IStoryThread passage9_Main()
 	{
 		Vars.location["GARAGE"]  = false;
 		Vars.location["WAREHOUSE"]  = true;
 		Vars.location["SERVER"]  = false;
 		Vars.location["SECURITY"]  = false;
 		Vars.location["CLEAN"]  = false;
-		yield return text("You enter a warehouse. Shelves of boxes and equipment. To the NORTH, an elevator with no power, sealed with a security door. Next to elevator, a rack with white lab COATS on it. To the EAST, a door labeled “Security Room.” To the WEST, a door labeled “Server Room.\" ");
+		Vars.location["TITLE"]  = false;
+		yield return text("You enter a warehouse. You LOOK and see shelves of boxes and equipment. To the NORTH, an elevator with no power, sealed with a security door. Next to elevator, a rack with white lab COATS on it. To the EAST, a door labeled “Security Room.” To the WEST, a door labeled “Server Room.\" ");
 		if(Vars.guard == true) {
 			yield return text("Doesn't look like the guard is following you. Must be pretty drunk");
 		}
@@ -585,6 +621,8 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		using (Group("hook", "lo")) {
 			yield return text("LOOK");
 		}
+		yield return text(" ");
+		yield return enchantIntoLink(hookRef("lo"), passage9_Fragment_1);
 		yield return text(" ");
 		using (Group("hook", "tc")) {
 			yield return text("GET COAT");
@@ -605,105 +643,102 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		using (Group("hook", "ge")) {
 			yield return text("GEAR");
 		}
+		yield return enchantIntoLink(hookRef("tc"), passage9_Fragment_3);
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("lo"), passage10_Fragment_1);
+		yield return enchantIntoLink(hookRef("no"), passage9_Fragment_5);
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("tc"), passage10_Fragment_3);
+		yield return enchantIntoLink(hookRef("wo"), passage9_Fragment_7);
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("no"), passage10_Fragment_5);
+		yield return enchantIntoLink(hookRef("eo"), passage9_Fragment_9);
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("wo"), passage10_Fragment_7);
-		yield return text(" ");
-		yield return enchantIntoLink(hookRef("eo"), passage10_Fragment_9);
-		yield return text(" ");
-		yield return enchantIntoLink(hookRef("ge"), passage10_Fragment_11);
+		yield return enchantIntoLink(hookRef("ge"), passage9_Fragment_11);
 		yield return lineBreak();
 		using (Group("hook", "c1")) {
 		}
 		yield break;
 	}
 
-	IStoryThread passage10_Fragment_0()
+	IStoryThread passage9_Fragment_0()
 	{
 		yield return passage("Look_Logic");
 		yield break;
 	}
 
-	IStoryThread passage10_Fragment_1()
+	IStoryThread passage9_Fragment_1()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage10_Fragment_0);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage9_Fragment_0);
 		yield break;
 	}
 
-	IStoryThread passage10_Fragment_2()
+	IStoryThread passage9_Fragment_2()
 	{
 		yield return passage("Coat_Logic");
 		yield break;
 	}
 
-	IStoryThread passage10_Fragment_3()
+	IStoryThread passage9_Fragment_3()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage10_Fragment_2);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage9_Fragment_2);
 		yield break;
 	}
 
-	IStoryThread passage10_Fragment_4()
+	IStoryThread passage9_Fragment_4()
 	{
 		yield return passage("North_Logic");
 		yield break;
 	}
 
-	IStoryThread passage10_Fragment_5()
+	IStoryThread passage9_Fragment_5()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage10_Fragment_4);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage9_Fragment_4);
 		yield break;
 	}
 
-	IStoryThread passage10_Fragment_6()
+	IStoryThread passage9_Fragment_6()
 	{
 		yield return passage("West_Logic");
 		yield break;
 	}
 
-	IStoryThread passage10_Fragment_7()
+	IStoryThread passage9_Fragment_7()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage10_Fragment_6);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage9_Fragment_6);
 		yield break;
 	}
 
-	IStoryThread passage10_Fragment_8()
+	IStoryThread passage9_Fragment_8()
 	{
 		yield return passage("East_Logic");
 		yield break;
 	}
 
-	IStoryThread passage10_Fragment_9()
+	IStoryThread passage9_Fragment_9()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage10_Fragment_8);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage9_Fragment_8);
 		yield break;
 	}
 
-	IStoryThread passage10_Fragment_10()
+	IStoryThread passage9_Fragment_10()
 	{
 		yield return passage("Gear");
 		yield break;
 	}
 
-	IStoryThread passage10_Fragment_11()
+	IStoryThread passage9_Fragment_11()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage10_Fragment_10);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage9_Fragment_10);
 		yield break;
 	}
 
 	// .............
-	// #11: Fob_Logic
+	// #10: Fob_Logic
 
-	void passage11_Init()
+	void passage10_Init()
 	{
-		this.Passages[@"Fob_Logic"] = new StoryPassage(@"Fob_Logic", new string[]{  }, passage11_Main);
+		this.Passages[@"Fob_Logic"] = new StoryPassage(@"Fob_Logic", new string[]{  }, passage10_Main);
 	}
 
-	IStoryThread passage11_Main()
+	IStoryThread passage10_Main()
 	{
 		yield return lineBreak();
 		if(Vars.location["SERVER"] == true) {
@@ -714,7 +749,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 					yield return text("USE FOB");
 				}
 				yield return text(" ");
-				yield return enchantIntoLink(hookRef("uf"), passage11_Fragment_1);
+				yield return enchantIntoLink(hookRef("uf"), passage10_Fragment_1);
 				yield return text(" ");
 			}
 			else {
@@ -725,27 +760,27 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield break;
 	}
 
-	IStoryThread passage11_Fragment_0()
+	IStoryThread passage10_Fragment_0()
 	{
 		yield return passage("Fob_Logic2");
 		yield break;
 	}
 
-	IStoryThread passage11_Fragment_1()
+	IStoryThread passage10_Fragment_1()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage11_Fragment_0);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage10_Fragment_0);
 		yield break;
 	}
 
 	// .............
-	// #12: Coat_Logic
+	// #11: Coat_Logic
 
-	void passage12_Init()
+	void passage11_Init()
 	{
-		this.Passages[@"Coat_Logic"] = new StoryPassage(@"Coat_Logic", new string[]{  }, passage12_Main);
+		this.Passages[@"Coat_Logic"] = new StoryPassage(@"Coat_Logic", new string[]{  }, passage11_Main);
 	}
 
-	IStoryThread passage12_Main()
+	IStoryThread passage11_Main()
 	{
 		yield return lineBreak();
 		if(Vars.location["WAREHOUSE"] == true) {
@@ -762,18 +797,19 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 
 	// .............
-	// #13: Cure_Logic
+	// #12: Cure_Logic
 
-	void passage13_Init()
+	void passage12_Init()
 	{
-		this.Passages[@"Cure_Logic"] = new StoryPassage(@"Cure_Logic", new string[]{  }, passage13_Main);
+		this.Passages[@"Cure_Logic"] = new StoryPassage(@"Cure_Logic", new string[]{  }, passage12_Main);
 	}
 
-	IStoryThread passage13_Main()
+	IStoryThread passage12_Main()
 	{
 		yield return lineBreak();
 		if(Vars.infected == true) {
 			Vars.infected  = false;
+			Vars.inv["CURE"]  = true;
 			yield return text("You grab a stick of CURE, insert it into your data drive. Ahhhh. Sweet anti-virus. Gets all the malware out.");
 		}
 		else {
@@ -782,32 +818,32 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 				yield return text("USE CURE");
 			}
 			yield return text(" ");
-			yield return enchantIntoLink(hookRef("uc"), passage13_Fragment_1);
+			yield return enchantIntoLink(hookRef("uc"), passage12_Fragment_1);
 		}
 		yield break;
 	}
 
-	IStoryThread passage13_Fragment_0()
+	IStoryThread passage12_Fragment_0()
 	{
 		yield return passage("Cure_Logic");
 		yield break;
 	}
 
-	IStoryThread passage13_Fragment_1()
+	IStoryThread passage12_Fragment_1()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage13_Fragment_0);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage12_Fragment_0);
 		yield break;
 	}
 
 	// .............
-	// #14: West_Logic
+	// #13: West_Logic
 
-	void passage14_Init()
+	void passage13_Init()
 	{
-		this.Passages[@"West_Logic"] = new StoryPassage(@"West_Logic", new string[]{  }, passage14_Main);
+		this.Passages[@"West_Logic"] = new StoryPassage(@"West_Logic", new string[]{  }, passage13_Main);
 	}
 
-	IStoryThread passage14_Main()
+	IStoryThread passage13_Main()
 	{
 		yield return lineBreak();
 		if(Vars.location["WAREHOUSE"] == true) {
@@ -820,40 +856,44 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("WEST");
 		}
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("wo"), passage14_Fragment_1);
+		yield return enchantIntoLink(hookRef("wo"), passage13_Fragment_1);
 		yield break;
 	}
 
-	IStoryThread passage14_Fragment_0()
+	IStoryThread passage13_Fragment_0()
 	{
 		yield return passage("West_Logic");
 		yield break;
 	}
 
-	IStoryThread passage14_Fragment_1()
+	IStoryThread passage13_Fragment_1()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage14_Fragment_0);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage13_Fragment_0);
 		yield break;
 	}
 
 	// .............
-	// #15: Security
+	// #14: Security
 
-	void passage15_Init()
+	void passage14_Init()
 	{
-		this.Passages[@"Security"] = new StoryPassage(@"Security", new string[]{  }, passage15_Main);
+		this.Passages[@"Security"] = new StoryPassage(@"Security", new string[]{  }, passage14_Main);
 	}
 
-	IStoryThread passage15_Main()
+	IStoryThread passage14_Main()
 	{
 		Vars.location["GARAGE"]  = false;
 		Vars.location["WAREHOUSE"]  = false;
 		Vars.location["SERVER"]  = false;
 		Vars.location["SECURITY"]  = true;
 		Vars.location["CLEAN"]  = false;
-		yield return text("You walk into the Security Room. Console of security monitors, currently malfunctioning. Guard crouching under the console, trying to repair them. Large calendar on the wall.");
+		Vars.location["TITLE"]  = false;
+		Vars.guard  = false;
+		yield return text("You walk into the Security Room. Console of security monitors, currently malfunctioning. Guard lying next to the console. You LOOK at large calendar on the wall. Warehouse to the WEST.");
 		yield return lineBreak();
-		yield return text("The guard notices you. He stands up, hand goes for a gun at his side. He speaks Russian, which your T.E.T./R.I.S. translates. “Identify yourself!”");
+		if(Vars.dead_g == false) {
+			yield return text("The guard notices at you. He stands up, hand goes for a GUN at his side. He speaks Russian, which your T.E.T./R.I.S. translates. “Identify yourself!” You are unsure if he will let you TALK.");
+		}
 		yield return lineBreak();
 		if(Vars.inv["COAT"] == true) {
 			yield return text("The guard’s eyes study your white lab COAT. Hand moves away from gun. “Sorry. Can never remember what you scientists look like. Can’t remember much of anything these days, really. Maybe I should lay off drinking. Anyway, you need to get to the basement?\"");
@@ -881,89 +921,89 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("GEAR");
 		}
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("ge"), passage15_Fragment_1);
-		yield return enchantIntoLink(hookRef("ta"), passage15_Fragment_3);
+		yield return enchantIntoLink(hookRef("ge"), passage14_Fragment_1);
+		yield return enchantIntoLink(hookRef("ta"), passage14_Fragment_3);
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("ug"), passage15_Fragment_5);
+		yield return enchantIntoLink(hookRef("ug"), passage14_Fragment_5);
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("lo"), passage15_Fragment_7);
+		yield return enchantIntoLink(hookRef("lo"), passage14_Fragment_7);
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("wo"), passage15_Fragment_9);
+		yield return enchantIntoLink(hookRef("wo"), passage14_Fragment_9);
 		yield return lineBreak();
 		using (Group("hook", "c1")) {
 		}
 		yield break;
 	}
 
-	IStoryThread passage15_Fragment_0()
+	IStoryThread passage14_Fragment_0()
 	{
 		yield return passage("Gear");
 		yield break;
 	}
 
-	IStoryThread passage15_Fragment_1()
+	IStoryThread passage14_Fragment_1()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage15_Fragment_0);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage14_Fragment_0);
 		yield break;
 	}
 
-	IStoryThread passage15_Fragment_2()
+	IStoryThread passage14_Fragment_2()
 	{
 		yield return passage("Talk_Logic");
 		yield break;
 	}
 
-	IStoryThread passage15_Fragment_3()
+	IStoryThread passage14_Fragment_3()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage15_Fragment_2);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage14_Fragment_2);
 		yield break;
 	}
 
-	IStoryThread passage15_Fragment_4()
+	IStoryThread passage14_Fragment_4()
 	{
 		yield return passage("Gun_Logic2");
 		yield break;
 	}
 
-	IStoryThread passage15_Fragment_5()
+	IStoryThread passage14_Fragment_5()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage15_Fragment_4);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage14_Fragment_4);
 		yield break;
 	}
 
-	IStoryThread passage15_Fragment_6()
+	IStoryThread passage14_Fragment_6()
 	{
 		yield return passage("Look_Logic");
 		yield break;
 	}
 
-	IStoryThread passage15_Fragment_7()
+	IStoryThread passage14_Fragment_7()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage15_Fragment_6);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage14_Fragment_6);
 		yield break;
 	}
 
-	IStoryThread passage15_Fragment_8()
+	IStoryThread passage14_Fragment_8()
 	{
 		yield return passage("West_Logic");
 		yield break;
 	}
 
-	IStoryThread passage15_Fragment_9()
+	IStoryThread passage14_Fragment_9()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage15_Fragment_8);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage14_Fragment_8);
 		yield break;
 	}
 
 	// .............
-	// #16: East_Logic
+	// #15: East_Logic
 
-	void passage16_Init()
+	void passage15_Init()
 	{
-		this.Passages[@"East_Logic"] = new StoryPassage(@"East_Logic", new string[]{  }, passage16_Main);
+		this.Passages[@"East_Logic"] = new StoryPassage(@"East_Logic", new string[]{  }, passage15_Main);
 	}
 
-	IStoryThread passage16_Main()
+	IStoryThread passage15_Main()
 	{
 		yield return lineBreak();
 		if(Vars.location["WAREHOUSE"] == true) {
@@ -976,38 +1016,39 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("EAST");
 		}
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("eo"), passage16_Fragment_1);
+		yield return enchantIntoLink(hookRef("eo"), passage15_Fragment_1);
 		yield break;
 	}
 
-	IStoryThread passage16_Fragment_0()
+	IStoryThread passage15_Fragment_0()
 	{
 		yield return passage("East_Logic");
 		yield break;
 	}
 
-	IStoryThread passage16_Fragment_1()
+	IStoryThread passage15_Fragment_1()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage16_Fragment_0);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage15_Fragment_0);
 		yield break;
 	}
 
 	// .............
-	// #17: Server
+	// #16: Server
 
-	void passage17_Init()
+	void passage16_Init()
 	{
-		this.Passages[@"Server"] = new StoryPassage(@"Server", new string[]{  }, passage17_Main);
+		this.Passages[@"Server"] = new StoryPassage(@"Server", new string[]{  }, passage16_Main);
 	}
 
-	IStoryThread passage17_Main()
+	IStoryThread passage16_Main()
 	{
 		Vars.location["GARAGE"]  = false;
 		Vars.location["WAREHOUSE"]  = false;
 		Vars.location["SERVER"]  = true;
 		Vars.location["SECURITY"]  = false;
 		Vars.location["CLEAN"]  = false;
-		yield return text("You enter the Server Room. Banks of computers, loud hum from the fans. In front of you, an administrative terminal. Along the wall, a cabinet.");
+		Vars.location["TITLE"]  = false;
+		yield return text("You enter the Server Room. Banks of computers, loud hum from the fans, ready to be HACKed. In front of you, an administrative terminal. A key FOB lies on top of it. Along the wall, a cabinet LOOKs back at you. The warehouse is back towards the EAST.");
 		using (Group("hook", "lo")) {
 			yield return text("LOOK");
 		}
@@ -1028,14 +1069,14 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("GEAR");
 		}
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("ge"), passage17_Fragment_1);
+		yield return enchantIntoLink(hookRef("ge"), passage16_Fragment_1);
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("lo"), passage17_Fragment_3);
-		yield return enchantIntoLink(hookRef("ha"), passage17_Fragment_5);
+		yield return enchantIntoLink(hookRef("lo"), passage16_Fragment_3);
+		yield return enchantIntoLink(hookRef("ha"), passage16_Fragment_5);
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("eo"), passage17_Fragment_7);
+		yield return enchantIntoLink(hookRef("eo"), passage16_Fragment_7);
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("tf"), passage17_Fragment_9);
+		yield return enchantIntoLink(hookRef("tf"), passage16_Fragment_9);
 		yield return text(" ");
 		yield return lineBreak();
 		using (Group("hook", "c1")) {
@@ -1043,75 +1084,75 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield break;
 	}
 
-	IStoryThread passage17_Fragment_0()
+	IStoryThread passage16_Fragment_0()
 	{
 		yield return passage("Gear");
 		yield break;
 	}
 
-	IStoryThread passage17_Fragment_1()
+	IStoryThread passage16_Fragment_1()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage17_Fragment_0);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage16_Fragment_0);
 		yield break;
 	}
 
-	IStoryThread passage17_Fragment_2()
+	IStoryThread passage16_Fragment_2()
 	{
 		yield return passage("Look_Logic");
 		yield break;
 	}
 
-	IStoryThread passage17_Fragment_3()
+	IStoryThread passage16_Fragment_3()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage17_Fragment_2);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage16_Fragment_2);
 		yield break;
 	}
 
-	IStoryThread passage17_Fragment_4()
+	IStoryThread passage16_Fragment_4()
 	{
 		yield return passage("Hack_Logic");
 		yield break;
 	}
 
-	IStoryThread passage17_Fragment_5()
+	IStoryThread passage16_Fragment_5()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage17_Fragment_4);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage16_Fragment_4);
 		yield break;
 	}
 
-	IStoryThread passage17_Fragment_6()
+	IStoryThread passage16_Fragment_6()
 	{
 		yield return passage("East_Logic");
 		yield break;
 	}
 
-	IStoryThread passage17_Fragment_7()
+	IStoryThread passage16_Fragment_7()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage17_Fragment_6);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage16_Fragment_6);
 		yield break;
 	}
 
-	IStoryThread passage17_Fragment_8()
+	IStoryThread passage16_Fragment_8()
 	{
 		yield return passage("Fob_Logic");
 		yield break;
 	}
 
-	IStoryThread passage17_Fragment_9()
+	IStoryThread passage16_Fragment_9()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage17_Fragment_8);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage16_Fragment_8);
 		yield break;
 	}
 
 	// .............
-	// #18: South_Logic
+	// #17: South_Logic
 
-	void passage18_Init()
+	void passage17_Init()
 	{
-		this.Passages[@"South_Logic"] = new StoryPassage(@"South_Logic", new string[]{  }, passage18_Main);
+		this.Passages[@"South_Logic"] = new StoryPassage(@"South_Logic", new string[]{  }, passage17_Main);
 	}
 
-	IStoryThread passage18_Main()
+	IStoryThread passage17_Main()
 	{
 		yield return lineBreak();
 		if(Vars.location["WAREHOUSE"] == true) {
@@ -1121,31 +1162,31 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("SOUTH");
 		}
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("so"), passage18_Fragment_1);
+		yield return enchantIntoLink(hookRef("so"), passage17_Fragment_1);
 		yield break;
 	}
 
-	IStoryThread passage18_Fragment_0()
+	IStoryThread passage17_Fragment_0()
 	{
 		yield return passage("South_Logic");
 		yield break;
 	}
 
-	IStoryThread passage18_Fragment_1()
+	IStoryThread passage17_Fragment_1()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage18_Fragment_0);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage17_Fragment_0);
 		yield break;
 	}
 
 	// .............
-	// #19: Fob_Logic2
+	// #18: Fob_Logic2
 
-	void passage19_Init()
+	void passage18_Init()
 	{
-		this.Passages[@"Fob_Logic2"] = new StoryPassage(@"Fob_Logic2", new string[]{  }, passage19_Main);
+		this.Passages[@"Fob_Logic2"] = new StoryPassage(@"Fob_Logic2", new string[]{  }, passage18_Main);
 	}
 
-	IStoryThread passage19_Main()
+	IStoryThread passage18_Main()
 	{
 		yield return lineBreak();
 		if(Vars.inv["FOB"] == true) {
@@ -1156,92 +1197,76 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 					yield return text("USE CURE");
 				}
 				yield return text(" ");
-				yield return enchantIntoLink(hookRef("uc"), passage19_Fragment_1);
+				yield return enchantIntoLink(hookRef("uc"), passage18_Fragment_1);
 			}
 		}
 		yield break;
 	}
 
-	IStoryThread passage19_Fragment_0()
+	IStoryThread passage18_Fragment_0()
 	{
 		yield return passage("Cure_Logic");
 		yield break;
 	}
 
-	IStoryThread passage19_Fragment_1()
+	IStoryThread passage18_Fragment_1()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage19_Fragment_0);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage18_Fragment_0);
 		yield break;
 	}
 
 	// .............
-	// #20: Talk_Logic
+	// #19: Talk_Logic
 
-	void passage20_Init()
+	void passage19_Init()
 	{
-		this.Passages[@"Talk_Logic"] = new StoryPassage(@"Talk_Logic", new string[]{  }, passage20_Main);
+		this.Passages[@"Talk_Logic"] = new StoryPassage(@"Talk_Logic", new string[]{  }, passage19_Main);
 	}
 
-	IStoryThread passage20_Main()
+	IStoryThread passage19_Main()
 	{
 		yield return lineBreak();
 		if(Vars.location["SECURITY"] == true) {
 			if(Vars.guard == false && Vars.dead_g == false) {
 				if(Vars.ser_door == false) {
 					Vars.ser_door  = true;
-					yield return text("”I’ll disable the security door on the elevator for you. Be careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.” The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.");
-				}
-				else {
-					yield return text("The guard is passed out. It doesn't look like he can talk right now.");
+					yield return text(" ");
+					Vars.dead_g  = true;
+					yield return text(" ”I’ll disable the security door on the elevator for you. Be careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.” The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.");
 				}
 			}
 			else if(Vars.dead_g == false) {
 				Vars.HP  = Vars.HP - 1;
-				yield return text("You try, but the guard shoots you before you can!");
+				yield return text("You try, but the guard shoots you before you can! ");
+				yield return lineBreak();
+				if(Vars.HP == 2) {
+					yield return text("YOU ARE PRETTY HURT, MAN");
+				}
+				yield return text(" ");
+				if(Vars.HP == 1) {
+					yield return text("YOU ARE BASICALLY DEAD");
+				}
+				yield return text(" ");
+				if(Vars.HP <= 0) {
+					Vars.game_over  = true;
+					yield return text(" GAME OVER");
+				}
 			}
 		}
-		using (Group("hook", "ta")) {
-			yield return text("TALK");
-		}
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("ta"), passage20_Fragment_1);
-		yield return text(" ");
-		if(Vars.HP == 2) {
-			yield return text("YOU ARE PRETTY HURT, MAN");
-		}
-		yield return text(" ");
-		if(Vars.HP == 1) {
-			yield return text("YOU ARE BASICALLY DEAD");
-		}
-		yield return text(" ");
-		if(Vars.HP <= 0) {
-			Vars.game_over  = true;
-			yield return text(" GAME OVER");
-		}
 		yield break;
 	}
 
-	IStoryThread passage20_Fragment_0()
-	{
-		yield return passage("Talk_Logic");
-		yield break;
-	}
-
-	IStoryThread passage20_Fragment_1()
-	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage20_Fragment_0);
-		yield break;
-	}
 
 	// .............
-	// #21: Lab
+	// #20: Lab
 
-	void passage21_Init()
+	void passage20_Init()
 	{
-		this.Passages[@"Lab"] = new StoryPassage(@"Lab", new string[]{  }, passage21_Main);
+		this.Passages[@"Lab"] = new StoryPassage(@"Lab", new string[]{  }, passage20_Main);
 	}
 
-	IStoryThread passage21_Main()
+	IStoryThread passage20_Main()
 	{
 		Vars.location["GARAGE"]  = false;
 		Vars.location["WAREHOUSE"]  = false;
@@ -1249,9 +1274,10 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["SECURITY"]  = false;
 		Vars.location["LAB"]  = true;
 		Vars.location["CLEAN"]  = false;
+		Vars.location["TITLE"]  = false;
 		yield return text("You get into the elevator and descend to the lower floor.");
 		yield return lineBreak();
-		yield return text("You step off the elevator. Big room, circular. To the NORTH there’s a plastic locked cleanroom. Inside the cleanroom there is a tall machine in the center. Directly in front of you, a computer attached to a holographic projector.");
+		yield return text("You step off the elevator. Big room, circular. To the north there’s a plastic locked cleanroom. Inside the cleanroom there is a tall machine in the center. LOOKing in front of you, a computer attached to a holographic projector blocks the cleanroom. It seems like they want to TALK. ");
 		using (Group("hook", "lo")) {
 			yield return text("LOOK");
 		}
@@ -1264,61 +1290,61 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("GEAR");
 		}
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("lo"), passage21_Fragment_1);
-		yield return enchantIntoLink(hookRef("ai"), passage21_Fragment_3);
+		yield return enchantIntoLink(hookRef("lo"), passage20_Fragment_1);
+		yield return enchantIntoLink(hookRef("ai"), passage20_Fragment_3);
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("ge"), passage21_Fragment_5);
+		yield return enchantIntoLink(hookRef("ge"), passage20_Fragment_5);
 		yield return lineBreak();
 		using (Group("hook", "c1")) {
 		}
 		yield break;
 	}
 
-	IStoryThread passage21_Fragment_0()
+	IStoryThread passage20_Fragment_0()
 	{
 		yield return passage("Look_Logic");
 		yield break;
 	}
 
-	IStoryThread passage21_Fragment_1()
+	IStoryThread passage20_Fragment_1()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage21_Fragment_0);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage20_Fragment_0);
 		yield break;
 	}
 
-	IStoryThread passage21_Fragment_2()
+	IStoryThread passage20_Fragment_2()
 	{
 		yield return passage("AI_Logic");
 		yield break;
 	}
 
-	IStoryThread passage21_Fragment_3()
+	IStoryThread passage20_Fragment_3()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage21_Fragment_2);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage20_Fragment_2);
 		yield break;
 	}
 
-	IStoryThread passage21_Fragment_4()
+	IStoryThread passage20_Fragment_4()
 	{
 		yield return passage("Gear");
 		yield break;
 	}
 
-	IStoryThread passage21_Fragment_5()
+	IStoryThread passage20_Fragment_5()
 	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage21_Fragment_4);
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage20_Fragment_4);
 		yield break;
 	}
 
 	// .............
-	// #22: Gear
+	// #21: Gear
 
-	void passage22_Init()
+	void passage21_Init()
 	{
-		this.Passages[@"Gear"] = new StoryPassage(@"Gear", new string[]{  }, passage22_Main);
+		this.Passages[@"Gear"] = new StoryPassage(@"Gear", new string[]{  }, passage21_Main);
 	}
 
-	IStoryThread passage22_Main()
+	IStoryThread passage21_Main()
 	{
 		yield return lineBreak();
 		yield return text("INVENTORY: ");
@@ -1335,17 +1361,73 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		if(Vars.inv["COAT"] == true) {
 			yield return text("COAT ");
 		}
+		if(Vars.inv["CURE"] == true) {
+			yield return text("CURE ");
+		}
 		using (Group("hook", "ge")) {
 			yield return text("GEAR");
 		}
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("ge"), passage22_Fragment_1);
+		yield return enchantIntoLink(hookRef("ge"), passage21_Fragment_1);
+		yield break;
+	}
+
+	IStoryThread passage21_Fragment_0()
+	{
+		yield return passage("Gear");
+		yield break;
+	}
+
+	IStoryThread passage21_Fragment_1()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage21_Fragment_0);
+		yield break;
+	}
+
+	// .............
+	// #22: AI_Logic
+
+	void passage22_Init()
+	{
+		this.Passages[@"AI_Logic"] = new StoryPassage(@"AI_Logic", new string[]{  }, passage22_Main);
+	}
+
+	IStoryThread passage22_Main()
+	{
+		yield return lineBreak();
+		if(Vars.open_clean == false) {
+			Vars.cor_ans  = "FOB";
+			yield return text(" You go over to the hologram head. 'I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot. ");
+			yield return lineBreak();
+			yield return text("First question: What is something that opens things, that your boss would be mad if they found out you lost it. ");
+			using (Group("hook", "af")) {
+				yield return text("USE FOB");
+			}
+			yield return text(" ");
+			using (Group("hook", "ac")) {
+				yield return text("USE COAT");
+			}
+			yield return text(" ");
+			using (Group("hook", "ag")) {
+				yield return text("USE GUN");
+			}
+			yield return text(" ");
+			yield return enchantIntoLink(hookRef("af"), passage22_Fragment_1);
+			yield return text(" ");
+			yield return enchantIntoLink(hookRef("ac"), passage22_Fragment_3);
+			yield return text(" ");
+			yield return enchantIntoLink(hookRef("ag"), passage22_Fragment_5);
+		}
+		yield return text(" ");
+		if(Vars.open_clean == true) {
+			yield return text("It's ironic that an A.I. like myself is programmed to despise robots. It's like being programmed to despise yourself. Honestly, the only thing that keeps me sane is taking comfort in MY UNDYING HATRED FOR MANGY DEGENERATE ROBOTS.");
+		}
 		yield break;
 	}
 
 	IStoryThread passage22_Fragment_0()
 	{
-		yield return passage("Gear");
+		yield return passage("AI_Fob");
 		yield break;
 	}
 
@@ -1355,39 +1437,64 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield break;
 	}
 
+	IStoryThread passage22_Fragment_2()
+	{
+		yield return passage("AI_Coat");
+		yield break;
+	}
+
+	IStoryThread passage22_Fragment_3()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage22_Fragment_2);
+		yield break;
+	}
+
+	IStoryThread passage22_Fragment_4()
+	{
+		yield return passage("AI_Gun");
+		yield break;
+	}
+
+	IStoryThread passage22_Fragment_5()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage22_Fragment_4);
+		yield break;
+	}
+
 	// .............
-	// #23: AI_Logic
+	// #23: AI_Fob
 
 	void passage23_Init()
 	{
-		this.Passages[@"AI_Logic"] = new StoryPassage(@"AI_Logic", new string[]{  }, passage23_Main);
+		this.Passages[@"AI_Fob"] = new StoryPassage(@"AI_Fob", new string[]{  }, passage23_Main);
 	}
 
 	IStoryThread passage23_Main()
 	{
 		yield return lineBreak();
-		if(Vars.lab_c == 0) {
-			yield return text("You go over to the hologram head. “I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot. First question: show me something that opens things, that your boss would be mad if they found out you lost it. ");
-			Vars.lab_c  = Vars.lab_c + 1;
-			yield return text(" ");
-			Vars.cor_ans  = "FOB";
-		}
-		if(Vars.lab_c == 1) {
-			yield return text("Second question: show me something that you could use to backup your thoughts, or a song that you like. ");
+		if(Vars.cor_ans == "FOB") {
+			yield return text("Correct! ");
+			yield return lineBreak();
+			yield return text("Second question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. ");
 			Vars.cor_ans  = "COAT";
-			yield return text(" ");
-			Vars.lab_c  = Vars.lab_c + 1;
-			yield return text(" ");
 		}
-		if(Vars.lab_c == 2) {
-			yield return text(" Last question: show me something you could use to make people beg for mercy. ");
-			Vars.lab_c  = Vars.lab_c + 1;
+		else {
+			yield return text("That's an answer a robot would give! You get shocked. What item  opens things, that your boss would be mad if they found out you lost it?");
+			Vars.HP  = Vars.HP - 1;
 			yield return text(" ");
-			Vars.cor_and  = "GUN";
+			yield return lineBreak();
+			if(Vars.HP == 2) {
+				yield return text("YOU ARE PRETTY HURT, MAN");
+			}
+			if(Vars.HP == 1) {
+				yield return text("YOU ARE BASICALLY DEAD");
+			}
+			if(Vars.HP <= 0) {
+				Vars.game_over  = true;
+				yield return text("GAME OVER");
+			}
 		}
-		if(Vars.open_clean == true) {
-			yield return text("It's ironic that an A.I. like myself is programmed to despise robots. It's like being programmed to despise yourself. Honestly, the only thing that keeps me sane is taking comfort in MY UNDYING HATRED FOR MANGY DEGENERATE ROBOTS.");
-		}
+		yield return text(" ");
 		using (Group("hook", "af")) {
 			yield return text("USE FOB");
 		}
@@ -1442,80 +1549,100 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	}
 
 	// .............
-	// #24: AI_Fob
+	// #24: AI_Coat
 
 	void passage24_Init()
 	{
-		this.Passages[@"AI_Fob"] = new StoryPassage(@"AI_Fob", new string[]{  }, passage24_Main);
+		this.Passages[@"AI_Coat"] = new StoryPassage(@"AI_Coat", new string[]{  }, passage24_Main);
 	}
 
 	IStoryThread passage24_Main()
 	{
 		yield return lineBreak();
-		if(Vars.cor_ans == "FOB") {
+		if(Vars.cor_ans == "COAT") {
 			yield return text("Correct! ");
-			yield return passage("AI_Logic");
+			yield return lineBreak();
+			yield return text("Last question: tell me something you could use to make people beg for mercy.  ");
+			Vars.cor_ans  = "GUN";
 		}
 		else {
-			yield return text("That’s an answer a robot would give! You get shocked. What item  opens things, that your boss would be mad if they found out you lost it?");
+			yield return text("That's an answer a robot would give! You get shocked. What could you use to protect yourself from the elements, or to make a fashion statement? ");
 			Vars.HP  = Vars.HP - 1;
+			yield return text(" ");
+			yield return lineBreak();
+			if(Vars.HP == 2) {
+				yield return text("YOU ARE PRETTY HURT, MAN");
+			}
+			if(Vars.HP == 1) {
+				yield return text("YOU ARE BASICALLY DEAD");
+			}
+			if(Vars.HP <= 0) {
+				Vars.game_over  = true;
+				yield return text("GAME OVER");
+			}
 		}
-		if(Vars.HP == 2) {
-			yield return text("YOU ARE PRETTY HURT, MAN");
+		using (Group("hook", "af")) {
+			yield return text("USE FOB");
 		}
-		if(Vars.HP == 1) {
-			yield return text("YOU ARE BASICALLY DEAD");
+		yield return text(" ");
+		using (Group("hook", "ac")) {
+			yield return text("USE COAT");
 		}
-		if(Vars.HP <= 0) {
-			Vars.game_over  = true;
-			yield return text("GAME OVER");
+		yield return text(" ");
+		using (Group("hook", "ag")) {
+			yield return text("USE GUN");
 		}
+		yield return enchantIntoLink(hookRef("af"), passage24_Fragment_1);
+		yield return enchantIntoLink(hookRef("ac"), passage24_Fragment_3);
+		yield return enchantIntoLink(hookRef("ag"), passage24_Fragment_5);
 		yield break;
 	}
 
+	IStoryThread passage24_Fragment_0()
+	{
+		yield return passage("AI_Fob");
+		yield break;
+	}
+
+	IStoryThread passage24_Fragment_1()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage24_Fragment_0);
+		yield break;
+	}
+
+	IStoryThread passage24_Fragment_2()
+	{
+		yield return passage("AI_Coat");
+		yield break;
+	}
+
+	IStoryThread passage24_Fragment_3()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage24_Fragment_2);
+		yield break;
+	}
+
+	IStoryThread passage24_Fragment_4()
+	{
+		yield return passage("AI_Gun");
+		yield break;
+	}
+
+	IStoryThread passage24_Fragment_5()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage24_Fragment_4);
+		yield break;
+	}
 
 	// .............
-	// #25: AI_Coat
+	// #25: AI_Gun
 
 	void passage25_Init()
 	{
-		this.Passages[@"AI_Coat"] = new StoryPassage(@"AI_Coat", new string[]{  }, passage25_Main);
+		this.Passages[@"AI_Gun"] = new StoryPassage(@"AI_Gun", new string[]{  }, passage25_Main);
 	}
 
 	IStoryThread passage25_Main()
-	{
-		yield return lineBreak();
-		if(Vars.cor_ans == "COAT") {
-			yield return text("Correct! ");
-			yield return passage("AI_Logic");
-		}
-		else {
-			yield return text("That’s an answer a robot would give! You get shocked. What item could you use to backup your thoughts, or a song that you like? ");
-			Vars.HP  = Vars.HP - 1;
-		}
-		if(Vars.HP == 2) {
-			yield return text("YOU ARE PRETTY HURT, MAN");
-		}
-		if(Vars.HP == 1) {
-			yield return text("YOU ARE BASICALLY DEAD");
-		}
-		if(Vars.HP <= 0) {
-			Vars.game_over  = true;
-			yield return text("GAME OVER");
-		}
-		yield break;
-	}
-
-
-	// .............
-	// #26: AI_Gun
-
-	void passage26_Init()
-	{
-		this.Passages[@"AI_Gun"] = new StoryPassage(@"AI_Gun", new string[]{  }, passage26_Main);
-	}
-
-	IStoryThread passage26_Main()
 	{
 		yield return lineBreak();
 		if(Vars.cor_ans == "GUN") {
@@ -1523,52 +1650,167 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return passage("AI_Win");
 		}
 		else {
-			yield return text("That’s an answer a robot would give! You get shocked. What item could you use to make people beg for mercy. ");
+			yield return text("That's an answer a robot would give! You get shocked. What item could you use to make people beg for mercy? ");
 			Vars.HP  = Vars.HP - 1;
-		}
-		if(Vars.HP == 2) {
-			yield return text("YOU ARE PRETTY HURT, MAN");
-		}
-		if(Vars.HP == 1) {
-			yield return text("YOU ARE BASICALLY DEAD");
-		}
-		if(Vars.HP <= 0) {
-			Vars.game_over  = true;
-			yield return text("GAME OVER");
+			yield return text(" ");
+			yield return lineBreak();
+			if(Vars.HP == 2) {
+				yield return text("YOU ARE PRETTY HURT, MAN");
+			}
+			yield return text(" ");
+			if(Vars.HP == 1) {
+				yield return text("YOU ARE BASICALLY DEAD");
+			}
+			yield return text(" ");
+			if(Vars.HP <= 0) {
+				Vars.game_over  = true;
+				yield return text("GAME OVER");
+			}
+			yield return text(" ");
+			using (Group("hook", "af")) {
+				yield return text("USE FOB");
+			}
+			yield return text(" ");
+			using (Group("hook", "ac")) {
+				yield return text("USE COAT");
+			}
+			yield return text(" ");
+			using (Group("hook", "ag")) {
+				yield return text("USE GUN");
+			}
+			yield return text(" ");
+			yield return enchantIntoLink(hookRef("af"), passage25_Fragment_1);
+			yield return text(" ");
+			yield return enchantIntoLink(hookRef("ac"), passage25_Fragment_3);
+			yield return text(" ");
+			yield return enchantIntoLink(hookRef("ag"), passage25_Fragment_5);
 		}
 		yield break;
 	}
 
-
-	// .............
-	// #27: AI_Win
-
-	void passage27_Init()
+	IStoryThread passage25_Fragment_0()
 	{
-		this.Passages[@"AI_Win"] = new StoryPassage(@"AI_Win", new string[]{  }, passage27_Main);
+		yield return passage("AI_Fob");
+		yield break;
 	}
 
-	IStoryThread passage27_Main()
+	IStoryThread passage25_Fragment_1()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage25_Fragment_0);
+		yield break;
+	}
+
+	IStoryThread passage25_Fragment_2()
+	{
+		yield return passage("AI_Coat");
+		yield break;
+	}
+
+	IStoryThread passage25_Fragment_3()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage25_Fragment_2);
+		yield break;
+	}
+
+	IStoryThread passage25_Fragment_4()
+	{
+		yield return passage("AI_Gun");
+		yield break;
+	}
+
+	IStoryThread passage25_Fragment_5()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage25_Fragment_4);
+		yield break;
+	}
+
+	// .............
+	// #26: AI_Win
+
+	void passage26_Init()
+	{
+		this.Passages[@"AI_Win"] = new StoryPassage(@"AI_Win", new string[]{  }, passage26_Main);
+	}
+
+	IStoryThread passage26_Main()
 	{
 		yield return lineBreak();
-		yield return text("Looks like you’re human… or, human enough. Opening cleanroom door.” The cleanroom door hisses as it unlocks. ");
+		yield return text("'Looks like you're human ... or, human enough. Opening cleanroom door.' The cleanroom door to the NORTH hisses as it unlocks. ");
 		Vars.open_clean  = true;
 		using (Group("hook", "ai")) {
 			yield return text("TALK");
 		}
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("ai"), passage27_Fragment_1);
+		yield return enchantIntoLink(hookRef("ai"), passage26_Fragment_1);
 		using (Group("hook", "no")) {
 			yield return text("NORTH");
 		}
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("no"), passage27_Fragment_3);
+		yield return enchantIntoLink(hookRef("no"), passage26_Fragment_3);
+		yield break;
+	}
+
+	IStoryThread passage26_Fragment_0()
+	{
+		yield return passage("AI_Logic");
+		yield break;
+	}
+
+	IStoryThread passage26_Fragment_1()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage26_Fragment_0);
+		yield break;
+	}
+
+	IStoryThread passage26_Fragment_2()
+	{
+		yield return passage("North_Logic");
+		yield break;
+	}
+
+	IStoryThread passage26_Fragment_3()
+	{
+		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage26_Fragment_2);
+		yield break;
+	}
+
+	// .............
+	// #27: Clean
+
+	void passage27_Init()
+	{
+		this.Passages[@"Clean"] = new StoryPassage(@"Clean", new string[]{  }, passage27_Main);
+	}
+
+	IStoryThread passage27_Main()
+	{
+		Vars.location["GARAGE"]  = false;
+		Vars.location["WAREHOUSE"]  = false;
+		Vars.location["SERVER"]  = false;
+		Vars.location["SECURITY"]  = false;
+		Vars.location["LAB"]  = false;
+		Vars.location["CLEAN"]  = true;
+		Vars.location["TITLE"]  = false;
+		yield return text("You go into the cleanroom. Door seals shut behind you. There is a table with some electronics parts on it. In the center, you LOOK at a tall machine. Screen set into it, control stick and buttons, an opened cabinet door near the bottom with ports to HACK into. ");
+		using (Group("hook", "lo")) {
+			yield return text("LOOK");
+		}
+		yield return text(" ");
+		using (Group("hook", "ha")) {
+			yield return text("HACK");
+		}
+		yield return enchantIntoLink(hookRef("lo"), passage27_Fragment_1);
+		yield return text(" ");
+		yield return enchantIntoLink(hookRef("ha"), passage27_Fragment_3);
+		yield return lineBreak();
+		using (Group("hook", "c1")) {
+		}
 		yield break;
 	}
 
 	IStoryThread passage27_Fragment_0()
 	{
-		yield return passage("AI_Logic");
+		yield return passage("Look_Logic");
 		yield break;
 	}
 
@@ -1580,7 +1822,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage27_Fragment_2()
 	{
-		yield return passage("AI_Logic");
+		yield return passage("Hack_Logic");
 		yield break;
 	}
 
@@ -1591,70 +1833,14 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	}
 
 	// .............
-	// #28: Clean
+	// #28: End
 
 	void passage28_Init()
 	{
-		this.Passages[@"Clean"] = new StoryPassage(@"Clean", new string[]{  }, passage28_Main);
+		this.Passages[@"End"] = new StoryPassage(@"End", new string[]{  }, passage28_Main);
 	}
 
 	IStoryThread passage28_Main()
-	{
-		Vars.location["GARAGE"]  = false;
-		Vars.location["WAREHOUSE"]  = false;
-		Vars.location["SERVER"]  = false;
-		Vars.location["SECURITY"]  = false;
-		Vars.location["LAB"]  = false;
-		Vars.location["CLEAN"]  = true;
-		yield return text("You go into the cleanroom. Door seals shut behind you. There is a table with some electronics parts on it. In the center, a tall machine. Screen set into it, control stick and buttons, a cabinet door near the bottom.");
-		using (Group("hook", "lo")) {
-			yield return text("LOOK");
-		}
-		yield return text(" ");
-		using (Group("hook", "ha")) {
-			yield return text("HACK");
-		}
-		yield return enchantIntoLink(hookRef("lo"), passage28_Fragment_1);
-		yield return enchantIntoLink(hookRef("ha"), passage28_Fragment_3);
-		yield return lineBreak();
-		using (Group("hook", "c1")) {
-		}
-		yield break;
-	}
-
-	IStoryThread passage28_Fragment_0()
-	{
-		yield return passage("Look_Logic");
-		yield break;
-	}
-
-	IStoryThread passage28_Fragment_1()
-	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage28_Fragment_0);
-		yield break;
-	}
-
-	IStoryThread passage28_Fragment_2()
-	{
-		yield return passage("Hack_Logic");
-		yield break;
-	}
-
-	IStoryThread passage28_Fragment_3()
-	{
-		yield return enchant(hookRef("c1"), HarloweEnchantCommand.Append, passage28_Fragment_2);
-		yield break;
-	}
-
-	// .............
-	// #29: End
-
-	void passage29_Init()
-	{
-		this.Passages[@"End"] = new StoryPassage(@"End", new string[]{  }, passage29_Main);
-	}
-
-	IStoryThread passage29_Main()
 	{
 		yield return text("You HACK into the Polymathia software. You delve into the code. Recognize bits of it from your psyops training. Dark patterns, submodal suggestions, selective suppression, other pieces that you don’t understand. Cutting-edge indoctrination tech. The information is too much for you. You disconnect.”");
 		yield return lineBreak();
@@ -1667,11 +1853,11 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("END");
 		}
 		yield return text(" ");
-		yield return enchantIntoLink(hookRef("end"), passage29_Fragment_0);
+		yield return enchantIntoLink(hookRef("end"), passage28_Fragment_0);
 		yield break;
 	}
 
-	IStoryThread passage29_Fragment_0()
+	IStoryThread passage28_Fragment_0()
 	{
 		Vars.win  = true;
 		yield break;
