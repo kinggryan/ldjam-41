@@ -10,7 +10,9 @@ public class TetrisDisplay : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		// debugText.SetAllDirty();
+        // commandText.SetAllDirty();
+        // lineCompleteText.SetAllDirty();
 	}
 	
 	// Update is called once per frame

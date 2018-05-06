@@ -27,6 +27,8 @@ public class TetrisManager : MonoBehaviour {
 
     private char[,] tetrisBoard;
     private TetrisBlock currentBlock;
+    private TetrisBlock[] nextBlocks;
+    private int numNextBlocks = 1;
 
     private float gameStepsDuration = 1;
     private float gameStepTimer;
@@ -51,7 +53,12 @@ public class TetrisManager : MonoBehaviour {
             }
         }
 
-        currentBlock = GetNextBlock();
+        // Initialize the block queue
+        nextBlocks = new TetrisBlock[numNextBlocks];
+        for(var i = 0 ; i < numNextBlocks ; i++) {
+            nextBlocks[i] = GetNextBlock();
+        }
+        UpdateNextBlocks();
         display.UpdateBoard(tetrisBoard, currentBlock);
         gameStepTimer = gameStepsDuration;
     }
@@ -123,7 +130,7 @@ public class TetrisManager : MonoBehaviour {
     void PerformNextGameStep()
     {
         if (currentBlock == null)
-            currentBlock = GetNextBlock();
+            UpdateNextBlocks();
 
         PerformNextDownwardMove();
 
@@ -479,5 +486,18 @@ public class TetrisManager : MonoBehaviour {
     public bool IsPaused()
     {
         return playDelayFrames == -1;
+    }
+
+    void UpdateNextBlocks()
+    {
+        // set the current block
+        currentBlock = nextBlocks[0];
+        
+        // Move the next blocks forward in the queue
+        for(var i = 0 ; i < numNextBlocks-1 ; i++) {
+            nextBlocks[i] = nextBlocks[i+1];
+        }
+
+        nextBlocks[numNextBlocks-1] = GetNextBlock();
     }
 }
