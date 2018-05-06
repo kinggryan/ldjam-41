@@ -82,14 +82,16 @@ public class TetrisBlock {
         return false;
     }
 
-    public char[,] AddToBoard(char[,] board)
+    /// This function returns the supplied board with the given piece added at its position.
+    /// If zeroed is true, then the block will be cornered in the uper left of the board.!-- 
+    public char[,] AddToBoard(char[,] board, bool zeroed = false)
     {
         var newBoard = (char[,])board.Clone();
         for (var localX = 0; localX < blockLetters.GetLength(0); localX++)
         {
-            var x = positionX - localOriginX + localX;
+            var x = localX + (zeroed ? 0 : positionX - localOriginX);
             for (var localY = 0; localY < blockLetters.GetLength(1); localY++) {
-                var y = positionY - localOriginY + localY;
+                var y = localY + (zeroed ? 0 : positionY - localOriginY);
                 if (blockLetters[localX, localY] != ' ') {
                     newBoard[x, y] = blockLetters[localX, localY];
                 }

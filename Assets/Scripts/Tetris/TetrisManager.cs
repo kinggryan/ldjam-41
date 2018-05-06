@@ -20,6 +20,7 @@ public class TetrisManager : MonoBehaviour {
 
     private WakeUpTetris pauser;
     private TetrisDisplay display;
+    private TetrisBlockQueueDisplay nextBlockDisplay;
     private TextrisTwinePlayer twinePlayer;
 
     private int boardSizeX = 10;
@@ -43,6 +44,7 @@ public class TetrisManager : MonoBehaviour {
         soundEngine = Object.FindObjectOfType<SoundEngine>();
         musicEngine = Object.FindObjectOfType<MusicEngine>();
         pauser = Object.FindObjectOfType<WakeUpTetris>();
+        nextBlockDisplay = Object.FindObjectOfType<TetrisBlockQueueDisplay>();
 
         tetrisBoard = new char[boardSizeX, boardSizeY];
         for (var x = 0; x < boardSizeX; x++)
@@ -499,5 +501,6 @@ public class TetrisManager : MonoBehaviour {
         }
 
         nextBlocks[numNextBlocks-1] = GetNextBlock();
+        nextBlockDisplay.SetNextBlock(nextBlocks[0]);
     }
 }
