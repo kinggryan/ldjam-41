@@ -1,8 +1,9 @@
-﻿<Properties StartupConfiguration="{459B3DA2-91A0-36DC-E2B1-AD6079A012BF}|">
+<Properties StartupConfiguration="{459B3DA2-91A0-36DC-E2B1-AD6079A012BF}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Adventure/TextrisTwinePlayer.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Assets/Scripts/Adventure/TextrisTwinePlayer.cs" Line="20" Column="1" />
+      <File FileName="Assets/DynamicCommands.cs" Line="15" Column="43" />
+      <File FileName="Assets/Scripts/Adventure/Textris.cs" Line="355" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

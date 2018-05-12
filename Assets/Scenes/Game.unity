@@ -298,6 +298,11 @@ Prefab:
       propertyPath: m_Name
       value: Commands
       objectReference: {fileID: 0}
+    - target: {fileID: 114507533842187770, guid: 8031916428caf491b96492719636a63d,
+        type: 2}
+      propertyPath: style.m_ContentOffset.y
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8031916428caf491b96492719636a63d, type: 2}
   m_IsPrefabParent: 0
@@ -1433,7 +1438,7 @@ MonoBehaviour:
   AutoDisplay: 1
   ShowNamedLinks: 1
   updateTextStepDuration: 0.05
-  updateTextStepTimer: -759.9919
+  updateTextStepTimer: -764.06067
   storyText: {fileID: 1114789946}
 --- !u!114 &1480000014
 MonoBehaviour:
