@@ -9,6 +9,8 @@ public class TetrisBlock {
     protected int positionY;
     protected int localOriginX;
     protected int localOriginY;
+    protected int upperLeftCornerX;
+    protected int upperleftCornerY;
 
     public virtual bool IsBlockAbovePlayArea(int playAreaHeight){
         // Debug.Log("Block position: " + positionY + " areaHeight: " + playAreaHeight);
@@ -84,16 +86,18 @@ public class TetrisBlock {
 
     /// This function returns the supplied board with the given piece added at its position.
     /// If zeroed is true, then the block will be cornered in the uper left of the board.!-- 
-    public char[,] AddToBoard(char[,] board, bool zeroed = false)
+    public char[,] AddToBoard(char[,] board, bool cornered = false)
     {
         var newBoard = (char[,])board.Clone();
         for (var localX = 0; localX < blockLetters.GetLength(0); localX++)
         {
-            var x = localX + (zeroed ? 0 : positionX - localOriginX);
+            var x = localX + (cornered ? -upperLeftCornerX : (positionX - localOriginX));
             for (var localY = 0; localY < blockLetters.GetLength(1); localY++) {
-                var y = localY + (zeroed ? 0 : positionY - localOriginY);
+                var y = localY + (cornered ? -upperleftCornerY : (positionY - localOriginY));
                 if (blockLetters[localX, localY] != ' ') {
-                    newBoard[x, y] = blockLetters[localX, localY];
+                    // Ensure you don't try to write things outside of the valid space
+                    if(x >= 0 && x < newBoard.GetLength(0) && y >= 0 && y < newBoard.GetLength(1))
+                        newBoard[x, y] = blockLetters[localX, localY];
                 }
             }
         }
@@ -188,6 +192,8 @@ public class SquareBlock : TetrisBlock {
         blockLetters = new char[,] { { topLetters[0], topLetters[1] }, { bottomLetters[0], bottomLetters[1] } };
         localOriginX = 0;
         localOriginY = 0;
+        upperLeftCornerX = 0;
+        upperleftCornerY = 0;
         this.positionX = positionX;
         this.positionY = positionY;
 
@@ -229,6 +235,8 @@ public class TBlock : TetrisBlock
             { ' ', ' ', ' ' } };
         localOriginX = 1;
         localOriginY = 1;
+        upperLeftCornerX = 0;
+        upperleftCornerY = 0;
         this.positionX = positionX;
         this.positionY = positionY;
     }
@@ -247,6 +255,8 @@ public class LongBlock : TetrisBlock
             {' ', ' ', ' ', ' ', ' '}};
         localOriginX = 2;
         localOriginY = 2;
+        upperLeftCornerX = 2;
+        upperleftCornerY = 1;
         this.positionX = positionX;
         this.positionY = positionY;
     }
@@ -265,6 +275,8 @@ public class ZBlock : TetrisBlock
             {' ', ' ', ' '}};
         localOriginX = 1;
         localOriginY = 1;
+        upperLeftCornerX = 0;
+        upperleftCornerY = 0;
         this.positionX = positionX;
         this.positionY = positionY;
     }
@@ -283,6 +295,8 @@ public class ReverseZBlock : TetrisBlock
             {' ', ' ', ' '}};
         localOriginX = 1;
         localOriginY = 1;
+        upperLeftCornerX = 0;
+        upperleftCornerY = 0;
         this.positionX = positionX;
         this.positionY = positionY;
     }
@@ -300,6 +314,8 @@ public class LBlock : TetrisBlock
             {' ', middleLetters[2], bottomLetters[1]}};
         localOriginX = 1;
         localOriginY = 1;
+        upperLeftCornerX = 0;
+        upperleftCornerY = 0;
         this.positionX = positionX;
         this.positionY = positionY;
     }
@@ -318,6 +334,8 @@ public class ReverseLBlock : TetrisBlock
             {bottomLetters[1], middleLetters[2], ' '}};
         localOriginX = 1;
         localOriginY = 1;
+        upperLeftCornerX = 0;
+        upperleftCornerY = 0;
         this.positionX = positionX;
         this.positionY = positionY;
     }

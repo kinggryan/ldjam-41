@@ -19,11 +19,12 @@ public class TetrisBlockQueueDisplay : MonoBehaviour {
 												{' ', ' ', ' ', ' '} };
 		blockQueueDisplayText = block.AddToBoard(blockQueueDisplayText, true);
 		var blockQueueText = "";
-        for(var y = blockQueueDisplayText.GetLength(1)-1; y >= 0; y--)
+        for(var x = 0; x < blockQueueDisplayText.GetLength(0); x++)
         {
-            for(var x = 0; x < blockQueueDisplayText.GetLength(0); x++)
+            for(var y = 0; y < blockQueueDisplayText.GetLength(1); y++)
             {
-                blockQueueText += blockQueueDisplayText[x, y];
+				var nextText = blockQueueDisplayText[x, y];
+                blockQueueText += nextText == ' ' ? '.' : nextText;
             }
             blockQueueText += "\n";
         }
