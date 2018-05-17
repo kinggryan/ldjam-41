@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114404720257760046}
   - component: {fileID: 114660733219759212}
   m_Layer: 5
-  m_Name: DynamicText 1
+  m_Name: DynamicText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

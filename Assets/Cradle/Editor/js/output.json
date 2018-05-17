@@ -1,10 +1,5 @@
 {
-    "console": [
-        {
-            "type": "message",
-            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:127:3712\nt@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:127:19933\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:127:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:124:4450\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:124:18801\nr@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:127:40542\na@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:127:41837\na@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:127:45808\ne@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:127:56837\no@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:127:53671\ne@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:127:56642\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:127:54045\nrender@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:128:486\nc@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:130:3813\nrenderInto@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:130:3254\nu@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:130:8919\ngoToPassage@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:130:9309\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:131:16874\nf@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:114:24025\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:114:36747 undefined"
-        }
-    ],
+    "console": [],
     "result": {
         "passages": [
             {
