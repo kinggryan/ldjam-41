@@ -18,7 +18,7 @@ public class MusicTransition : MonoBehaviour {
 	public bool transition = false;
 
 	public void ChangeMusic(){
-		print("changing music");
+		print("changing music: " + destination.name);
 		transition = true;
 		if (!crossfade && !verticalLayer){
 			source.StopSound();
@@ -28,16 +28,18 @@ public class MusicTransition : MonoBehaviour {
 	
 
 	// Use this for initialization
-	void Start () {
-		source.externalVolumeModifier = 1;
+	/* void Start () {
+		Debug.Log(gameObject.name + " Music Transition Load");
 		if (!verticalLayer){
+			source.externalVolumeModifier = 1;
 			destination.externalVolumeModifier = 0;
 		}
 		else {
 			 destination.externalVolumeModifier = vertStartVol;
-			print("vol mod: " + destination.externalVolumeModifier);
+			print(destination.name + " vol mod: " + destination.externalVolumeModifier);
 		}
 	}
+	*/
 
 
 	

@@ -25,7 +25,7 @@ public class AudioEngine : MonoBehaviour {
 
     void Start(){
         musicEngine = Object.FindObjectOfType<MusicEngine>();
-        musicEngine.ChangeMusicWithName("BassUp");
+        //musicEngine.ChangeMusicWithName("BassUp");
     }
     
 }

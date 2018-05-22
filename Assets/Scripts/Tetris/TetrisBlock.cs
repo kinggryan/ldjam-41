@@ -21,6 +21,10 @@ public class TetrisBlock {
         
 
     }
+
+    public virtual Vector2 GetCurrentBlockPosition(){
+        return new Vector2 (positionX, positionY);
+    }
 	// Returns true if the rotation was successful
     public virtual bool RotateClockwise(char[,] board)
     {

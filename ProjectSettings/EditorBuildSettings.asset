@@ -12,5 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Game.unity
     guid: 57e4568e51e83264885fbce6c4da995d
   - enabled: 1
+    path: Assets/Scenes/Menu/Options.unity
+    guid: d5dbbd334457f3249b132bb365e9362e
+  - enabled: 1
     path: Assets/Scenes/Menu/Lose.unity
     guid: 3efbbc185689e4174be12ce9c87f0f46
+  - enabled: 1
+    path: Assets/Scenes/TEST.unity
+    guid: 1e242bd0ced834a91baa194c6be4f83c
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/0d1c22a549b409c4f8201b1759f58725
+    guid: 0d1c22a549b409c4f8201b1759f58725
+  m_configObjects: {}

@@ -1,0 +1,614 @@
+[33mcommit 98f3fa0a117f50142e9c3640a69aea01bffcb41c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: radaeze <33758858+radaeze@users.noreply.github.com>
+Date:   Mon May 14 23:33:19 2018 -0700
+
+    changed commands text
+
+[33mcommit 22c22ba769256ea736d5ca6b54a04609692ce92b[m
+Author: Ryan King <ryan@helloworldeng.com>
+Date:   Sat May 12 15:01:01 2018 -0700
+
+    Fixed some next block stuff
+
+[33mcommit a1921aa4a17d6a629cf5cd5602a66e81ae35ca84[m
+Merge: 7a2e360 d868134
+Author: Ryan King <ryan@helloworldeng.com>
+Date:   Sat May 12 14:40:16 2018 -0700
+
+    Merge branch 'master' of https://github.com/kinggryan/ldjam-41
+
+[33mcommit 7a2e360fc6689d61278d2bed442a3385dd479a73[m
+Author: Ryan King <ryan@helloworldeng.com>
+Date:   Sun May 6 15:12:37 2018 -0700
+
+    Next block queue WIP
+
+[33mcommit d92de8e1f2446c3a35f96f676601cf1230fc00b2[m
+Author: Ryan King <ryan@helloworldeng.com>
+Date:   Sun May 6 14:52:27 2018 -0700
+
+    Upgraded unity version to 2018.1.02f; Added block queueing system, not yet displayed
+
+[33mcommit d868134d515b14cfed988eb5e243cd3c418c6eed[m
+Author: Scaregoat <irbaleg.doom@gmail.com>
+Date:   Sat May 5 22:47:05 2018 -0700
+
+    Punch-up pass 1
+    
+    Did a punch-up pass on the text in the Twine file
+
+[33mcommit 12d59f139cb5799a789f687d71f99a3bcfbf23d6[m
+Author: radaeze <33758858+radaeze@users.noreply.github.com>
+Date:   Sat May 5 14:33:01 2018 -0700
+
+    unity upgrade, inventory, more story edits
+
+[33mcommit e36f8fe8871a4ab63181465d24a3a8efb62065fb[m
+Author: radaeze <33758858+radaeze@users.noreply.github.com>
+Date:   Tue May 1 18:26:30 2018 -0700
+
+    test scence to bypass Tetris
+
+[33mcommit 1b6803d7a12c963bf9e8c3e9c3adacfa74dd0911[m
+Author: radaeze <33758858+radaeze@users.noreply.github.com>
+Date:   Tue May 1 16:37:40 2018 -0700
+
+    dynamic text prefab
+
+[33mcommit 0909a85fc648567693693b105b648bd3515c0fe3[m
+Author: radaeze <33758858+radaeze@users.noreply.github.com>
+Date:   Tue May 1 15:52:19 2018 -0700
+
+    splits two word commands
+
+[33mcommit 3caccfe332ae957a516606ec01b806d3f51cd19b[m
+Author: radaeze <33758858+radaeze@users.noreply.github.com>
+Date:   Tue May 1 14:38:04 2018 -0700
+
+    changed rotate input
+
+[33mcommit 2fb42fa3e96abcc93cc9a24fbca3eeda001a663b[m
+Author: radaeze <33758858+radaeze@users.noreply.github.com>
+Date:   Tue May 1 14:35:34 2018 -0700
+
+    changed open hack and added dyanmic commands
+
+[33mcommit f1d64ceb75d8c0dc3be14a328aac73e7db2df7a0[m
+Author: radaeze <33758858+radaeze@users.noreply.github.com>
+Date:   Mon Apr 30 22:42:04 2018 -0700
+
+    intial tutorial stuff and edits
+
+[33mcommit 8f6bef31b183ba8d1890546202782d90cd65ea29[m
+Author: radaeze <33758858+radaeze@users.noreply.github.com>
+Date:   Sun Apr 29 16:01:42 2018 -0700
+
+    deleted commands no longer used
+
+[33mcommit 89360b59a0e87f907aeb264bc38ca742911b6a0d[m
+Author: radaeze <33758858+radaeze@users.noreply.github.com>
+Date:   Sun Apr 29 15:52:09 2018 -0700
+
+    intial edits for level design
+
+[33mcommit 8ddc2dfc03281221a730adb7e0f61c25f78e4693[m
+Merge: 3e32bd0 bb9faff
+Author: radaeze <33758858+radaeze@users.noreply.github.com>
+Date:   Sat Apr 28 16:49:51 2018 -0700
+
+    idk
+
+[33mcommit 3e32bd0b39927f29a0e4220961c41de63766415e[m
+Author: radaeze <33758858+radaeze@users.noreply.github.com>
+Date:   Sat Apr 28 16:48:09 2018 -0700
+
+    music cue stuff
+
+[33mcommit 468d7de27ba8fbec420191cac8f60c08cb94b7af[m
+Author: radaeze <33758858+radaeze@users.noreply.github.com>
+Date:   Sat Apr 28 16:45:12 2018 -0700
+
+    music cues script
+
+[33mcommit bb9faffaad958a7048a7cffaf7dd3a540d9cb833[m
+Author: radaeze <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sat Apr 28 16:28:29 2018 -0700
+
+    music cues script
+
+[33mcommit 1cbd7a6602e0344d7aa1d8dc6f3a325b218c860e[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Fri Apr 27 22:03:30 2018 -0700
+
+    Pause game when new text appears
+
+[33mcommit 5c2c5de1014578152b8ff1998ad4cb3b1a1b33cd[m
+Merge: 5d4c064 22799d6
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Wed Apr 25 14:01:54 2018 -0700
+
+    updated more audio stuff
+
+[33mcommit 5d4c064a60acbd7d5ce130232ab1fcd58e619886[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Tue Apr 24 20:36:26 2018 -0700
+
+    added a bnuch of music and updated menus
+
+[33mcommit 22799d6eea5bd92b62815439cc026da9948a67a1[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Tue Apr 24 18:54:21 2018 -0700
+
+    small thing
+
+[33mcommit c40dea640a49eed2ec9fe2d91edf41911026b0be[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Tue Apr 24 18:45:02 2018 -0700
+
+    same thing really
+
+[33mcommit 4867313b638a402dd14c7b927d4a5125e1f7e0bd[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Tue Apr 24 18:38:07 2018 -0700
+
+    small error in command mapping
+
+[33mcommit 3a947fbf085a3741f7f1eea552244e02976ff2a9[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Tue Apr 24 16:22:36 2018 -0700
+
+    fixed errors messing with WebGL build
+
+[33mcommit 88e123c656d9ad213c5db5127148edc4636c76e3[m
+Merge: 7480020 3b19fd1
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 17:25:11 2018 -0700
+
+    merge conf
+
+[33mcommit 748002030e5b2352376c12841d5d20f05c45a5c5[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 17:24:06 2018 -0700
+
+    some audio stuff
+
+[33mcommit 3b19fd1e6103d4b3245ce5cd63bd480fead57b79[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Mon Apr 23 17:21:47 2018 -0700
+
+    more twine stuff
+
+[33mcommit 04dea8685e2d2e36d543b74d4b389b07565fa7d4[m
+Merge: cc1cd69 8662af5
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 17:17:42 2018 -0700
+
+    updating for merge
+
+[33mcommit cc1cd69bfbaf15142a4b58a196e8ffcc6a3d576f[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 17:11:03 2018 -0700
+
+    vertical bug fix sorta
+
+[33mcommit 8662af5b0ed7bc252adb8610be67fb3fb7e34613[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Mon Apr 23 16:52:20 2018 -0700
+
+    twine bug
+
+[33mcommit d9eed25bcdc1921ac686941152954542b1d5084b[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 16:49:00 2018 -0700
+
+    further music stuff
+
+[33mcommit e7d92c677f57e28b74da277bd035ccb08e16b187[m
+Merge: 7869540 0c9d50b
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 16:30:29 2018 -0700
+
+    Merge branch 'master' of https://github.com/kinggryan/ldjam-41
+
+[33mcommit 0c9d50bd5ea8715a1f7f96151c933014ddd89ba1[m
+Merge: 55c19e7 a973694
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Mon Apr 23 16:27:13 2018 -0700
+
+    Merge branch 'master' of https://github.com/kinggryan/ldjam-41
+
+[33mcommit 55c19e7257459b90311104324141aa43a80cc9e4[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Mon Apr 23 16:26:22 2018 -0700
+
+    win/lose scene and story fixes
+
+[33mcommit 78695409f9b1aad82d10e6af4d54b5fb4c3e5078[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 16:26:00 2018 -0700
+
+    implementing music
+
+[33mcommit a97369478ef0049f91c021da341222fced7a7f55[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 15:40:34 2018 -0700
+
+    added vertical spelling
+
+[33mcommit 2c6b6fcb72121ac39a4ae4e733bdf2841aab3dc1[m
+Merge: 7a37b12 aa67e0f
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 14:52:50 2018 -0700
+
+    mergey bergey
+
+[33mcommit 7a37b1226af4818ad27182e72b601e57eba9ceca[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 14:50:12 2018 -0700
+
+    hopefully ficxing twine error
+
+[33mcommit c715b9a0922f5831bf8055f0f34a040d39841c33[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 14:17:33 2018 -0700
+
+    adding music
+
+[33mcommit aa67e0f66e0bf0bfd65db5837d6a0c0cf388d3d5[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Mon Apr 23 14:04:05 2018 -0700
+
+    forgot to stuff for loading win scence
+
+[33mcommit 4a723605fb06f0a0335417fc1c7eed4b2ba61a98[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Mon Apr 23 14:00:15 2018 -0700
+
+    changed links and added more aliases
+
+[33mcommit fcb3ddaa86212208bd54b3d0c2870ef35d62c8ce[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Mon Apr 23 12:33:08 2018 -0700
+
+    added END command
+
+[33mcommit 0446e4c99c801416f7904d585147dcb072e66ad0[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Mon Apr 23 12:28:53 2018 -0700
+
+    finished story, added game over/ win condtions
+
+[33mcommit db15c2da721e2dab1002697ca3b3ca8e0a16189b[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Mon Apr 23 08:59:17 2018 -0700
+
+    changed back to TextrisTwinePlayer in TetrisManager
+
+[33mcommit a020bb99e21d4a2c98a28a88f5d0e6bbafc1484e[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Mon Apr 23 03:20:13 2018 -0700
+
+    edits
+
+[33mcommit aae7d35abf51a781671dd37d1f60a1714214c5b6[m
+Merge: 9a60517 7560619
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Mon Apr 23 03:04:15 2018 -0700
+
+    gabe's edits
+
+[33mcommit 9a60517ba09dec0750a5da9be5f0f5e00243cab6[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Mon Apr 23 02:41:28 2018 -0700
+
+    gear, GET commands, fixes
+
+[33mcommit 7560619e32a809959dfa23ce497afb4dc574c61a[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 01:50:19 2018 -0700
+
+    cleaned up lose code
+
+[33mcommit f7ae05f3fa0bc3020d9d1b9076b79d4f869894a4[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 01:45:51 2018 -0700
+
+    Added Lose code + some little audio stuff
+
+[33mcommit b1c8d433c192a4b41e30ff1d24e7e75f7660fc3e[m
+Merge: 311112b 09fd92e
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 00:54:22 2018 -0700
+
+    Merge branch 'master' of https://github.com/kinggryan/ldjam-41
+
+[33mcommit 311112bf6fa364bf9ab3471da957ec96f4544da2[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Mon Apr 23 00:54:12 2018 -0700
+
+    more merge conflict stuff yet again
+
+[33mcommit 09fd92e6bda9563ac3f3bf50b9beaaef8e3a0067[m
+Author: Scaregoat <irbaleg.doom@gmail.com>
+Date:   Mon Apr 23 00:26:43 2018 -0700
+
+    pared down descriptions
+
+[33mcommit 1b767f19d026c28362769bfdfe501a49ab1c8c85[m
+Merge: fe4ca5c 9e10884
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sun Apr 22 23:21:39 2018 -0700
+
+    Merge branch 'master' of https://github.com/kinggryan/ldjam-41
+
+[33mcommit fe4ca5c6baf5157923a1bbab3eeacb529ab74d81[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sun Apr 22 23:21:30 2018 -0700
+
+    i forgot what but probs story stuff
+
+[33mcommit 9e1088463349576f0d6be096aad064768e35c215[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 22:23:08 2018 -0700
+
+    Enable tetris once player hits button
+
+[33mcommit 0ddacb92a91a529bee8bb3233ac252c4a43aad26[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 21:33:35 2018 -0700
+
+    Little tweak to thing
+
+[33mcommit 98c75b8aeb5e053066481ced089b608c4bdb0e5b[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 21:31:24 2018 -0700
+
+    fixed alias highlighting bug
+
+[33mcommit eeedcf11463d476c3f2404dac947500fb6fc1a7f[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 21:20:30 2018 -0700
+
+    Added ability to alias; added newcommands
+
+[33mcommit 57a53c9de9c08a4a186aebe9b27e35418f35f0f6[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 20:25:04 2018 -0700
+
+    Added plaeyr settings
+
+[33mcommit 796b1d238f36b031e9a0eee7522ebbf3d7083cee[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 20:22:03 2018 -0700
+
+    various appearance tweaks
+
+[33mcommit cfe9b248908e01e3ad48ff2318866a5e91dec642[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sun Apr 22 19:36:56 2018 -0700
+
+    security room
+
+[33mcommit 956da864d6e44589bb50d27501ebb186486cc68c[m
+Merge: 69fafe9 5f4b901
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 18:44:14 2018 -0700
+
+    Merge branch 'master' of https://github.com/kinggryan/ldjam-41
+
+[33mcommit 69fafe9230d294e0077901652f4fd99effb3d361[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 18:44:07 2018 -0700
+
+    New display stuff
+
+[33mcommit 5f4b9018f586918163bf91b9589d021956789c82[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sun Apr 22 18:21:21 2018 -0700
+
+    server room
+
+[33mcommit 3814214650042dccd7267d233de12f49f6b9d54d[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 16:37:17 2018 -0700
+
+    small tweaks to tetris board size and console appearance
+
+[33mcommit aee535b61cf93975db96b9502d6b59d6da3ead24[m
+Merge: 2c8bfa4 53ceadf
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 16:26:01 2018 -0700
+
+    Merge branch 'master' of https://github.com/kinggryan/ldjam-41
+
+[33mcommit 2c8bfa4263010d13e76d0872a19b5657f0a1d17d[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 16:22:57 2018 -0700
+
+    Typey text
+
+[33mcommit 53ceadff892241a133ae279e9d22c2d7fb49af10[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sun Apr 22 15:51:52 2018 -0700
+
+    warehouse room
+
+[33mcommit c9719380a4f8226a5d1f788c9bf4e920567eafc0[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 15:35:52 2018 -0700
+
+    The letters spawned come from actually doable commands
+
+[33mcommit 7812d4306888d169373ee42a98cf7a6c00fa2ce6[m
+Merge: 7f4396a 4ed811f
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 15:21:36 2018 -0700
+
+    Merge branch 'master' of https://github.com/kinggryan/ldjam-41
+
+[33mcommit 7f4396a2298288423576b835d4e1f93d07771094[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 15:21:21 2018 -0700
+
+    Letters now only use the current possible commands
+
+[33mcommit 4ed811fb6568213057bcc2baa30a6a813bc2f382[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Sun Apr 22 15:05:13 2018 -0700
+
+    added master AudioEngine Prefab
+
+[33mcommit 8c59cb139257da16827cdc2544d852284171d790[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sun Apr 22 14:55:20 2018 -0700
+
+    Added initial commands list and resized story in game scene
+
+[33mcommit b9c8d89447a55a74275381fbb9d0fc8f030600b2[m
+Author: traviswhendrix <traviswhendrix@gmail.com>
+Date:   Sun Apr 22 14:36:36 2018 -0700
+
+    added rough tetris UI SFX
+
+[33mcommit 9be69fe53f1d9bc2d3da90bacdaf37c243c82ccd[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sun Apr 22 13:08:49 2018 -0700
+
+    forgot game scence edits
+
+[33mcommit bf54da32547399f3d5ad2ccd4c172ae975d951aa[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sun Apr 22 13:07:02 2018 -0700
+
+    more first room stuff
+
+[33mcommit 34afc130f96775bdbe38ad4c425c1b77313d2161[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sun Apr 22 12:09:25 2018 -0700
+
+    first room fixes
+
+[33mcommit 477aefa69a566d8e1fbff104eeb364d2042904be[m
+Merge: dcfe8b9 2fd4bf8
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sun Apr 22 11:28:04 2018 -0700
+
+    Merge branch 'master' of https://github.com/kinggryan/ldjam-41
+
+[33mcommit dcfe8b9a29d66e9dcc353723eb2b5002e1e5e57d[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sun Apr 22 11:27:58 2018 -0700
+
+    first adventure room
+
+[33mcommit 2fd4bf81d8abdc2961f59bb690f9945e3fee7135[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sat Apr 21 19:42:23 2018 -0700
+
+    tetris letters are chunks of valid command words
+
+[33mcommit 7743cdd45127f978e153092ae9783274bc8eec52[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sat Apr 21 18:43:38 2018 -0700
+
+    Commands go to twine story!
+
+[33mcommit f7f016b33941c53f44f599959a0d3e35929b8033[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sat Apr 21 18:24:37 2018 -0700
+
+    Can get commands from tetris
+
+[33mcommit fce461163b171dbf6e303111b0dabbb07a4d6433[m
+Merge: 597e0f1 4589956
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sat Apr 21 17:13:26 2018 -0700
+
+    Merge branch 'master' of https://github.com/kinggryan/ldjam-41
+
+[33mcommit 597e0f1e3f37d5fad3737fbe01dcfd17a2cafcda[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sat Apr 21 17:13:23 2018 -0700
+
+    Added weighted commands list structure for letter generation
+
+[33mcommit 45899560ffd812503447427000ae51f4b603d750[m
+Merge: 3243819 9c3e039
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sat Apr 21 16:54:47 2018 -0700
+
+    Merge branch 'master' of https://github.com/kinggryan/ldjam-41
+
+[33mcommit 32438195e4ba895b368a9f79846f412964882247[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sat Apr 21 16:54:26 2018 -0700
+
+    script for adventure display
+
+[33mcommit a6584f7347997b9bcdce7356383ec9fcc1f5fe33[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sat Apr 21 16:43:35 2018 -0700
+
+    Random Letters
+
+[33mcommit 6ef9a52b3aa4449f1b8b6913207651f1805bd3d9[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sat Apr 21 15:56:38 2018 -0700
+
+    Adjusted font and UI stuff
+
+[33mcommit 9c3e03919b100b5cfae591d66a0dff1f1f74303b[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sat Apr 21 15:53:12 2018 -0700
+
+    You can play tetris now
+
+[33mcommit 64ba86c1e0078d91c32c8601412930b83c9407a2[m
+Merge: b7b8457 0e293b3
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sat Apr 21 15:24:46 2018 -0700
+
+    Merge branch 'master' of https://github.com/kinggryan/ldjam-41
+
+[33mcommit b7b8457cdf63390ca249d32bbec54f9663cde4fb[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sat Apr 21 15:24:40 2018 -0700
+
+    test text display
+
+[33mcommit 0e293b36746feb2c211f363ebe91e9a2ca7338ef[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sat Apr 21 14:44:15 2018 -0700
+
+    Lines disappear now
+
+[33mcommit dd80587da34ec133a17dd96dae3d626fa4316922[m
+Merge: c7aff33 7f9f106
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sat Apr 21 14:33:30 2018 -0700
+
+    Merge branch 'master' of https://github.com/kinggryan/ldjam-41
+
+[33mcommit c7aff3323f4d322108316865a64285ff13083856[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sat Apr 21 14:33:03 2018 -0700
+
+    Tetris Basics
+
+[33mcommit 7f9f10666b78fdac566be09860702c7d7b4144f9[m
+Author: ramia.davis@gmail.com <AtomicTourist@Ramias-MacBook-Air.local>
+Date:   Sat Apr 21 12:07:38 2018 -0700
+
+    added cradle plugin
+
+[33mcommit bf7809b6d3052dc26bf0c25b2be3d02f1f8c6318[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sat Apr 21 11:44:24 2018 -0700
+
+    Added game scene
+
+[33mcommit dc3456a61a67853bce29262d52f7b942a46b78c7[m
+Author: Ryan King <kinggryan@gmail.com>
+Date:   Sat Apr 21 11:23:17 2018 -0700
+
+    Initial commit

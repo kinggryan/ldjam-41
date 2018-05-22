@@ -259,6 +259,7 @@ public class TetrisManager : MonoBehaviour {
             if(IsLineComplete(y))
             {
                 display.UpdateBoardWithCompleteLine(tetrisBoard, y);
+                soundEngine.PlaySoundWithName("LineClear");
             }
 
             // Do something with the command
@@ -293,16 +294,20 @@ public class TetrisManager : MonoBehaviour {
             if (command.command.command != TwineTextPlayer.Command.None)
             {
                 display.UpdateBoardWithCommandOnColumn(tetrisBoard, command.word, x);
+                soundEngine.PlaySoundWithName("EnterCommand");
             }
 
             if(IsColumnComplete(x))
             {
                 display.UpdateBoardWithCompleteColumn(tetrisBoard, x);
+                soundEngine.PlaySoundWithName("LineClear");
             }
 
             // Do something with the command
             if (command.command.command != TwineTextPlayer.Command.None || IsColumnComplete(x))
             {
+                Debug.Log("Command: " + command.command.command);
+                Debug.Log("Command: " + command.command);
                 RemoveColumnAndMoveAboveCharactersDown(x);
                 didEraseColumn = true;
             }
@@ -486,29 +491,37 @@ public class TetrisManager : MonoBehaviour {
                 tetrisBoard[x, y] = tetrisBoard[x, y + 1];
             }
         }
-        soundEngine.PlaySoundWithName("LineClear");
+        //soundEngine.PlaySoundWithName("LineClear");
     }
 
     void RemoveColumnAndMoveAboveCharactersDown(int xCoord){
-        Debug.Log("Trying to remove column");
-        for(var x = xCoord; x < boardSizeX - 1;  x++)
-        {
-            for(var y = 0; y < boardSizeY; y++)
+        Debug.Log("Trying to remove column " + xCoord);
+
+        //for(var x = xCoord; x < boardSizeX - 1;  x++)
+        //{
+            //Debug.Log("X: " + xCoord);
+            for(var y = boardSizeY - 2; y >= 0; y--)
             {
-                tetrisBoard[x, y] = tetrisBoard[x + 1, y];
+                //Debug.Log("Y: " + y);
+                tetrisBoard[xCoord, y] = tetrisBoard[xCoord, y + 1];
+                //Debug.Log("Moving x: " + xCoord + " y: " + y);
             }
-        }
-        soundEngine.PlaySoundWithName("LineClear");
+        //}
+        //soundEngine.PlaySoundWithName("LineClear");
     }
 
     public void PausePlay()
     {
         playDelayFrames = -1;
+        musicEngine.PauseMusic();
+        
     }
 
     public void ResumePlay()
     {
         playDelayFrames = 0;
+        soundEngine.PlaySoundWithName("UnPause");
+        musicEngine.UnpauseMusic();
     }
 
     public bool IsPaused()

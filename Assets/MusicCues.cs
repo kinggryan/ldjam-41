@@ -4,8 +4,11 @@ using UnityEngine;
 using Cradle;
 
 public class MusicCues : MonoBehaviour {
-	private SoundEngine soundEngine;
+	public SoundEngine soundEngine;
     private MusicEngine musicEngine;
+	private bool playedTitleEnterSound = false;
+	private bool firstHackEntered = false;
+	private bool firstLookEntered = false;
 
 	// Use this for initialization
 	void Start () {
@@ -19,9 +22,37 @@ public class MusicCues : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	void Title_Enter(){
+		Debug.Log("Title Enter");
+	}
+
+	void Title_Update(){
+		if(soundEngine != null && musicEngine != null && !playedTitleEnterSound){
+			soundEngine.PlaySoundWithName("ImproperShutdown");
+			musicEngine.ChangeMusicWithName("PadsUp");
+			musicEngine.ChangeMusicWithName("RoomToTank");
+			//musicEngine.ChangeMusicWithName("BassUp");
+			playedTitleEnterSound = true;
+		}
+	}
+
+	/*
+	void Title_Exit(){
+		Debug.Log("Title Exit");
+		if(soundEngine != null){
+			soundEngine.PlaySoundWithName("SystemCheckComplete");
+		}else{
+			Debug.Log("SoundEngine missing");
+		}
+	}
+	*/
+
 	void Garage_Enter(){
 
-		musicEngine.ChangeMusicWithName("KickUp");
+		musicEngine.ChangeMusicWithName("MelodyUp");
+		soundEngine.PlaySoundWithName("OpenHatch");
+		musicEngine.ChangeMusicWithName("RoomToTank");
 	}
 	void Garage_Update()
 	{
@@ -35,16 +66,32 @@ public class MusicCues : MonoBehaviour {
 
 	[StoryCue("Hack_Logic", "Enter")]
 	void enterHack(){
+		if(!firstHackEntered){
+			Debug.Log("1st HACK ENTER");
+			soundEngine.PlaySoundWithName("SystemCheckComplete");
+			musicEngine.ChangeMusicWithName("BassUp");
+			firstHackEntered = true;
+		}
+		Debug.Log("HACK ENTER");
 		// ...
 	}
 
-	[StoryCue("Hack_Logic", "Exit")]
-	void exitHack(){
+	[StoryCue("Look_Logic", "Enter")]
+	void enterLook(){
+		if(!firstLookEntered){
+			Debug.Log("1st Look ENTER");
+			soundEngine.PlaySoundWithName("EnterCommand");
+			musicEngine.ChangeMusicWithName("KickUp");
+			firstLookEntered = true;
+		}
+		Debug.Log("LOOK ENTER");
 		// ...
 	}
+
 
 	void Warehouse_Enter(){
-
+		Debug.Log("WAREHOUSE ENTERED");
+		soundEngine.PlaySoundWithName("WarehouseEnter");
 	
 	}
 
@@ -55,7 +102,7 @@ public class MusicCues : MonoBehaviour {
 	}
 
 	void Warehouse_Exit(){	
-		
+		Debug.Log("WAREHOUSE EXIT");
 	}
 
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 [System.Serializable]
 public class TransitionAndName {
@@ -10,6 +11,9 @@ public class TransitionAndName {
 
 public class MusicEngine : MonoBehaviour {
 
+	public AudioMixerSnapshot paused;
+	public AudioMixerSnapshot unpaused;
+	public float pauseTransitionTime;
 	public TransitionAndName[] events;
 
 		/* void Awake(){
@@ -17,7 +21,6 @@ public class MusicEngine : MonoBehaviour {
 		} */
     
 	public void ChangeMusicWithName(string name) {
-		print("Picking sound");
 		var playedSound = false;
 		foreach (var eventAndName in events) {
 			if (eventAndName.name == name) {
@@ -30,6 +33,15 @@ public class MusicEngine : MonoBehaviour {
 		if (!playedSound) {
 			Debug.LogError("Couldn't find sound for name: " + name);
 		}
+	}
+
+	public void PauseMusic(){
+		paused.TransitionTo(pauseTransitionTime);
+	}
+
+	public void UnpauseMusic(){
+		unpaused.TransitionTo(pauseTransitionTime);
+		
 	}
 
 
