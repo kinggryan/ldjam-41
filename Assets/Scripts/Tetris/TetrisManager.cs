@@ -29,6 +29,7 @@ public class TetrisManager : MonoBehaviour {
     private char[,] tetrisBoard;
     private TetrisBlock currentBlock;
     private TetrisBlock[] nextBlocks;
+    private TetrisBlock stashedBlock;
     private int numNextBlocks = 1;
 
     private float gameStepsDuration = 1;
@@ -126,6 +127,10 @@ public class TetrisManager : MonoBehaviour {
             soundEngine.PlaySoundWithName("BlockMove");
         }
 
+        if(Input.GetButtonDown("stash")) {
+            StashCurrentBlock();
+        }
+
         display.UpdateBoard(tetrisBoard, currentBlock);
     }
 
@@ -142,7 +147,7 @@ public class TetrisManager : MonoBehaviour {
 
         if(CheckForWinInTwine())
         {
-                WinGame();
+            WinGame();
         }
         
     }
@@ -176,6 +181,27 @@ public class TetrisManager : MonoBehaviour {
         
     }
 
+    // This stashes the current block and returns the next current block.
+    TetrisBlock StashCurrentBlock() {
+        // If there is no current block, then we can't do any stashing.
+        if(currentBlock == null) {
+            return currentBlock;
+        }
+
+        // If there's a stashed block, switch it and the current block.
+        if(stashedBlock != null) {
+            var retBlock = stashedBlock;
+            retBlock.SetPosition(currentBlock.GetPositionX(), currentBlock.GetPositionY());
+            stashedBlock = currentBlock;
+            currentBlock = retBlock;
+            return currentBlock;
+        } else {
+            // Otherwise, put the current block in the stash and get the next block
+            stashedBlock = currentBlock;
+            UpdateNextBlocks();
+            return currentBlock;
+        }
+    }
 
     TetrisBlock GetNextBlock()
     {

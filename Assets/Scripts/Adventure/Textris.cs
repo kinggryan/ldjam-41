@@ -195,7 +195,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return text(" ");
 		if(Vars.location["WAREHOUSE"] == true) {
 			yield return lineBreak();
-			yield return text("The shelves are filled with boxes of electronics parts from Shenzhen. Power supplies, monitors, big plastic buttons. ");
+			yield return text("The shelves are filled with boxes of electronics parts from Shenzhen. Power supplies, monitors, big plastic buttons. Surprisingly harmless stuff for a secret research base.");
 			if(Vars.inv["GUN"] == false) {
 				yield return lineBreak();
 				yield return text("Someone left a GUN there. ");
@@ -209,7 +209,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return text(" ");
 		if(Vars.location["SERVER"] == true) {
 			yield return lineBreak();
-			yield return text("Cabinet is secured with an electronic padlock. Must be valuable stuff in there.");
+			yield return text("Cabinet is secured with an electronic padlock. Don't want to think about what happens if you get caught stealing tech supplies around here.");
 		}
 		yield return text(" ");
 		if(Vars.location["SECURITY"] == true) {
@@ -365,9 +365,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 				Vars.power  = true;
 				yield return text("You reach up your nose, grab the wire in it and run it into the admin terminal. You begin to HACK into the facility’s electrical systems. You find the power controls for the elevator, switch them on.");
 				yield return lineBreak();
-				yield return text("As you disconnect from the admin terminal, you feel it transfer some packets your way.");
-				yield return lineBreak();
-				yield return text("You notice strange data in your T.E.T./R.I.S. implant. A malware infection! You need to find an anti-virus cure, fast!");
+				yield return text("As you disconnect from the admin terminal, you feel it transfer some packets your way. A malware infection! You need to find an anti-virus cure, fast!");
 			}
 			else {
 				yield return text("You should probably leave the terminal alone.");
@@ -834,7 +832,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("The guard notices you. He stands up, hand goes for a GUN at his side. He speaks Russian, which your T.E.T./R.I.S. translates. \"Identify yourself!\" You are unsure if he will let you TALK.");
 			yield return lineBreak();
 			if(Vars.inv["COAT"] == true) {
-				yield return text("The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shot to shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"");
+				yield return text("The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"");
 			}
 			yield return text(" ");
 			using (Group("hook", "ta")) {
@@ -973,7 +971,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["SECURITY"]  = false;
 		Vars.location["CLEAN"]  = false;
 		Vars.location["TITLE"]  = false;
-		yield return text("You enter the Server Room. Banks of computers, ready to be HACKed. Loud hum from the fans. Smells like comp sci goblin. In front of you, an administrative terminal. A key FOB lies on top of it. Along the wall, a cabinet LOOKs back at you. The warehouse is back towards the EAST.");
+		yield return text("You enter the Server Room. Banks of computers, ready to be HACKed. Loud hum from the fans. Smells like stale sweat and microwaved pierogies. In front of you, an administrative terminal. A key FOB lies on top of it. Along the wall, a cabinet LOOKs back at you. The warehouse is back towards the EAST.");
 		using (Group("hook", "lo")) {
 			yield return text("LOOK");
 		}
@@ -1708,9 +1706,9 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage27_Main()
 	{
-		yield return text("You HACK into the Polymathia software. You delve into the code. Recognize bits of it from your psyops training. Dark patterns, submodal suggestions, selective suppression, other pieces that you don’t understand. Cutting-edge indoctrination tech. The information is too much for you. Have to disconnect.");
+		yield return text("You HACK into the Polymathia software. You delve into the code. Recognize bits of it from your psyops training. Dark patterns, submodal suggestions, selective suppression, other pieces that you don’t understand. Cutting-edge indoctrination tech. The information is too much. Have to disconnect.");
 		yield return lineBreak();
-		yield return text("You jack out of the machine, feel dizzy. Questions spin through your mind. What was that code? Where are you? Who sent you here? Why? You struggle to think, but you can’t remember why you’re even here.");
+		yield return text("You jack out of the machine, feel dizzy. Questions spin through your mind. What was that code? Where are you? Who sent you here? Why? You struggle to think, but you can’t remember why you’re even here. Your memory centers are purging themselves.");
 		yield return lineBreak();
 		yield return text("You feel sick.");
 		yield return lineBreak();

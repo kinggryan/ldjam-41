@@ -181,6 +181,19 @@ public class TetrisBlock {
             }
         }
     }
+
+    public void SetPosition(int x, int y) {
+        positionX = x;
+        positionY = y;
+    }
+
+    public int GetPositionX() {
+        return positionX;
+    }
+
+    public int GetPositionY() {
+        return positionY;
+    }
 }
 
 public class SquareBlock : TetrisBlock {
