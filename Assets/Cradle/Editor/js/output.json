@@ -239,17 +239,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"HACK \",\" HackTitle\"",
+                        "innerText": "link-goto:\"HACK\",\" HackTitle\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"HACK \",\" HackTitle\")",
+                        "text": "(link-goto:\"HACK\",\" HackTitle\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "HACK ",
-                                "text": "\"HACK \"",
+                                "innerText": "HACK",
+                                "text": "\"HACK\"",
                                 "type": "string"
                             },
                             {
@@ -2498,17 +2498,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"LOOK \",\" LookLab\"",
+                        "innerText": "link-goto:\"LOOK\",\" LookLab\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"LOOK \",\" LookLab\")",
+                        "text": "(link-goto:\"LOOK\",\" LookLab\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "LOOK ",
-                                "text": "\"LOOK \"",
+                                "innerText": "LOOK",
+                                "text": "\"LOOK\"",
                                 "type": "string"
                             },
                             {
@@ -2528,17 +2528,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"TALK \",\" AI\"",
+                        "innerText": "link-goto:\"TALK\",\" AI\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"TALK \",\" AI\")",
+                        "text": "(link-goto:\"TALK\",\" AI\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "TALK ",
-                                "text": "\"TALK \"",
+                                "innerText": "TALK",
+                                "text": "\"TALK\"",
                                 "type": "string"
                             },
                             {
@@ -2614,17 +2614,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"NORTH \",\" Clean\"",
+                        "innerText": "link-goto:\"NORTH\",\" Clean\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"NORTH \",\" Clean\")",
+                        "text": "(link-goto:\"NORTH\",\" Clean\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "NORTH ",
-                                "text": "\"NORTH \"",
+                                "innerText": "NORTH",
+                                "text": "\"NORTH\"",
                                 "type": "string"
                             },
                             {
@@ -2644,17 +2644,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"TALK \",\" AI\"",
+                        "innerText": "link-goto:\"TALK\",\" AI\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"TALK \",\" AI\")",
+                        "text": "(link-goto:\"TALK\",\" AI\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "TALK ",
-                                "text": "\"TALK \"",
+                                "innerText": "TALK",
+                                "text": "\"TALK\"",
                                 "type": "string"
                             },
                             {
@@ -2953,17 +2953,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"LOOK \",\" LookGarage\"",
+                        "innerText": "link-goto:\"LOOK\",\" LookGarage\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"LOOK \",\" LookGarage\")",
+                        "text": "(link-goto:\"LOOK\",\" LookGarage\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "LOOK ",
-                                "text": "\"LOOK \"",
+                                "innerText": "LOOK",
+                                "text": "\"LOOK\"",
                                 "type": "string"
                             },
                             {
@@ -2983,17 +2983,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"NORTH \",\" NorthGarage\"",
+                        "innerText": "link-goto:\"NORTH\",\" NorthGarage\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"NORTH \",\" NorthGarage\")",
+                        "text": "(link-goto:\"NORTH\",\" NorthGarage\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "NORTH ",
-                                "text": "\"NORTH \"",
+                                "innerText": "NORTH",
+                                "text": "\"NORTH\"",
                                 "type": "string"
                             },
                             {
@@ -3032,17 +3032,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"LOOK \",\" LookTitle\"",
+                        "innerText": "link-goto:\"LOOK\",\" LookTitle\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"LOOK \",\" LookTitle\")",
+                        "text": "(link-goto:\"LOOK\",\" LookTitle\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "LOOK ",
-                                "text": "\"LOOK \"",
+                                "innerText": "LOOK",
+                                "text": "\"LOOK\"",
                                 "type": "string"
                             },
                             {
@@ -3069,17 +3069,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"OPEN \",\" Garage\"",
+                        "innerText": "link-goto:\"OPEN\",\" Garage\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"OPEN \",\" Garage\")",
+                        "text": "(link-goto:\"OPEN\",\" Garage\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "OPEN ",
-                                "text": "\"OPEN \"",
+                                "innerText": "OPEN",
+                                "text": "\"OPEN\"",
                                 "type": "string"
                             },
                             {
@@ -3099,17 +3099,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"HACK \",\" HackTitle2\"",
+                        "innerText": "link-goto:\"HACK\",\" HackTitle2\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"HACK \",\" HackTitle2\")",
+                        "text": "(link-goto:\"HACK\",\" HackTitle2\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "HACK ",
-                                "text": "\"HACK \"",
+                                "innerText": "HACK",
+                                "text": "\"HACK\"",
                                 "type": "string"
                             },
                             {
@@ -3140,17 +3140,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"OPEN \",\" Garage\"",
+                        "innerText": "link-goto:\"OPEN\",\" Garage\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"OPEN \",\" Garage\")",
+                        "text": "(link-goto:\"OPEN\",\" Garage\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "OPEN ",
-                                "text": "\"OPEN \"",
+                                "innerText": "OPEN",
+                                "text": "\"OPEN\"",
                                 "type": "string"
                             },
                             {
@@ -3227,17 +3227,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"NORTH \",\" NorthGarage\"",
+                        "innerText": "link-goto:\"NORTH\",\" NorthGarage\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"NORTH \",\" NorthGarage\")",
+                        "text": "(link-goto:\"NORTH\",\" NorthGarage\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "NORTH ",
-                                "text": "\"NORTH \"",
+                                "innerText": "NORTH",
+                                "text": "\"NORTH\"",
                                 "type": "string"
                             },
                             {
@@ -3342,25 +3342,25 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "Door won’t open. Need a password for this keypad. [[LOOK -> LookGarage]] ",
-                        "text": "[Door won’t open. Need a password for this keypad. [[LOOK -> LookGarage]] ]",
+                        "innerText": "Door won’t open. Need a password for this keypad. [[LOOK-> LookGarage]] ",
+                        "text": "[Door won’t open. Need a password for this keypad. [[LOOK-> LookGarage]] ]",
                         "tokens": [
                             {
                                 "text": "Door won’t open. Need a password for this keypad. ",
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"LOOK \",\" LookGarage\"",
+                                "innerText": "link-goto:\"LOOK\",\" LookGarage\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"LOOK \",\" LookGarage\")",
+                                "text": "(link-goto:\"LOOK\",\" LookGarage\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "LOOK ",
-                                        "text": "\"LOOK \"",
+                                        "innerText": "LOOK",
+                                        "text": "\"LOOK\"",
                                         "type": "string"
                                     },
                                     {
@@ -3531,21 +3531,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[GET COAT -> GetCoat ]]",
-                        "text": "[[[GET COAT -> GetCoat ]]]",
+                        "innerText": "[[GET COAT-> GetCoat ]]",
+                        "text": "[[[GET COAT-> GetCoat ]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"GET COAT \",\" GetCoat \"",
+                                "innerText": "link-goto:\"GET COAT\",\" GetCoat \"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"GET COAT \",\" GetCoat \")",
+                                "text": "(link-goto:\"GET COAT\",\" GetCoat \")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "GET COAT ",
-                                        "text": "\"GET COAT \"",
+                                        "innerText": "GET COAT",
+                                        "text": "\"GET COAT\"",
                                         "type": "string"
                                     },
                                     {
@@ -3568,17 +3568,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"NORTH \",\" NorthWare\"",
+                        "innerText": "link-goto:\"NORTH\",\" NorthWare\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"NORTH \",\" NorthWare\")",
+                        "text": "(link-goto:\"NORTH\",\" NorthWare\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "NORTH ",
-                                "text": "\"NORTH \"",
+                                "innerText": "NORTH",
+                                "text": "\"NORTH\"",
                                 "type": "string"
                             },
                             {
@@ -3598,17 +3598,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"WEST \",\" Server\"",
+                        "innerText": "link-goto:\"WEST\",\" Server\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"WEST \",\" Server\")",
+                        "text": "(link-goto:\"WEST\",\" Server\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "WEST ",
-                                "text": "\"WEST \"",
+                                "innerText": "WEST",
+                                "text": "\"WEST\"",
                                 "type": "string"
                             },
                             {
@@ -3628,17 +3628,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"EAST \",\" Security\"",
+                        "innerText": "link-goto:\"EAST\",\" Security\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"EAST \",\" Security\")",
+                        "text": "(link-goto:\"EAST\",\" Security\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "EAST ",
-                                "text": "\"EAST \"",
+                                "innerText": "EAST",
+                                "text": "\"EAST\"",
                                 "type": "string"
                             },
                             {
@@ -3749,21 +3749,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[LOOK -> LookWare]]",
-                        "text": "[[[LOOK -> LookWare]]]",
+                        "innerText": "[[LOOK-> LookWare]]",
+                        "text": "[[[LOOK-> LookWare]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"LOOK \",\" LookWare\"",
+                                "innerText": "link-goto:\"LOOK\",\" LookWare\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"LOOK \",\" LookWare\")",
+                                "text": "(link-goto:\"LOOK\",\" LookWare\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "LOOK ",
-                                        "text": "\"LOOK \"",
+                                        "innerText": "LOOK",
+                                        "text": "\"LOOK\"",
                                         "type": "string"
                                     },
                                     {
@@ -3786,17 +3786,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"NORTH \",\" NorthWare\"",
+                        "innerText": "link-goto:\"NORTH\",\" NorthWare\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"NORTH \",\" NorthWare\")",
+                        "text": "(link-goto:\"NORTH\",\" NorthWare\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "NORTH ",
-                                "text": "\"NORTH \"",
+                                "innerText": "NORTH",
+                                "text": "\"NORTH\"",
                                 "type": "string"
                             },
                             {
@@ -3816,17 +3816,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"WEST \",\" Server\"",
+                        "innerText": "link-goto:\"WEST\",\" Server\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"WEST \",\" Server\")",
+                        "text": "(link-goto:\"WEST\",\" Server\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "WEST ",
-                                "text": "\"WEST \"",
+                                "innerText": "WEST",
+                                "text": "\"WEST\"",
                                 "type": "string"
                             },
                             {
@@ -3846,17 +3846,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"EAST \",\" Security\"",
+                        "innerText": "link-goto:\"EAST\",\" Security\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"EAST \",\" Security\")",
+                        "text": "(link-goto:\"EAST\",\" Security\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "EAST ",
-                                "text": "\"EAST \"",
+                                "innerText": "EAST",
+                                "text": "\"EAST\"",
                                 "type": "string"
                             },
                             {
@@ -4051,8 +4051,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "Need to turn the power on in the Server Room and disable the security barrier in the Security Room first.(if: $inv's GUN is false)[[[LOOK -> LookWare]]] (if: $inv's COAT is false)[[[GET COAT -> GetCoat ]]] [[WEST -> Server]] [[EAST -> Security]]",
-                        "text": "[Need to turn the power on in the Server Room and disable the security barrier in the Security Room first.(if: $inv's GUN is false)[[[LOOK -> LookWare]]] (if: $inv's COAT is false)[[[GET COAT -> GetCoat ]]] [[WEST -> Server]] [[EAST -> Security]]]",
+                        "innerText": "Need to turn the power on in the Server Room and disable the security barrier in the Security Room first.(if: $inv's GUN is false)[[[LOOK-> LookWare]]] (if: $inv's COAT is false)[[[GET COAT-> GetCoat ]]] [[WEST-> Server]] [[EAST-> Security]]",
+                        "text": "[Need to turn the power on in the Server Room and disable the security barrier in the Security Room first.(if: $inv's GUN is false)[[[LOOK-> LookWare]]] (if: $inv's COAT is false)[[[GET COAT-> GetCoat ]]] [[WEST-> Server]] [[EAST-> Security]]]",
                         "tokens": [
                             {
                                 "text": "Need to turn the power on in the Server Room and disable the security barrier in the Security Room first.",
@@ -4101,21 +4101,21 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "[[LOOK -> LookWare]]",
-                                "text": "[[[LOOK -> LookWare]]]",
+                                "innerText": "[[LOOK-> LookWare]]",
+                                "text": "[[[LOOK-> LookWare]]]",
                                 "tokens": [
                                     {
-                                        "innerText": "link-goto:\"LOOK \",\" LookWare\"",
+                                        "innerText": "link-goto:\"LOOK\",\" LookWare\"",
                                         "name": "linkgoto",
-                                        "text": "(link-goto:\"LOOK \",\" LookWare\")",
+                                        "text": "(link-goto:\"LOOK\",\" LookWare\")",
                                         "tokens": [
                                             {
                                                 "text": "link-goto:",
                                                 "type": "macroName"
                                             },
                                             {
-                                                "innerText": "LOOK ",
-                                                "text": "\"LOOK \"",
+                                                "innerText": "LOOK",
+                                                "text": "\"LOOK\"",
                                                 "type": "string"
                                             },
                                             {
@@ -4180,21 +4180,21 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "[[GET COAT -> GetCoat ]]",
-                                "text": "[[[GET COAT -> GetCoat ]]]",
+                                "innerText": "[[GET COAT-> GetCoat ]]",
+                                "text": "[[[GET COAT-> GetCoat ]]]",
                                 "tokens": [
                                     {
-                                        "innerText": "link-goto:\"GET COAT \",\" GetCoat \"",
+                                        "innerText": "link-goto:\"GET COAT\",\" GetCoat \"",
                                         "name": "linkgoto",
-                                        "text": "(link-goto:\"GET COAT \",\" GetCoat \")",
+                                        "text": "(link-goto:\"GET COAT\",\" GetCoat \")",
                                         "tokens": [
                                             {
                                                 "text": "link-goto:",
                                                 "type": "macroName"
                                             },
                                             {
-                                                "innerText": "GET COAT ",
-                                                "text": "\"GET COAT \"",
+                                                "innerText": "GET COAT",
+                                                "text": "\"GET COAT\"",
                                                 "type": "string"
                                             },
                                             {
@@ -4217,17 +4217,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"WEST \",\" Server\"",
+                                "innerText": "link-goto:\"WEST\",\" Server\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"WEST \",\" Server\")",
+                                "text": "(link-goto:\"WEST\",\" Server\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "WEST ",
-                                        "text": "\"WEST \"",
+                                        "innerText": "WEST",
+                                        "text": "\"WEST\"",
                                         "type": "string"
                                     },
                                     {
@@ -4247,17 +4247,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"EAST \",\" Security\"",
+                                "innerText": "link-goto:\"EAST\",\" Security\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"EAST \",\" Security\")",
+                                "text": "(link-goto:\"EAST\",\" Security\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "EAST ",
-                                        "text": "\"EAST \"",
+                                        "innerText": "EAST",
+                                        "text": "\"EAST\"",
                                         "type": "string"
                                     },
                                     {
@@ -4328,21 +4328,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[HACK -> HackServ]]",
-                        "text": "[[[HACK -> HackServ]]]",
+                        "innerText": "[[HACK-> HackServ]]",
+                        "text": "[[[HACK-> HackServ]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"HACK \",\" HackServ\"",
+                                "innerText": "link-goto:\"HACK\",\" HackServ\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"HACK \",\" HackServ\")",
+                                "text": "(link-goto:\"HACK\",\" HackServ\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "HACK ",
-                                        "text": "\"HACK \"",
+                                        "innerText": "HACK",
+                                        "text": "\"HACK\"",
                                         "type": "string"
                                     },
                                     {
@@ -4440,21 +4440,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[USE CURE -> UseCure]]",
-                        "text": "[[[USE CURE -> UseCure]]]",
+                        "innerText": "[[USE CURE-> UseCure]]",
+                        "text": "[[[USE CURE-> UseCure]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"USE CURE \",\" UseCure\"",
+                                "innerText": "link-goto:\"USE CURE\",\" UseCure\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE CURE \",\" UseCure\")",
+                                "text": "(link-goto:\"USE CURE\",\" UseCure\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE CURE ",
-                                        "text": "\"USE CURE \"",
+                                        "innerText": "USE CURE",
+                                        "text": "\"USE CURE\"",
                                         "type": "string"
                                     },
                                     {
@@ -4519,21 +4519,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[GET FOB -> GetFoB]]",
-                        "text": "[[[GET FOB -> GetFoB]]]",
+                        "innerText": "[[GET FOB-> GetFoB]]",
+                        "text": "[[[GET FOB-> GetFoB]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"GET FOB \",\" GetFoB\"",
+                                "innerText": "link-goto:\"GET FOB\",\" GetFoB\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"GET FOB \",\" GetFoB\")",
+                                "text": "(link-goto:\"GET FOB\",\" GetFoB\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "GET FOB ",
-                                        "text": "\"GET FOB \"",
+                                        "innerText": "GET FOB",
+                                        "text": "\"GET FOB\"",
                                         "type": "string"
                                     },
                                     {
@@ -4631,21 +4631,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[USE FOB -> UseFoB]]",
-                        "text": "[[[USE FOB -> UseFoB]]]",
+                        "innerText": "[[USE FOB-> UseFoB]]",
+                        "text": "[[[USE FOB-> UseFoB]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"USE FOB \",\" UseFoB\"",
+                                "innerText": "link-goto:\"USE FOB\",\" UseFoB\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE FOB \",\" UseFoB\")",
+                                "text": "(link-goto:\"USE FOB\",\" UseFoB\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE FOB ",
-                                        "text": "\"USE FOB \"",
+                                        "innerText": "USE FOB",
+                                        "text": "\"USE FOB\"",
                                         "type": "string"
                                     },
                                     {
@@ -4899,17 +4899,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"LOOK \",\" LookServ\"",
+                        "innerText": "link-goto:\"LOOK\",\" LookServ\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"LOOK \",\" LookServ\")",
+                        "text": "(link-goto:\"LOOK\",\" LookServ\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "LOOK ",
-                                "text": "\"LOOK \"",
+                                "innerText": "LOOK",
+                                "text": "\"LOOK\"",
                                 "type": "string"
                             },
                             {
@@ -5004,21 +5004,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[USE CURE -> UseCure]]",
-                        "text": "[[[USE CURE -> UseCure]]]",
+                        "innerText": "[[USE CURE-> UseCure]]",
+                        "text": "[[[USE CURE-> UseCure]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"USE CURE \",\" UseCure\"",
+                                "innerText": "link-goto:\"USE CURE\",\" UseCure\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE CURE \",\" UseCure\")",
+                                "text": "(link-goto:\"USE CURE\",\" UseCure\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE CURE ",
-                                        "text": "\"USE CURE \"",
+                                        "innerText": "USE CURE",
+                                        "text": "\"USE CURE\"",
                                         "type": "string"
                                     },
                                     {
@@ -5083,21 +5083,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[GET FOB -> GetFoB]]",
-                        "text": "[[[GET FOB -> GetFoB]]]",
+                        "innerText": "[[GET FOB-> GetFoB]]",
+                        "text": "[[[GET FOB-> GetFoB]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"GET FOB \",\" GetFoB\"",
+                                "innerText": "link-goto:\"GET FOB\",\" GetFoB\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"GET FOB \",\" GetFoB\")",
+                                "text": "(link-goto:\"GET FOB\",\" GetFoB\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "GET FOB ",
-                                        "text": "\"GET FOB \"",
+                                        "innerText": "GET FOB",
+                                        "text": "\"GET FOB\"",
                                         "type": "string"
                                     },
                                     {
@@ -5195,21 +5195,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[USE FOB -> UseFoB]]",
-                        "text": "[[[USE FOB -> UseFoB]]]",
+                        "innerText": "[[USE FOB-> UseFoB]]",
+                        "text": "[[[USE FOB-> UseFoB]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"USE FOB \",\" UseFoB\"",
+                                "innerText": "link-goto:\"USE FOB\",\" UseFoB\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE FOB \",\" UseFoB\")",
+                                "text": "(link-goto:\"USE FOB\",\" UseFoB\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE FOB ",
-                                        "text": "\"USE FOB \"",
+                                        "innerText": "USE FOB",
+                                        "text": "\"USE FOB\"",
                                         "type": "string"
                                     },
                                     {
@@ -5323,17 +5323,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"LOOK \",\" LookServ\"",
+                        "innerText": "link-goto:\"LOOK\",\" LookServ\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"LOOK \",\" LookServ\")",
+                        "text": "(link-goto:\"LOOK\",\" LookServ\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "LOOK ",
-                                "text": "\"LOOK \"",
+                                "innerText": "LOOK",
+                                "text": "\"LOOK\"",
                                 "type": "string"
                             },
                             {
@@ -5390,21 +5390,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[HACK -> HackServ]]",
-                        "text": "[[[HACK -> HackServ]]]",
+                        "innerText": "[[HACK-> HackServ]]",
+                        "text": "[[[HACK-> HackServ]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"HACK \",\" HackServ\"",
+                                "innerText": "link-goto:\"HACK\",\" HackServ\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"HACK \",\" HackServ\")",
+                                "text": "(link-goto:\"HACK\",\" HackServ\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "HACK ",
-                                        "text": "\"HACK \"",
+                                        "innerText": "HACK",
+                                        "text": "\"HACK\"",
                                         "type": "string"
                                     },
                                     {
@@ -5502,21 +5502,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[USE CURE -> UseCure]]",
-                        "text": "[[[USE CURE -> UseCure]]]",
+                        "innerText": "[[USE CURE-> UseCure]]",
+                        "text": "[[[USE CURE-> UseCure]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"USE CURE \",\" UseCure\"",
+                                "innerText": "link-goto:\"USE CURE\",\" UseCure\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE CURE \",\" UseCure\")",
+                                "text": "(link-goto:\"USE CURE\",\" UseCure\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE CURE ",
-                                        "text": "\"USE CURE \"",
+                                        "innerText": "USE CURE",
+                                        "text": "\"USE CURE\"",
                                         "type": "string"
                                     },
                                     {
@@ -5610,21 +5610,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[USE FOB -> UseFoB]]",
-                        "text": "[[[USE FOB -> UseFoB]]]",
+                        "innerText": "[[USE FOB-> UseFoB]]",
+                        "text": "[[[USE FOB-> UseFoB]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"USE FOB \",\" UseFoB\"",
+                                "innerText": "link-goto:\"USE FOB\",\" UseFoB\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE FOB \",\" UseFoB\")",
+                                "text": "(link-goto:\"USE FOB\",\" UseFoB\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE FOB ",
-                                        "text": "\"USE FOB \"",
+                                        "innerText": "USE FOB",
+                                        "text": "\"USE FOB\"",
                                         "type": "string"
                                     },
                                     {
@@ -5775,17 +5775,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"LOOK \",\" LookServ\"",
+                        "innerText": "link-goto:\"LOOK\",\" LookServ\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"LOOK \",\" LookServ\")",
+                        "text": "(link-goto:\"LOOK\",\" LookServ\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "LOOK ",
-                                "text": "\"LOOK \"",
+                                "innerText": "LOOK",
+                                "text": "\"LOOK\"",
                                 "type": "string"
                             },
                             {
@@ -5842,21 +5842,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[HACK -> HackServ]]",
-                        "text": "[[[HACK -> HackServ]]]",
+                        "innerText": "[[HACK-> HackServ]]",
+                        "text": "[[[HACK-> HackServ]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"HACK \",\" HackServ\"",
+                                "innerText": "link-goto:\"HACK\",\" HackServ\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"HACK \",\" HackServ\")",
+                                "text": "(link-goto:\"HACK\",\" HackServ\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "HACK ",
-                                        "text": "\"HACK \"",
+                                        "innerText": "HACK",
+                                        "text": "\"HACK\"",
                                         "type": "string"
                                     },
                                     {
@@ -5954,21 +5954,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[USE CURE -> UseCure]]",
-                        "text": "[[[USE CURE -> UseCure]]]",
+                        "innerText": "[[USE CURE-> UseCure]]",
+                        "text": "[[[USE CURE-> UseCure]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"USE CURE \",\" UseCure\"",
+                                "innerText": "link-goto:\"USE CURE\",\" UseCure\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE CURE \",\" UseCure\")",
+                                "text": "(link-goto:\"USE CURE\",\" UseCure\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE CURE ",
-                                        "text": "\"USE CURE \"",
+                                        "innerText": "USE CURE",
+                                        "text": "\"USE CURE\"",
                                         "type": "string"
                                     },
                                     {
@@ -6073,17 +6073,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"LOOK \",\" LookServ\"",
+                        "innerText": "link-goto:\"LOOK\",\" LookServ\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"LOOK \",\" LookServ\")",
+                        "text": "(link-goto:\"LOOK\",\" LookServ\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "LOOK ",
-                                "text": "\"LOOK \"",
+                                "innerText": "LOOK",
+                                "text": "\"LOOK\"",
                                 "type": "string"
                             },
                             {
@@ -6140,21 +6140,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[HACK -> HackServ]]",
-                        "text": "[[[HACK -> HackServ]]]",
+                        "innerText": "[[HACK-> HackServ]]",
+                        "text": "[[[HACK-> HackServ]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"HACK \",\" HackServ\"",
+                                "innerText": "link-goto:\"HACK\",\" HackServ\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"HACK \",\" HackServ\")",
+                                "text": "(link-goto:\"HACK\",\" HackServ\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "HACK ",
-                                        "text": "\"HACK \"",
+                                        "innerText": "HACK",
+                                        "text": "\"HACK\"",
                                         "type": "string"
                                     },
                                     {
@@ -6219,21 +6219,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[GET FOB -> GetFoB]]",
-                        "text": "[[[GET FOB -> GetFoB]]]",
+                        "innerText": "[[GET FOB-> GetFoB]]",
+                        "text": "[[[GET FOB-> GetFoB]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"GET FOB \",\" GetFoB\"",
+                                "innerText": "link-goto:\"GET FOB\",\" GetFoB\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"GET FOB \",\" GetFoB\")",
+                                "text": "(link-goto:\"GET FOB\",\" GetFoB\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "GET FOB ",
-                                        "text": "\"GET FOB \"",
+                                        "innerText": "GET FOB",
+                                        "text": "\"GET FOB\"",
                                         "type": "string"
                                     },
                                     {
@@ -6331,21 +6331,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[USE FOB -> UseFoB]]",
-                        "text": "[[[USE FOB -> UseFoB]]]",
+                        "innerText": "[[USE FOB-> UseFoB]]",
+                        "text": "[[[USE FOB-> UseFoB]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"USE FOB \",\" UseFoB\"",
+                                "innerText": "link-goto:\"USE FOB\",\" UseFoB\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE FOB \",\" UseFoB\")",
+                                "text": "(link-goto:\"USE FOB\",\" UseFoB\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE FOB ",
-                                        "text": "\"USE FOB \"",
+                                        "innerText": "USE FOB",
+                                        "text": "\"USE FOB\"",
                                         "type": "string"
                                     },
                                     {
@@ -6498,8 +6498,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $HP to it - 1) You try, but the guard shoots you before you can! \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true)GAME OVER] (if: $inv's GUN is true)[[[USE GUN -> UseGun]]]",
-                        "text": "[(set: $HP to it - 1) You try, but the guard shoots you before you can! \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true)GAME OVER] (if: $inv's GUN is true)[[[USE GUN -> UseGun]]]]",
+                        "innerText": "(set: $HP to it - 1) You try, but the guard shoots you before you can! \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true)GAME OVER] (if: $inv's GUN is true)[[[USE GUN-> UseGun]]]",
+                        "text": "[(set: $HP to it - 1) You try, but the guard shoots you before you can! \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true)GAME OVER] (if: $inv's GUN is true)[[[USE GUN-> UseGun]]]]",
                         "tokens": [
                             {
                                 "innerText": "set: $HP to it - 1",
@@ -6801,21 +6801,21 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "[[USE GUN -> UseGun]]",
-                                "text": "[[[USE GUN -> UseGun]]]",
+                                "innerText": "[[USE GUN-> UseGun]]",
+                                "text": "[[[USE GUN-> UseGun]]]",
                                 "tokens": [
                                     {
-                                        "innerText": "link-goto:\"USE GUN \",\" UseGun\"",
+                                        "innerText": "link-goto:\"USE GUN\",\" UseGun\"",
                                         "name": "linkgoto",
-                                        "text": "(link-goto:\"USE GUN \",\" UseGun\")",
+                                        "text": "(link-goto:\"USE GUN\",\" UseGun\")",
                                         "tokens": [
                                             {
                                                 "text": "link-goto:",
                                                 "type": "macroName"
                                             },
                                             {
-                                                "innerText": "USE GUN ",
-                                                "text": "\"USE GUN \"",
+                                                "innerText": "USE GUN",
+                                                "text": "\"USE GUN\"",
                                                 "type": "string"
                                             },
                                             {
@@ -6841,17 +6841,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"TALK \",\" TalkSec\"",
+                        "innerText": "link-goto:\"TALK\",\" TalkSec\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"TALK \",\" TalkSec\")",
+                        "text": "(link-goto:\"TALK\",\" TalkSec\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "TALK ",
-                                "text": "\"TALK \"",
+                                "innerText": "TALK",
+                                "text": "\"TALK\"",
                                 "type": "string"
                             },
                             {
@@ -7111,8 +7111,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $HP to it - 1)You try, but the guard shoots you before you can! \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true) GAME OVER] (if: $inv's GUN is true)[[[USE GUN -> UseGun]]]",
-                        "text": "[(set: $HP to it - 1)You try, but the guard shoots you before you can! \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true) GAME OVER] (if: $inv's GUN is true)[[[USE GUN -> UseGun]]]]",
+                        "innerText": "(set: $HP to it - 1)You try, but the guard shoots you before you can! \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true) GAME OVER] (if: $inv's GUN is true)[[[USE GUN-> UseGun]]]",
+                        "text": "[(set: $HP to it - 1)You try, but the guard shoots you before you can! \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true) GAME OVER] (if: $inv's GUN is true)[[[USE GUN-> UseGun]]]]",
                         "tokens": [
                             {
                                 "innerText": "set: $HP to it - 1",
@@ -7414,21 +7414,21 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "[[USE GUN -> UseGun]]",
-                                "text": "[[[USE GUN -> UseGun]]]",
+                                "innerText": "[[USE GUN-> UseGun]]",
+                                "text": "[[[USE GUN-> UseGun]]]",
                                 "tokens": [
                                     {
-                                        "innerText": "link-goto:\"USE GUN \",\" UseGun\"",
+                                        "innerText": "link-goto:\"USE GUN\",\" UseGun\"",
                                         "name": "linkgoto",
-                                        "text": "(link-goto:\"USE GUN \",\" UseGun\")",
+                                        "text": "(link-goto:\"USE GUN\",\" UseGun\")",
                                         "tokens": [
                                             {
                                                 "text": "link-goto:",
                                                 "type": "macroName"
                                             },
                                             {
-                                                "innerText": "USE GUN ",
-                                                "text": "\"USE GUN \"",
+                                                "innerText": "USE GUN",
+                                                "text": "\"USE GUN\"",
                                                 "type": "string"
                                             },
                                             {
@@ -7506,17 +7506,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"LOOK \",\" LookSec\"",
+                        "innerText": "link-goto:\"LOOK\",\" LookSec\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"LOOK \",\" LookSec\")",
+                        "text": "(link-goto:\"LOOK\",\" LookSec\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "LOOK ",
-                                "text": "\"LOOK \"",
+                                "innerText": "LOOK",
+                                "text": "\"LOOK\"",
                                 "type": "string"
                             },
                             {
@@ -7696,17 +7696,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"LOOK \",\" LookSec\"",
+                        "innerText": "link-goto:\"LOOK\",\" LookSec\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"LOOK \",\" LookSec\")",
+                        "text": "(link-goto:\"LOOK\",\" LookSec\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "LOOK ",
-                                "text": "\"LOOK \"",
+                                "innerText": "LOOK",
+                                "text": "\"LOOK\"",
                                 "type": "string"
                             },
                             {
@@ -7726,17 +7726,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"TALK \",\" TalkSec\"",
+                        "innerText": "link-goto:\"TALK\",\" TalkSec\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"TALK \",\" TalkSec\")",
+                        "text": "(link-goto:\"TALK\",\" TalkSec\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "TALK ",
-                                "text": "\"TALK \"",
+                                "innerText": "TALK",
+                                "text": "\"TALK\"",
                                 "type": "string"
                             },
                             {
@@ -8053,17 +8053,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"LOOK \",\" LookServ\"",
+                        "innerText": "link-goto:\"LOOK\",\" LookServ\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"LOOK \",\" LookServ\")",
+                        "text": "(link-goto:\"LOOK\",\" LookServ\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "LOOK ",
-                                "text": "\"LOOK \"",
+                                "innerText": "LOOK",
+                                "text": "\"LOOK\"",
                                 "type": "string"
                             },
                             {
@@ -8120,21 +8120,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[HACK -> HackServ]]",
-                        "text": "[[[HACK -> HackServ]]]",
+                        "innerText": "[[HACK-> HackServ]]",
+                        "text": "[[[HACK-> HackServ]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"HACK \",\" HackServ\"",
+                                "innerText": "link-goto:\"HACK\",\" HackServ\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"HACK \",\" HackServ\")",
+                                "text": "(link-goto:\"HACK\",\" HackServ\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "HACK ",
-                                        "text": "\"HACK \"",
+                                        "innerText": "HACK",
+                                        "text": "\"HACK\"",
                                         "type": "string"
                                     },
                                     {
@@ -8228,21 +8228,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[USE CURE -> UseCure]]",
-                        "text": "[[[USE CURE -> UseCure]]]",
+                        "innerText": "[[USE CURE-> UseCure]]",
+                        "text": "[[[USE CURE-> UseCure]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"USE CURE \",\" UseCure\"",
+                                "innerText": "link-goto:\"USE CURE\",\" UseCure\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE CURE \",\" UseCure\")",
+                                "text": "(link-goto:\"USE CURE\",\" UseCure\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE CURE ",
-                                        "text": "\"USE CURE \"",
+                                        "innerText": "USE CURE",
+                                        "text": "\"USE CURE\"",
                                         "type": "string"
                                     },
                                     {
@@ -8307,21 +8307,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[GET FOB -> GetFoB]]",
-                        "text": "[[[GET FOB -> GetFoB]]]",
+                        "innerText": "[[GET FOB-> GetFoB]]",
+                        "text": "[[[GET FOB-> GetFoB]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"GET FOB \",\" GetFoB\"",
+                                "innerText": "link-goto:\"GET FOB\",\" GetFoB\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"GET FOB \",\" GetFoB\")",
+                                "text": "(link-goto:\"GET FOB\",\" GetFoB\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "GET FOB ",
-                                        "text": "\"GET FOB \"",
+                                        "innerText": "GET FOB",
+                                        "text": "\"GET FOB\"",
                                         "type": "string"
                                     },
                                     {
@@ -8419,21 +8419,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[USE FOB -> UseFoB]]",
-                        "text": "[[[USE FOB -> UseFoB]]]",
+                        "innerText": "[[USE FOB-> UseFoB]]",
+                        "text": "[[[USE FOB-> UseFoB]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"USE FOB \",\" UseFoB\"",
+                                "innerText": "link-goto:\"USE FOB\",\" UseFoB\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE FOB \",\" UseFoB\")",
+                                "text": "(link-goto:\"USE FOB\",\" UseFoB\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE FOB ",
-                                        "text": "\"USE FOB \"",
+                                        "innerText": "USE FOB",
+                                        "text": "\"USE FOB\"",
                                         "type": "string"
                                     },
                                     {
@@ -9055,17 +9055,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"LOOK \",\" LookSec\"",
+                        "innerText": "link-goto:\"LOOK\",\" LookSec\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"LOOK \",\" LookSec\")",
+                        "text": "(link-goto:\"LOOK\",\" LookSec\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "LOOK ",
-                                "text": "\"LOOK \"",
+                                "innerText": "LOOK",
+                                "text": "\"LOOK\"",
                                 "type": "string"
                             },
                             {
@@ -9085,17 +9085,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"TALK \",\" TalkSec\"",
+                        "innerText": "link-goto:\"TALK\",\" TalkSec\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"TALK \",\" TalkSec\")",
+                        "text": "(link-goto:\"TALK\",\" TalkSec\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "TALK ",
-                                "text": "\"TALK \"",
+                                "innerText": "TALK",
+                                "text": "\"TALK\"",
                                 "type": "string"
                             },
                             {
@@ -9190,21 +9190,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[USE GUN -> UseGun]]",
-                        "text": "[[[USE GUN -> UseGun]]]",
+                        "innerText": "[[USE GUN-> UseGun]]",
+                        "text": "[[[USE GUN-> UseGun]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"USE GUN \",\" UseGun\"",
+                                "innerText": "link-goto:\"USE GUN\",\" UseGun\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE GUN \",\" UseGun\")",
+                                "text": "(link-goto:\"USE GUN\",\" UseGun\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE GUN ",
-                                        "text": "\"USE GUN \"",
+                                        "innerText": "USE GUN",
+                                        "text": "\"USE GUN\"",
                                         "type": "string"
                                     },
                                     {
@@ -9272,17 +9272,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"TALK \",\" AI\"",
+                        "innerText": "link-goto:\"TALK\",\" AI\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"TALK \",\" AI\")",
+                        "text": "(link-goto:\"TALK\",\" AI\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "TALK ",
-                                "text": "\"TALK \"",
+                                "innerText": "TALK",
+                                "text": "\"TALK\"",
                                 "type": "string"
                             },
                             {
@@ -9346,8 +9346,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $cor_ans to \"FOB\") You go over to the hologram head. \"I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot.\"\nFirst question: What is something that opens things, that your boss would be mad if they found out you lost it? [[USE FOB -> AIFob]] [[USE COAT -> AICoat]] [[USE GUN -> AIGun]]",
-                        "text": "[(set: $cor_ans to \"FOB\") You go over to the hologram head. \"I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot.\"\nFirst question: What is something that opens things, that your boss would be mad if they found out you lost it? [[USE FOB -> AIFob]] [[USE COAT -> AICoat]] [[USE GUN -> AIGun]]]",
+                        "innerText": "(set: $cor_ans to \"FOB\") You go over to the hologram head. \"I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot.\"\nFirst question: What is something that opens things, that your boss would be mad if they found out you lost it? [[USE FOB-> AIFob]] [[USE COAT-> AICoat]] [[USE GUN-> AIGun]]",
+                        "text": "[(set: $cor_ans to \"FOB\") You go over to the hologram head. \"I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot.\"\nFirst question: What is something that opens things, that your boss would be mad if they found out you lost it? [[USE FOB-> AIFob]] [[USE COAT-> AICoat]] [[USE GUN-> AIGun]]]",
                         "tokens": [
                             {
                                 "innerText": "set: $cor_ans to \"FOB\"",
@@ -9400,17 +9400,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"USE FOB \",\" AIFob\"",
+                                "innerText": "link-goto:\"USE FOB\",\" AIFob\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE FOB \",\" AIFob\")",
+                                "text": "(link-goto:\"USE FOB\",\" AIFob\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE FOB ",
-                                        "text": "\"USE FOB \"",
+                                        "innerText": "USE FOB",
+                                        "text": "\"USE FOB\"",
                                         "type": "string"
                                     },
                                     {
@@ -9430,17 +9430,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"USE COAT \",\" AICoat\"",
+                                "innerText": "link-goto:\"USE COAT\",\" AICoat\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE COAT \",\" AICoat\")",
+                                "text": "(link-goto:\"USE COAT\",\" AICoat\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE COAT ",
-                                        "text": "\"USE COAT \"",
+                                        "innerText": "USE COAT",
+                                        "text": "\"USE COAT\"",
                                         "type": "string"
                                     },
                                     {
@@ -9460,17 +9460,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"USE GUN \",\" AIGun\"",
+                                "innerText": "link-goto:\"USE GUN\",\" AIGun\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE GUN \",\" AIGun\")",
+                                "text": "(link-goto:\"USE GUN\",\" AIGun\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE GUN ",
-                                        "text": "\"USE GUN \"",
+                                        "innerText": "USE GUN",
+                                        "text": "\"USE GUN\"",
                                         "type": "string"
                                     },
                                     {
@@ -9530,25 +9530,25 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "\"It's ironic that an A.I. like myself is programmed to despise robots. It's like being programmed to despise yourself. Honestly, the only thing that keeps me sane is taking comfort in MY UNDYING HATRED FOR MANGY DEGENERATE ROBOTS.\" [[NORTH -> Clean]]",
-                        "text": "[\"It's ironic that an A.I. like myself is programmed to despise robots. It's like being programmed to despise yourself. Honestly, the only thing that keeps me sane is taking comfort in MY UNDYING HATRED FOR MANGY DEGENERATE ROBOTS.\" [[NORTH -> Clean]]]",
+                        "innerText": "\"It's ironic that an A.I. like myself is programmed to despise robots. It's like being programmed to despise yourself. Honestly, the only thing that keeps me sane is taking comfort in MY UNDYING HATRED FOR MANGY DEGENERATE ROBOTS.\" [[NORTH-> Clean]]",
+                        "text": "[\"It's ironic that an A.I. like myself is programmed to despise robots. It's like being programmed to despise yourself. Honestly, the only thing that keeps me sane is taking comfort in MY UNDYING HATRED FOR MANGY DEGENERATE ROBOTS.\" [[NORTH-> Clean]]]",
                         "tokens": [
                             {
                                 "text": "\"It's ironic that an A.I. like myself is programmed to despise robots. It's like being programmed to despise yourself. Honestly, the only thing that keeps me sane is taking comfort in MY UNDYING HATRED FOR MANGY DEGENERATE ROBOTS.\" ",
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"NORTH \",\" Clean\"",
+                                "innerText": "link-goto:\"NORTH\",\" Clean\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"NORTH \",\" Clean\")",
+                                "text": "(link-goto:\"NORTH\",\" Clean\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "NORTH ",
-                                        "text": "\"NORTH \"",
+                                        "innerText": "NORTH",
+                                        "text": "\"NORTH\"",
                                         "type": "string"
                                     },
                                     {
@@ -9941,17 +9941,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"USE FOB \",\" AIFob\"",
+                        "innerText": "link-goto:\"USE FOB\",\" AIFob\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"USE FOB \",\" AIFob\")",
+                        "text": "(link-goto:\"USE FOB\",\" AIFob\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "USE FOB ",
-                                "text": "\"USE FOB \"",
+                                "innerText": "USE FOB",
+                                "text": "\"USE FOB\"",
                                 "type": "string"
                             },
                             {
@@ -9971,17 +9971,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"USE COAT \",\" AICoat\"",
+                        "innerText": "link-goto:\"USE COAT\",\" AICoat\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"USE COAT \",\" AICoat\")",
+                        "text": "(link-goto:\"USE COAT\",\" AICoat\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "USE COAT ",
-                                "text": "\"USE COAT \"",
+                                "innerText": "USE COAT",
+                                "text": "\"USE COAT\"",
                                 "type": "string"
                             },
                             {
@@ -10001,17 +10001,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"USE GUN \",\" AIGun\"",
+                        "innerText": "link-goto:\"USE GUN\",\" AIGun\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"USE GUN \",\" AIGun\")",
+                        "text": "(link-goto:\"USE GUN\",\" AIGun\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "USE GUN ",
-                                "text": "\"USE GUN \"",
+                                "innerText": "USE GUN",
+                                "text": "\"USE GUN\"",
                                 "type": "string"
                             },
                             {
@@ -10401,17 +10401,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"USE FOB \",\" AIFob\"",
+                        "innerText": "link-goto:\"USE FOB\",\" AIFob\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"USE FOB \",\" AIFob\")",
+                        "text": "(link-goto:\"USE FOB\",\" AIFob\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "USE FOB ",
-                                "text": "\"USE FOB \"",
+                                "innerText": "USE FOB",
+                                "text": "\"USE FOB\"",
                                 "type": "string"
                             },
                             {
@@ -10431,17 +10431,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"USE COAT \",\" AICoat\"",
+                        "innerText": "link-goto:\"USE COAT\",\" AICoat\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"USE COAT \",\" AICoat\")",
+                        "text": "(link-goto:\"USE COAT\",\" AICoat\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "USE COAT ",
-                                "text": "\"USE COAT \"",
+                                "innerText": "USE COAT",
+                                "text": "\"USE COAT\"",
                                 "type": "string"
                             },
                             {
@@ -10461,17 +10461,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"USE GUN \",\" AIGun\"",
+                        "innerText": "link-goto:\"USE GUN\",\" AIGun\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"USE GUN \",\" AIGun\")",
+                        "text": "(link-goto:\"USE GUN\",\" AIGun\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "USE GUN ",
-                                "text": "\"USE GUN \"",
+                                "innerText": "USE GUN",
+                                "text": "\"USE GUN\"",
                                 "type": "string"
                             },
                             {
@@ -10576,8 +10576,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "That's an answer a robot would give! You get shocked. What item could you use to make people beg for mercy? (set: $HP to it - 1) \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true)GAME OVER] [[USE FOB -> AIFob]] [[USE COAT -> AICoat]] [[USE GUN -> AIGun]]",
-                        "text": "[That's an answer a robot would give! You get shocked. What item could you use to make people beg for mercy? (set: $HP to it - 1) \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true)GAME OVER] [[USE FOB -> AIFob]] [[USE COAT -> AICoat]] [[USE GUN -> AIGun]]]",
+                        "innerText": "That's an answer a robot would give! You get shocked. What item could you use to make people beg for mercy? (set: $HP to it - 1) \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true)GAME OVER] [[USE FOB-> AIFob]] [[USE COAT-> AICoat]] [[USE GUN-> AIGun]]",
+                        "text": "[That's an answer a robot would give! You get shocked. What item could you use to make people beg for mercy? (set: $HP to it - 1) \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true)GAME OVER] [[USE FOB-> AIFob]] [[USE COAT-> AICoat]] [[USE GUN-> AIGun]]]",
                         "tokens": [
                             {
                                 "text": "That's an answer a robot would give! You get shocked. What item could you use to make people beg for mercy? ",
@@ -10841,17 +10841,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"USE FOB \",\" AIFob\"",
+                                "innerText": "link-goto:\"USE FOB\",\" AIFob\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE FOB \",\" AIFob\")",
+                                "text": "(link-goto:\"USE FOB\",\" AIFob\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE FOB ",
-                                        "text": "\"USE FOB \"",
+                                        "innerText": "USE FOB",
+                                        "text": "\"USE FOB\"",
                                         "type": "string"
                                     },
                                     {
@@ -10871,17 +10871,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"USE COAT \",\" AICoat\"",
+                                "innerText": "link-goto:\"USE COAT\",\" AICoat\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE COAT \",\" AICoat\")",
+                                "text": "(link-goto:\"USE COAT\",\" AICoat\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE COAT ",
-                                        "text": "\"USE COAT \"",
+                                        "innerText": "USE COAT",
+                                        "text": "\"USE COAT\"",
                                         "type": "string"
                                     },
                                     {
@@ -10901,17 +10901,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"USE GUN \",\" AIGun\"",
+                                "innerText": "link-goto:\"USE GUN\",\" AIGun\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE GUN \",\" AIGun\")",
+                                "text": "(link-goto:\"USE GUN\",\" AIGun\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE GUN ",
-                                        "text": "\"USE GUN \"",
+                                        "innerText": "USE GUN",
+                                        "text": "\"USE GUN\"",
                                         "type": "string"
                                     },
                                     {
@@ -11235,17 +11235,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"LOOK \",\" LookClean\"",
+                        "innerText": "link-goto:\"LOOK\",\" LookClean\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"LOOK \",\" LookClean\")",
+                        "text": "(link-goto:\"LOOK\",\" LookClean\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "LOOK ",
-                                "text": "\"LOOK \"",
+                                "innerText": "LOOK",
+                                "text": "\"LOOK\"",
                                 "type": "string"
                             },
                             {
@@ -11265,17 +11265,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"HACK \",\" End\"",
+                        "innerText": "link-goto:\"HACK\",\" End\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"HACK \",\" End\")",
+                        "text": "(link-goto:\"HACK\",\" End\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "HACK ",
-                                "text": "\"HACK \"",
+                                "innerText": "HACK",
+                                "text": "\"HACK\"",
                                 "type": "string"
                             },
                             {
@@ -11302,17 +11302,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"HACK \",\" End\"",
+                        "innerText": "link-goto:\"HACK\",\" End\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"HACK \",\" End\")",
+                        "text": "(link-goto:\"HACK\",\" End\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "HACK ",
-                                "text": "\"HACK \"",
+                                "innerText": "HACK",
+                                "text": "\"HACK\"",
                                 "type": "string"
                             },
                             {

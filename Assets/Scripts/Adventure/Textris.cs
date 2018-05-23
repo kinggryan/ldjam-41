@@ -140,7 +140,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return lineBreak();
 		yield return lineBreak();
 		yield return text("Testing command module. Manipulate data using anchor thoughts W, A, S, D, <, and >. Enter command HACK. ");
-		yield return link("HACK ", " HackTitle", null);
+		yield return link("HACK", " HackTitle", null);
 		yield break;
 	}
 
@@ -248,9 +248,9 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return text("You get into the elevator and descend to the lower floor.");
 		yield return lineBreak();
 		yield return text("You step off the elevator. Big room, circular. To the NORTH there’s a plastic locked cleanroom. Inside the cleanroom there is a tall machine in the center. LOOKing in front of you, a computer attached to a holographic projector blocks the cleanroom. It seems like it wants to TALK.");
-		yield return link("LOOK ", " LookLab", null);
+		yield return link("LOOK", " LookLab", null);
 		yield return text(" ");
-		yield return link("TALK ", " AI", null);
+		yield return link("TALK", " AI", null);
 		yield return text(" ");
 		yield break;
 	}
@@ -270,9 +270,9 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return text("\"Looks like you're human ... or, human enough. Opening cleanroom door.\" The cleanroom door to the NORTH hisses as it unlocks. ");
 		Vars.open_clean  = true;
 		yield return text(" ");
-		yield return link("NORTH ", " Clean", null);
+		yield return link("NORTH", " Clean", null);
 		yield return text(" ");
-		yield return link("TALK ", " AI", null);
+		yield return link("TALK", " AI", null);
 		yield return text(" ");
 		yield break;
 	}
@@ -299,9 +299,9 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return text("You pound on the hatch. Springs open. You haul yourself out of the tank.");
 		yield return lineBreak();
 		yield return text("You’re in a garage. Door to the NORTH, a keypad next to it. A desk with several drawers to LOOK through. ");
-		yield return link("LOOK ", " LookGarage", null);
+		yield return link("LOOK", " LookGarage", null);
 		yield return text(" ");
-		yield return link("NORTH ", " NorthGarage", null);
+		yield return link("NORTH", " NorthGarage", null);
 		yield break;
 	}
 
@@ -320,7 +320,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return lineBreak();
 		yield return lineBreak();
 		yield return text("Enter command LOOK to engage sensory data collection when ready. ");
-		yield return link("LOOK ", " LookTitle", null);
+		yield return link("LOOK", " LookTitle", null);
 		yield break;
 	}
 
@@ -336,9 +336,9 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	IStoryThread passage8_Main()
 	{
 		yield return text("You wake up, floating. It's dark. Where are you? Can't remember. Is this death? You move your arm, feel water splash. Hmm, sensory deprivation tank. Like death, but lamer. The hatch is above you. Could probably OPEN it. ");
-		yield return link("OPEN ", " Garage", null);
+		yield return link("OPEN", " Garage", null);
 		yield return text(" ");
-		yield return link("HACK ", " HackTitle2", null);
+		yield return link("HACK", " HackTitle2", null);
 		yield return text(" ");
 		yield break;
 	}
@@ -355,7 +355,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	IStoryThread passage9_Main()
 	{
 		yield return text("Critical message found in root directory: 'Hello agent. We have sent you to infiltrate a research facility that is developing a mind alteration machine. You have been outfitted with the implant Total Environmental Transcription/Reactive Information Synthesis, or T.E.T./R.I.S., to aid in your mission. It will quickly analyze your surroundings and determine your best courses of action. Good luck.' ");
-		yield return link("OPEN ", " Garage", null);
+		yield return link("OPEN", " Garage", null);
 		yield break;
 	}
 
@@ -374,7 +374,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.inv["NOTE"]  = true;
 		yield return lineBreak();
 		yield return text("You’re in a garage. Door to the NORTH, a keypad next to it. ");
-		yield return link("NORTH ", " NorthGarage", null);
+		yield return link("NORTH", " NorthGarage", null);
 		yield break;
 	}
 
@@ -394,7 +394,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		}
 		else {
 			yield return text("Door won’t open. Need a password for this keypad. ");
-			yield return link("LOOK ", " LookGarage", null);
+			yield return link("LOOK", " LookGarage", null);
 			yield return text(" ");
 		}
 		yield break;
@@ -417,14 +417,14 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			Vars.inv["GUN"]  = true;
 		}
 		if(Vars.inv["COAT"] == false) {
-			yield return link("GET COAT ", " GetCoat ", null);
+			yield return link("GET COAT", " GetCoat ", null);
 		}
 		yield return text(" ");
-		yield return link("NORTH ", " NorthWare", null);
+		yield return link("NORTH", " NorthWare", null);
 		yield return text(" ");
-		yield return link("WEST ", " Server", null);
+		yield return link("WEST", " Server", null);
 		yield return text(" ");
-		yield return link("EAST ", " Security", null);
+		yield return link("EAST", " Security", null);
 		yield break;
 	}
 
@@ -442,14 +442,14 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.inv["COAT"]  = true;
 		yield return text(" You take a white lab COAT from the rack, put it on. The white really brings out the green in your ocular cybernetics. ");
 		if(Vars.inv["GUN"] == false) {
-			yield return link("LOOK ", " LookWare", null);
+			yield return link("LOOK", " LookWare", null);
 		}
 		yield return text(" ");
-		yield return link("NORTH ", " NorthWare", null);
+		yield return link("NORTH", " NorthWare", null);
 		yield return text(" ");
-		yield return link("WEST ", " Server", null);
+		yield return link("WEST", " Server", null);
 		yield return text(" ");
-		yield return link("EAST ", " Security", null);
+		yield return link("EAST", " Security", null);
 		yield break;
 	}
 
@@ -471,16 +471,16 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		if(Vars.power == false || Vars.ser_door == false) {
 			yield return text("Need to turn the power on in the Server Room and disable the security barrier in the Security Room first.");
 			if(Vars.inv["GUN"] == false) {
-				yield return link("LOOK ", " LookWare", null);
+				yield return link("LOOK", " LookWare", null);
 			}
 			yield return text(" ");
 			if(Vars.inv["COAT"] == false) {
-				yield return link("GET COAT ", " GetCoat ", null);
+				yield return link("GET COAT", " GetCoat ", null);
 			}
 			yield return text(" ");
-			yield return link("WEST ", " Server", null);
+			yield return link("WEST", " Server", null);
 			yield return text(" ");
-			yield return link("EAST ", " Security", null);
+			yield return link("EAST", " Security", null);
 		}
 		yield return text(" ");
 		yield break;
@@ -499,19 +499,19 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	{
 		yield return text("Cabinet is secured with an electronic padlock. Don't want to think about what happens if you get caught stealing tech supplies around here.");
 		if(Vars.power == false) {
-			yield return link("HACK ", " HackServ", null);
+			yield return link("HACK", " HackServ", null);
 		}
 		yield return text(" ");
 		if(Vars.inv["CURE"] == true && Vars.infected == true) {
-			yield return link("USE CURE ", " UseCure", null);
+			yield return link("USE CURE", " UseCure", null);
 		}
 		yield return text(" ");
 		if(Vars.inv["FOB"] == false) {
-			yield return link("GET FOB ", " GetFoB", null);
+			yield return link("GET FOB", " GetFoB", null);
 		}
 		yield return text(" ");
 		if(Vars.inv["FOB"] == true && Vars.open_cab == false) {
-			yield return link("USE FOB ", " UseFoB", null);
+			yield return link("USE FOB", " UseFoB", null);
 		}
 		yield return text(" ");
 		yield return link("EAST", "Warehouse", null);
@@ -540,18 +540,18 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("You should probably leave the terminal alone.");
 		}
 		yield return text(" ");
-		yield return link("LOOK ", " LookServ", null);
+		yield return link("LOOK", " LookServ", null);
 		yield return text(" ");
 		if(Vars.inv["CURE"] == true && Vars.infected == true) {
-			yield return link("USE CURE ", " UseCure", null);
+			yield return link("USE CURE", " UseCure", null);
 		}
 		yield return text(" ");
 		if(Vars.inv["FOB"] == false) {
-			yield return link("GET FOB ", " GetFoB", null);
+			yield return link("GET FOB", " GetFoB", null);
 		}
 		yield return text(" ");
 		if(Vars.inv["FOB"] == true && Vars.open_cab == false) {
-			yield return link("USE FOB ", " UseFoB", null);
+			yield return link("USE FOB", " UseFoB", null);
 		}
 		yield return text(" ");
 		yield return link("EAST", "Warehouse", null);
@@ -572,17 +572,17 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	{
 		Vars.inv["FOB"]  = true;
 		yield return text(" You nab the key FOB. Should be able to unlock something. ");
-		yield return link("LOOK ", " LookServ", null);
+		yield return link("LOOK", " LookServ", null);
 		yield return text(" ");
 		if(Vars.power == false) {
-			yield return link("HACK ", " HackServ", null);
+			yield return link("HACK", " HackServ", null);
 		}
 		yield return text(" ");
 		if(Vars.inv["CURE"] == true && Vars.infected == true) {
-			yield return link("USE CURE ", " UseCure", null);
+			yield return link("USE CURE", " UseCure", null);
 		}
 		if(Vars.inv["FOB"] == true && Vars.open_cab == false) {
-			yield return link("USE FOB ", " UseFoB", null);
+			yield return link("USE FOB", " UseFoB", null);
 		}
 		yield return text("  ");
 		yield return link("EAST", "Warehouse", null);
@@ -604,14 +604,14 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.open_cab  = true;
 		Vars.inv["CURE"]  = true;
 		yield return text(" You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles, a data stick labeled CURE. You grab the data stick. ");
-		yield return link("LOOK ", " LookServ", null);
+		yield return link("LOOK", " LookServ", null);
 		yield return text(" ");
 		if(Vars.power == false) {
-			yield return link("HACK ", " HackServ", null);
+			yield return link("HACK", " HackServ", null);
 		}
 		yield return text(" ");
 		if(Vars.inv["CURE"] == true && Vars.infected == true) {
-			yield return link("USE CURE ", " UseCure", null);
+			yield return link("USE CURE", " UseCure", null);
 		}
 		yield return text(" ");
 		yield return link("EAST", "Warehouse", null);
@@ -631,18 +631,18 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	{
 		Vars.infected  = false;
 		yield return text("You grab a stick of CURE, insert it into your data port. Ahhhh, sweet anti-virus. Your braindrive partition feels squeaky clean. ");
-		yield return link("LOOK ", " LookServ", null);
+		yield return link("LOOK", " LookServ", null);
 		yield return text("  ");
 		if(Vars.power == false) {
-			yield return link("HACK ", " HackServ", null);
+			yield return link("HACK", " HackServ", null);
 		}
 		yield return lineBreak();
 		if(Vars.inv["FOB"] == false) {
-			yield return link("GET FOB ", " GetFoB", null);
+			yield return link("GET FOB", " GetFoB", null);
 		}
 		yield return text(" ");
 		if(Vars.inv["FOB"] == true && Vars.open_cab == false) {
-			yield return link("USE FOB ", " UseFoB", null);
+			yield return link("USE FOB", " UseFoB", null);
 		}
 		yield return text(" ");
 		yield return link("EAST", "Warehouse", null);
@@ -682,11 +682,11 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			}
 			yield return text(" ");
 			if(Vars.inv["GUN"] == true) {
-				yield return link("USE GUN ", " UseGun", null);
+				yield return link("USE GUN", " UseGun", null);
 			}
 		}
 		yield return text(" ");
-		yield return link("TALK ", " TalkSec", null);
+		yield return link("TALK", " TalkSec", null);
 		yield return text(" ");
 		yield return link("WEST", "Warehouse", null);
 		yield break;
@@ -727,7 +727,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			}
 			yield return text(" ");
 			if(Vars.inv["GUN"] == true) {
-				yield return link("USE GUN ", " UseGun", null);
+				yield return link("USE GUN", " UseGun", null);
 			}
 		}
 		yield return text(" ");
@@ -735,7 +735,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("Dead men don't talk.");
 		}
 		yield return text(" ");
-		yield return link("LOOK ", " LookSec", null);
+		yield return link("LOOK", " LookSec", null);
 		yield return link("WEST", "Warehouse", null);
 		yield break;
 	}
@@ -757,9 +757,9 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return text(" ");
 		Vars.dead_g  = true;
 		yield return text("You SHOOT the guard. His body armor takes the hit, but the shot flings him back. He hits a switch on the console, gets knocked out cold. You hear the elevator security door retract in the warehouse. Convenient. ");
-		yield return link("LOOK ", " LookSec", null);
+		yield return link("LOOK", " LookSec", null);
 		yield return text(" ");
-		yield return link("TALK ", " TalkSec", null);
+		yield return link("TALK", " TalkSec", null);
 		yield return text(" ");
 		yield return link("WEST", "Warehouse", null);
 		yield break;
@@ -783,21 +783,21 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["CLEAN"]  = false;
 		Vars.location["TITLE"]  = false;
 		yield return text("You enter the Server Room. Banks of computers, ready to be HACKed. Loud hum from the fans. Smells like stale sweat and microwaved pierogies. In front of you, an administrative terminal. A key FOB lies on top of it. Along the wall, a cabinet LOOKs back at you. The warehouse is back towards the EAST. ");
-		yield return link("LOOK ", " LookServ", null);
+		yield return link("LOOK", " LookServ", null);
 		yield return text(" ");
 		if(Vars.power == false) {
-			yield return link("HACK ", " HackServ", null);
+			yield return link("HACK", " HackServ", null);
 		}
 		if(Vars.inv["CURE"] == true && Vars.infected == true) {
-			yield return link("USE CURE ", " UseCure", null);
+			yield return link("USE CURE", " UseCure", null);
 		}
 		yield return text(" ");
 		if(Vars.inv["FOB"] == false) {
-			yield return link("GET FOB ", " GetFoB", null);
+			yield return link("GET FOB", " GetFoB", null);
 		}
 		yield return text(" ");
 		if(Vars.inv["FOB"] == true && Vars.open_cab == false) {
-			yield return link("USE FOB ", " UseFoB", null);
+			yield return link("USE FOB", " UseFoB", null);
 		}
 		yield return text(" ");
 		yield return link("EAST", "Warehouse", null);
@@ -835,12 +835,12 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			}
 		}
 		yield return text(" ");
-		yield return link("LOOK ", " LookSec", null);
+		yield return link("LOOK", " LookSec", null);
 		yield return text(" ");
-		yield return link("TALK ", " TalkSec", null);
+		yield return link("TALK", " TalkSec", null);
 		yield return text(" ");
 		if(Vars.inv["GUN"] == true && Vars.guard == true) {
-			yield return link("USE GUN ", " UseGun", null);
+			yield return link("USE GUN", " UseGun", null);
 		}
 		yield return text(" ");
 		yield return link("WEST", "Warehouse", null);
@@ -859,7 +859,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	IStoryThread passage25_Main()
 	{
 		yield return text("The projector flickers on. Hologram of a head appears. It speaks. \"Greetings, Please interact and submit to Turing test.\" ");
-		yield return link("TALK ", " AI", null);
+		yield return link("TALK", " AI", null);
 		yield return text(" ");
 		yield break;
 	}
@@ -880,16 +880,16 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text(" You go over to the hologram head. \"I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot.\"");
 			yield return lineBreak();
 			yield return text("First question: What is something that opens things, that your boss would be mad if they found out you lost it? ");
-			yield return link("USE FOB ", " AIFob", null);
+			yield return link("USE FOB", " AIFob", null);
 			yield return text(" ");
-			yield return link("USE COAT ", " AICoat", null);
+			yield return link("USE COAT", " AICoat", null);
 			yield return text(" ");
-			yield return link("USE GUN ", " AIGun", null);
+			yield return link("USE GUN", " AIGun", null);
 		}
 		yield return text(" ");
 		if(Vars.open_clean == true) {
 			yield return text("\"It's ironic that an A.I. like myself is programmed to despise robots. It's like being programmed to despise yourself. Honestly, the only thing that keeps me sane is taking comfort in MY UNDYING HATRED FOR MANGY DEGENERATE ROBOTS.\" ");
-			yield return link("NORTH ", " Clean", null);
+			yield return link("NORTH", " Clean", null);
 		}
 		yield break;
 	}
@@ -928,11 +928,11 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			}
 		}
 		yield return text(" ");
-		yield return link("USE FOB ", " AIFob", null);
+		yield return link("USE FOB", " AIFob", null);
 		yield return text(" ");
-		yield return link("USE COAT ", " AICoat", null);
+		yield return link("USE COAT", " AICoat", null);
 		yield return text(" ");
-		yield return link("USE GUN ", " AIGun", null);
+		yield return link("USE GUN", " AIGun", null);
 		yield break;
 	}
 
@@ -970,11 +970,11 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			}
 		}
 		yield return text(" ");
-		yield return link("USE FOB ", " AIFob", null);
+		yield return link("USE FOB", " AIFob", null);
 		yield return text(" ");
-		yield return link("USE COAT ", " AICoat", null);
+		yield return link("USE COAT", " AICoat", null);
 		yield return text(" ");
-		yield return link("USE GUN ", " AIGun", null);
+		yield return link("USE GUN", " AIGun", null);
 		yield break;
 	}
 
@@ -1011,11 +1011,11 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 				yield return text("GAME OVER");
 			}
 			yield return text(" ");
-			yield return link("USE FOB ", " AIFob", null);
+			yield return link("USE FOB", " AIFob", null);
 			yield return text(" ");
-			yield return link("USE COAT ", " AICoat", null);
+			yield return link("USE COAT", " AICoat", null);
 			yield return text(" ");
-			yield return link("USE GUN ", " AIGun", null);
+			yield return link("USE GUN", " AIGun", null);
 		}
 		yield break;
 	}
@@ -1039,9 +1039,9 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["CLEAN"]  = true;
 		Vars.location["TITLE"]  = false;
 		yield return text("You go into the cleanroom. Door seals shut behind you. There is a table with some circuit boards on it. In the center, you LOOK at a tall machine. Screen set into it, control stick and buttons, an opened cabinet door near the bottom with ports to HACK into. ");
-		yield return link("LOOK ", " LookClean", null);
+		yield return link("LOOK", " LookClean", null);
 		yield return text(" ");
-		yield return link("HACK ", " End", null);
+		yield return link("HACK", " End", null);
 		yield break;
 	}
 
@@ -1057,7 +1057,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	IStoryThread passage31_Main()
 	{
 		yield return text("You look over at the tall machine. The cabient reads 'Copyright 198X Sensum Delere Games'. The scene shows a menu for a game called Polymathia, but doesn't seem like there's any way to start the game. ");
-		yield return link("HACK ", " End", null);
+		yield return link("HACK", " End", null);
 		yield break;
 	}
 
