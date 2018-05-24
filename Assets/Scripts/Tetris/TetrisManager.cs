@@ -8,11 +8,20 @@ public class TetrisManager : MonoBehaviour {
     {
         public readonly LetterGenerator.WeightedCommand command;
         public readonly string word;
+        public readonly int coordinate; // This is for the purpose of determining the y coordinate of vertical commands. Not used for horizontal commands
+
+        public CommandReturnTuple(LetterGenerator.WeightedCommand command, string word, int coordinate)
+        {
+            this.command = command;
+            this.word = word;
+            this.coordinate = coordinate;
+        }
 
         public CommandReturnTuple(LetterGenerator.WeightedCommand command, string word)
         {
             this.command = command;
             this.word = word;
+            this.coordinate = 0;
         }
     }
 
@@ -308,7 +317,7 @@ public class TetrisManager : MonoBehaviour {
             {
                 Debug.Log("Command: " + command.command.command);
                 Debug.Log("Command: " + command.command);
-                RemoveColumnAndMoveAboveCharactersDown(x);
+                RemoveMultipleLinesAndMoveAboveLinesDown(command.coordinate, command.word.Length);
                 didEraseColumn = true;
             }
 
@@ -353,19 +362,19 @@ public class TetrisManager : MonoBehaviour {
   
 
     bool IsColumnComplete(int xCoord)
+    {
+    // Debug.Log("Line " + yCoord);
+        for(var y = 0; y < boardSizeY; y++)
         {
-        // Debug.Log("Line " + yCoord);
-            for(var y = 0; y < boardSizeY; y++)
+        // Debug.Log("is " + tetrisBoard[x, yCoord]);
+            if(tetrisBoard[xCoord,y] == ' ')
             {
-            // Debug.Log("is " + tetrisBoard[x, yCoord]);
-                if(tetrisBoard[xCoord,y] == ' ')
-                {
-                    return false;
-                }
+                return false;
             }
-
-            return true;
         }
+
+        return true;
+    }
 
     void LoseGame(){
         Debug.Log("GAME OVER");
@@ -395,10 +404,10 @@ public class TetrisManager : MonoBehaviour {
         // Do some stuff to find teh commands
         for (var x = 0; x < boardSizeX; x++)
         {
-            if(tetrisBoard[x,yCoord] != ' ')
-            {
+            // if(tetrisBoard[x,yCoord] != ' ')
+            // {
                 lineString += tetrisBoard[x, yCoord];
-            }
+            // }
         }
 
         if (lineString.Length != 0)
@@ -442,10 +451,12 @@ public class TetrisManager : MonoBehaviour {
         // Do some stuff to find teh commands
         for (var y = boardSizeY - 1; y >= 0; y--)
         {
-            if(tetrisBoard[xCoord, y] != ' ')
-            {
-                columnString += tetrisBoard[xCoord, y];
-            }
+            columnString += tetrisBoard[xCoord, y];
+
+            // if(tetrisBoard[xCoord, y] != ' ')
+            // {
+            //     columnString += tetrisBoard[xCoord, y];
+            // }
         }
 
         if (columnString.Length != 0)
@@ -453,27 +464,34 @@ public class TetrisManager : MonoBehaviour {
             //Debug.Log("CollectionBase string:" + columnString);
             foreach (var command in LetterGenerator.weightedCommandsList)
             {
-                var wasFound = columnString.Contains(command.name);
+                var bottomY = columnString.IndexOf(command.name);
                 var textToUse = command.name;
-                foreach(var alias in command.aliases)
-                {
-                    if(wasFound)
-                    {
-                        //Debug.Log("Command Found In Column " + xCoord);
-                        break;
-                    }
+                var wasFound = bottomY > -1;
 
-                    if(columnString.Contains(alias))
+                if(!wasFound) {
+                    foreach(var alias in command.aliases)
                     {
-                        textToUse = alias;
-                        wasFound = true;
+                        if(wasFound)
+                        {
+                            //Debug.Log("Command Found In Column " + xCoord);
+                            break;
+                        }
+
+                        bottomY = columnString.IndexOf(alias);
+                        if(bottomY >= 0)
+                        {
+                            textToUse = alias;
+                            wasFound = true;
+                        }
                     }
                 }
-
+                
                 if (wasFound)
                 {
+                    bottomY = tetrisBoard.GetLength(1) - (bottomY + textToUse.Length);
+                    Debug.Log("Found Index of " + bottomY + " in string " + columnString);
                     //twinePlayer.TypeCommand(textToUse);
-                    return new CommandReturnTuple(command, textToUse);
+                    return new CommandReturnTuple(command, textToUse, bottomY);
                 }
             }
         }
@@ -508,6 +526,13 @@ public class TetrisManager : MonoBehaviour {
             }
         //}
         //soundEngine.PlaySoundWithName("LineClear");
+    }
+
+    void RemoveMultipleLinesAndMoveAboveLinesDown(int bottomY, int length) {
+        Debug.Log("Removing with bottom y " + bottomY + " and length " + length);
+        for(var i = 0; i < length; i++) {
+            RemoveLineAndMoveAboveLinesDown(bottomY);
+        }
     }
 
     public void PausePlay()

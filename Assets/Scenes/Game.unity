@@ -736,6 +736,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1956187940114248, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114416626135346226, guid: 44b72ad9a46488344b25e3afd5373c3a,
+        type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1429,7 +1434,7 @@ MonoBehaviour:
   AutoDisplay: 1
   ShowNamedLinks: 1
   updateTextStepDuration: 0.05
-  updateTextStepTimer: -811.1694
+  updateTextStepTimer: -814.2621
   storyText: {fileID: 1114789946}
 --- !u!114 &1480000014
 MonoBehaviour:
