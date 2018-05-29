@@ -31,6 +31,7 @@ public class MusicCues : MonoBehaviour {
 		if(soundEngine != null && musicEngine != null && !playedTitleEnterSound){
 			soundEngine.PlaySoundWithName("ImproperShutdown");
 			musicEngine.ChangeMusicWithName("PadsUp");
+			musicEngine.ChangeMusicWithName("BassUp");
 			musicEngine.ChangeMusicWithName("RoomToTank");
 			//musicEngine.ChangeMusicWithName("BassUp");
 			playedTitleEnterSound = true;
@@ -49,7 +50,7 @@ public class MusicCues : MonoBehaviour {
 	*/
 
 	void Garage_Enter(){
-
+		Debug.Log("Garage Enter");
 		musicEngine.ChangeMusicWithName("MelodyUp");
 		soundEngine.PlaySoundWithName("OpenHatch");
 		musicEngine.ChangeMusicWithName("RoomToTank");
