@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TetrisManager : MonoBehaviour {
 
@@ -382,7 +383,7 @@ public class TetrisManager : MonoBehaviour {
     void LoseGame(){
         Debug.Log("GAME OVER");
         TurnDownAllInstrumentsExceptBass();
-        Application.LoadLevel("Lose");
+        SceneManager.LoadScene("Lose");
         
     }
 
@@ -396,7 +397,7 @@ public class TetrisManager : MonoBehaviour {
 
     void WinGame(){
         Debug.Log("YOU WON");
-        Application.LoadLevel("Win");
+		SceneManager.LoadScene("Win");
     }
 
 
