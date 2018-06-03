@@ -30,7 +30,8 @@ public class TetrisManager : MonoBehaviour {
 
     private WakeUpTetris pauser;
     private TetrisDisplay display;
-    private TetrisBlockQueueDisplay nextBlockDisplay;
+    public TetrisBlockQueueDisplay nextBlockDisplay;
+    public TetrisBlockQueueDisplay stashBlockDisplay;
     private TextrisTwinePlayer twinePlayer;
 
     private int boardSizeX = 10;
@@ -55,7 +56,7 @@ public class TetrisManager : MonoBehaviour {
         soundEngine = Object.FindObjectOfType<SoundEngine>();
         musicEngine = Object.FindObjectOfType<MusicEngine>();
         pauser = Object.FindObjectOfType<WakeUpTetris>();
-        nextBlockDisplay = Object.FindObjectOfType<TetrisBlockQueueDisplay>();
+        // nextBlockDisplay = Object.FindObjectOfType<TetrisBlockQueueDisplay>();
 
         tetrisBoard = new char[boardSizeX, boardSizeY];
         for (var x = 0; x < boardSizeX; x++)
@@ -203,11 +204,13 @@ public class TetrisManager : MonoBehaviour {
             var retBlock = stashedBlock;
             retBlock.SetPosition(currentBlock.GetPositionX(), currentBlock.GetPositionY());
             stashedBlock = currentBlock;
+            stashBlockDisplay.SetNextBlock(stashedBlock);
             currentBlock = retBlock;
             return currentBlock;
         } else {
             // Otherwise, put the current block in the stash and get the next block
             stashedBlock = currentBlock;
+            stashBlockDisplay.SetNextBlock(stashedBlock);
             UpdateNextBlocks();
             return currentBlock;
         }
