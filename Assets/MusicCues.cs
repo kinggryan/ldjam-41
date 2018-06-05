@@ -30,8 +30,8 @@ public class MusicCues : MonoBehaviour {
 	void Title_Update(){
 		if(soundEngine != null && musicEngine != null && !playedTitleEnterSound){
 			soundEngine.PlaySoundWithName("ImproperShutdown");
-			musicEngine.ChangeMusicWithName("PadsUp");
-			musicEngine.ChangeMusicWithName("BassUp");
+			//musicEngine.ChangeMusicWithName("PadsUp");
+			//musicEngine.ChangeMusicWithName("BassUp");
 			musicEngine.ChangeMusicWithName("RoomToTank");
 			//musicEngine.ChangeMusicWithName("BassUp");
 			playedTitleEnterSound = true;
@@ -51,8 +51,8 @@ public class MusicCues : MonoBehaviour {
 
 	void Garage_Enter(){
 		Debug.Log("Garage Enter");
-		musicEngine.ChangeMusicWithName("MelodyUp");
-		soundEngine.PlaySoundWithName("OpenHatch");
+		//musicEngine.ChangeMusicWithName("MelodyUp");
+		//soundEngine.PlaySoundWithName("OpenHatch");
 		musicEngine.ChangeMusicWithName("RoomToTank");
 	}
 	void Garage_Update()
@@ -82,7 +82,7 @@ public class MusicCues : MonoBehaviour {
 		if(!firstLookEntered){
 			Debug.Log("1st Look ENTER");
 			soundEngine.PlaySoundWithName("EnterCommand");
-			musicEngine.ChangeMusicWithName("KickUp");
+			//musicEngine.ChangeMusicWithName("KickUp");
 			firstLookEntered = true;
 		}
 		Debug.Log("LOOK ENTER");

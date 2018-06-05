@@ -12,8 +12,8 @@ public class StartMusic : MonoBehaviour {
 		soundEngine = Object.FindObjectOfType<SoundEngine>();
 		musicEngine = Object.FindObjectOfType<MusicEngine>();
 
-		soundEngine.PlaySoundWithName("Start");
-		musicEngine.ChangeMusicWithName("MelodyUp");
+		//soundEngine.PlaySoundWithName("Start");
+		//musicEngine.ChangeMusicWithName("MelodyUp");
 	}
 	
 }
