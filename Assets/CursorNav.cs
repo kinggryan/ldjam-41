@@ -23,7 +23,7 @@ public class CursorNav : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown("down")){
-			if(curIndex < 2 ){
+			if(curIndex < 2 && cursor != null ){
 				textList[curIndex].color = lime;
 				curIndex++;
                 cursor.transform.position += Vector3.down * 51;
@@ -48,14 +48,17 @@ public class CursorNav : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)){
 			if (currentScene == 0)
 			{
+				soundEngine.PlaySoundWithName("Enter");
 				SceneManager.LoadScene(curIndex + 1);
 			}
 
 			else{
 				if (curIndex == 2){
-					SceneManager.LoadScene("01a Start");
+					SceneManager.LoadScene("Menu");
+					soundEngine.PlaySoundWithName("Enter");
 				}
 				else{
+					soundEngine.PlaySoundWithName("Enter");
 					SceneManager.LoadScene(curIndex + 1);
 				}
 			}

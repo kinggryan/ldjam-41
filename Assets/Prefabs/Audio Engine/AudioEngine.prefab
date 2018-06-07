@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 4711489272869372}
   - component: {fileID: 114446338968355896}
   m_Layer: 0
-  m_Name: Start
+  m_Name: Enter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1046,8 +1046,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4175934568216350}
-  m_RootOrder: 3
+  m_Father: {fileID: 4505665473088592}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4079522731077642
 Transform:
@@ -1103,9 +1103,8 @@ Transform:
   - {fileID: 4246659497072590}
   - {fileID: 4875488951039732}
   - {fileID: 4275561756526694}
-  - {fileID: 4076788929589412}
   m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4194118498747732
 Transform:
@@ -1365,6 +1364,7 @@ Transform:
   - {fileID: 4562766828325948}
   - {fileID: 4059981681749292}
   - {fileID: 4055614551730862}
+  - {fileID: 4076788929589412}
   - {fileID: 4175934568216350}
   m_Father: {fileID: 4152782509377852}
   m_RootOrder: 1
@@ -1822,7 +1822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events:
-  - name: Start
+  - name: Enter
     soundEvent: {fileID: 114446338968355896}
   - name: BlockMove
     soundEvent: {fileID: 114214780705460502}
@@ -1851,7 +1851,7 @@ MonoBehaviour:
   - name: Pause
     soundEvent: {fileID: 114103905995008988}
   - name: MenuNav
-    soundEvent: {fileID: 114723863764007750}
+    soundEvent: {fileID: 114663281475188996}
   - name: UnPause
     soundEvent: {fileID: 114723863764007750}
 --- !u!114 &114057775354726758
@@ -2150,7 +2150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   random: 0
   playOnAwake: 0
-  volume: 0.3
+  volume: 1
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -2158,7 +2158,7 @@ MonoBehaviour:
   fadeOutTimer: 1
   startDelay: 0
   audioClip:
-  - {fileID: 8300000, guid: eb7043e0d20df0f47ace08c6994675c1, type: 3}
+  - {fileID: 8300000, guid: 287eabb6151175748a8e775dc5942e51, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -2430,7 +2430,7 @@ MonoBehaviour:
   fadeOutTimer: 1
   startDelay: 0
   audioClip:
-  - {fileID: 8300000, guid: 87445ab73db2b084fabc58d2aedec1a2, type: 3}
+  - {fileID: 8300000, guid: 04305852407fb5643ae0efe8dfb270de, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -2546,7 +2546,7 @@ MonoBehaviour:
   fadeOutTimer: 1
   startDelay: 0
   audioClip:
-  - {fileID: 8300000, guid: d0e8db122b115d94583a6894c81c1d39, type: 3}
+  - {fileID: 8300000, guid: e366f5c8199221846a7fab19510cf449, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -2555,7 +2555,7 @@ MonoBehaviour:
   panMultiplier: 0
   externalVolumeModifier: 1
   externalPitchModifier: 0
-  output: {fileID: 0}
+  output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
   type: 2
@@ -2767,7 +2767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   random: 0
   playOnAwake: 0
-  volume: 0.2
+  volume: 1
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -2775,7 +2775,7 @@ MonoBehaviour:
   fadeOutTimer: 1
   startDelay: 0
   audioClip:
-  - {fileID: 8300000, guid: 96dfa29a3f344d744b402a93c7603aee, type: 3}
+  - {fileID: 8300000, guid: 865761e5661bf7741b3a937fbcd5c6cd, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -3107,7 +3107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   random: 0
   playOnAwake: 0
-  volume: 0.8
+  volume: 1
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -3115,7 +3115,7 @@ MonoBehaviour:
   fadeOutTimer: 1
   startDelay: 0
   audioClip:
-  - {fileID: 8300000, guid: 7003d470cc1a6af428221d6d27f0022b, type: 3}
+  - {fileID: 8300000, guid: 287eabb6151175748a8e775dc5942e51, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -3199,7 +3199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   random: 0
   playOnAwake: 0
-  volume: 0.25
+  volume: 0.8
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -3207,7 +3207,7 @@ MonoBehaviour:
   fadeOutTimer: 1
   startDelay: 0
   audioClip:
-  - {fileID: 8300000, guid: f72153514b998324e8f691d6d20ab042, type: 3}
+  - {fileID: 8300000, guid: 287eabb6151175748a8e775dc5942e51, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -3256,7 +3256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   random: 0
   playOnAwake: 1
-  volume: 0.8
+  volume: 1
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -3273,7 +3273,7 @@ MonoBehaviour:
   panMultiplier: 0
   externalVolumeModifier: 1
   externalPitchModifier: 0
-  output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
   type: 2

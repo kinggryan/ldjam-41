@@ -78,6 +78,7 @@ private VirtualAudioChannel audioChannel;
     public void PlaySound ()
     {
         //nextClipToPlay.Play();
+        Debug.Log("Playing sound " + gameObject.name);
         double clipStartTime = AudioSettings.dspTime + startDelay+ Time.deltaTime;
         double clipEndTime = clipStartTime + nextClipToPlay.clip.length;
         double clipLength = nextClipToPlay.clip.length;
