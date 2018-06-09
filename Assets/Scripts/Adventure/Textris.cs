@@ -212,18 +212,18 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		}
 		yield return text(" ");
 		if(Vars.inv["GUN"] == false) {
-			yield return link("LOOK ", " LookWare", null);
+			yield return link("LOOK", " LookWare", null);
 		}
 		yield return text(" ");
 		if(Vars.inv["COAT"] == false) {
-			yield return link("GET COAT ", " GetCoat ", null);
+			yield return link("GET COAT", " GetCoat ", null);
 		}
 		yield return text(" ");
-		yield return link("NORTH ", " NorthWare", null);
+		yield return link("NORTH", " NorthWare", null);
 		yield return text(" ");
-		yield return link("WEST ", " Server", null);
+		yield return link("WEST", " Server", null);
 		yield return text(" ");
-		yield return link("EAST ", " Security", null);
+		yield return link("EAST", " Security", null);
 		yield break;
 	}
 
