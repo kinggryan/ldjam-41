@@ -10,7 +10,8 @@ public class CursorNav : MonoBehaviour {
 	public Transform cursor;
 	public int curIndex = 0;
 	public Scene currentScene;
-	public Color lime = new Color(0, 255, 0); 
+	public Color lime = new Color(0, 255, 0);
+	public int cursorOffset = 62;
 
 	// Use this for initialization
 	void Start () {
@@ -28,11 +29,11 @@ public class CursorNav : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown("down")){
-			if(curIndex < 5  && currentScene == SceneManager.GetSceneByName("Options")){
+			if(curIndex < 6  && currentScene == SceneManager.GetSceneByName("Options")){
 				textList[curIndex].color = lime;
 				if (curIndex == 2)
                 {
-                    cursor.transform.position += Vector3.down * 79;
+                    cursor.transform.position += Vector3.down * 22;
 					foreach(Slider s in sliders){
 						s.interactable = false;
 					}
@@ -40,17 +41,17 @@ public class CursorNav : MonoBehaviour {
 				curIndex++;
 				Debug.Log(textList[curIndex].text + ", " + curIndex);
 
-                cursor.transform.position += Vector3.down * 50;
+				cursor.transform.position += Vector3.down * cursorOffset;
 				textList[curIndex].color = Color.white;
 			}
 
-			if (curIndex < 2 && currentScene == SceneManager.GetSceneByName("Menu") )
+			if (curIndex < 3 && currentScene == SceneManager.GetSceneByName("Menu") )
             {
                 textList[curIndex].color = lime;
                 curIndex++;
                 Debug.Log(textList[curIndex].text + ", " + curIndex);
 
-                cursor.transform.position += Vector3.down * 50;
+				cursor.transform.position += Vector3.down * cursorOffset;
                 textList[curIndex].color = Color.white;
             }
             
@@ -63,7 +64,7 @@ public class CursorNav : MonoBehaviour {
 				textList[curIndex].color = lime;
 				if (curIndex == 3 && currentScene == SceneManager.GetSceneByName("Options"))
                 {
-                    cursor.transform.position += Vector3.up * 79;
+                    cursor.transform.position += Vector3.up * 22;
 					foreach (Slider s in sliders)
                     {
 						s.interactable = true;
@@ -73,7 +74,7 @@ public class CursorNav : MonoBehaviour {
                 curIndex--;
 				Debug.Log(textList[curIndex].text + ", " + curIndex);
 				textList[curIndex].color = Color.white;
-                cursor.transform.position += Vector3.up * 50;
+				cursor.transform.position += Vector3.up * cursorOffset;
                 
             }
         }
