@@ -13,6 +13,7 @@ public class CursorNav : MonoBehaviour {
 	public Color lime = new Color(0, 255, 0);
 	public int cursorOffset = 62;
 
+
 	// Use this for initialization
 	void Start () {
 		textList = GetComponentsInChildren<Text>();
@@ -44,15 +45,15 @@ public class CursorNav : MonoBehaviour {
 				cursor.transform.position += Vector3.down * cursorOffset;
 				textList[curIndex].color = Color.white;
 			}
-
+            
 			if (curIndex < 3 && currentScene == SceneManager.GetSceneByName("Menu") )
             {
                 textList[curIndex].color = lime;
-                curIndex++;
-                Debug.Log(textList[curIndex].text + ", " + curIndex);
+				curIndex++;
 
 				cursor.transform.position += Vector3.down * cursorOffset;
                 textList[curIndex].color = Color.white;
+				Debug.Log(textList[curIndex].text + ", " + curIndex + ", " + cursor.transform.position.ToString());
             }
             
 		}
@@ -96,6 +97,11 @@ public class CursorNav : MonoBehaviour {
 					SceneManager.LoadScene("Options");
 				}
 
+				if (curIndex == 3)
+                {
+                    SceneManager.LoadScene("Credits");
+                }
+
 
 			}
 			if (currentScene == SceneManager.GetSceneByName("Options")){
@@ -113,6 +119,11 @@ public class CursorNav : MonoBehaviour {
 				if(curIndex == 5)
                 {
                     SceneManager.LoadScene("Menu");
+                }
+
+				if (curIndex == 6)
+                {
+                    SceneManager.LoadScene("Credits");
                 }
 				
 			}
