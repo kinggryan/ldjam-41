@@ -9,22 +9,26 @@ public class CursorNav : MonoBehaviour {
 	public Slider[] sliders;
 	public Transform cursor;
 	public int curIndex = 0;
-	public int  currentScene;
+	public Scene currentScene;
 	public Color lime = new Color(0, 255, 0); 
 
 	// Use this for initialization
 	void Start () {
 		textList = GetComponentsInChildren<Text>();
 		cursor = gameObject.transform.Find("Cursor");
-		currentScene = SceneManager.GetActiveScene().buildIndex;
-		sliders = GetComponentsInChildren<Slider>();
-		sliders[0].Select();
+		currentScene = SceneManager.GetActiveScene();
+
+		if (currentScene == SceneManager.GetSceneByName("Options"))
+		{
+			sliders = GetComponentsInChildren<Slider>();
+			sliders[0].Select();
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown("down")){
-			if(curIndex < 5  && currentScene == 3){
+			if(curIndex < 5  && currentScene == SceneManager.GetSceneByName("Options")){
 				textList[curIndex].color = lime;
 				if (curIndex == 2)
                 {
@@ -40,7 +44,7 @@ public class CursorNav : MonoBehaviour {
 				textList[curIndex].color = Color.white;
 			}
 
-			if (curIndex < 2 && currentScene == 0 )
+			if (curIndex < 2 && currentScene == SceneManager.GetSceneByName("Menu") )
             {
                 textList[curIndex].color = lime;
                 curIndex++;
@@ -57,7 +61,7 @@ public class CursorNav : MonoBehaviour {
 			if (curIndex >= 1)
             {
 				textList[curIndex].color = lime;
-				if (curIndex == 3 && currentScene == 3)
+				if (curIndex == 3 && currentScene == SceneManager.GetSceneByName("Options"))
                 {
                     cursor.transform.position += Vector3.up * 79;
 					foreach (Slider s in sliders)
@@ -75,7 +79,7 @@ public class CursorNav : MonoBehaviour {
         }
         
 		if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)){
-			if (currentScene == 0)
+			if (currentScene == SceneManager.GetSceneByName("Menu"))
 			{
 				if (curIndex == 0){
 					SceneManager.LoadScene("Game");
@@ -90,7 +94,7 @@ public class CursorNav : MonoBehaviour {
 				}
 
 			}
-			if (currentScene == 3){
+			if (currentScene == SceneManager.GetSceneByName("Options")){
 				if (curIndex == 3)
                 {
                     SceneManager.LoadScene("Game");
