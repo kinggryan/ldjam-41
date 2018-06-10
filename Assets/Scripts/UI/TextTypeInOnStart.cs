@@ -38,7 +38,7 @@ public class TextTypeInOnStart : MonoBehaviour {
 				text.text += fullTextStr[0];
 				fullTextStr = fullTextStr.Substring(1);
 				if(fullTextStr.Length == 0) {
-					BroadcastMessage("OnTypingAnimationCompleted");
+					BroadcastMessage("OnTypingAnimationCompleted",SendMessageOptions.DontRequireReceiver);
 				}
 			}
 		}
