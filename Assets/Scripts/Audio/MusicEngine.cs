@@ -12,13 +12,16 @@ public class TransitionAndName {
 public class MusicEngine : MonoBehaviour {
 
 	public AudioMixerSnapshot paused;
-	public AudioMixerSnapshot unpaused;
+	public AudioMixerSnapshot currentMusicSnapshot;
+	public AudioMixerSnapshot[] mixerSnapshots;
+	
 	public float pauseTransitionTime;
 	public TransitionAndName[] events;
 
-		/* void Awake(){
-		GameObject.DontDestroyOnLoad(gameObject);
-		} */
+	void Start (){
+		currentMusicSnapshot = mixerSnapshots[0];
+		currentMusicSnapshot.TransitionTo(4);
+	}
     
 	public void ChangeMusicWithName(string name) {
 		var playedSound = false;
@@ -40,7 +43,7 @@ public class MusicEngine : MonoBehaviour {
 	}
 
 	public void UnpauseMusic(){
-		unpaused.TransitionTo(pauseTransitionTime);
+		currentMusicSnapshot.TransitionTo(pauseTransitionTime);
 		
 	}
 

@@ -43,7 +43,7 @@ private float playerDistance;
 public float playerXDistance;
 private float playerYDistance;
 private Transform transform;
-private AudioSource nextClipToPlay;
+public AudioSource nextClipToPlay;
 public enum Type
 {
     Loop,
@@ -60,12 +60,13 @@ private VirtualAudioChannel audioChannel;
 
     void Awake(){
         audioChannel = gameObject.transform.parent.GetComponent<VirtualAudioChannel>();
+        PrepareFIrstSoundToPlay();
     }
 
    void Start ()
     {
         transform = gameObject.GetComponent<Transform>();
-        PrepareFIrstSoundToPlay();
+        //PrepareFIrstSoundToPlay();
         if (playOnAwake)
         {
             PlaySound();
@@ -79,19 +80,24 @@ private VirtualAudioChannel audioChannel;
     {
         //nextClipToPlay.Play();
         //Debug.Log("Playing sound " + gameObject.name);
-        double clipStartTime = AudioSettings.dspTime + startDelay+ Time.deltaTime;
-        double clipEndTime = clipStartTime + nextClipToPlay.clip.length;
-        double clipLength = nextClipToPlay.clip.length;
-        if (audioChannel != null){
-            audioChannel.OnSoundPlayed(nextClipToPlay);
+        if (nextClipToPlay != null){
+            double clipStartTime = AudioSettings.dspTime + startDelay+ Time.deltaTime;
+            double clipEndTime = clipStartTime + nextClipToPlay.clip.length;
+            double clipLength = nextClipToPlay.clip.length;
+            if (audioChannel != null){
+                audioChannel.OnSoundPlayed(nextClipToPlay);
+            }
+            nextClipToPlay.PlayScheduled(clipStartTime);
+            //nextClipToPlay.SetScheduledEndTime(clipEndTime);
+            //Debug.Log("Current clip end time: " + clipEndTime);
+            //Debug.Log("Current clip length: " + clipLength);
+            //Debug.Log("Played sound " + nextClipToPlay);
+            soundPlayed = true;
+            PrepareNextSoundToPlay(clipStartTime, clipEndTime);
+        }else{
+            Debug.LogWarning(gameObject.name + " audioCilp not found?");
         }
-        nextClipToPlay.PlayScheduled(clipStartTime);
-        //nextClipToPlay.SetScheduledEndTime(clipEndTime);
-        //Debug.Log("Current clip end time: " + clipEndTime);
-        //Debug.Log("Current clip length: " + clipLength);
-        //Debug.Log("Played sound " + nextClipToPlay);
-        soundPlayed = true;
-        PrepareNextSoundToPlay(clipStartTime, clipEndTime);
+      
         
     }
 

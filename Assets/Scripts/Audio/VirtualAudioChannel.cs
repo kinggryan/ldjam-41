@@ -10,7 +10,7 @@ public class VirtualAudioChannel : MonoBehaviour {
 		foreach (AudioSource source in sources){
 			if (source != lastSoundPlayed){
 				source.Stop();
-				Debug.Log("Sound " + source.name + "stopped");
+				//Debug.Log("Sound " + source.name + "stopped");
 			}
 		}
 	}
