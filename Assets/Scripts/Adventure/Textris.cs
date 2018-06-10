@@ -497,7 +497,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage15_Main()
 	{
-		yield return text("Cabinet is secured with an electronic padlock. I guess even top secret elite IT admins like stealing office supplies.");
+		yield return text("Cabinet is secured with an electronic padlock. Don't want to think about what happens if you get caught stealing tech supplies around here.");
 		if(Vars.power == false) {
 			yield return link("HACK", " HackServ", null);
 		}
@@ -532,7 +532,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		if(Vars.infected == false && Vars.power == false) {
 			Vars.infected  = true;
 			Vars.power  = true;
-			yield return text("You reach up your nose, grab the wire in it and run it into the admin terminal. Once you HACK into the electrical system, you find the power controls for the elevator, switch them on.");
+			yield return text("You reach up your nose, grab the wire in it and run it into the admin terminal. You begin to HACK into the facility’s electrical systems. You find the power controls for the elevator, switch them on.");
 			yield return lineBreak();
 			yield return text("As you disconnect from the admin terminal, you feel it transfer some packets your way. A malware infection! You need to find an anti-virus cure, fast!");
 		}
@@ -603,7 +603,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	{
 		Vars.open_cab  = true;
 		Vars.inv["CURE"]  = true;
-		yield return text(" You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles... a data stick labeled CURE. It has a GPS lock on it, and a label that says \"SERVER ROOM ONLY.\" Wow, office supply theft must actually be a huge problem around here. You grab the data stick. ");
+		yield return text(" You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles, a data stick labeled CURE. You grab the data stick. ");
 		yield return link("LOOK", " LookServ", null);
 		yield return text(" ");
 		if(Vars.power == false) {
@@ -630,7 +630,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	IStoryThread passage19_Main()
 	{
 		Vars.infected  = false;
-		yield return text("You insert the stick of CURE into your data port. After a second, the GPS lock blinks, says \"valid location detected\" and runs the stick's executable. Ahhhh, sweet anti-virus. Your braindrive partition feels squeaky clean. ");
+		yield return text("You grab a stick of CURE, insert it into your data port. Ahhhh, sweet anti-virus. Your braindrive partition feels squeaky clean. ");
 		yield return link("LOOK", " LookServ", null);
 		yield return text("  ");
 		if(Vars.power == false) {
@@ -828,10 +828,10 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return text("You walk into the Security Room. Big console of security monitors, currently malfunctioning. Guard lying next to the console. You LOOK at a large calendar on the wall. Warehouse to the WEST.");
 		yield return lineBreak();
 		if(Vars.dead_g == false && Vars.ser_door == false) {
-			yield return text("The guard notices you. He stands up, hand goes for a GUN at his side. \"Identify yourself!\" he barks. You are unsure if he will let you TALK.");
+			yield return text("The guard notices you. He stands up, hand goes for a GUN at his side. He speaks Russian, which your T.E.T./R.I.S. translates. \"Identify yourself!\" You are unsure if he will let you TALK.");
 			yield return lineBreak();
 			if(Vars.inv["COAT"] == true) {
-				yield return text("The guard notices your lab COAT, eases up. \"I don't remember any scientists with so much skull hardware. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"");
+				yield return text("The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"");
 			}
 		}
 		yield return text(" ");

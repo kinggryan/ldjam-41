@@ -327,7 +327,6 @@ public class TetrisManager : MonoBehaviour {
 
             if (command.command.command != TwineTextPlayer.Command.None)
             {
-                Debug.Log("FUCKING PAUSE");
                 twinePlayer.TypeCommand(command.word);
                 twinePlayer.DoCommand(command.command.command);
                 pauser.PausePlay();
