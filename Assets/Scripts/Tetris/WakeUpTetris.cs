@@ -10,8 +10,10 @@ public class WakeUpTetris : MonoBehaviour {
     public Color fadedOutGameTextColor;
     public Color fadedInGameTextColor;
     public float minPauseDuration = 10f;
+    public float firstPauseMinDuration = 10f;
 
     private float pauseTimer;
+    private bool isFirstPause = true;
 
     private void Start()
     {
@@ -22,8 +24,9 @@ public class WakeUpTetris : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         pauseTimer += Time.deltaTime;
-        if (pauseTimer >= minPauseDuration && tetris.IsPaused() && (Input.GetButtonUp("left") || Input.GetButtonUp("right") || Input.GetButtonUp("up") || Input.GetButtonUp("down") || Input.GetButtonUp("rotateclockwise") || Input.GetButtonUp("rotatecounterclockwise") ))
+        if (pauseTimer >= (isFirstPause ? firstPauseMinDuration : minPauseDuration) && tetris.IsPaused() && (Input.GetButtonUp("left") || Input.GetButtonUp("right") || Input.GetButtonUp("up") || Input.GetButtonUp("down") || Input.GetButtonUp("rotateclockwise") || Input.GetButtonUp("rotatecounterclockwise") ))
         {
+            isFirstPause = false;
             BeginPlay();
         }
 	}
