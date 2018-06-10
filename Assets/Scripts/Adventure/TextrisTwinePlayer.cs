@@ -71,7 +71,7 @@ public class TextrisTwinePlayer : TwineTextPlayer {
                 }
             }
     
-            //Debug.Log("Printing text for story text:" + text.Text);
+            Debug.Log("Printing text for story text:" + text.Text);
             if (!string.IsNullOrEmpty(text.Text))
             {
                 targetStoryText += text.Text.Replace('’', '\'');

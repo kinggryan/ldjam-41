@@ -2,7 +2,7 @@
     "console": [
         {
             "type": "message",
-            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:3712\nt@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:19933\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:4450\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:18801\nr@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:40542\na@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:41837\ne@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:56837\no@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:53671\ne@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:56642\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:54045\nrender@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:486\nc@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:110:3813\nrenderInto@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:110:3254\nu@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:110:8919\ngoToPassage@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:110:9309\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:111:16874\nf@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:94:24025\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:94:36747 undefined"
+            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:101:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:101:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:41837\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:91:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:91:36747 undefined"
         }
     ],
     "result": {
@@ -225,10 +225,6 @@
                     {
                         "text": "Improper shutdown detected. System check initiated...",
                         "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
                     },
                     {
                         "text": "\n",
@@ -2565,10 +2561,6 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "text": "\"Looks like you're human ... or, human enough. Opening cleanroom door.\" The cleanroom door to the NORTH hisses as it unlocks. ",
                         "type": "text"
                     },
@@ -2933,15 +2925,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": " ",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "You pound on the hatch. Springs open. You haul yourself out of the tank.",
+                        "text": " You pound on the hatch. Springs open. You haul yourself out of the tank.",
                         "type": "text"
                     },
                     {
@@ -3018,10 +3002,6 @@
                     {
                         "text": "System check complete. ",
                         "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
                     },
                     {
                         "text": "\n",
@@ -6173,8 +6153,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "if: $inv's FOB is false",
@@ -9612,19 +9592,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "Correct! \nSecond question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. (set: $cor_ans to \"COAT\")",
-                        "text": "[Correct! \nSecond question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. (set: $cor_ans to \"COAT\")]",
+                        "innerText": "Correct! Second question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. (set: $cor_ans to \"COAT\")",
+                        "text": "[Correct! Second question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. (set: $cor_ans to \"COAT\")]",
                         "tokens": [
                             {
-                                "text": "Correct! ",
-                                "type": "text"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "text": "Second question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. ",
+                                "text": "Correct! Second question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. ",
                                 "type": "text"
                             },
                             {
@@ -10072,19 +10044,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "Correct! \nLast question: tell me something you could use to make people beg for mercy.  (set: $cor_ans to \"GUN\")",
-                        "text": "[Correct! \nLast question: tell me something you could use to make people beg for mercy.  (set: $cor_ans to \"GUN\")]",
+                        "innerText": "Correct! Last question: tell me something you could use to make people beg for mercy.  (set: $cor_ans to \"GUN\")",
+                        "text": "[Correct! Last question: tell me something you could use to make people beg for mercy.  (set: $cor_ans to \"GUN\")]",
                         "tokens": [
                             {
-                                "text": "Correct! ",
-                                "type": "text"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "text": "Last question: tell me something you could use to make people beg for mercy.  ",
+                                "text": "Correct! Last question: tell me something you could use to make people beg for mercy.  ",
                                 "type": "text"
                             },
                             {
