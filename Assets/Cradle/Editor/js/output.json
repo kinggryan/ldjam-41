@@ -2,7 +2,7 @@
     "console": [
         {
             "type": "message",
-            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:3712\nt@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:19933\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:4450\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:102:18801\nr@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:40542\na@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:41837\ne@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:56837\no@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:53671\ne@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:56642\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:54045\nrender@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:106:486\nc@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:3813\nrenderInto@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:3254\nu@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:8919\ngoToPassage@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:9309\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:109:16874\nf@file:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:92:24025\nfile:///Users/ryan/games/ldjam-41/Assets/Scripts/Adventure/Textris.html:92:36747 undefined"
+            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:41837\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:110:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:110:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:110:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:110:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:111:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:94:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:94:36747 undefined"
         }
     ],
     "result": {
@@ -1983,21 +1983,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[LOOK -> LookWare]]",
-                        "text": "[[[LOOK -> LookWare]]]",
+                        "innerText": "[[LOOK-> LookWare]]",
+                        "text": "[[[LOOK-> LookWare]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"LOOK \",\" LookWare\"",
+                                "innerText": "link-goto:\"LOOK\",\" LookWare\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"LOOK \",\" LookWare\")",
+                                "text": "(link-goto:\"LOOK\",\" LookWare\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "LOOK ",
-                                        "text": "\"LOOK \"",
+                                        "innerText": "LOOK",
+                                        "text": "\"LOOK\"",
                                         "type": "string"
                                     },
                                     {
@@ -2062,21 +2062,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[GET COAT -> GetCoat ]]",
-                        "text": "[[[GET COAT -> GetCoat ]]]",
+                        "innerText": "[[GET COAT-> GetCoat ]]",
+                        "text": "[[[GET COAT-> GetCoat ]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"GET COAT \",\" GetCoat \"",
+                                "innerText": "link-goto:\"GET COAT\",\" GetCoat \"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"GET COAT \",\" GetCoat \")",
+                                "text": "(link-goto:\"GET COAT\",\" GetCoat \")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "GET COAT ",
-                                        "text": "\"GET COAT \"",
+                                        "innerText": "GET COAT",
+                                        "text": "\"GET COAT\"",
                                         "type": "string"
                                     },
                                     {
@@ -2099,17 +2099,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"NORTH \",\" NorthWare\"",
+                        "innerText": "link-goto:\"NORTH\",\" NorthWare\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"NORTH \",\" NorthWare\")",
+                        "text": "(link-goto:\"NORTH\",\" NorthWare\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "NORTH ",
-                                "text": "\"NORTH \"",
+                                "innerText": "NORTH",
+                                "text": "\"NORTH\"",
                                 "type": "string"
                             },
                             {
@@ -2129,17 +2129,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"WEST \",\" Server\"",
+                        "innerText": "link-goto:\"WEST\",\" Server\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"WEST \",\" Server\")",
+                        "text": "(link-goto:\"WEST\",\" Server\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "WEST ",
-                                "text": "\"WEST \"",
+                                "innerText": "WEST",
+                                "text": "\"WEST\"",
                                 "type": "string"
                             },
                             {
@@ -2159,17 +2159,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"EAST \",\" Security\"",
+                        "innerText": "link-goto:\"EAST\",\" Security\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"EAST \",\" Security\")",
+                        "text": "(link-goto:\"EAST\",\" Security\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "EAST ",
-                                "text": "\"EAST \"",
+                                "innerText": "EAST",
+                                "text": "\"EAST\"",
                                 "type": "string"
                             },
                             {
@@ -4287,7 +4287,7 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Cabinet is secured with an electronic padlock. I guess even top secret elite IT admins like stealing office supplies.",
+                        "text": "Cabinet is secured with an electronic padlock. Don't want to think about what happens if you get caught stealing tech supplies around here.",
                         "type": "text"
                     },
                     {
@@ -4779,8 +4779,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $infected to true)(set: $power to true)You reach up your nose, grab the wire in it and run it into the admin terminal. Once you HACK into the electrical system, you find the power controls for the elevator, switch them on.\nAs you disconnect from the admin terminal, you feel it transfer some packets your way. A malware infection! You need to find an anti-virus cure, fast!",
-                        "text": "[(set: $infected to true)(set: $power to true)You reach up your nose, grab the wire in it and run it into the admin terminal. Once you HACK into the electrical system, you find the power controls for the elevator, switch them on.\nAs you disconnect from the admin terminal, you feel it transfer some packets your way. A malware infection! You need to find an anti-virus cure, fast!]",
+                        "innerText": "(set: $infected to true)(set: $power to true)You reach up your nose, grab the wire in it and run it into the admin terminal. You begin to HACK into the facility’s electrical systems. You find the power controls for the elevator, switch them on.\nAs you disconnect from the admin terminal, you feel it transfer some packets your way. A malware infection! You need to find an anti-virus cure, fast!",
+                        "text": "[(set: $infected to true)(set: $power to true)You reach up your nose, grab the wire in it and run it into the admin terminal. You begin to HACK into the facility’s electrical systems. You find the power controls for the elevator, switch them on.\nAs you disconnect from the admin terminal, you feel it transfer some packets your way. A malware infection! You need to find an anti-virus cure, fast!]",
                         "tokens": [
                             {
                                 "innerText": "set: $infected to true",
@@ -4857,7 +4857,7 @@
                                 "type": "macro"
                             },
                             {
-                                "text": "You reach up your nose, grab the wire in it and run it into the admin terminal. Once you HACK into the electrical system, you find the power controls for the elevator, switch them on.",
+                                "text": "You reach up your nose, grab the wire in it and run it into the admin terminal. You begin to HACK into the facility’s electrical systems. You find the power controls for the elevator, switch them on.",
                                 "type": "text"
                             },
                             {
@@ -5771,7 +5771,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": " You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles... a data stick labeled CURE. It has a GPS lock on it, and a label that says \"SERVER ROOM ONLY.\" Wow, office supply theft must actually be a huge problem around here. You grab the data stick. ",
+                        "text": " You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles, a data stick labeled CURE. You grab the data stick. ",
                         "type": "text"
                     },
                     {
@@ -6069,7 +6069,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": "You insert the stick of CURE into your data port. After a second, the GPS lock blinks, says \"valid location detected\" and runs the stick's executable. Ahhhh, sweet anti-virus. Your braindrive partition feels squeaky clean. ",
+                        "text": "You grab a stick of CURE, insert it into your data port. Ahhhh, sweet anti-virus. Your braindrive partition feels squeaky clean. ",
                         "type": "text"
                     },
                     {
@@ -8983,11 +8983,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "The guard notices you. He stands up, hand goes for a GUN at his side. \"Identify yourself!\" he barks. You are unsure if he will let you TALK.\n(if: $inv's COAT is true)[The guard notices your lab COAT, eases up. \"I don't remember any scientists with so much skull hardware. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]",
-                        "text": "[The guard notices you. He stands up, hand goes for a GUN at his side. \"Identify yourself!\" he barks. You are unsure if he will let you TALK.\n(if: $inv's COAT is true)[The guard notices your lab COAT, eases up. \"I don't remember any scientists with so much skull hardware. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]]",
+                        "innerText": "The guard notices you. He stands up, hand goes for a GUN at his side. He speaks Russian, which your T.E.T./R.I.S. translates. \"Identify yourself!\" You are unsure if he will let you TALK.\n(if: $inv's COAT is true)[The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]",
+                        "text": "[The guard notices you. He stands up, hand goes for a GUN at his side. He speaks Russian, which your T.E.T./R.I.S. translates. \"Identify yourself!\" You are unsure if he will let you TALK.\n(if: $inv's COAT is true)[The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]]",
                         "tokens": [
                             {
-                                "text": "The guard notices you. He stands up, hand goes for a GUN at his side. \"Identify yourself!\" he barks. You are unsure if he will let you TALK.",
+                                "text": "The guard notices you. He stands up, hand goes for a GUN at his side. He speaks Russian, which your T.E.T./R.I.S. translates. \"Identify yourself!\" You are unsure if he will let you TALK.",
                                 "type": "text"
                             },
                             {
@@ -9037,11 +9037,11 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "The guard notices your lab COAT, eases up. \"I don't remember any scientists with so much skull hardware. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"",
-                                "text": "[The guard notices your lab COAT, eases up. \"I don't remember any scientists with so much skull hardware. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]",
+                                "innerText": "The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"",
+                                "text": "[The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]",
                                 "tokens": [
                                     {
-                                        "text": "The guard notices your lab COAT, eases up. \"I don't remember any scientists with so much skull hardware. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"",
+                                        "text": "The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"",
                                         "type": "text"
                                     }
                                 ],
