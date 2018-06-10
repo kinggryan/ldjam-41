@@ -1422,6 +1422,24 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1073248339}
+--- !u!1 &1091050508 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1723786535910106, guid: d1f29fbb7ca8cfd41aba4b31ca4503b4,
+    type: 2}
+  m_PrefabInternal: {fileID: 594532079}
+--- !u!114 &1091050509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1091050508}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f407160f0d04ec485b766ad227da88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeSpeed: 0.05
+  typeDelay: 0
 --- !u!1 &1114789944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,7 +2014,7 @@ MonoBehaviour:
   AutoDisplay: 1
   ShowNamedLinks: 1
   updateTextStepDuration: 0.05
-  updateTextStepTimer: -873.58875
+  updateTextStepTimer: -890.6003
   storyText: {fileID: 1114789946}
 --- !u!224 &1480000013 stripped
 RectTransform:
