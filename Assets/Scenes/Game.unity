@@ -321,6 +321,91 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2012901403}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &113111036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 113111040}
+  - component: {fileID: 113111039}
+  - component: {fileID: 113111038}
+  - component: {fileID: 113111037}
+  m_Layer: 5
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &113111037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113111036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae49ac171851e714499abc2e62ce2992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressButtonToPlayParent: {fileID: 0}
+  gameTextToFadeOut:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tetris: {fileID: 113111038}
+  fadedOutGameTextColor: {r: 0.008620679, g: 0.25, b: 0, a: 1}
+  fadedInGameTextColor: {r: 0.0060013034, g: 0.8161765, b: 0.1121621, a: 1}
+  minPauseDuration: 0.25
+--- !u!114 &113111038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113111036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8552bb8eaa46991409e411b3fe2b6ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playDelayFrames: 0
+  nextBlockDisplay: {fileID: 0}
+  stashBlockDisplay: {fileID: 0}
+  boardSizeY: 26
+--- !u!114 &113111039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113111036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de1e243733a5aa54fb2a564af94b6a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugText: {fileID: 0}
+  commandText: {fileID: 0}
+  lineCompleteText: {fileID: 0}
+--- !u!224 &113111040
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113111036}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 208, y: 156}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &334625800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,7 +1996,7 @@ MonoBehaviour:
   AutoDisplay: 1
   ShowNamedLinks: 1
   updateTextStepDuration: 0.05
-  updateTextStepTimer: -878.4719
+  updateTextStepTimer: -878.6753
   storyText: {fileID: 1114789946}
 --- !u!224 &1480000013 stripped
 RectTransform:
