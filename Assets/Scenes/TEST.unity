@@ -335,6 +335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playDelayFrames: 0
+  nextBlockDisplay: {fileID: 0}
+  stashBlockDisplay: {fileID: 0}
   boardSizeY: 26
 --- !u!114 &607400330
 MonoBehaviour:
@@ -634,7 +636,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1956187940114248, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
@@ -1431,7 +1433,7 @@ MonoBehaviour:
   AutoDisplay: 1
   ShowNamedLinks: 1
   updateTextStepDuration: 0.05
-  updateTextStepTimer: -767.12946
+  updateTextStepTimer: -767.0495
   storyText: {fileID: 1114789946}
 --- !u!114 &1480000014
 MonoBehaviour:
@@ -1459,6 +1461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe8dc93340714391a588fbfc9aac358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEngine: {fileID: 0}
 --- !u!1 &1484020992
 GameObject:
   m_ObjectHideFlags: 0

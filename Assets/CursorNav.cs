@@ -79,7 +79,9 @@ public class CursorNav : MonoBehaviour {
         }
         
 		if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)){
+
 			if (currentScene == SceneManager.GetSceneByName("Menu"))
+
 			{
 				if (curIndex == 0){
 					SceneManager.LoadScene("Game");
@@ -93,8 +95,10 @@ public class CursorNav : MonoBehaviour {
 					SceneManager.LoadScene("Options");
 				}
 
+
 			}
 			if (currentScene == SceneManager.GetSceneByName("Options")){
+
 				if (curIndex == 3)
                 {
                     SceneManager.LoadScene("Game");

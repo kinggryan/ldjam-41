@@ -350,11 +350,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae49ac171851e714499abc2e62ce2992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressButtonToPlayParent: {fileID: 0}
+  pressButtonToPlayParent: {fileID: 2022463320}
   gameTextToFadeOut:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1484020994}
+  - {fileID: 1549398983}
+  - {fileID: 1381735136}
   tetris: {fileID: 113111038}
   fadedOutGameTextColor: {r: 0.008620679, g: 0.25, b: 0, a: 1}
   fadedInGameTextColor: {r: 0.0060013034, g: 0.8161765, b: 0.1121621, a: 1}
@@ -371,8 +371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playDelayFrames: 0
-  nextBlockDisplay: {fileID: 0}
-  stashBlockDisplay: {fileID: 0}
+  nextBlockDisplay: {fileID: 520288464}
+  stashBlockDisplay: {fileID: 1981553747}
   boardSizeY: 26
 --- !u!114 &113111039
 MonoBehaviour:
@@ -385,9 +385,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de1e243733a5aa54fb2a564af94b6a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugText: {fileID: 0}
-  commandText: {fileID: 0}
-  lineCompleteText: {fileID: 0}
+  debugText: {fileID: 1381735136}
+  commandText: {fileID: 1809560957}
+  lineCompleteText: {fileID: 57495757}
 --- !u!224 &113111040
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1996,7 +1996,7 @@ MonoBehaviour:
   AutoDisplay: 1
   ShowNamedLinks: 1
   updateTextStepDuration: 0.05
-  updateTextStepTimer: -878.6753
+  updateTextStepTimer: -873.58875
   storyText: {fileID: 1114789946}
 --- !u!224 &1480000013 stripped
 RectTransform:
