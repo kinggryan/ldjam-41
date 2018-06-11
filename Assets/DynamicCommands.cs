@@ -22,11 +22,11 @@ public class DynamicCommands : MonoBehaviour
         links = twinePlayer.Story.GetCurrentLinks();
         items = twinePlayer.Story.Vars["inv"];
     }
-
+    
     // Update is called once per frame
     void Update()
     {
-        UpdateText();
+        UpdateText();     
     }
 
     void UpdateText() {
