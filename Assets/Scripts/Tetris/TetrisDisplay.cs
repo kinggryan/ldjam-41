@@ -125,8 +125,10 @@ public class TetrisDisplay : MonoBehaviour {
 
     void HighlightLine(char[,] board, int yCoord)
     {
+        // If the line complete text is blank, only this line should be highlighted.
+        // Otherwise, we should use the existing text and just add a new line to it because we may want to display multiple lines at once
+        var useLineCompleteText = lineCompleteText.text.Length > 0;
         var textString = "";
-        var currentWordIndex = 0;
         for (var y = board.GetLength(1) - 1; y >= 0; y--)
         {
             for (var x = 0; x < board.GetLength(0); x++)
@@ -134,11 +136,10 @@ public class TetrisDisplay : MonoBehaviour {
                 if (yCoord == y)
                 {
                     textString += board[x, y];
-                    currentWordIndex++;
                 }
                 else
                 {
-                    textString += ' ';
+                    textString += useLineCompleteText ? lineCompleteText.text[y*(board.GetLength(0)+1) + x] : ' ';
                 }
             }
             textString += "\n";
