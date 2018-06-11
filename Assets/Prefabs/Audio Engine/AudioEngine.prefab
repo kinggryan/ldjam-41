@@ -1404,10 +1404,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4246659497072590}
-  - {fileID: 4875488951039732}
   - {fileID: 4275561756526694}
   m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4186799532550834
 Transform:
@@ -1524,7 +1523,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4175934568216350}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4304008188022300
 Transform:
@@ -1771,6 +1770,7 @@ Transform:
   - {fileID: 4204672712769036}
   - {fileID: 4859686428086706}
   - {fileID: 4608820093092470}
+  - {fileID: 4875488951039732}
   - {fileID: 4175934568216350}
   m_Father: {fileID: 4152782509377852}
   m_RootOrder: 1
@@ -2162,8 +2162,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4175934568216350}
-  m_RootOrder: 1
+  m_Father: {fileID: 4505665473088592}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4890025044361556
 Transform:
@@ -2389,6 +2389,7 @@ MonoBehaviour:
   output: {fileID: 243866688812705942, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114082701887901462
@@ -2479,6 +2480,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114103905995008988
@@ -2514,6 +2516,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114132866397605752
@@ -2549,6 +2552,7 @@ MonoBehaviour:
   output: {fileID: 243691669167639702, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114155606218685588
@@ -2606,6 +2610,7 @@ MonoBehaviour:
   output: {fileID: 243306652105412556, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114196793929096366
@@ -2707,6 +2712,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114211498282445880
@@ -2742,6 +2748,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114214780705460502
@@ -2777,6 +2784,7 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114248446876070428
@@ -2834,6 +2842,7 @@ MonoBehaviour:
   output: {fileID: 243869501408604698, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114267898989923858
@@ -2979,6 +2988,7 @@ MonoBehaviour:
   output: {fileID: 243000698359656230, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114408156645690888
@@ -3014,6 +3024,7 @@ MonoBehaviour:
   output: {fileID: 243111215895784604, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114408696002531406
@@ -3049,6 +3060,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114411847300786382
@@ -3084,6 +3096,7 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114416626135346226
@@ -3130,6 +3143,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114435188788970198
@@ -3165,6 +3179,7 @@ MonoBehaviour:
   output: {fileID: 243317859957219062, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114435943328980636
@@ -3222,6 +3237,7 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114466338203356078
@@ -3323,6 +3339,7 @@ MonoBehaviour:
   output: {fileID: 243524121490445238, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114497265934028490
@@ -3358,6 +3375,7 @@ MonoBehaviour:
   output: {fileID: 243869501408604698, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114503765097109792
@@ -3416,6 +3434,7 @@ MonoBehaviour:
   output: {fileID: 243693818407189546, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 1
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114545979970279454
@@ -3495,6 +3514,7 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114549126112874186
@@ -3552,6 +3572,7 @@ MonoBehaviour:
   output: {fileID: 243869501408604698, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114554837729869470
@@ -3569,7 +3590,7 @@ MonoBehaviour:
   currentMusicSnapshot: {fileID: 0}
   mixerSnapshots:
   - {fileID: 245837382050888162, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
-  - {fileID: 245251190224604086, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  - {fileID: 245961715484187498, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   - {fileID: 245112304087491770, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   - {fileID: 245552186577651406, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   - {fileID: 245118862004900794, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
@@ -3651,6 +3672,7 @@ MonoBehaviour:
   output: {fileID: 243737428850878322, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114562460367931372
@@ -3730,6 +3752,7 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114591121708581740
@@ -3787,6 +3810,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114642562044835558
@@ -3844,6 +3868,7 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114692785521603364
@@ -3901,6 +3926,7 @@ MonoBehaviour:
   output: {fileID: 243691669167639702, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114718236423869564
@@ -3936,6 +3962,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114723863764007750
@@ -3971,6 +3998,7 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114747354752501552
@@ -4028,6 +4056,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114773242635950128
@@ -4107,6 +4136,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114855227450101888
@@ -4164,6 +4194,7 @@ MonoBehaviour:
   output: {fileID: 0}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114883451812757448
@@ -4243,6 +4274,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114905918216053520
@@ -4278,6 +4310,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114966224851766896
@@ -4313,6 +4346,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114968606478951746
@@ -4348,6 +4382,7 @@ MonoBehaviour:
   output: {fileID: 243105637752370232, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114971279744968298
@@ -4383,6 +4418,7 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
 --- !u!114 &114979379301042582
@@ -4418,6 +4454,7 @@ MonoBehaviour:
   output: {fileID: 0}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
 --- !u!114 &114981023321961824
@@ -4453,5 +4490,6 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0

@@ -29,25 +29,30 @@ public class MusicCues : MonoBehaviour {
 		}
 		if (musicEngine != null){
 			Debug.Log("Getting current music snapshot");
-			musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[6];
+			musicEngine.mixerSnapshots[0].TransitionTo(musicEngine.pauseTransitionTime);
+			musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[2];
 		}
 	}
 	[StoryCue(" HackTitle", "Enter")]
 	void HackTitleEnter(){
 		Debug.Log("HackTitle Enter");
 		soundEngine.PlaySoundWithName("SystemCheckComplete");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[3];
 	}
 
 	[StoryCue(" LookTitle", "Enter")]
 	void LookTitleEnter(){
 		Debug.Log("LookTitle Enter");
 		soundEngine.PlaySoundWithName("EnterCommand");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[4];
+		
 	}
 	
 	[StoryCue(" Garage", "Enter")]
 	void GarageEnter(){
 		Debug.Log("Garage Enter");
 		soundEngine.PlaySoundWithName("OpenHatch");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[5];
 	}
 	
 	[StoryCue(" LookGarage", "Enter")]
@@ -64,6 +69,7 @@ public class MusicCues : MonoBehaviour {
 	void WarehouseEnter(){
 		Debug.Log("Warehouse Enter");
 		soundEngine.PlaySoundWithName("DoorOpen");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[5];
 	}
 	[StoryCue(" LookWare", "Enter")]
 	void LookWareEnter(){

@@ -19,7 +19,7 @@ public class MusicEngine : MonoBehaviour {
 	public TransitionAndName[] events;
 
 	void Start (){
-		currentMusicSnapshot = mixerSnapshots[0];
+		currentMusicSnapshot = mixerSnapshots[1];
 		currentMusicSnapshot.TransitionTo(4);
 	}
     
@@ -39,7 +39,7 @@ public class MusicEngine : MonoBehaviour {
 	}
 
 	public void PauseMusic(){
-		paused.TransitionTo(pauseTransitionTime);
+		mixerSnapshots[0].TransitionTo(pauseTransitionTime);
 	}
 
 	public void UnpauseMusic(){
