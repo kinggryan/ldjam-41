@@ -541,7 +541,7 @@ public class TetrisManager : MonoBehaviour {
     public void PausePlay()
     {
         playDelayFrames = -1;
-        musicEngine.PauseMusic();
+        
         
     }
 

@@ -12,12 +12,14 @@ public class CursorNav : MonoBehaviour {
 	public Scene currentScene;
 	public Color lime = new Color(0, 255, 0);
 	public int cursorOffset = 62;
+	private SoundEngine soundEngine;
 
 
 	// Use this for initialization
 	void Start () {
 		textList = GetComponentsInChildren<Text>();
 		cursor = gameObject.transform.Find("Cursor");
+		soundEngine = Object.FindObjectOfType<SoundEngine>();
 		currentScene = SceneManager.GetActiveScene();
 
 		if (currentScene == SceneManager.GetSceneByName("Options"))
@@ -30,6 +32,9 @@ public class CursorNav : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown("down")){
+			if (curIndex < 3){
+				soundEngine.PlaySoundWithName("MenuNav");
+			}
 			if(curIndex < 6  && currentScene == SceneManager.GetSceneByName("Options")){
 				textList[curIndex].color = lime;
 				if (curIndex == 2)
@@ -60,6 +65,9 @@ public class CursorNav : MonoBehaviour {
 
 		if (Input.GetButtonDown("up"))
         {
+			if (curIndex > 0){
+				soundEngine.PlaySoundWithName("MenuNav");
+			}
 			if (curIndex >= 1)
             {
 				textList[curIndex].color = lime;
@@ -81,7 +89,7 @@ public class CursorNav : MonoBehaviour {
         }
         
 		if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)){
-
+			soundEngine.PlaySoundWithName("Enter");
 			if (currentScene == SceneManager.GetSceneByName("Menu"))
 
 			{

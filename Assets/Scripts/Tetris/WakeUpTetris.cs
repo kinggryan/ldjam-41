@@ -15,9 +15,12 @@ public class WakeUpTetris : MonoBehaviour {
     private float pauseTimer;
     private bool isFirstPause = true;
 
+    private MusicEngine musicEngine;
+
     private void Start()
     {
         fadedInGameTextColor = gameTextToFadeOut[0].color;
+        musicEngine = Object.FindObjectOfType<MusicEngine>();
         PausePlay();
     }
 
@@ -35,6 +38,7 @@ public class WakeUpTetris : MonoBehaviour {
     {
         pauseTimer = 0;
         Debug.Log("Pausing play");
+        musicEngine.PauseMusic();
         tetris.PausePlay();
         pressButtonToPlayParent.SetActive(true);
         // Fade in text

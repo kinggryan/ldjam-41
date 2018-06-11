@@ -7,16 +7,11 @@ using Cradle;
 public class MusicCues : MonoBehaviour {
 	public SoundEngine soundEngine;
     private MusicEngine musicEngine;
-	private bool firstHackEntered = false;
-	private bool firstLookEntered = false;
-	//public AudioMixerSnapshot[] mixerSnapshots;
 
-	// Use this for initialization
 	void Awake () {
 
 		soundEngine = Object.FindObjectOfType<SoundEngine>();
         musicEngine = Object.FindObjectOfType<MusicEngine>();
-		//musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[0];
 	}
 
 
@@ -29,25 +24,30 @@ public class MusicCues : MonoBehaviour {
 		}
 		if (musicEngine != null){
 			Debug.Log("Getting current music snapshot");
-			musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[6];
+			musicEngine.mixerSnapshots[0].TransitionTo(musicEngine.pauseTransitionTime);
+			musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[2];
 		}
 	}
 	[StoryCue(" HackTitle", "Enter")]
 	void HackTitleEnter(){
 		Debug.Log("HackTitle Enter");
 		soundEngine.PlaySoundWithName("SystemCheckComplete");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[3];
 	}
 
 	[StoryCue(" LookTitle", "Enter")]
 	void LookTitleEnter(){
 		Debug.Log("LookTitle Enter");
 		soundEngine.PlaySoundWithName("EnterCommand");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[4];
+		
 	}
 	
 	[StoryCue(" Garage", "Enter")]
 	void GarageEnter(){
 		Debug.Log("Garage Enter");
 		soundEngine.PlaySoundWithName("OpenHatch");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[5];
 	}
 	
 	[StoryCue(" LookGarage", "Enter")]
@@ -64,6 +64,7 @@ public class MusicCues : MonoBehaviour {
 	void WarehouseEnter(){
 		Debug.Log("Warehouse Enter");
 		soundEngine.PlaySoundWithName("DoorOpen");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[5];
 	}
 	[StoryCue(" LookWare", "Enter")]
 	void LookWareEnter(){
@@ -77,31 +78,60 @@ public class MusicCues : MonoBehaviour {
 	void ServerEnter(){
 		Debug.Log("Server Enter");
 		soundEngine.PlaySoundWithName("DoorOpen");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[6];
 	}	
+	
 	[StoryCue(" HackServ", "Enter")]
 	void HackServEnter(){
 		Debug.Log("HackServ Enter");
 		soundEngine.PlaySoundWithName("SystemCheckComplete");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[7];
 	}
+
+	[StoryCue(" UseCure", "Enter")]
+	void UseCureEnter(){
+		Debug.Log("UseCure Enter");
+		soundEngine.PlaySoundWithName("Cure");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[6];
+	
+	}
+
 	[StoryCue(" Security", "Enter")]
 	void SecurityEnter(){
 		Debug.Log("Server Enter");
 		soundEngine.PlaySoundWithName("DoorOpen");
+		soundEngine.PlaySoundWithName("GuardAlert");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[8];
 	}
+	
+	[StoryCue(" LookSec", "Enter")]
+	void LookSecEnter(){
+		Debug.Log("LookSec Enter");
+		soundEngine.PlaySoundWithName("GuardShoot");
+	}
+
 	[StoryCue("Lab", "Enter")]
 	void LabEnter(){
 		Debug.Log("Lab Enter");
 		soundEngine.PlaySoundWithName("Elevator");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[10];
 	}
+	[StoryCue("AI", "Enter")]
+	void AIEnter(){
+		Debug.Log("AI Enter");
+		soundEngine.PlaySoundWithName("Kapcha");
+	} 
 	[StoryCue("AI_Win", "Enter")]
 	void AI_WinEnter(){
 		Debug.Log("AI_Win Enter");
 		soundEngine.PlaySoundWithName("CleanroomDoor");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[11];
 	}
 	[StoryCue(" Clean", "Enter")]
 	void CleanEnter(){
 		Debug.Log("Clean Enter");
 		soundEngine.PlaySoundWithName("CleanroomDoor");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[12];
 	}
 	[StoryCue(" End", "Enter")]
 	void EndEnter(){

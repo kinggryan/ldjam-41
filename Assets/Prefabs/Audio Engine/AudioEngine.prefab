@@ -59,6 +59,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1077684694694200
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4495379654760210}
+  - component: {fileID: 114821807476147268}
+  m_Layer: 0
+  m_Name: Kapcha
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1085850791277892
 GameObject:
   m_ObjectHideFlags: 1
@@ -425,6 +441,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1390141483087100
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4089297436333670}
+  - component: {fileID: 114337860374282102}
+  m_Layer: 0
+  m_Name: GuardShoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1408471678871912
 GameObject:
   m_ObjectHideFlags: 1
@@ -467,7 +499,7 @@ GameObject:
   - component: {fileID: 4711489272869372}
   - component: {fileID: 114446338968355896}
   m_Layer: 0
-  m_Name: Enter
+  m_Name: GetGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -532,6 +564,22 @@ GameObject:
   - component: {fileID: 114210837585609744}
   m_Layer: 0
   m_Name: CleanroomDoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1481042802181960
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4289830295006872}
+  - component: {fileID: 114687061419141542}
+  m_Layer: 0
+  m_Name: Enter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -713,6 +761,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1635444524060552
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4787579448154330}
+  - component: {fileID: 114848217971650032}
+  m_Layer: 0
+  m_Name: Cure
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1678556968935294
 GameObject:
   m_ObjectHideFlags: 1
@@ -852,6 +916,22 @@ GameObject:
   - component: {fileID: 114214780705460502}
   m_Layer: 0
   m_Name: BlockMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1747488864101220
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4159746788328992}
+  - component: {fileID: 114535951545555150}
+  m_Layer: 0
+  m_Name: GuardAlert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1329,6 +1409,19 @@ Transform:
   m_Father: {fileID: 4305650117093838}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4089297436333670
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1390141483087100}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4505665473088592}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4093779807079642
 Transform:
   m_ObjectHideFlags: 1
@@ -1393,6 +1486,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4159746788328992
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747488864101220}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4505665473088592}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4175934568216350
 Transform:
   m_ObjectHideFlags: 1
@@ -1404,10 +1510,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4246659497072590}
-  - {fileID: 4875488951039732}
   - {fileID: 4275561756526694}
   m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 21
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4186799532550834
 Transform:
@@ -1524,7 +1629,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4175934568216350}
-  m_RootOrder: 2
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4289830295006872
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481042802181960}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4505665473088592}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4304008188022300
 Transform:
@@ -1740,6 +1858,19 @@ Transform:
   m_Father: {fileID: 4305650117093838}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4495379654760210
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1077684694694200}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4505665473088592}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4505665473088592
 Transform:
   m_ObjectHideFlags: 1
@@ -1750,7 +1881,7 @@ Transform:
   m_LocalPosition: {x: -464.33832, y: -308.19785, z: 0.697339}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4711489272869372}
+  - {fileID: 4289830295006872}
   - {fileID: 4005152104318352}
   - {fileID: 4815864110058808}
   - {fileID: 4933120870927438}
@@ -1771,6 +1902,12 @@ Transform:
   - {fileID: 4204672712769036}
   - {fileID: 4859686428086706}
   - {fileID: 4608820093092470}
+  - {fileID: 4875488951039732}
+  - {fileID: 4159746788328992}
+  - {fileID: 4089297436333670}
+  - {fileID: 4495379654760210}
+  - {fileID: 4787579448154330}
+  - {fileID: 4711489272869372}
   - {fileID: 4175934568216350}
   m_Father: {fileID: 4152782509377852}
   m_RootOrder: 1
@@ -2020,7 +2157,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 0
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4724868250805994
 Transform:
@@ -2073,6 +2210,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4305650117093838}
   m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4787579448154330
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1635444524060552}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4505665473088592}
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4806810300229178
 Transform:
@@ -2162,8 +2312,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4175934568216350}
-  m_RootOrder: 1
+  m_Father: {fileID: 4505665473088592}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4890025044361556
 Transform:
@@ -2323,7 +2473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events:
   - name: Enter
-    soundEvent: {fileID: 114446338968355896}
+    soundEvent: {fileID: 114687061419141542}
   - name: BlockMove
     soundEvent: {fileID: 114214780705460502}
   - name: BlockLand
@@ -2356,6 +2506,18 @@ MonoBehaviour:
     soundEvent: {fileID: 114981023321961824}
   - name: CleanroomDoor
     soundEvent: {fileID: 114210837585609744}
+  - name: MenuNav
+    soundEvent: {fileID: 114663281475188996}
+  - name: GuardAlert
+    soundEvent: {fileID: 114535951545555150}
+  - name: GuardShoot
+    soundEvent: {fileID: 114663281475188996}
+  - name: Kapcha
+    soundEvent: {fileID: 114663281475188996}
+  - name: Cure
+    soundEvent: {fileID: 114663281475188996}
+  - name: GetGun
+    soundEvent: {fileID: 114663281475188996}
 --- !u!114 &114057775354726758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2389,8 +2551,10 @@ MonoBehaviour:
   output: {fileID: 243866688812705942, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114082701887901462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2479,8 +2643,10 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114103905995008988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2514,8 +2680,10 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114132866397605752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2549,8 +2717,10 @@ MonoBehaviour:
   output: {fileID: 243691669167639702, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114155606218685588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2606,8 +2776,10 @@ MonoBehaviour:
   output: {fileID: 243306652105412556, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114196793929096366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2707,8 +2879,10 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114211498282445880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2742,8 +2916,10 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114214780705460502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2757,7 +2933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   random: 0
   playOnAwake: 0
-  volume: 1
+  volume: 0.6
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -2777,8 +2953,10 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114248446876070428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2834,8 +3012,10 @@ MonoBehaviour:
   output: {fileID: 243869501408604698, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114267898989923858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2880,6 +3060,43 @@ MonoBehaviour:
   fadeAfterInterval: 0
   timer: 0
   transition: 0
+--- !u!114 &114337860374282102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1390141483087100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  random: 0
+  playOnAwake: 0
+  volume: 1
+  pitch: 0
+  pitchRandomization: 0
+  fadeInTime: 0
+  fadeOutTime: 0
+  fadeOutTimer: 1
+  startDelay: 1
+  audioClip:
+  - {fileID: 8300000, guid: 25d461a8d7563ee43862e56366547098, type: 3}
+  waitTime: 0
+  waitRange: 0
+  listener: {fileID: 0}
+  threeDee: 0
+  threeDeeMultiplier: 1
+  panMultiplier: 0
+  externalVolumeModifier: 1
+  externalPitchModifier: 0
+  output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  clipToLoop: 0
+  playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
+  type: 2
+  timer: 0
+  isLooping: 0
 --- !u!114 &114346714558922618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2979,8 +3196,10 @@ MonoBehaviour:
   output: {fileID: 243000698359656230, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114408156645690888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3014,8 +3233,10 @@ MonoBehaviour:
   output: {fileID: 243111215895784604, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114408696002531406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3029,7 +3250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   random: 0
   playOnAwake: 0
-  volume: 1
+  volume: 0.6
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -3049,8 +3270,10 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114411847300786382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3084,8 +3307,10 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114416626135346226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3130,8 +3355,10 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114435188788970198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3165,8 +3392,10 @@ MonoBehaviour:
   output: {fileID: 243317859957219062, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114435943328980636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3210,7 +3439,7 @@ MonoBehaviour:
   fadeOutTimer: 1
   startDelay: 0
   audioClip:
-  - {fileID: 8300000, guid: e366f5c8199221846a7fab19510cf449, type: 3}
+  - {fileID: 8300000, guid: 76c912f00616be74982ad2e4a403c316, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -3219,11 +3448,13 @@ MonoBehaviour:
   panMultiplier: 0
   externalVolumeModifier: 1
   externalPitchModifier: 0
-  output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114466338203356078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3323,8 +3554,10 @@ MonoBehaviour:
   output: {fileID: 243524121490445238, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114497265934028490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3358,8 +3591,10 @@ MonoBehaviour:
   output: {fileID: 243869501408604698, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114503765097109792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3382,6 +3617,43 @@ MonoBehaviour:
   fadeAfterInterval: 0
   timer: 0
   transition: 0
+--- !u!114 &114535951545555150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747488864101220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  random: 0
+  playOnAwake: 0
+  volume: 1
+  pitch: 0
+  pitchRandomization: 0
+  fadeInTime: 0
+  fadeOutTime: 0
+  fadeOutTimer: 1
+  startDelay: 2
+  audioClip:
+  - {fileID: 8300000, guid: bcdd6689dc7bec94a926daa5d490ca89, type: 3}
+  waitTime: 0
+  waitRange: 0
+  listener: {fileID: 0}
+  threeDee: 0
+  threeDeeMultiplier: 1
+  panMultiplier: 0
+  externalVolumeModifier: 1
+  externalPitchModifier: 0
+  output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  clipToLoop: 0
+  playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
+  type: 2
+  timer: 0
+  isLooping: 0
 --- !u!114 &114536754032764476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3416,8 +3688,10 @@ MonoBehaviour:
   output: {fileID: 243693818407189546, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 1
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114545979970279454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3495,8 +3769,10 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114549126112874186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3552,8 +3828,10 @@ MonoBehaviour:
   output: {fileID: 243869501408604698, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114554837729869470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3568,14 +3846,19 @@ MonoBehaviour:
   paused: {fileID: 245251190224604086, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   currentMusicSnapshot: {fileID: 0}
   mixerSnapshots:
+  - {fileID: 245961715484187498, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   - {fileID: 245837382050888162, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   - {fileID: 245251190224604086, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
-  - {fileID: 245112304087491770, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
-  - {fileID: 245552186577651406, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
-  - {fileID: 245118862004900794, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
-  - {fileID: 245172340758878602, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   - {fileID: 245525371177776354, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
-  - {fileID: 0}
+  - {fileID: 245172340758878602, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  - {fileID: 245118862004900794, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  - {fileID: 245291720629664850, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  - {fileID: 245129154240544994, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  - {fileID: 245162057263312786, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  - {fileID: 245089587094332448, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  - {fileID: 245251536222338372, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  - {fileID: 245367260928669758, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  - {fileID: 245165377291007124, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   pauseTransitionTime: 2
   events:
   - name: GameStart
@@ -3651,8 +3934,10 @@ MonoBehaviour:
   output: {fileID: 243737428850878322, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114562460367931372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3730,8 +4015,10 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114591121708581740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3787,8 +4074,10 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114642562044835558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3824,7 +4113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   random: 0
   playOnAwake: 0
-  volume: 1
+  volume: 0.3
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -3844,8 +4133,47 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
+--- !u!114 &114687061419141542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481042802181960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  random: 0
+  playOnAwake: 0
+  volume: 1
+  pitch: 0
+  pitchRandomization: 0
+  fadeInTime: 0
+  fadeOutTime: 0
+  fadeOutTimer: 1
+  startDelay: 0
+  audioClip:
+  - {fileID: 8300000, guid: e366f5c8199221846a7fab19510cf449, type: 3}
+  waitTime: 0
+  waitRange: 0
+  listener: {fileID: 0}
+  threeDee: 0
+  threeDeeMultiplier: 1
+  panMultiplier: 0
+  externalVolumeModifier: 1
+  externalPitchModifier: 0
+  output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  clipToLoop: 0
+  playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
+  type: 2
+  timer: 0
+  isLooping: 0
 --- !u!114 &114692785521603364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3901,8 +4229,10 @@ MonoBehaviour:
   output: {fileID: 243691669167639702, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114718236423869564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3936,8 +4266,10 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114723863764007750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3971,8 +4303,10 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114747354752501552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4028,8 +4362,10 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114773242635950128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4107,8 +4443,84 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
+--- !u!114 &114821807476147268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1077684694694200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  random: 0
+  playOnAwake: 0
+  volume: 1
+  pitch: 0
+  pitchRandomization: 0
+  fadeInTime: 0
+  fadeOutTime: 0
+  fadeOutTimer: 1
+  startDelay: 0
+  audioClip:
+  - {fileID: 8300000, guid: 900991c3b6c43444e821e81747722982, type: 3}
+  waitTime: 0
+  waitRange: 0
+  listener: {fileID: 0}
+  threeDee: 0
+  threeDeeMultiplier: 1
+  panMultiplier: 0
+  externalVolumeModifier: 1
+  externalPitchModifier: 0
+  output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  clipToLoop: 0
+  playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
+  type: 2
+  timer: 0
+  isLooping: 0
+--- !u!114 &114848217971650032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1635444524060552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  random: 0
+  playOnAwake: 0
+  volume: 0.5
+  pitch: 0
+  pitchRandomization: 0
+  fadeInTime: 0
+  fadeOutTime: 0
+  fadeOutTimer: 1
+  startDelay: 0
+  audioClip:
+  - {fileID: 8300000, guid: 138bc91ff1899ff4ea5696cc565ace12, type: 3}
+  waitTime: 0
+  waitRange: 0
+  listener: {fileID: 0}
+  threeDee: 0
+  threeDeeMultiplier: 1
+  panMultiplier: 0
+  externalVolumeModifier: 1
+  externalPitchModifier: 0
+  output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  clipToLoop: 0
+  playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
+  type: 2
+  timer: 0
+  isLooping: 0
 --- !u!114 &114855227450101888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4164,8 +4576,10 @@ MonoBehaviour:
   output: {fileID: 0}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114883451812757448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4243,8 +4657,10 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114905918216053520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4278,8 +4694,10 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114966224851766896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4313,8 +4731,10 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114968606478951746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4348,8 +4768,10 @@ MonoBehaviour:
   output: {fileID: 243105637752370232, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114971279744968298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4383,8 +4805,10 @@ MonoBehaviour:
   output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
 --- !u!114 &114979379301042582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4418,8 +4842,10 @@ MonoBehaviour:
   output: {fileID: 0}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 0
   timer: 0
+  isLooping: 0
 --- !u!114 &114981023321961824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4453,5 +4879,7 @@ MonoBehaviour:
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
   type: 2
   timer: 0
+  isLooping: 0
