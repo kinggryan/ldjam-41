@@ -57,6 +57,7 @@ private bool soundPlayed = false;
 
 public double timer;
 private VirtualAudioChannel audioChannel;
+public bool isLooping;
 
     void Awake(){
         audioChannel = gameObject.transform.parent.GetComponent<VirtualAudioChannel>();
@@ -118,7 +119,7 @@ private VirtualAudioChannel audioChannel;
         SetStartVolume(source);
         SetPitch(source);
         nextClipToPlay = source;
-        if (type == Type.Loop || type == Type.Sequence && soundPlayed){
+        if (type == Type.Loop && !isLooping || type == Type.Sequence && soundPlayed){
             ScheduleNextClipToPlayAtEndOfCurrentClip(source, currentClipStartTime, currentClipEndTime);
         }
 
@@ -146,7 +147,7 @@ private VirtualAudioChannel audioChannel;
         {
             if (type == Type.Loop){
                 if (clip == clipToLoop){
-
+                    source.loop = true;
                 }else{
                     clip += 1;
                 }
@@ -171,6 +172,7 @@ private VirtualAudioChannel audioChannel;
                 Destroy(audioSource);
             }
         }
+        isLooping = false;
     }
     
     void checkIfSameAsLast(int last, int current)
@@ -196,6 +198,9 @@ private VirtualAudioChannel audioChannel;
 
     void ScheduleNextClipToPlayAtEndOfCurrentClip(AudioSource source, double clipStartTime, double clipEndTime){
         source.PlayScheduled(clipEndTime);
+        if(source.loop == true){
+            isLooping = true;
+        }
         //Debug.Log("Sound scheduled to play at " + clipEndTime);
         float endTimeOfNextClipToPlay = (float)clipEndTime + audioClip[clip].length;
         //Destroy(source, audioClip[clip].length + 0.7f);

@@ -20,7 +20,7 @@ public class MusicEngine : MonoBehaviour {
 
 	void Start (){
 		currentMusicSnapshot = mixerSnapshots[1];
-		currentMusicSnapshot.TransitionTo(4);
+		currentMusicSnapshot.TransitionTo(3.5f);
 	}
     
 	public void ChangeMusicWithName(string name) {
