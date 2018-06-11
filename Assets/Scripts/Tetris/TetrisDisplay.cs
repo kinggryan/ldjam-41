@@ -68,20 +68,28 @@ public class TetrisDisplay : MonoBehaviour {
     void HighLightWord(char[,] board, string word, int yCoord)
     {
         var textString = "";
-        var currentWordIndex = 0;
         for (var y = board.GetLength(1) - 1; y >= 0; y--)
         {
-            for (var x = 0; x < board.GetLength(0); x++)
-            {
-                if(currentWordIndex < word.Length && yCoord == y && board[x, y] == word[currentWordIndex])
-                {
-                    textString += board[x, y];
-                    currentWordIndex++;
-                } else
-                {
-                    textString += ' ';
+            if(yCoord == y) {
+                var comparisonString = "";
+                for(var x = 0 ; x < board.GetLength(0); x++) {
+                    comparisonString += board[x,y];
+                }
+                var startWordIndex = comparisonString.IndexOf(word);
+                var endWordIndex = comparisonString.IndexOf(word) + word.Length;
+                Debug.Log("Start: " + startWordIndex + " end " + endWordIndex);
+                for(var x = 0 ; x < board.GetLength(0); x++) {
+                    if(x >= startWordIndex && x < endWordIndex)
+                        textString += board[x,y];
+                    else
+                        textString += " ";
+                }
+            } else {
+                for(var x = 0 ; x < board.GetLength(0); x++) {
+                    textString += " ";
                 }
             }
+
             textString += "\n";
         }
 
