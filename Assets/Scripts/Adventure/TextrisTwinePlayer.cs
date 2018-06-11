@@ -6,7 +6,8 @@ using Cradle;
 public class TextrisTwinePlayer : TwineTextPlayer {
 
     public float updateTextStepDuration = 0.09f;
-    public float updateTextStepTimer = 0f;
+    private float updateTextStepTimer = 0f;
+    public float updateTextDelay = 5.5f;
     public UnityEngine.UI.Text storyText;
     string targetStoryText = "";
 
@@ -15,8 +16,12 @@ public class TextrisTwinePlayer : TwineTextPlayer {
         targetStoryText += "\n\n<color=white>" + command + "</color>\n\n";
     }
 
+    private void Awake() {
+        updateTextStepTimer = updateTextDelay;
+    }
+
     private void Update()
-    {
+    {   
         updateTextStepTimer -= Time.deltaTime;
         if(updateTextStepTimer <= 0)
         {
@@ -66,7 +71,7 @@ public class TextrisTwinePlayer : TwineTextPlayer {
                 }
             }
     
-            //Debug.Log("Printing text for story text:" + text.Text);
+            Debug.Log("Printing text for story text:" + text.Text);
             if (!string.IsNullOrEmpty(text.Text))
             {
                 targetStoryText += text.Text.Replace('’', '\'');

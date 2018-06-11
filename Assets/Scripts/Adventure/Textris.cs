@@ -138,7 +138,6 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["CLEAN"]  = false;
 		yield return text("Improper shutdown detected. System check initiated...");
 		yield return lineBreak();
-		yield return lineBreak();
 		yield return text("Testing command module. Manipulate data using anchor thoughts W, A, S, D, <, and >. Enter command HACK. ");
 		yield return link("HACK", " HackTitle", null);
 		yield break;
@@ -266,7 +265,6 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage5_Main()
 	{
-		yield return lineBreak();
 		yield return text("\"Looks like you're human ... or, human enough. Opening cleanroom door.\" The cleanroom door to the NORTH hisses as it unlocks. ");
 		Vars.open_clean  = true;
 		yield return text(" ");
@@ -294,9 +292,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["SECURITY"]  = false;
 		Vars.location["CLEAN"]  = false;
 		Vars.location["TITLE"]  = false;
-		yield return text(" ");
-		yield return lineBreak();
-		yield return text("You pound on the hatch. Springs open. You haul yourself out of the tank.");
+		yield return text(" You pound on the hatch. Springs open. You haul yourself out of the tank.");
 		yield return lineBreak();
 		yield return text("You’re in a garage. Door to the NORTH, a keypad next to it. A desk with several drawers to LOOK through. ");
 		yield return link("LOOK", " LookGarage", null);
@@ -317,7 +313,6 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	IStoryThread passage7_Main()
 	{
 		yield return text("System check complete. ");
-		yield return lineBreak();
 		yield return lineBreak();
 		yield return text("Enter command LOOK to engage sensory data collection when ready. ");
 		yield return link("LOOK", " LookTitle", null);
@@ -636,7 +631,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		if(Vars.power == false) {
 			yield return link("HACK", " HackServ", null);
 		}
-		yield return lineBreak();
+		yield return text(" ");
 		if(Vars.inv["FOB"] == false) {
 			yield return link("GET FOB", " GetFoB", null);
 		}
@@ -906,9 +901,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	IStoryThread passage27_Main()
 	{
 		if(Vars.cor_ans == "FOB") {
-			yield return text("Correct! ");
-			yield return lineBreak();
-			yield return text("Second question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. ");
+			yield return text("Correct! Second question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. ");
 			Vars.cor_ans  = "COAT";
 		}
 		else {
@@ -948,9 +941,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	IStoryThread passage28_Main()
 	{
 		if(Vars.cor_ans == "COAT") {
-			yield return text("Correct! ");
-			yield return lineBreak();
-			yield return text("Last question: tell me something you could use to make people beg for mercy.  ");
+			yield return text("Correct! Last question: tell me something you could use to make people beg for mercy.  ");
 			Vars.cor_ans  = "GUN";
 		}
 		else {

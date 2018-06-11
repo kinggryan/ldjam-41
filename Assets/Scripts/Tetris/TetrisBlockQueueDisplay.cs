@@ -6,10 +6,10 @@ public class TetrisBlockQueueDisplay : MonoBehaviour {
 
 	UnityEngine.UI.Text blockQueueDisplay;
 
+
 	// Use this for initialization
 	void Start () {
-		blockQueueDisplay = GetComponent<UnityEngine.UI.Text>();
-
+		blockQueueDisplay = GetComponent<UnityEngine.UI.Text>();		      
 	}
 	
 	public void SetNextBlock(TetrisBlock block) {
@@ -32,4 +32,5 @@ public class TetrisBlockQueueDisplay : MonoBehaviour {
 
 		// Debug.Log("Adding to board:" + blockQueueText);
 	}
+    
 }

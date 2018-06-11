@@ -12,6 +12,9 @@ public class DynamicCommands : MonoBehaviour
     public Cradle.StoryVar items;
     public Text commandText;
 
+    private string fullTextStr = "";
+    private bool shouldUpdateCommands = false;
+
     // Use this for initialization
     void Start()
     {
@@ -19,19 +22,32 @@ public class DynamicCommands : MonoBehaviour
         links = twinePlayer.Story.GetCurrentLinks();
         items = twinePlayer.Story.Vars["inv"];
     }
-
+    
     // Update is called once per frame
     void Update()
     {
-        commandText.text = "CMD:/";
-        PrintCommands();
-        commandText.text += "\n INV:/";
-        PrintInv();
-
+        UpdateText();     
     }
 
-    void PrintCommands()
+    void UpdateText() {
+        var newStr = "CMD:/";
+        newStr += PrintCommands();
+        newStr += "\n INV:/";
+        newStr += PrintInv();
+        if(!shouldUpdateCommands && !GetComponent<TextTypeInOnStart>().enabled) {
+            // HACK: Attach a typing effect after determining what the commands should be
+            commandText.text = newStr;
+            GetComponent<TextTypeInOnStart>().enabled = true;
+        }
+        if(newStr != fullTextStr && shouldUpdateCommands) {
+            commandText.text = newStr;
+            fullTextStr = commandText.text;
+        }
+    }
+
+    string PrintCommands()
     {
+        var str = "";
         links = twinePlayer.Story.GetCurrentLinks();
         foreach (var link in links)
         {
@@ -41,40 +57,47 @@ public class DynamicCommands : MonoBehaviour
             if (text.Contains(" "))
             {
                 string[] words = text.Split(null);
-                commandText.text += "\n" + words[0];
-                commandText.text += "\n" + words[1];
+                str += "\n" + words[0];
+                str += "\n" + words[1];
             }
             else
             {
-                commandText.text += "\n" + text;
+                str += "\n" + text;
             }
         }
+        return str;
     }
 
-    void PrintInv()
+    string PrintInv()
     {
+        var str = "";
         items = twinePlayer.Story.Vars["inv"];
 
         if (items["NOTE"] == true)
         {
-            commandText.text += "\n NOTE";
+            str += "\n NOTE";
         }
         if (items["COAT"] == true)
         {
-            commandText.text += "\n COAT";
+            str += "\n COAT";
         }
         if (items["GUN"] == true)
         {
-            commandText.text += "\n GUN";
+            str += "\n GUN";
         }
         if (items["FOB"] == true)
         {
-            commandText.text += "\n FOB";
+            str += "\n FOB";
         }
         if (items["CURE"] == true)
         {
-            commandText.text += "\n CURE";
+            str += "\n CURE";
         }
 
+        return str;
+    }
+
+    void OnTypingAnimationCompleted() {
+        shouldUpdateCommands = true;
     }
 }

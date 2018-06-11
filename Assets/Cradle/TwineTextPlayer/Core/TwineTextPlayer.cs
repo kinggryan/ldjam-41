@@ -122,8 +122,8 @@ public class TwineTextPlayer : MonoBehaviour {
 		this.Story.OnOutput += Story_OnOutput;
 		this.Story.OnOutputRemoved += Story_OnOutputRemoved;
 
-		if (StartStory)
-			this.Story.Begin();
+		//if (StartStory)
+			//this.Story.Begin();
 	}
 
 	void OnDestroy()
