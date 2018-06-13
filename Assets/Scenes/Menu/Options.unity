@@ -2536,7 +2536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textList: []
   sliders: []
-  cursor: {fileID: 0}
+  cursor: {fileID: 221381420}
   curIndex: 0
   lime: {r: 0, g: 255, b: 0, a: 1}
   cursorOffset: 62

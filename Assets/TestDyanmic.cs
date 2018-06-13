@@ -21,6 +21,7 @@
 		void Update () {
 			commandText = twinePlayer.Story.GetCurrentLinks();	
 			items = twinePlayer.Story.Vars["inv"];	
+        
 		}
 		void OnGUI() {
 			int x = 10;
@@ -85,6 +86,5 @@
 				
 			}	
 	}
-
 
 }

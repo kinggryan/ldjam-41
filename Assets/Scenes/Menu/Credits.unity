@@ -1176,8 +1176,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000095367, y: -106}
-  m_SizeDelta: {x: 137.2, y: 79.2}
+  m_AnchoredPosition: {x: 51.1, y: -106}
+  m_SizeDelta: {x: 174.5, y: 79.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1460566065
 MonoBehaviour:
@@ -1211,15 +1211,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'ANNIE CILEY            MUSIC
+  m_Text: 'ANNIE CILEY        MUSIC COMPOSER
 
-    RAMIA DAVIS            STORY
+    RAMIA DAVIS        LEVEL DESGINER
 
-    TRAVIS HENDRIX         MUSIC
+    TRAVIS HENDRIX     AUDIO ENGINEER
 
-    RYAN KING              PROGRAMMING
+    RYAN KING          LEAD PROGAMMER
 
-    GABE WOOD              STORY'
+    GABE WOOD          STORY DESGINER'
 --- !u!222 &1460566066
 CanvasRenderer:
   m_ObjectHideFlags: 0

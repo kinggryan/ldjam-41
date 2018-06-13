@@ -1,5 +1,10 @@
 {
-    "console": [],
+    "console": [
+        {
+            "type": "message",
+            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:101:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:101:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:41837\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:91:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:91:36747 undefined"
+        }
+    ],
     "result": {
         "passages": [
             {
@@ -226,11 +231,7 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "Testing command module. Manipulate data with anchor thoughts W, A, S, D, <, and >. Use anchor thought SPACE to isolate and store data for later use. Enter command HACK. ",
+                        "text": "Testing command module. Manipulate data using anchor thoughts W, A, S, D, <, and >. Enter command HACK. ",
                         "type": "text"
                     },
                     {
@@ -1978,21 +1979,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[LOOK -> LookWare]]",
-                        "text": "[[[LOOK -> LookWare]]]",
+                        "innerText": "[[LOOK-> LookWare]]",
+                        "text": "[[[LOOK-> LookWare]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"LOOK \",\" LookWare\"",
+                                "innerText": "link-goto:\"LOOK\",\" LookWare\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"LOOK \",\" LookWare\")",
+                                "text": "(link-goto:\"LOOK\",\" LookWare\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "LOOK ",
-                                        "text": "\"LOOK \"",
+                                        "innerText": "LOOK",
+                                        "text": "\"LOOK\"",
                                         "type": "string"
                                     },
                                     {
@@ -2057,21 +2058,21 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "[[GET COAT -> GetCoat ]]",
-                        "text": "[[[GET COAT -> GetCoat ]]]",
+                        "innerText": "[[GET COAT-> GetCoat ]]",
+                        "text": "[[[GET COAT-> GetCoat ]]]",
                         "tokens": [
                             {
-                                "innerText": "link-goto:\"GET COAT \",\" GetCoat \"",
+                                "innerText": "link-goto:\"GET COAT\",\" GetCoat \"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"GET COAT \",\" GetCoat \")",
+                                "text": "(link-goto:\"GET COAT\",\" GetCoat \")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "GET COAT ",
-                                        "text": "\"GET COAT \"",
+                                        "innerText": "GET COAT",
+                                        "text": "\"GET COAT\"",
                                         "type": "string"
                                     },
                                     {
@@ -2094,17 +2095,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"NORTH \",\" NorthWare\"",
+                        "innerText": "link-goto:\"NORTH\",\" NorthWare\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"NORTH \",\" NorthWare\")",
+                        "text": "(link-goto:\"NORTH\",\" NorthWare\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "NORTH ",
-                                "text": "\"NORTH \"",
+                                "innerText": "NORTH",
+                                "text": "\"NORTH\"",
                                 "type": "string"
                             },
                             {
@@ -2124,17 +2125,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"WEST \",\" Server\"",
+                        "innerText": "link-goto:\"WEST\",\" Server\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"WEST \",\" Server\")",
+                        "text": "(link-goto:\"WEST\",\" Server\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "WEST ",
-                                "text": "\"WEST \"",
+                                "innerText": "WEST",
+                                "text": "\"WEST\"",
                                 "type": "string"
                             },
                             {
@@ -2154,17 +2155,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"EAST \",\" Security\"",
+                        "innerText": "link-goto:\"EAST\",\" Security\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"EAST \",\" Security\")",
+                        "text": "(link-goto:\"EAST\",\" Security\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "EAST ",
-                                "text": "\"EAST \"",
+                                "innerText": "EAST",
+                                "text": "\"EAST\"",
                                 "type": "string"
                             },
                             {
@@ -2560,10 +2561,6 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
                         "text": "\"Looks like you're human ... or, human enough. Opening cleanroom door.\" The cleanroom door to the NORTH hisses as it unlocks. ",
                         "type": "text"
                     },
@@ -2928,15 +2925,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": " ",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "You pound on the hatch. Springs open. You haul yourself out of the tank.",
+                        "text": " You pound on the hatch. Springs open. You haul yourself out of the tank.",
                         "type": "text"
                     },
                     {
@@ -3013,10 +3002,6 @@
                     {
                         "text": "System check complete. ",
                         "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
                     },
                     {
                         "text": "\n",
@@ -4282,7 +4267,7 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Cabinet is secured with an electronic padlock. I guess even top secret elite IT admins like stealing office supplies.",
+                        "text": "Cabinet is secured with an electronic padlock. Don't want to think about what happens if you get caught stealing tech supplies around here.",
                         "type": "text"
                     },
                     {
@@ -4774,8 +4759,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $infected to true)(set: $power to true)You reach up your nose, grab the wire in it and run it into the admin terminal. Once you HACK into the electrical system, you find the power controls for the elevator, switch them on.\nAs you disconnect from the admin terminal, you feel it transfer some packets your way. A malware infection! You need to find an anti-virus cure, fast!",
-                        "text": "[(set: $infected to true)(set: $power to true)You reach up your nose, grab the wire in it and run it into the admin terminal. Once you HACK into the electrical system, you find the power controls for the elevator, switch them on.\nAs you disconnect from the admin terminal, you feel it transfer some packets your way. A malware infection! You need to find an anti-virus cure, fast!]",
+                        "innerText": "(set: $infected to true)(set: $power to true)You reach up your nose, grab the wire in it and run it into the admin terminal. You begin to HACK into the facility’s electrical systems. You find the power controls for the elevator, switch them on.\nAs you disconnect from the admin terminal, you feel it transfer some packets your way. A malware infection! You need to find an anti-virus cure, fast!",
+                        "text": "[(set: $infected to true)(set: $power to true)You reach up your nose, grab the wire in it and run it into the admin terminal. You begin to HACK into the facility’s electrical systems. You find the power controls for the elevator, switch them on.\nAs you disconnect from the admin terminal, you feel it transfer some packets your way. A malware infection! You need to find an anti-virus cure, fast!]",
                         "tokens": [
                             {
                                 "innerText": "set: $infected to true",
@@ -4852,7 +4837,7 @@
                                 "type": "macro"
                             },
                             {
-                                "text": "You reach up your nose, grab the wire in it and run it into the admin terminal. Once you HACK into the electrical system, you find the power controls for the elevator, switch them on.",
+                                "text": "You reach up your nose, grab the wire in it and run it into the admin terminal. You begin to HACK into the facility’s electrical systems. You find the power controls for the elevator, switch them on.",
                                 "type": "text"
                             },
                             {
@@ -5766,7 +5751,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": " You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles... a data stick labeled CURE. It has a GPS lock on it, and a label that says \"SERVER ROOM ONLY.\" Wow, office supply theft must actually be a huge problem around here. You grab the data stick. ",
+                        "text": " You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles, a data stick labeled CURE. You grab the data stick. ",
                         "type": "text"
                     },
                     {
@@ -6064,7 +6049,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": "You insert the stick of CURE into your data port. After a second, the GPS lock blinks, says \"valid location detected\" and runs the stick's executable. Ahhhh, sweet anti-virus. Your braindrive partition feels squeaky clean. ",
+                        "text": "You grab a stick of CURE, insert it into your data port. Ahhhh, sweet anti-virus. Your braindrive partition feels squeaky clean. ",
                         "type": "text"
                     },
                     {
@@ -6168,8 +6153,8 @@
                         "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
+                        "text": " ",
+                        "type": "text"
                     },
                     {
                         "innerText": "if: $inv's FOB is false",
@@ -8978,11 +8963,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "The guard notices you. He stands up, hand goes for a GUN at his side. You are unsure if he will let you TALK.\n(if: $inv's COAT is true)[The guard eases when he sees your COAT. \"I don't remember any scientists with skull hardware. Then again, my memory's been shit recently. I should lay off drinking. Or drink more. You need to get to the basement?\"]",
-                        "text": "[The guard notices you. He stands up, hand goes for a GUN at his side. You are unsure if he will let you TALK.\n(if: $inv's COAT is true)[The guard eases when he sees your COAT. \"I don't remember any scientists with skull hardware. Then again, my memory's been shit recently. I should lay off drinking. Or drink more. You need to get to the basement?\"]]",
+                        "innerText": "The guard notices you. He stands up, hand goes for a GUN at his side. He speaks Russian, which your T.E.T./R.I.S. translates. \"Identify yourself!\" You are unsure if he will let you TALK.\n(if: $inv's COAT is true)[The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]",
+                        "text": "[The guard notices you. He stands up, hand goes for a GUN at his side. He speaks Russian, which your T.E.T./R.I.S. translates. \"Identify yourself!\" You are unsure if he will let you TALK.\n(if: $inv's COAT is true)[The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]]",
                         "tokens": [
                             {
-                                "text": "The guard notices you. He stands up, hand goes for a GUN at his side. You are unsure if he will let you TALK.",
+                                "text": "The guard notices you. He stands up, hand goes for a GUN at his side. He speaks Russian, which your T.E.T./R.I.S. translates. \"Identify yourself!\" You are unsure if he will let you TALK.",
                                 "type": "text"
                             },
                             {
@@ -9032,11 +9017,11 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "The guard eases when he sees your COAT. \"I don't remember any scientists with skull hardware. Then again, my memory's been shit recently. I should lay off drinking. Or drink more. You need to get to the basement?\"",
-                                "text": "[The guard eases when he sees your COAT. \"I don't remember any scientists with skull hardware. Then again, my memory's been shit recently. I should lay off drinking. Or drink more. You need to get to the basement?\"]",
+                                "innerText": "The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"",
+                                "text": "[The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]",
                                 "tokens": [
                                     {
-                                        "text": "The guard eases when he sees your COAT. \"I don't remember any scientists with skull hardware. Then again, my memory's been shit recently. I should lay off drinking. Or drink more. You need to get to the basement?\"",
+                                        "text": "The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"",
                                         "type": "text"
                                     }
                                 ],
@@ -9607,19 +9592,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "Correct! \nSecond question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. (set: $cor_ans to \"COAT\")",
-                        "text": "[Correct! \nSecond question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. (set: $cor_ans to \"COAT\")]",
+                        "innerText": "Correct! Second question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. (set: $cor_ans to \"COAT\")",
+                        "text": "[Correct! Second question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. (set: $cor_ans to \"COAT\")]",
                         "tokens": [
                             {
-                                "text": "Correct! ",
-                                "type": "text"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "text": "Second question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. ",
+                                "text": "Correct! Second question: tell me something that you could use to protect yourself from the elements, or to make a fashion statement. ",
                                 "type": "text"
                             },
                             {
@@ -10067,19 +10044,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "Correct! \nLast question: tell me something you could use to make people beg for mercy.  (set: $cor_ans to \"GUN\")",
-                        "text": "[Correct! \nLast question: tell me something you could use to make people beg for mercy.  (set: $cor_ans to \"GUN\")]",
+                        "innerText": "Correct! Last question: tell me something you could use to make people beg for mercy.  (set: $cor_ans to \"GUN\")",
+                        "text": "[Correct! Last question: tell me something you could use to make people beg for mercy.  (set: $cor_ans to \"GUN\")]",
                         "tokens": [
                             {
-                                "text": "Correct! ",
-                                "type": "text"
-                            },
-                            {
-                                "text": "\n",
-                                "type": "br"
-                            },
-                            {
-                                "text": "Last question: tell me something you could use to make people beg for mercy.  ",
+                                "text": "Correct! Last question: tell me something you could use to make people beg for mercy.  ",
                                 "type": "text"
                             },
                             {
