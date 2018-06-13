@@ -38,7 +38,7 @@ public class MusicCues : MonoBehaviour {
 	[StoryCue(" LookTitle", "Enter")]
 	void LookTitleEnter(){
 		Debug.Log("LookTitle Enter");
-		soundEngine.PlaySoundWithName("EnterCommand");
+		soundEngine.PlaySoundWithName("SystemCheckComplete");
 		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[4];
 		
 	}

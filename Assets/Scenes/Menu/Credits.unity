@@ -1239,6 +1239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeSpeed: 0.05
   typeDelay: 1
+  sound: Text
 --- !u!1 &1498589128
 GameObject:
   m_ObjectHideFlags: 0
