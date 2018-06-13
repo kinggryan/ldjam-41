@@ -35,7 +35,8 @@ public static class LetterGenerator {
         // And all the item commands
         new WeightedCommand( TwineTextPlayer.Command.UseGun, "USEGUN", 1, new string[]{"GUN", "ARM", "GAT" }),
         new WeightedCommand( TwineTextPlayer.Command.UseFob, "USEFOB", 1, new string[]{"FOB" }),
-		new WeightedCommand( TwineTextPlayer.Command.UseFob, "USECOAT", 1, new string[]{"COAT", "CLOTH", "GARB" }),
+		new WeightedCommand( TwineTextPlayer.Command.UseCoat, "USECOAT", 1, new string[]{"COAT", "CLOTH", "GARB" }),
+		new WeightedCommand( TwineTextPlayer.Command.UseCure, "USECURE", 1, new string[]{"CURE", "HEAL" }),
       
         new WeightedCommand( TwineTextPlayer.Command.GetFob, "GETFOB", 1, new string[]{"FOB" }),
        

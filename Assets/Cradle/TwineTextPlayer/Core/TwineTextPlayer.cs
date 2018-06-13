@@ -34,6 +34,8 @@ public class TwineTextPlayer : MonoBehaviour {
         // The item ones
         UseGun,
         UseFob,
+        UseCoat,
+        UseCure,
        
 
      
@@ -59,7 +61,9 @@ public class TwineTextPlayer : MonoBehaviour {
         { Command.Look, "LOOK" },
         { Command.Talk, "TALK" },
         { Command.UseGun, "USE GUN" },
+		{ Command.UseCure, "USE CURE" },
         { Command.UseFob, "USE FOB" },
+		{ Command.UseCoat, "USE COAT" },
         { Command.GetFob, "GET FOB" },
         { Command.GetCoat, "GET COAT" },
         { Command.End, "END" },
@@ -77,7 +81,9 @@ public class TwineTextPlayer : MonoBehaviour {
         { "HACK", Command.Hack },
         { "TALK", Command.Talk },
         { "USE GUN", Command.UseGun },
+		{ "USE CURE", Command.UseCure },
         { "USE FOB", Command.UseFob },
+		{ "USE COAT", Command.UseCoat },
         { "GET FOB", Command.GetFob },
         { "GET COAT", Command.GetCoat },
         { "END", Command.End },
