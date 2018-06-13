@@ -143,7 +143,7 @@ public class CursorNav : MonoBehaviour {
 		if (curIndex >= 0 && curIndex <= 2){
 			if (Input.GetKeyDown(KeyCode.LeftArrow)){
 			Debug.Log("Left Arrow");
-				for (int i = 0; i <= sliders.Length; i++){
+				for (int i = 0; i <= sliders.Length - 1; i++){
 					Slider slider = sliders[i];
 					if (slider.gameObject == EventSystem.current.currentSelectedGameObject){
 						if (slider.value > slider.minValue){
@@ -159,7 +159,7 @@ public class CursorNav : MonoBehaviour {
 				}
 			}else if (Input.GetKeyDown(KeyCode.RightArrow)){
 			Debug.Log("Right Arrow");
-				for (int i = 0; i <= sliders.Length; i++){
+				for (int i = 0; i <= sliders.Length - 1; i++){
 					Slider slider = sliders[i];
 					if (slider.gameObject == EventSystem.current.currentSelectedGameObject){
 						if (slider.value < slider.maxValue){

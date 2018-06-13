@@ -34,14 +34,14 @@ public class TwineTextPlayer : MonoBehaviour {
         // The item ones
         UseGun,
         UseFob,
-        UseCoat,
+       
 
-        GetNote,
-        GetGun,
+     
+  
         GetFob,
         GetCoat,
 
-        Gear,
+   
         End,
 
         None
@@ -60,12 +60,8 @@ public class TwineTextPlayer : MonoBehaviour {
         { Command.Talk, "TALK" },
         { Command.UseGun, "USE GUN" },
         { Command.UseFob, "USE FOB" },
-        { Command.UseCoat, "USE COAT" },
-        { Command.GetNote, "GET NOTE" },
-        { Command.GetGun, "GET GUN" },
         { Command.GetFob, "GET FOB" },
         { Command.GetCoat, "GET COAT" },
-        { Command.Gear, "GEAR" },
         { Command.End, "END" },
         { Command.None, "" }
     };
@@ -82,14 +78,11 @@ public class TwineTextPlayer : MonoBehaviour {
         { "TALK", Command.Talk },
         { "USE GUN", Command.UseGun },
         { "USE FOB", Command.UseFob },
-        { "USE COAT", Command.UseCoat },
-        { "GET NOTE", Command.GetNote },
-        { "GET GUN", Command.GetGun },
         { "GET FOB", Command.GetFob },
         { "GET COAT", Command.GetCoat },
-        { "GEAR", Command.Gear },
         { "END", Command.End },
-        { "LOOK", Command.Look }
+        { "LOOK", Command.Look },
+		{ "", Command.None }
     };
 
     static Regex rx_splitText = new Regex(@"(\s+|[^\s]+)");

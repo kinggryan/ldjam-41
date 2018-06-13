@@ -1,5 +1,10 @@
 {
-    "console": [],
+    "console": [
+        {
+            "type": "message",
+            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:101:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:101:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:41837\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:104:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:107:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:91:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:91:36747 undefined"
+        }
+    ],
     "result": {
         "passages": [
             {
@@ -226,7 +231,7 @@
                         "type": "br"
                     },
                     {
-                        "text": "Testing command module. Manipulate data using anchor thoughts W, A, S, D, <, and >. Enter command HACK. ",
+                        "text": "Testing command module. Manipulate data using anchor thoughts W, A, S, D, <, and >. Use anchor thought SPACE to isolate and store data for later use. Enter command HACK. ",
                         "type": "text"
                     },
                     {
@@ -4026,11 +4031,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "Need to turn the power on in the Server Room and disable the security barrier in the Security Room first.(if: $inv's GUN is false)[[[LOOK-> LookWare]]] (if: $inv's COAT is false)[[[GET COAT-> GetCoat ]]] [[WEST-> Server]] [[EAST-> Security]]",
-                        "text": "[Need to turn the power on in the Server Room and disable the security barrier in the Security Room first.(if: $inv's GUN is false)[[[LOOK-> LookWare]]] (if: $inv's COAT is false)[[[GET COAT-> GetCoat ]]] [[WEST-> Server]] [[EAST-> Security]]]",
+                        "innerText": "Need to turn both the power on in the Server Room and disable the security barrier in the Security Room first.(if: $inv's GUN is false)[[[LOOK-> LookWare]]] (if: $inv's COAT is false)[[[GET COAT-> GetCoat ]]] [[WEST-> Server]] [[EAST-> Security]]",
+                        "text": "[Need to turn both the power on in the Server Room and disable the security barrier in the Security Room first.(if: $inv's GUN is false)[[[LOOK-> LookWare]]] (if: $inv's COAT is false)[[[GET COAT-> GetCoat ]]] [[WEST-> Server]] [[EAST-> Security]]]",
                         "tokens": [
                             {
-                                "text": "Need to turn the power on in the Server Room and disable the security barrier in the Security Room first.",
+                                "text": "Need to turn both the power on in the Server Room and disable the security barrier in the Security Room first.",
                                 "type": "text"
                             },
                             {
@@ -4262,8 +4267,114 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Cabinet is secured with an electronic padlock. Don't want to think about what happens if you get caught stealing tech supplies around here.",
+                        "innerText": "if: $inv's CURE is false",
+                        "name": "if",
+                        "text": "(if: $inv's CURE is false)",
+                        "tokens": [
+                            {
+                                "text": "if:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "inv",
+                                "text": "$inv",
+                                "type": "variable"
+                            },
+                            {
+                                "name": "CURE",
+                                "text": "'s CURE",
+                                "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "false",
+                                "type": "boolean"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "Cabinet is secured with an electronic padlock. Don't want to think about what happens if you get caught stealing tech supplies around here.",
+                        "text": "[Cabinet is secured with an electronic padlock. Don't want to think about what happens if you get caught stealing tech supplies around here.]",
+                        "tokens": [
+                            {
+                                "text": "Cabinet is secured with an electronic padlock. Don't want to think about what happens if you get caught stealing tech supplies around here.",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " ",
                         "type": "text"
+                    },
+                    {
+                        "innerText": "if: $inv's CURE is true",
+                        "name": "if",
+                        "text": "(if: $inv's CURE is true)",
+                        "tokens": [
+                            {
+                                "text": "if:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "inv",
+                                "text": "$inv",
+                                "type": "variable"
+                            },
+                            {
+                                "name": "CURE",
+                                "text": "'s CURE",
+                                "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "true",
+                                "type": "boolean"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "You almost feel bad for whoever gets blamed for the stolen supplies. Almost.",
+                        "text": "[You almost feel bad for whoever gets blamed for the stolen supplies. Almost.]",
+                        "tokens": [
+                            {
+                                "text": "You almost feel bad for whoever gets blamed for the stolen supplies. Almost.",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
                     },
                     {
                         "innerText": "if: $power is false",
@@ -8024,7 +8135,64 @@
                         "type": "macro"
                     },
                     {
-                        "text": "You enter the Server Room. Banks of computers, ready to be HACKed. Loud hum from the fans. Smells like stale sweat and microwaved pierogies. In front of you, an administrative terminal. A key FOB lies on top of it. Along the wall, a cabinet LOOKs back at you. The warehouse is back towards the EAST. ",
+                        "text": "You enter the Server Room. Banks of computers, ready to be HACKed. Loud hum from the fans. Smells like stale sweat and microwaved pierogies. In front of you, an administrative terminal. ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "if: $inv's FOB is false",
+                        "name": "if",
+                        "text": "(if: $inv's FOB is false)",
+                        "tokens": [
+                            {
+                                "text": "if:",
+                                "type": "macroName"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "inv",
+                                "text": "$inv",
+                                "type": "variable"
+                            },
+                            {
+                                "name": "FOB",
+                                "text": "'s FOB",
+                                "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "false",
+                                "type": "boolean"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "A key FOB lies on top of it.",
+                        "text": "[A key FOB lies on top of it.]",
+                        "tokens": [
+                            {
+                                "text": "A key FOB lies on top of it.",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "text": " Along the wall, a cabinet LOOKs back at you. The warehouse is back towards the EAST. ",
                         "type": "text"
                     },
                     {
@@ -8958,11 +9126,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "The guard notices you. He stands up, hand goes for a GUN at his side. He speaks Russian, which your T.E.T./R.I.S. translates. \"Identify yourself!\" You are unsure if he will let you TALK.\n(if: $inv's COAT is true)[The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]",
-                        "text": "[The guard notices you. He stands up, hand goes for a GUN at his side. He speaks Russian, which your T.E.T./R.I.S. translates. \"Identify yourself!\" You are unsure if he will let you TALK.\n(if: $inv's COAT is true)[The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]]",
+                        "innerText": "The guard notices you. He stands up, hand goes for a GUN at his side. You are unsure if he will let you TALK.\n(if: $inv's COAT is true)[The guard’s eyes study your white lab COAT. \"I don't remember scientists with skull hardware. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]",
+                        "text": "[The guard notices you. He stands up, hand goes for a GUN at his side. You are unsure if he will let you TALK.\n(if: $inv's COAT is true)[The guard’s eyes study your white lab COAT. \"I don't remember scientists with skull hardware. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]]",
                         "tokens": [
                             {
-                                "text": "The guard notices you. He stands up, hand goes for a GUN at his side. He speaks Russian, which your T.E.T./R.I.S. translates. \"Identify yourself!\" You are unsure if he will let you TALK.",
+                                "text": "The guard notices you. He stands up, hand goes for a GUN at his side. You are unsure if he will let you TALK.",
                                 "type": "text"
                             },
                             {
@@ -9012,11 +9180,11 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"",
-                                "text": "[The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]",
+                                "innerText": "The guard’s eyes study your white lab COAT. \"I don't remember scientists with skull hardware. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"",
+                                "text": "[The guard’s eyes study your white lab COAT. \"I don't remember scientists with skull hardware. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"]",
                                 "tokens": [
                                     {
-                                        "text": "The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"",
+                                        "text": "The guard’s eyes study your white lab COAT. \"I don't remember scientists with skull hardware. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"",
                                         "type": "text"
                                     }
                                 ],

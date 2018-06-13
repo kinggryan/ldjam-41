@@ -138,7 +138,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["CLEAN"]  = false;
 		yield return text("Improper shutdown detected. System check initiated...");
 		yield return lineBreak();
-		yield return text("Testing command module. Manipulate data using anchor thoughts W, A, S, D, <, and >. Enter command HACK. ");
+		yield return text("Testing command module. Manipulate data using anchor thoughts W, A, S, D, <, and >. Use anchor thought SPACE to isolate and store data for later use. Enter command HACK. ");
 		yield return link("HACK", " HackTitle", null);
 		yield break;
 	}
@@ -464,7 +464,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		}
 		yield return text(" ");
 		if(Vars.power == false || Vars.ser_door == false) {
-			yield return text("Need to turn the power on in the Server Room and disable the security barrier in the Security Room first.");
+			yield return text("Need to turn both the power on in the Server Room and disable the security barrier in the Security Room first.");
 			if(Vars.inv["GUN"] == false) {
 				yield return link("LOOK", " LookWare", null);
 			}
@@ -492,7 +492,13 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage15_Main()
 	{
-		yield return text("Cabinet is secured with an electronic padlock. Don't want to think about what happens if you get caught stealing tech supplies around here.");
+		if(Vars.inv["CURE"] == false) {
+			yield return text("Cabinet is secured with an electronic padlock. Don't want to think about what happens if you get caught stealing tech supplies around here.");
+		}
+		yield return text(" ");
+		if(Vars.inv["CURE"] == true) {
+			yield return text("You almost feel bad for whoever gets blamed for the stolen supplies. Almost.");
+		}
 		if(Vars.power == false) {
 			yield return link("HACK", " HackServ", null);
 		}
@@ -777,7 +783,11 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["SECURITY"]  = false;
 		Vars.location["CLEAN"]  = false;
 		Vars.location["TITLE"]  = false;
-		yield return text("You enter the Server Room. Banks of computers, ready to be HACKed. Loud hum from the fans. Smells like stale sweat and microwaved pierogies. In front of you, an administrative terminal. A key FOB lies on top of it. Along the wall, a cabinet LOOKs back at you. The warehouse is back towards the EAST. ");
+		yield return text("You enter the Server Room. Banks of computers, ready to be HACKed. Loud hum from the fans. Smells like stale sweat and microwaved pierogies. In front of you, an administrative terminal. ");
+		if(Vars.inv["FOB"] == false) {
+			yield return text("A key FOB lies on top of it.");
+		}
+		yield return text(" Along the wall, a cabinet LOOKs back at you. The warehouse is back towards the EAST. ");
 		yield return link("LOOK", " LookServ", null);
 		yield return text(" ");
 		if(Vars.power == false) {
@@ -823,10 +833,10 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return text("You walk into the Security Room. Big console of security monitors, currently malfunctioning. Guard lying next to the console. You LOOK at a large calendar on the wall. Warehouse to the WEST.");
 		yield return lineBreak();
 		if(Vars.dead_g == false && Vars.ser_door == false) {
-			yield return text("The guard notices you. He stands up, hand goes for a GUN at his side. He speaks Russian, which your T.E.T./R.I.S. translates. \"Identify yourself!\" You are unsure if he will let you TALK.");
+			yield return text("The guard notices you. He stands up, hand goes for a GUN at his side. You are unsure if he will let you TALK.");
 			yield return lineBreak();
 			if(Vars.inv["COAT"] == true) {
-				yield return text("The guard’s eyes study your white lab COAT. Hand moves away from gun. \"I don't remember any of you scientists having machinery packed into your skull. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"");
+				yield return text("The guard’s eyes study your white lab COAT. \"I don't remember scientists with skull hardware. Then again, my memory's been shit recently. Maybe I should lay off drinking. Or drink more. Anyway, you need to get to the basement?\"");
 			}
 		}
 		yield return text(" ");

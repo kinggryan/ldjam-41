@@ -53,7 +53,7 @@ public class TextrisTwinePlayer : TwineTextPlayer {
             }
             //Debug.Log("Adding character " + targetStoryText[storyText.text.Length]);
             storyText.text += targetStoryText[storyText.text.Length];
-            if (targetStoryText[storyText.text.Length] == ' '){
+            if (targetStoryText[storyText.text.Length - 1] == ' '){
                 //Debug.Log("SPACE");
                 
             //}else if(targetStoryText[storyText.text.Length] == "\n\n"){
