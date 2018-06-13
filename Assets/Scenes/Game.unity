@@ -329,6 +329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeSpeed: 0.05
   typeDelay: 1
+  sound: Dash
 --- !u!114 &72744289 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11442590, guid: c4ae6fc83f0d4f64091afc0dccd76dd6,
@@ -656,6 +657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeSpeed: 0.05
   typeDelay: 3.5
+  sound: Space
 --- !u!1 &528783256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,6 +1514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeSpeed: 0.05
   typeDelay: 3.1
+  sound: Space
 --- !u!1 &1091050508 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1723786535910106, guid: d1f29fbb7ca8cfd41aba4b31ca4503b4,
@@ -1530,6 +1533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeSpeed: 0.05
   typeDelay: 0
+  sound: Space
 --- !u!1 &1114789944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,6 +1702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeSpeed: 0.05
   typeDelay: 4.7
+  sound: Dash
 --- !u!114 &1257246257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1947,6 +1952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeSpeed: 0.05
   typeDelay: 4.7
+  sound: Dash
 --- !u!1001 &1355489597
 Prefab:
   m_ObjectHideFlags: 0
@@ -2393,6 +2399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeSpeed: 0.05
   typeDelay: 1
+  sound: Dash
 --- !u!1 &1490567116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,6 +2650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeSpeed: 0.05
   typeDelay: 1
+  sound: Dash
 --- !u!1 &1552514854
 GameObject:
   m_ObjectHideFlags: 0
@@ -2904,6 +2912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeSpeed: 0.05
   typeDelay: 3.9
+  sound: Space
 --- !u!1 &1809560955
 GameObject:
   m_ObjectHideFlags: 0
@@ -3146,6 +3155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeSpeed: 0.05
   typeDelay: 4.3
+  sound: Space
 --- !u!1001 &2012901403
 Prefab:
   m_ObjectHideFlags: 0

@@ -59,6 +59,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1039512467075658
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4567391261529692}
+  - component: {fileID: 114723317803449728}
+  m_Layer: 0
+  m_Name: GetGun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1077684694694200
 GameObject:
   m_ObjectHideFlags: 1
@@ -85,7 +101,7 @@ GameObject:
   - component: {fileID: 4175934568216350}
   - component: {fileID: 114086345061399798}
   m_Layer: 0
-  m_Name: VirtualAudioChannel
+  m_Name: VirtualAudioChannel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,6 +229,22 @@ GameObject:
   - component: {fileID: 114545979970279454}
   m_Layer: 0
   m_Name: TankToRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1202970302933288
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4428583701413602}
+  - component: {fileID: 114206858719926234}
+  m_Layer: 0
+  m_Name: Dash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -499,7 +531,7 @@ GameObject:
   - component: {fileID: 4711489272869372}
   - component: {fileID: 114446338968355896}
   m_Layer: 0
-  m_Name: GetGun
+  m_Name: Space
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -564,6 +596,22 @@ GameObject:
   - component: {fileID: 114210837585609744}
   m_Layer: 0
   m_Name: CleanroomDoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1461275248802144
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4328654180897044}
+  - component: {fileID: 114593889386745558}
+  m_Layer: 0
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1145,6 +1193,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1901552991735290
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4249873842639694}
+  - component: {fileID: 114882399019474600}
+  m_Layer: 0
+  m_Name: VirtualAudioChannel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1905235874217852
 GameObject:
   m_ObjectHideFlags: 1
@@ -1420,7 +1484,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4093779807079642
 Transform:
@@ -1497,7 +1561,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4175934568216350
 Transform:
@@ -1505,14 +1569,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1085850791277892}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4246659497072590}
-  - {fileID: 4275561756526694}
+  - {fileID: 4328654180897044}
+  - {fileID: 4711489272869372}
+  - {fileID: 4428583701413602}
   m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4186799532550834
 Transform:
@@ -1576,8 +1641,23 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4175934568216350}
+  m_Father: {fileID: 4249873842639694}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4249873842639694
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901552991735290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4246659497072590}
+  - {fileID: 4275561756526694}
+  m_Father: {fileID: 4505665473088592}
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4250895553599990
 Transform:
@@ -1628,7 +1708,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4175934568216350}
+  m_Father: {fileID: 4249873842639694}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4289830295006872
@@ -1714,6 +1794,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4305650117093838}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4328654180897044
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1461275248802144}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4175934568216350}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4337385510995936
 Transform:
@@ -1832,6 +1925,19 @@ Transform:
   m_Father: {fileID: 4093779807079642}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4428583701413602
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1202970302933288}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4175934568216350}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4444856323167450
 Transform:
   m_ObjectHideFlags: 1
@@ -1869,7 +1975,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4505665473088592
 Transform:
@@ -1902,12 +2008,13 @@ Transform:
   - {fileID: 4204672712769036}
   - {fileID: 4859686428086706}
   - {fileID: 4608820093092470}
-  - {fileID: 4875488951039732}
   - {fileID: 4159746788328992}
   - {fileID: 4089297436333670}
   - {fileID: 4495379654760210}
   - {fileID: 4787579448154330}
-  - {fileID: 4711489272869372}
+  - {fileID: 4567391261529692}
+  - {fileID: 4875488951039732}
+  - {fileID: 4249873842639694}
   - {fileID: 4175934568216350}
   m_Father: {fileID: 4152782509377852}
   m_RootOrder: 1
@@ -2002,6 +2109,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4505665473088592}
   m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4567391261529692
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1039512467075658}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4505665473088592}
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4577097087066012
 Transform:
@@ -2156,8 +2276,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 26
+  m_Father: {fileID: 4175934568216350}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4724868250805994
 Transform:
@@ -2222,7 +2342,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4806810300229178
 Transform:
@@ -2313,7 +2433,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 21
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4890025044361556
 Transform:
@@ -2518,6 +2638,12 @@ MonoBehaviour:
     soundEvent: {fileID: 114663281475188996}
   - name: GetGun
     soundEvent: {fileID: 114663281475188996}
+  - name: Text
+    soundEvent: {fileID: 114593889386745558}
+  - name: Space
+    soundEvent: {fileID: 114446338968355896}
+  - name: Dash
+    soundEvent: {fileID: 114206858719926234}
 --- !u!114 &114057775354726758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2529,6 +2655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 1
@@ -2621,6 +2749,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 0.5
@@ -2658,6 +2788,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -2695,6 +2827,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 0.2
@@ -2754,6 +2888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 1
@@ -2846,6 +2982,45 @@ MonoBehaviour:
   fadeAfterInterval: 0
   timer: 0
   transition: 0
+--- !u!114 &114206858719926234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1202970302933288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
+  random: 0
+  playOnAwake: 0
+  volume: 1
+  pitch: 0
+  pitchRandomization: 0
+  fadeInTime: 0
+  fadeOutTime: 0
+  fadeOutTimer: 1
+  startDelay: 0
+  audioClip:
+  - {fileID: 8300000, guid: b1ec5cd60f3d8204989821c0e431c614, type: 3}
+  waitTime: 0
+  waitRange: 0
+  listener: {fileID: 0}
+  threeDee: 0
+  threeDeeMultiplier: 1
+  panMultiplier: 0
+  externalVolumeModifier: 1
+  externalPitchModifier: 0
+  output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  clipToLoop: 0
+  playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
+  type: 2
+  timer: 0
+  isLooping: 0
 --- !u!114 &114210837585609744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2857,6 +3032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -2894,6 +3071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -2931,9 +3110,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
-  volume: 0.6
+  volume: 0.4
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -2990,6 +3171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 1
@@ -3071,6 +3254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -3174,6 +3359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 1
@@ -3211,6 +3398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 1
@@ -3248,6 +3437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 0.6
@@ -3285,9 +3476,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
-  volume: 1
+  volume: 0.8
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -3333,6 +3526,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 0.5
@@ -3370,6 +3565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 1
@@ -3429,6 +3626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -3439,7 +3638,7 @@ MonoBehaviour:
   fadeOutTimer: 1
   startDelay: 0
   audioClip:
-  - {fileID: 8300000, guid: 76c912f00616be74982ad2e4a403c316, type: 3}
+  - {fileID: 8300000, guid: 8ed2d4ce6ed79644a8660a447f785c4c, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -3448,7 +3647,7 @@ MonoBehaviour:
   panMultiplier: 0
   externalVolumeModifier: 1
   externalPitchModifier: 0
-  output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
   nextClipToPlay: {fileID: 0}
@@ -3532,6 +3731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 1
@@ -3569,6 +3770,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 1
@@ -3628,6 +3831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -3665,6 +3870,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 0.2
@@ -3747,9 +3954,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
-  volume: 1
+  volume: 0.8
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -3806,6 +4015,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 0.2
@@ -3912,6 +4123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 1
@@ -3993,6 +4206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -4052,6 +4267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 0.1
@@ -4072,6 +4289,45 @@ MonoBehaviour:
   externalVolumeModifier: 1
   externalPitchModifier: 0
   output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  clipToLoop: 0
+  playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
+  type: 2
+  timer: 0
+  isLooping: 0
+--- !u!114 &114593889386745558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1461275248802144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
+  random: 0
+  playOnAwake: 0
+  volume: 1
+  pitch: 0
+  pitchRandomization: 0
+  fadeInTime: 0
+  fadeOutTime: 0
+  fadeOutTimer: 1
+  startDelay: 0
+  audioClip:
+  - {fileID: 8300000, guid: 83ba32687eabe5f4fbb39bf7f1bfd7a2, type: 3}
+  waitTime: 0
+  waitRange: 0
+  listener: {fileID: 0}
+  threeDee: 0
+  threeDeeMultiplier: 1
+  panMultiplier: 0
+  externalVolumeModifier: 1
+  externalPitchModifier: 0
+  output: {fileID: 243898480582987972, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   clipToLoop: 0
   playerXDistance: 0
   nextClipToPlay: {fileID: 0}
@@ -4111,6 +4367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 0.3
@@ -4148,6 +4406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -4207,6 +4467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 1
@@ -4244,6 +4506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -4270,6 +4534,45 @@ MonoBehaviour:
   type: 2
   timer: 0
   isLooping: 0
+--- !u!114 &114723317803449728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1039512467075658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
+  random: 0
+  playOnAwake: 0
+  volume: 1
+  pitch: 0
+  pitchRandomization: 0
+  fadeInTime: 0
+  fadeOutTime: 0
+  fadeOutTimer: 1
+  startDelay: 0
+  audioClip:
+  - {fileID: 8300000, guid: 76c912f00616be74982ad2e4a403c316, type: 3}
+  waitTime: 0
+  waitRange: 0
+  listener: {fileID: 0}
+  threeDee: 0
+  threeDeeMultiplier: 1
+  panMultiplier: 0
+  externalVolumeModifier: 1
+  externalPitchModifier: 0
+  output: {fileID: 243904391745602182, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  clipToLoop: 0
+  playerXDistance: 0
+  nextClipToPlay: {fileID: 0}
+  type: 2
+  timer: 0
+  isLooping: 0
 --- !u!114 &114723863764007750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4281,6 +4584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 0.8
@@ -4340,6 +4645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 1
@@ -4421,6 +4728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -4458,6 +4767,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -4495,6 +4806,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 0.5
@@ -4554,6 +4867,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -4580,6 +4895,17 @@ MonoBehaviour:
   type: 2
   timer: 0
   isLooping: 0
+--- !u!114 &114882399019474600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901552991735290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6a9ace2a6161640a2f17a624466a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114883451812757448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4635,6 +4961,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -4672,6 +5000,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -4709,6 +5039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -4746,6 +5078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 1
   volume: 1
@@ -4783,6 +5117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 0.25
@@ -4820,6 +5156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1
@@ -4857,6 +5195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd0732abf60614ba9e025e4a569742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAudioSource: []
+  activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
   volume: 1

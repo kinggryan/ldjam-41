@@ -10,6 +10,7 @@ public class TextrisTwinePlayer : TwineTextPlayer {
     public float updateTextDelay = 5.5f;
     public UnityEngine.UI.Text storyText;
     string targetStoryText = "";
+    private SoundEngine soundEngine;
 
     public override void TypeCommand(string command)
     {
@@ -18,6 +19,7 @@ public class TextrisTwinePlayer : TwineTextPlayer {
 
     private void Awake() {
         updateTextStepTimer = updateTextDelay;
+        soundEngine = Object.FindObjectOfType<SoundEngine>();
     }
 
     private void Update()
@@ -49,8 +51,15 @@ public class TextrisTwinePlayer : TwineTextPlayer {
                 storyText.text += nextChar;
                 nextChar = targetStoryText[storyText.text.Length];
             }
-            //Debug.Log("Adding character " + targetText[storyText.text.Length]);
+            //Debug.Log("Adding character " + targetStoryText[storyText.text.Length]);
             storyText.text += targetStoryText[storyText.text.Length];
+            if (targetStoryText[storyText.text.Length] == ' '){
+                //Debug.Log("SPACE");
+                
+            //}else if(targetStoryText[storyText.text.Length] == "\n\n"){
+            }else{
+                soundEngine.PlaySoundWithName("Text");
+            }
         }
     }
 
@@ -71,7 +80,7 @@ public class TextrisTwinePlayer : TwineTextPlayer {
                 }
             }
     
-            Debug.Log("Printing text for story text:" + text.Text);
+            //Debug.Log("Printing text for story text:" + text.Text);
             if (!string.IsNullOrEmpty(text.Text))
             {
                 targetStoryText += text.Text.Replace('’', '\'');
