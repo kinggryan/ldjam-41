@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using Cradle;
 
 public class TetrisManager : MonoBehaviour {
 
@@ -48,6 +50,9 @@ public class TetrisManager : MonoBehaviour {
     private float lineCompleteHangDuration = 1.5f;
     private SoundEngine soundEngine;
     private MusicEngine musicEngine;
+    private int linesCleared;
+    public Text linesClearedDisplay;
+    private FadeOutAndLoadLevel screenDarken;
 
 	// Use this for initialization
 	void Start () {
@@ -156,10 +161,10 @@ public class TetrisManager : MonoBehaviour {
             LoseGame();
         }
 
-        if(CheckForWinInTwine())
+        /*if(CheckForWinInTwine())
         {
             WinGame();
-        }
+        }*/
         
     }
 
@@ -307,7 +312,6 @@ public class TetrisManager : MonoBehaviour {
             if (command.command.command != TwineTextPlayer.Command.None)
             {
                 display.UpdateBoardWithCommandOnColumn(tetrisBoard, command.word, x);
-                soundEngine.PlaySoundWithName("EnterCommand");
             }
 
             if(IsColumnComplete(x))
@@ -343,10 +347,11 @@ public class TetrisManager : MonoBehaviour {
         return twinePlayer.GetTwineVarState("game_over");     
     }
 
-    bool CheckForWinInTwine()
+    /* bool CheckForWinInTwine()
     {
         return twinePlayer.GetTwineVarState("win");
-    }
+    }*/
+    
 
     bool IsLineComplete(int yCoord)
     {
@@ -395,10 +400,12 @@ public class TetrisManager : MonoBehaviour {
         musicEngine.ChangeMusicWithName("CymbalDown");
     }
 
+    /*[StoryCue(" End", "Enter")]
     void WinGame(){
         Debug.Log("YOU WON");
-		SceneManager.LoadScene("Win");
-    }
+        screenDarken = GameObject.FindGameObjectWithTag("ScreenDarken").GetComponent<FadeOutAndLoadLevel>();
+        screenDarken.FadeAndLoadLevel();
+    }*/
 
 
     CommandReturnTuple GetCommandFromLine(int yCoord)

@@ -338,6 +338,7 @@ MonoBehaviour:
   nextBlockDisplay: {fileID: 0}
   stashBlockDisplay: {fileID: 0}
   boardSizeY: 26
+  linesClearedDisplay: {fileID: 0}
 --- !u!114 &607400330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,6 +391,7 @@ MonoBehaviour:
   fadedOutGameTextColor: {r: 0.008620679, g: 0.25, b: 0, a: 1}
   fadedInGameTextColor: {r: 0.0060013034, g: 0.8161765, b: 0.1121621, a: 1}
   minPauseDuration: 0.25
+  firstPauseMinDuration: 10
 --- !u!1 &732130391 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1684997839914168, guid: 8031916428caf491b96492719636a63d,
@@ -638,6 +640,24 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114446338968355896, guid: 44b72ad9a46488344b25e3afd5373c3a,
+        type: 2}
+      propertyPath: output
+      value: 
+      objectReference: {fileID: 243692950610499676, guid: 18a0b720b87012a49b8b6d238311e7e8,
+        type: 2}
+    - target: {fileID: 114206858719926234, guid: 44b72ad9a46488344b25e3afd5373c3a,
+        type: 2}
+      propertyPath: output
+      value: 
+      objectReference: {fileID: 243692950610499676, guid: 18a0b720b87012a49b8b6d238311e7e8,
+        type: 2}
+    - target: {fileID: 114593889386745558, guid: 44b72ad9a46488344b25e3afd5373c3a,
+        type: 2}
+      propertyPath: output
+      value: 
+      objectReference: {fileID: 243692950610499676, guid: 18a0b720b87012a49b8b6d238311e7e8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
   m_IsPrefabParent: 0
@@ -862,6 +882,111 @@ Prefab:
     - {fileID: 114507533842187770, guid: 8031916428caf491b96492719636a63d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8031916428caf491b96492719636a63d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1083827720
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1258668316}
+    m_Modifications:
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b5ebbb8590ab1404ba87aa4008b0e476, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &1083827721 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224815033043619320, guid: b5ebbb8590ab1404ba87aa4008b0e476,
+    type: 2}
+  m_PrefabInternal: {fileID: 1083827720}
 --- !u!1 &1114789944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1195,7 @@ RectTransform:
   - {fileID: 528783257}
   - {fileID: 1887026760}
   - {fileID: 1286112014}
+  - {fileID: 1083827721}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1433,8 +1559,9 @@ MonoBehaviour:
   AutoDisplay: 1
   ShowNamedLinks: 1
   updateTextStepDuration: 0.05
-  updateTextStepTimer: -767.0495
+  updateTextDelay: 0.5
   storyText: {fileID: 1114789946}
+  textStepDurationMultiplier: 50
 --- !u!114 &1480000014
 MonoBehaviour:
   m_ObjectHideFlags: 0

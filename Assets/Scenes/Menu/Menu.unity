@@ -113,53 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &157519478
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 464.33832
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 308.19785
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.697339
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114593889386745558, guid: 44b72ad9a46488344b25e3afd5373c3a,
-        type: 2}
-      propertyPath: volume
-      value: 0.6
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &243804481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,9 +1021,10 @@ GameObject:
   - component: {fileID: 1504093632}
   - component: {fileID: 1504093631}
   - component: {fileID: 1504093630}
+  - component: {fileID: 1504093633}
   m_Layer: 5
   m_Name: ScreenDarken
-  m_TagString: Untagged
+  m_TagString: ScreenDarken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1337,6 +1291,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1504093628}
+--- !u!114 &1504093633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1504093628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2b6f568ea65654d8cda1dca65a9abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeTime: 30
 --- !u!1 &1686561472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,6 +1525,64 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a457f5056a92814c92fc1b468813001, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2047877719
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114554837729869470, guid: 44b72ad9a46488344b25e3afd5373c3a,
+        type: 2}
+      propertyPath: mixerSnapshots.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 464.33832
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 308.19785
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.697339
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152782509377852, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114536754032764476, guid: 44b72ad9a46488344b25e3afd5373c3a,
+        type: 2}
+      propertyPath: audioClip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ee40e52d05c380458fa020273e1be11, type: 3}
+    - target: {fileID: 114554837729869470, guid: 44b72ad9a46488344b25e3afd5373c3a,
+        type: 2}
+      propertyPath: mixerSnapshots.Array.data[14]
+      value: 
+      objectReference: {fileID: 245517720563751540, guid: 18a0b720b87012a49b8b6d238311e7e8,
+        type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &2097076536 stripped
 RectTransform:

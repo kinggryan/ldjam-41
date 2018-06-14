@@ -7,6 +7,9 @@ using Cradle;
 public class MusicCues : MonoBehaviour {
 	public SoundEngine soundEngine;
     private MusicEngine musicEngine;
+	private TwineTextPlayer twineTextPlayer;
+	private	FadeOutAndLoadLevel screenDarken;
+	
 
 	void Awake () {
 
@@ -14,12 +17,23 @@ public class MusicCues : MonoBehaviour {
         musicEngine = Object.FindObjectOfType<MusicEngine>();
 	}
 
+	bool GetTwineBool(string boolToGet){
+		return twineTextPlayer.GetTwineVarState(boolToGet);
+	}
+
 
 	[StoryCue("Title", "Enter")]
 	void TitleEnter(){
 		Debug.Log("Title ENTER");
+		twineTextPlayer = Object.FindObjectOfType<TwineTextPlayer>();
+		if (twineTextPlayer != null){
+			Debug.Log("TwineTextPlayer found");
+		}else{
+			Debug.Log("TwineTextPlayer NOT found");
+		}
 		if (soundEngine != null){
 			soundEngine.PlaySoundWithName("ImproperShutdown");
+			soundEngine.PlaySoundWithName("FirstText");
 			
 		}
 		if (musicEngine != null){
@@ -64,11 +78,17 @@ public class MusicCues : MonoBehaviour {
 	void WarehouseEnter(){
 		Debug.Log("Warehouse Enter");
 		soundEngine.PlaySoundWithName("DoorOpen");
-		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[5];
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[13];
 	}
 	[StoryCue(" LookWare", "Enter")]
 	void LookWareEnter(){
 		Debug.Log("LookWare Enter");
+		if(!twineTextPlayer.Story.Vars["inv"]["GUN"]){
+			Debug.Log("Gun: False");
+			soundEngine.PlaySoundWithName("GetGun");
+		}else{
+			Debug.Log("Gun: True");
+		}
 	}
 	[StoryCue(" GetCoat", "Enter")]
 	void GetCoatEnter(){
@@ -98,16 +118,56 @@ public class MusicCues : MonoBehaviour {
 
 	[StoryCue(" Security", "Enter")]
 	void SecurityEnter(){
-		Debug.Log("Server Enter");
+		Debug.Log("Secutiry Enter");
+		if (GetTwineBool("dead_g")){
+			Debug.Log("Guard: Dead");
+			musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[9];
+		}else if (twineTextPlayer.Story.Vars["inv"]["COAT"] || GetTwineBool("ser_door"))
+			{
+			Debug.Log("Guard: Friendly");
+			soundEngine.PlaySoundWithName("GuardAlert");
+			musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[9];
+		}else{
+			Debug.Log("Guard: Aggro");
+			musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[8];
+			soundEngine.PlaySoundWithName("GuardAlert");
+		}
 		soundEngine.PlaySoundWithName("DoorOpen");
-		soundEngine.PlaySoundWithName("GuardAlert");
-		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[8];
+		
+		
+	}
+
+	[StoryCue(" TalkSec", "Enter")]
+	void TalkSecEnter(){
+		Debug.Log("TalkSec Enter");
+		if (GetTwineBool("dead_g")){
+			Debug.Log("Guard: Dead");
+		}else if (GetTwineBool("guard"))
+			{
+			Debug.Log("Guard: Aggro");
+			soundEngine.PlaySoundWithName("GuardShoot");
+		}else{
+			Debug.Log("Guard: Friendly");
+			musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[9];
+		}
+	}
+
+	[StoryCue(" UseGun", "Enter")]
+	void UseGunEnter(){
+		Debug.Log("UseGun Enter");
+		soundEngine.PlaySoundWithName("PlayerShoot");
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[9];
 	}
 	
 	[StoryCue(" LookSec", "Enter")]
 	void LookSecEnter(){
 		Debug.Log("LookSec Enter");
-		soundEngine.PlaySoundWithName("GuardShoot");
+		if (GetTwineBool("guard")){
+			Debug.Log("Guard: Aggro");
+			soundEngine.PlaySoundWithName("GuardShoot");
+		}else{
+			Debug.Log("Guard: Friendly");
+		}
 	}
 
 	[StoryCue("Lab", "Enter")]
@@ -116,16 +176,34 @@ public class MusicCues : MonoBehaviour {
 		soundEngine.PlaySoundWithName("Elevator");
 		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[10];
 	}
-	[StoryCue("AI", "Enter")]
+	[StoryCue(" AI", "Enter")]
 	void AIEnter(){
 		Debug.Log("AI Enter");
-		soundEngine.PlaySoundWithName("Kapcha");
+		if (!GetTwineBool("open_clean")){
+			soundEngine.PlaySoundWithName("Kapcha");
+		}
 	} 
 	[StoryCue("AI_Win", "Enter")]
 	void AI_WinEnter(){
 		Debug.Log("AI_Win Enter");
 		soundEngine.PlaySoundWithName("CleanroomDoor");
 		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[11];
+	}
+	[StoryCue("AIGun", "Enter")]
+	void AIGun(){
+		Debug.Log("AIGun Enter");
+		soundEngine.PlaySoundWithName("SystemCheckComplete");
+	}
+	
+	[StoryCue("AICoat", "Enter")]
+	void AICoat(){
+		Debug.Log("AICoat Enter");
+		soundEngine.PlaySoundWithName("SystemCheckComplete");
+	}
+	[StoryCue("AIFob", "Enter")]
+	void AIFob(){
+		Debug.Log("AIFob Enter");
+		soundEngine.PlaySoundWithName("SystemCheckComplete");
 	}
 	[StoryCue(" Clean", "Enter")]
 	void CleanEnter(){
@@ -137,6 +215,14 @@ public class MusicCues : MonoBehaviour {
 	void EndEnter(){
 		Debug.Log("End Enter");
 		soundEngine.PlaySoundWithName("Hack");
+		musicEngine.mixerSnapshots[14].TransitionTo(27);
+		musicEngine.currentMusicSnapshot = musicEngine.mixerSnapshots[14];
+		Debug.Log("YOU WON");
+        screenDarken = GameObject.FindGameObjectWithTag("ScreenDarken").GetComponent<FadeOutAndLoadLevel>();
+		if (screenDarken != null){
+			Debug.Log("Darkened found");
+		}
+        screenDarken.FadeAndLoadLevel();
 	}
 
 

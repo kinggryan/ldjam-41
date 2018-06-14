@@ -11,6 +11,7 @@ public class TextrisTwinePlayer : TwineTextPlayer {
     public UnityEngine.UI.Text storyText;
     string targetStoryText = "";
     private SoundEngine soundEngine;
+    public float textStepDurationMultiplier = 10;
 
     public override void TypeCommand(string command)
     {
@@ -27,7 +28,12 @@ public class TextrisTwinePlayer : TwineTextPlayer {
         updateTextStepTimer -= Time.deltaTime;
         if(updateTextStepTimer <= 0)
         {
-            updateTextStepTimer += updateTextStepDuration;
+            if(Input.GetKey(KeyCode.Escape)){
+                updateTextStepTimer += updateTextStepDuration / textStepDurationMultiplier;
+            }else{
+                updateTextStepTimer += updateTextStepDuration;
+                
+            }
             UpdateTextStep();
         }
     }

@@ -75,6 +75,8 @@ public double timer;
 private VirtualAudioChannel audioChannel;
 public bool isLooping;
 
+private bool fadeInComplete;
+
     void Awake(){
         audioChannel = gameObject.transform.parent.GetComponent<VirtualAudioChannel>();
         PrepareFirstSoundToPlay();
@@ -319,14 +321,15 @@ public bool isLooping;
 
     void Update()
     {
-        if (fadeIn){
+        if (fadeIn && !fadeInComplete){
                 fadeInTimer += Time.deltaTime / fadeInTime;
                 //print("fadeInTimer: " + fadeInTimer);
-            if (fadeInTimer >= 1)
+            if (fadeInTimer >= 1 && !fadeInComplete)
             {
                 //print("Fade done");
                 fadeInTimer = 0;
                 fadeIn = false;
+                fadeInComplete = true;
             }
         }
         else if (fadeOut){
@@ -367,7 +370,7 @@ public bool isLooping;
                         audioSource.volume = Mathf.Lerp(0, volume, Mathf.Clamp(volume * threeDeeVolume, 0, volume));
                         audioSource.panStereo = Mathf.Clamp((playerXDistance) * panMultiplier, -1, 1);
                     }
-                    else if (threeDee && fadeIn)
+                    else if (threeDee && fadeIn && !fadeInComplete)
                     {
                         audioSource.volume = Mathf.Clamp(volume * threeDeeVolume * fadeInTimer, 0, volume);
                         audioSource.panStereo = Mathf.Clamp((playerXDistance) * panMultiplier, -1, 1);
@@ -377,7 +380,7 @@ public bool isLooping;
                         audioSource.volume = Mathf.Clamp(volume * threeDeeVolume * fadeInTimer, 0, volume);
                         audioSource.panStereo = Mathf.Clamp((playerXDistance) * panMultiplier, -1, 1);
                     }
-                    else if (fadeIn)
+                    else if (fadeIn && !fadeInComplete)
                     {
                         audioSource.volume = volume * externalVolumeModifier * fadeInTimer;
                     }
