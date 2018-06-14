@@ -32,7 +32,7 @@ public class DynamicCommands : MonoBehaviour
     void UpdateText() {
         var newStr = "CMD:/";
         newStr += PrintCommands();
-        newStr += "\n INV:/";
+		newStr += "\n\nINV:/";
         newStr += PrintInv();
         if(!shouldUpdateCommands && !GetComponent<TextTypeInOnStart>().enabled) {
             // HACK: Attach a typing effect after determining what the commands should be

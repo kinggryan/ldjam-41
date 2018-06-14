@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour {
     void Awake ()
     {
         canvas = GameObject.Find("Canvas");
+		Cursor.visible = false;
     }
     
     public void LoadLevel(string name, float loadTransitionTime)

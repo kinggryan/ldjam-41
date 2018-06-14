@@ -14,6 +14,7 @@ public class CursorNav : MonoBehaviour {
 	public Color lime = new Color(0, 255, 0);
 	public int cursorOffset = 62;
 	private SoundEngine soundEngine;
+	private GameObject lastSelect;
 
 	private bool[] sliderMaxReached = new bool[]{ false, false, false};
 	private bool[] sliderMinReached = new bool[]{ false, false, false};
@@ -29,11 +30,19 @@ public class CursorNav : MonoBehaviour {
 		{
 			sliders = GetComponentsInChildren<Slider>();
 			sliders[0].Select();
+			lastSelect = new GameObject();
+
 		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if(EventSystem.current.currentSelectedGameObject == null){
+			EventSystem.current.SetSelectedGameObject(lastSelect);
+		}
+		else{
+			lastSelect = EventSystem.current.currentSelectedGameObject;
+		}
 		if (Input.GetButtonDown("down")){
 			if(curIndex < 6  && currentScene == SceneManager.GetSceneByName("Options")){
 				textList[curIndex].color = lime;

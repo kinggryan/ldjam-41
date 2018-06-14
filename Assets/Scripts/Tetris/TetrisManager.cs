@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class TetrisManager : MonoBehaviour {
 
@@ -49,8 +48,6 @@ public class TetrisManager : MonoBehaviour {
     private float lineCompleteHangDuration = 1.5f;
     private SoundEngine soundEngine;
     private MusicEngine musicEngine;
-    private int linesCleared;
-    public Text linesClearedDisplay;
 
 	// Use this for initialization
 	void Start () {
@@ -330,6 +327,7 @@ public class TetrisManager : MonoBehaviour {
 
             if (command.command.command != TwineTextPlayer.Command.None)
             {
+                Debug.Log("FUCKING PAUSE");
                 twinePlayer.TypeCommand(command.word);
                 twinePlayer.DoCommand(command.command.command);
                 pauser.PausePlay();
@@ -508,8 +506,6 @@ public class TetrisManager : MonoBehaviour {
 
     void RemoveLineAndMoveAboveLinesDown(int yCoord)
     {
-        linesCleared++;
-        linesClearedDisplay.text = linesCleared.ToString();
         for(var y = yCoord; y < boardSizeY - 1;  y++)
         {
             for(var x = 0; x < boardSizeX; x++)
@@ -520,6 +516,21 @@ public class TetrisManager : MonoBehaviour {
         //soundEngine.PlaySoundWithName("LineClear");
     }
 
+    void RemoveColumnAndMoveAboveCharactersDown(int xCoord){
+        Debug.Log("Trying to remove column " + xCoord);
+
+        //for(var x = xCoord; x < boardSizeX - 1;  x++)
+        //{
+            //Debug.Log("X: " + xCoord);
+            for(var y = boardSizeY - 2; y >= 0; y--)
+            {
+                //Debug.Log("Y: " + y);
+                tetrisBoard[xCoord, y] = tetrisBoard[xCoord, y + 1];
+                //Debug.Log("Moving x: " + xCoord + " y: " + y);
+            }
+        //}
+        //soundEngine.PlaySoundWithName("LineClear");
+    }
 
     void RemoveMultipleLinesAndMoveAboveLinesDown(int bottomY, int length) {
         Debug.Log("Removing with bottom y " + bottomY + " and length " + length);
@@ -531,7 +542,7 @@ public class TetrisManager : MonoBehaviour {
     public void PausePlay()
     {
         playDelayFrames = -1;
-        
+        musicEngine.PauseMusic();
         
     }
 
@@ -547,7 +558,7 @@ public class TetrisManager : MonoBehaviour {
         return playDelayFrames == -1;
     }
 
-    void UpdateNextBlocks()
+	public void UpdateNextBlocks()
     {
         // set the current block
         currentBlock = nextBlocks[0];

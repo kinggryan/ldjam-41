@@ -24,13 +24,13 @@ public class TetrisBlockQueueDisplay : MonoBehaviour {
             for(var y = 0; y < blockQueueDisplayText.GetLength(1); y++)
             {
 				var nextText = blockQueueDisplayText[x, y];
-                blockQueueText += nextText == ' ' ? '.' : nextText;
+                blockQueueText += nextText == ' ' ? ' ' : nextText;
             }
             blockQueueText += "\n";
         }
 		blockQueueDisplay.text = blockQueueText;
 
-		// Debug.Log("Adding to board:" + blockQueueText);
+		//Debug.Log("Adding to board:" + blockQueueText);
 	}
     
 }

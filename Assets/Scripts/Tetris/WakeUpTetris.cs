@@ -31,6 +31,8 @@ public class WakeUpTetris : MonoBehaviour {
         {
             isFirstPause = false;
             BeginPlay();
+			tetris.UpdateNextBlocks();
+
         }
 	}
 
