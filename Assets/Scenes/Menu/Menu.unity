@@ -1303,6 +1303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 30
+  levelToLoad: 
 --- !u!1 &1686561472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,6 +1582,11 @@ Prefab:
       value: 
       objectReference: {fileID: 245517720563751540, guid: 18a0b720b87012a49b8b6d238311e7e8,
         type: 2}
+    - target: {fileID: 114239341195002488, guid: 44b72ad9a46488344b25e3afd5373c3a,
+        type: 2}
+      propertyPath: audioClip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: aab3f0982c49ef349992960efe04b77e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44b72ad9a46488344b25e3afd5373c3a, type: 2}
   m_IsPrefabParent: 0
