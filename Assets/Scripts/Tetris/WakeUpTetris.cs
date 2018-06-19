@@ -31,11 +31,11 @@ public class WakeUpTetris : MonoBehaviour {
         {
             isFirstPause = false;
             BeginPlay();
-			tetris.UpdateNextBlocks();
+
 
         }
 	}
-
+    
     public void PausePlay()
     {
         pauseTimer = 0;
@@ -43,16 +43,20 @@ public class WakeUpTetris : MonoBehaviour {
         musicEngine.PauseMusic();
         tetris.PausePlay();
         pressButtonToPlayParent.SetActive(true);
+
         // Fade in text
         foreach (var text in gameTextToFadeOut)
         {
             text.color = fadedOutGameTextColor;
         }
+       
     }
 
     void BeginPlay()
     {
         Debug.Log("Resuming play");
+		tetris.UpdateNextBlocks();
+		tetris.UpdateNextBlocks(); //this is bullshit but fix for wrong commands in passage
         pressButtonToPlayParent.SetActive(false);
         tetris.ResumePlay();
         // Fade in text
@@ -60,5 +64,6 @@ public class WakeUpTetris : MonoBehaviour {
         {
             text.color = fadedInGameTextColor;
         }
+
     }
 }

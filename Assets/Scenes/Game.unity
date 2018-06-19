@@ -390,7 +390,7 @@ MonoBehaviour:
   nextBlockDisplay: {fileID: 520288464}
   stashBlockDisplay: {fileID: 1981553747}
   boardSizeY: 26
-  linesClearedDisplay: {fileID: 0}
+  linesClearedDisplay: {fileID: 937313788}
 --- !u!114 &113111039
 MonoBehaviour:
   m_ObjectHideFlags: 0

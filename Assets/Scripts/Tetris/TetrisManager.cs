@@ -513,6 +513,9 @@ public class TetrisManager : MonoBehaviour {
 
     void RemoveLineAndMoveAboveLinesDown(int yCoord)
     {
+		linesCleared++;
+        linesClearedDisplay.text = linesCleared.ToString();
+
         for(var y = yCoord; y < boardSizeY - 1;  y++)
         {
             for(var x = 0; x < boardSizeX; x++)
