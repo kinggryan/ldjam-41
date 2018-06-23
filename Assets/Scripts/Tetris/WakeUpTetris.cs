@@ -6,6 +6,7 @@ public class WakeUpTetris : MonoBehaviour {
 
     public GameObject pressButtonToPlayParent;
     public UnityEngine.UI.Text[] gameTextToFadeOut;
+	public UnityEngine.UI.Text gameTextToClear;
     public TetrisManager tetris;
     public Color fadedOutGameTextColor;
     public Color fadedInGameTextColor;
@@ -42,6 +43,7 @@ public class WakeUpTetris : MonoBehaviour {
         Debug.Log("Pausing play");
         musicEngine.PauseMusic();
         tetris.PausePlay();
+
         pressButtonToPlayParent.SetActive(true);
 
         // Fade in text
@@ -49,6 +51,7 @@ public class WakeUpTetris : MonoBehaviour {
         {
             text.color = fadedOutGameTextColor;
         }
+		gameTextToClear.text = "";
        
     }
 

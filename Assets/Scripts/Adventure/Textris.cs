@@ -408,7 +408,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	{
 		yield return text("The shelves are filled with boxes of electronics parts from Shenzhen. Power supplies, monitors, big plastic buttons. Surprisingly harmless stuff for a secret research base.");
 		if(Vars.inv["GUN"] == false) {
-			yield return text("Someone left a GUN there.  You take the GUN ");
+			yield return text(" Someone left a GUN there. You take the GUN ");
 			Vars.inv["GUN"]  = true;
 		}
 		if(Vars.inv["COAT"] == false) {
