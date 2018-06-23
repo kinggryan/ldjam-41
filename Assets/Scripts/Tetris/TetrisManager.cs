@@ -552,7 +552,11 @@ public class TetrisManager : MonoBehaviour {
     public void PausePlay()
     {
         playDelayFrames = -1;
-        musicEngine.PauseMusic();
+        if (!musicEngine){
+            Debug.LogWarning(gameObject.name + " musicEngine missing");
+        }else{
+            musicEngine.PauseMusic();
+        }
         
     }
 

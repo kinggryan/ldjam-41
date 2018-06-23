@@ -28,7 +28,11 @@ public class TetrisBlockQueueDisplay : MonoBehaviour {
             }
             blockQueueText += "\n";
         }
-		blockQueueDisplay.text = blockQueueText;
+		if (!blockQueueDisplay){
+			Debug.LogWarning(gameObject.name + " blockQueueDisplay Missing");
+		}else{
+			blockQueueDisplay.text = blockQueueText;
+		}
 
 		//Debug.Log("Adding to board:" + blockQueueText);
 	}

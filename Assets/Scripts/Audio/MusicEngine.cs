@@ -39,7 +39,11 @@ public class MusicEngine : MonoBehaviour {
 	}
 
 	public void PauseMusic(){
-		mixerSnapshots[0].TransitionTo(pauseTransitionTime);
+		if (!mixerSnapshots[0]){
+			Debug.LogWarning("PauseMusic Snapshot missing. Its going to be ok.");
+		}else{
+			mixerSnapshots[0].TransitionTo(pauseTransitionTime);
+		}
 	}
 
 	public void UnpauseMusic(){
