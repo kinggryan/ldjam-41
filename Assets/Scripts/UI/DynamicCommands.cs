@@ -75,23 +75,23 @@ public class DynamicCommands : MonoBehaviour
 
         if (items["NOTE"] == true)
         {
-            str += "\n NOTE";
+            str += "\nNOTE";
         }
         if (items["COAT"] == true)
         {
-            str += "\n COAT";
+            str += "\nCOAT";
         }
         if (items["GUN"] == true)
         {
-            str += "\n GUN";
+            str += "\nGUN";
         }
         if (items["FOB"] == true)
         {
-            str += "\n FOB";
+            str += "\nFOB";
         }
         if (items["CURE"] == true)
         {
-            str += "\n CURE";
+            str += "\nCURE";
         }
 
         return str;
