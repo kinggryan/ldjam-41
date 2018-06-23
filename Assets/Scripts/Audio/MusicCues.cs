@@ -33,7 +33,7 @@ public class MusicCues : MonoBehaviour {
 		}
 		if (soundEngine != null){
 			soundEngine.PlaySoundWithName("ImproperShutdown");
-			soundEngine.PlaySoundWithName("FirstText");
+			//soundEngine.PlaySoundWithName("FirstText");
 			
 		}
 		if (musicEngine != null){

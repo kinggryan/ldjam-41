@@ -1438,7 +1438,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4093779807079642
 Transform:
@@ -1553,11 +1553,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4328654180897044}
   - {fileID: 4711489272869372}
   - {fileID: 4428583701413602}
   m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4186799532550834
 Transform:
@@ -1772,8 +1771,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4175934568216350}
-  m_RootOrder: 0
+  m_Father: {fileID: 4505665473088592}
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4337385510995936
 Transform:
@@ -1903,7 +1902,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4175934568216350}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4444856323167450
 Transform:
@@ -1992,6 +1991,7 @@ Transform:
   - {fileID: 4113551454489298}
   - {fileID: 4249873842639694}
   - {fileID: 4055614551730862}
+  - {fileID: 4328654180897044}
   - {fileID: 4175934568216350}
   - {fileID: 4089297436333670}
   - {fileID: 4680689911155592}
@@ -2207,7 +2207,7 @@ Transform:
   - {fileID: 4117158893989388}
   - {fileID: 4806810300229178}
   m_Father: {fileID: 4505665473088592}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4681113390352622
 Transform:
@@ -2246,7 +2246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4175934568216350}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4724868250805994
 Transform:
@@ -3020,7 +3020,7 @@ MonoBehaviour:
   activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
-  volume: 0.2
+  volume: 0.1
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -3906,7 +3906,7 @@ MonoBehaviour:
   fadeOutTimer: 0
   startDelay: 0
   audioClip:
-  - {fileID: 8300000, guid: a2c51f14edf934e4085ce97565f89459, type: 3}
+  - {fileID: 8300000, guid: 0ee40e52d05c380458fa020273e1be11, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -4055,6 +4055,7 @@ MonoBehaviour:
   - {fileID: 245367260928669758, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   - {fileID: 245165377291007124, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   - {fileID: 245112304087491770, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
+  - {fileID: 245517720563751540, guid: 18a0b720b87012a49b8b6d238311e7e8, type: 2}
   pauseTransitionTime: 2
   events:
   - name: GameStart
@@ -4195,7 +4196,7 @@ MonoBehaviour:
   activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
-  volume: 1
+  volume: 0.5
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -4295,7 +4296,7 @@ MonoBehaviour:
   activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
-  volume: 0.6
+  volume: 0.4
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0
@@ -4303,7 +4304,7 @@ MonoBehaviour:
   fadeOutTimer: 1
   startDelay: 0
   audioClip:
-  - {fileID: 8300000, guid: 83ba32687eabe5f4fbb39bf7f1bfd7a2, type: 3}
+  - {fileID: 8300000, guid: 67d16666249523d4ebb8c4c20eca27a2, type: 3}
   waitTime: 0
   waitRange: 0
   listener: {fileID: 0}
@@ -4989,7 +4990,7 @@ MonoBehaviour:
   activeAudioSourceArray: []
   random: 0
   playOnAwake: 0
-  volume: 1
+  volume: 0.5
   pitch: 0
   pitchRandomization: 0
   fadeInTime: 0

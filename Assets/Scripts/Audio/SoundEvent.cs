@@ -56,10 +56,10 @@ public AudioMixerGroup output;
 public int clipToLoop;
     
 private float playerDistance;
-public float playerXDistance;
+private float playerXDistance;
 private float playerYDistance;
 private Transform transform;
-public AudioSource nextClipToPlay;
+private AudioSource nextClipToPlay;
 public enum Type
 {
     Loop,
@@ -68,14 +68,19 @@ public enum Type
 }
 
 public Type type;
+public bool voiceLimited = false;
+public int voiceLimit;
     
 private bool soundPlayed = false;
 
-public double timer;
+private double timer;
 private VirtualAudioChannel audioChannel;
-public bool isLooping;
+private bool isLooping;
 
 private bool fadeInComplete;
+public float repeatBuffer;
+private float repeatBufferTimer = 0; 
+private bool repeatBufferBool;
 
     void Awake(){
         audioChannel = gameObject.transform.parent.GetComponent<VirtualAudioChannel>();
@@ -95,42 +100,78 @@ private bool fadeInComplete;
     }
     
 
+
     public void PlaySound ()
     {
-        //nextClipToPlay.Play();
-        //Debug.Log("Playing sound " + gameObject.name);
-        if (nextClipToPlay != null){
-            double clipStartTime = AudioSettings.dspTime + startDelay+ Time.deltaTime;
-            double clipEndTime = clipStartTime + nextClipToPlay.clip.length;
-            double clipLength = nextClipToPlay.clip.length;
-            StartCoroutine(OnSoundFinished(clipStartTime, clipLength));
-            if (audioChannel != null){
-                audioChannel.OnSoundPlayed(nextClipToPlay);
+        DestroyAudioSourceIfNotScheduledOrPlaying();
+            if (!repeatBufferBool){
+                repeatBufferBool = true;
+            //nextClipToPlay.Play();
+            //Debug.Log("Playing sound " + gameObject.name);
+            if (nextClipToPlay != null){
+                if (voiceLimited && VoiceLimitReached()){
+                    Debug.Log("! " + gameObject.name + " not played. Voice limit reached.");
+                }else{
+                    double clipStartTime = AudioSettings.dspTime + startDelay+ Time.deltaTime;
+                    double clipEndTime = clipStartTime + nextClipToPlay.clip.length;
+                    double clipLength = nextClipToPlay.clip.length;
+                    StartCoroutine(OnSoundFinished(clipStartTime, clipLength));
+                    if (audioChannel != null){
+                        audioChannel.OnSoundPlayed(nextClipToPlay);
+                    }
+                    nextClipToPlay.PlayScheduled(clipStartTime);
+                    //nextClipToPlay.SetScheduledEndTime(clipEndTime);
+                    //Debug.Log("Current clip end time: " + clipEndTime);
+                    //Debug.Log("Current clip length: " + clipLength);
+                    //Debug.Log("Played sound " + nextClipToPlay);
+                    PrepareNextSoundToPlay(clipStartTime, clipEndTime);
+                    soundPlayed = true;
+                    
+                }
+            }else{
+                Debug.Log("! " + gameObject.name + " audioCilp not found?");
             }
-            nextClipToPlay.PlayScheduled(clipStartTime);
-            //nextClipToPlay.SetScheduledEndTime(clipEndTime);
-            //Debug.Log("Current clip end time: " + clipEndTime);
-            //Debug.Log("Current clip length: " + clipLength);
-            //Debug.Log("Played sound " + nextClipToPlay);
-            soundPlayed = true;
-            PrepareNextSoundToPlay(clipStartTime, clipEndTime);
         }else{
-            Debug.LogWarning(gameObject.name + " audioCilp not found?");
+            Debug.Log("! " + gameObject.name + " not played. Sound played within " + repeatBuffer + " another sound");
         }
       
         
     }
 
+    bool VoiceLimitReached(){
+    int instancesPlaying = 0;
+            for (int i = 0; i < activeAudioSourceArray.Length; i++)
+            {
+                AudioSource source = activeAudioSourceArray[i];
+                if (source.isPlaying){
+                    instancesPlaying ++;
+                    if (instancesPlaying >= voiceLimit){
+                        return true;
+                    }
+                }
+            }
+            return false;
+    }
+
     void PrepareFirstSoundToPlay(){
-        double clipStartTime = AudioSettings.dspTime + startDelay+ Time.deltaTime;
-        double clipEndTime = clipStartTime + audioClip[0].length;
-        double clipLength = audioClip[0].length;
-        AudioSource source = CreateAudioSource(clipStartTime, clipEndTime);
-        source.clip = audioClip[0];
-        source.outputAudioMixerGroup = output;
-        SetStartVolume(source);
-        SetPitch(source);
-        nextClipToPlay = source;
+        if (!audioClip[0]){
+            Debug.LogWarning(gameObject.name + " audioClip[] empty. Add an audio clip in the inspector.");
+        }else{
+            double clipStartTime;
+            if (!soundPlayed){
+                clipStartTime = AudioSettings.dspTime + startDelay+ Time.deltaTime;
+            }else{
+                clipStartTime = AudioSettings.dspTime + Time.deltaTime;
+            }
+            double clipEndTime = clipStartTime + audioClip[0].length;
+            double clipLength = audioClip[0].length;
+            AudioSource source = CreateAudioSource(clipStartTime, clipEndTime);
+            source.clip = audioClip[0];
+            source.outputAudioMixerGroup = output;
+            SetStartVolume(source);
+            SetPitch(source);
+            nextClipToPlay = source;
+        }
     }
 
     void PrepareNextSoundToPlay(double currentClipStartTime, double currentClipEndTime){
@@ -141,9 +182,10 @@ private bool fadeInComplete;
         SetStartVolume(source);
         SetPitch(source);
         nextClipToPlay = source;
-        if (type == Type.Loop && !isLooping || type == Type.Sequence && soundPlayed){
+        if (type == Type.Loop /*&& !isLooping*/ || type == Type.Sequence && soundPlayed){
             ScheduleNextClipToPlayAtEndOfCurrentClip(source, currentClipStartTime, currentClipEndTime);
         }
+        DestroyAudioSourceIfNotScheduledOrPlaying();
 
     }
 
@@ -182,7 +224,7 @@ private bool fadeInComplete;
         {
             if (type == Type.Loop){
                 if (clip == clipToLoop){
-                    source.loop = true;
+                    //source.loop = true;
                 }else{
                     clip += 1;
                 }
@@ -240,7 +282,7 @@ private bool fadeInComplete;
         float endTimeOfNextClipToPlay = (float)clipEndTime + audioClip[clip].length;
         clipStartTime = clipEndTime;
         clipEndTime = clipEndTime + audioClip[clip].length;
-        StartCoroutine(PrepareSoundAfterDelay(audioClip[clip].length + 0.7f, clipStartTime, clipEndTime));
+        StartCoroutine(PrepareSoundAfterDelay(audioClip[clip].length + 0.3f, clipStartTime, clipEndTime));
     }
 
     IEnumerator PrepareSoundAfterDelay(double delay, double clipStartTime, double clipEndTime){
@@ -275,52 +317,16 @@ private bool fadeInComplete;
         yield return new WaitForSeconds(delayTime +0.2f);
         DestroyAudioSourceIfNotScheduledOrPlaying();
     }
-    /* OLD BUT POSSIBLY USEFUL DERSTROY FUNTINOS
-
-    
-    void DestroyAudioSourceIfNotScheduledOrPlaying(){
-        if (audioSourceInfo != null && audioSourceInfoArray != null && soundPlayed){
-            for (int i = 0; i < audioSourceInfoArray.Length; i++)
-            {
-                AudioSource source = audioSourceInfoArray[i].source;
-                if (!source.isPlaying && source != nextClipToPlay && nextClipToPlay != null){
-                    Destroy(source);
-                    Debug.Log(name + " audiosource DESTROYED");
-                }else if(nextClipToPlay == null){
-                    Debug.LogWarning("Next clip missing");
-                }else{
-                    Debug.LogWarning(name + " AudioSource array missing");
-                }
-            }
-        }
-    }
-    
-    IEnumerator WaitUntilSoundIsFinishedPlayingThenDestroy(double clipStartTime, double clipLength){
-        
-        double currentTime = AudioSettings.dspTime;
-        float delayTime = (float)((clipStartTime - currentTime) + clipLength);
-        Debug.Log("Waiting " + delayTime + "s to detroy");
-        yield return new WaitForSeconds(delayTime +0.7f);
-        DestroyNonPlayingAudioSources();
-    }
-
-
-    
-
-    void DestroyNonPlayingAudioSources(){
-        Debug.Log(name + " destorying Non-Playing AudioSources");
-        AudioSource[] audioSources = GetComponents<AudioSource>();
-            foreach (AudioSource audioSource in audioSources)
-            {
-                if (!audioSource.isPlaying){
-                    Destroy(audioSource);
-                    Debug.Log(name + " AudioSource destroyed");
-                }
-            }
-    } */
 
     void Update()
     {
+        if(repeatBufferBool){
+            repeatBufferTimer += Time.deltaTime;
+            if (repeatBufferTimer >= repeatBuffer){
+                repeatBufferBool = false;
+                repeatBufferTimer = 0;
+            }
+        }
         if (fadeIn && !fadeInComplete){
                 fadeInTimer += Time.deltaTime / fadeInTime;
                 //print("fadeInTimer: " + fadeInTimer);
