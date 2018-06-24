@@ -193,28 +193,28 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["TITLE"]  = false;
 		yield return text("You enter a warehouse. You LOOK and see shelves of boxes and equipment. Next to elevator, a rack with white lab COATS on it. To the EAST, a door labeled \"Security Room.\" To the WEST, a door labeled \"Server Room.\" ");
 		if(Vars.power == false && Vars.ser_door == false) {
-			yield return text("To the NORTH, an elevator with no power, sealed with the security door.");
+			yield return text("To the NORTH, an elevator with no power, sealed with the security door. ");
 		}
 		if(Vars.power == true && Vars.ser_door == false) {
-			yield return text("To the NORTH, an elevator with power, sealed with the security door.");
+			yield return text("To the NORTH, an elevator with power, sealed with the security door. ");
 		}
 		yield return text(" ");
 		if(Vars.power == false && Vars.ser_door == true) {
-			yield return text("To the NORTH, an elevator with no power, with the security door opened.");
+			yield return text("To the NORTH, an elevator with no power, with the security door opened. ");
 		}
 		yield return text(" ");
 		if(Vars.power == true && Vars.ser_door == true) {
-			yield return text("To the NORTH, an elevator with power, with the security door opened.");
+			yield return text("To the NORTH, an elevator with power, with the security door opened. ");
 		}
 		if(Vars.guard == true) {
-			yield return text("Doesn't look like the guard is following you. Must be pretty drunk");
+			yield return text("Doesn't look like the guard is following you. Must be pretty drunk. ");
 		}
 		yield return text(" ");
 		if(Vars.inv["GUN"] == false) {
 			yield return link("LOOK", " LookWare", null);
 		}
 		yield return text(" ");
-		if(Vars.inv["COAT"] == false) {
+		if(Vars.inv["COAT"] == false && Vars.dead_g == false) {
 			yield return link("GET COAT", " GetCoat ", null);
 		}
 		yield return text(" ");
@@ -292,7 +292,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		Vars.location["SECURITY"]  = false;
 		Vars.location["CLEAN"]  = false;
 		Vars.location["TITLE"]  = false;
-		yield return text(" You pound on the hatch. Springs open. You haul yourself out of the tank.");
+		yield return text("You pound on the hatch. Springs open. You haul yourself out of the tank.");
 		yield return lineBreak();
 		yield return text("You’re in a garage. Door to the NORTH, a keypad next to it. A desk with several drawers to LOOK through. ");
 		yield return link("LOOK", " LookGarage", null);
@@ -408,10 +408,10 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	{
 		yield return text("The shelves are filled with boxes of electronics parts from Shenzhen. Power supplies, monitors, big plastic buttons. Surprisingly harmless stuff for a secret research base.");
 		if(Vars.inv["GUN"] == false) {
-			yield return text("Someone left a GUN there.  You take the GUN ");
+			yield return text(" Someone left a GUN there. You take the GUN ");
 			Vars.inv["GUN"]  = true;
 		}
-		if(Vars.inv["COAT"] == false) {
+		if(Vars.inv["COAT"] == false && Vars.dead_g == false) {
 			yield return link("GET COAT", " GetCoat ", null);
 		}
 		yield return text(" ");
@@ -435,7 +435,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	IStoryThread passage13_Main()
 	{
 		Vars.inv["COAT"]  = true;
-		yield return text(" You take a white lab COAT from the rack, put it on. The white really brings out the green in your ocular cybernetics. ");
+		yield return text("You take a white lab COAT from the rack, put it on. The white really brings out the green in your ocular cybernetics. ");
 		if(Vars.inv["GUN"] == false) {
 			yield return link("LOOK", " LookWare", null);
 		}
@@ -469,7 +469,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 				yield return link("LOOK", " LookWare", null);
 			}
 			yield return text(" ");
-			if(Vars.inv["COAT"] == false) {
+			if(Vars.inv["COAT"] == false && Vars.dead_g == false) {
 				yield return link("GET COAT", " GetCoat ", null);
 			}
 			yield return text(" ");
@@ -572,7 +572,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	IStoryThread passage17_Main()
 	{
 		Vars.inv["FOB"]  = true;
-		yield return text(" You nab the key FOB. Should be able to unlock something. ");
+		yield return text("You nab the key FOB. Should be able to unlock something. ");
 		yield return link("LOOK", " LookServ", null);
 		yield return text(" ");
 		if(Vars.power == false) {
@@ -604,7 +604,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	{
 		Vars.open_cab  = true;
 		Vars.inv["CURE"]  = true;
-		yield return text(" You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles, a data stick labeled CURE. You grab the data stick. ");
+		yield return text("You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles, a data stick labeled CURE. You grab the data stick. ");
 		yield return link("LOOK", " LookServ", null);
 		yield return text(" ");
 		if(Vars.power == false) {
@@ -707,7 +707,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		if(Vars.guard == false && Vars.dead_g == false) {
 			if(Vars.ser_door == false) {
 				Vars.ser_door  = true;
-				yield return text(" \"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.");
+				yield return text("\"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.");
 			}
 		}
 		else if(Vars.dead_g == false) {
@@ -830,7 +830,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		if(Vars.inv["COAT"] == false && Vars.dead_g == false) {
 			Vars.guard  = true;
 		}
-		yield return text("You walk into the Security Room. Big console of security monitors, currently malfunctioning. Guard lying next to the console. You LOOK at a large calendar on the wall. Warehouse to the WEST.");
+		yield return text("You walk into the Security Room. Big console of security monitors, currently malfunctioning. Guard lying next to the console. You LOOK at a large calendar on the wall. Warehouse to the WEST. ");
 		yield return lineBreak();
 		if(Vars.dead_g == false && Vars.ser_door == false) {
 			yield return text("The guard notices you. He stands up, hand goes for a GUN at his side. You are unsure if he will let you TALK.");
@@ -915,7 +915,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			Vars.cor_ans  = "COAT";
 		}
 		else {
-			yield return text("That's an answer a robot would give! You get shocked. What item  opens things, that your boss would be mad if they found out you lost it?");
+			yield return text("That's an answer a robot would give! You get shocked. What item opens things, that your boss would be mad if they found out you lost it?");
 			Vars.HP  = Vars.HP - 1;
 			yield return text(" ");
 			yield return lineBreak();

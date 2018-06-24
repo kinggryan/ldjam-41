@@ -1,5 +1,10 @@
 {
-    "console": [],
+    "console": [
+        {
+            "type": "message",
+            "value": "jQuery.Deferred exception: undefined is not a constructor (evaluating 'Number.isNaN(t)') includes@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:3712\nt@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:19933\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:40621\nsome@[native code]\napply@[native code]\ncall@[native code]\ncall@[native code]\nCall@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:4450\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:105:18801\nr@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:40542\na@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:41837\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:56837\no@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:53671\ne@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:56642\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:108:54045\nrender@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:109:486\nc@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:111:3813\nrenderInto@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:111:3254\nu@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:111:8919\ngoToPassage@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:111:9309\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:112:16874\nf@file:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:24025\nfile:///Users/AtomicTourist/Desktop/ldjam-41/Assets/Scripts/Adventure/Textris.html:95:36747 undefined"
+        }
+    ],
     "result": {
         "passages": [
             {
@@ -1618,11 +1623,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "To the NORTH, an elevator with no power, sealed with the security door.",
-                        "text": "[To the NORTH, an elevator with no power, sealed with the security door.]",
+                        "innerText": "To the NORTH, an elevator with no power, sealed with the security door. ",
+                        "text": "[To the NORTH, an elevator with no power, sealed with the security door. ]",
                         "tokens": [
                             {
-                                "text": "To the NORTH, an elevator with no power, sealed with the security door.",
+                                "text": "To the NORTH, an elevator with no power, sealed with the security door. ",
                                 "type": "text"
                             }
                         ],
@@ -1699,11 +1704,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "To the NORTH, an elevator with power, sealed with the security door.",
-                        "text": "[To the NORTH, an elevator with power, sealed with the security door.]",
+                        "innerText": "To the NORTH, an elevator with power, sealed with the security door. ",
+                        "text": "[To the NORTH, an elevator with power, sealed with the security door. ]",
                         "tokens": [
                             {
-                                "text": "To the NORTH, an elevator with power, sealed with the security door.",
+                                "text": "To the NORTH, an elevator with power, sealed with the security door. ",
                                 "type": "text"
                             }
                         ],
@@ -1784,11 +1789,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "To the NORTH, an elevator with no power, with the security door opened.",
-                        "text": "[To the NORTH, an elevator with no power, with the security door opened.]",
+                        "innerText": "To the NORTH, an elevator with no power, with the security door opened. ",
+                        "text": "[To the NORTH, an elevator with no power, with the security door opened. ]",
                         "tokens": [
                             {
-                                "text": "To the NORTH, an elevator with no power, with the security door opened.",
+                                "text": "To the NORTH, an elevator with no power, with the security door opened. ",
                                 "type": "text"
                             }
                         ],
@@ -1869,11 +1874,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "To the NORTH, an elevator with power, with the security door opened.",
-                        "text": "[To the NORTH, an elevator with power, with the security door opened.]",
+                        "innerText": "To the NORTH, an elevator with power, with the security door opened. ",
+                        "text": "[To the NORTH, an elevator with power, with the security door opened. ]",
                         "tokens": [
                             {
-                                "text": "To the NORTH, an elevator with power, with the security door opened.",
+                                "text": "To the NORTH, an elevator with power, with the security door opened. ",
                                 "type": "text"
                             }
                         ],
@@ -1917,11 +1922,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "Doesn't look like the guard is following you. Must be pretty drunk",
-                        "text": "[Doesn't look like the guard is following you. Must be pretty drunk]",
+                        "innerText": "Doesn't look like the guard is following you. Must be pretty drunk. ",
+                        "text": "[Doesn't look like the guard is following you. Must be pretty drunk. ]",
                         "tokens": [
                             {
-                                "text": "Doesn't look like the guard is following you. Must be pretty drunk",
+                                "text": "Doesn't look like the guard is following you. Must be pretty drunk. ",
                                 "type": "text"
                             }
                         ],
@@ -2011,9 +2016,9 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "if: $inv's COAT is false",
+                        "innerText": "if: $inv's COAT is false and $dead_g is false",
                         "name": "if",
-                        "text": "(if: $inv's COAT is false)",
+                        "text": "(if: $inv's COAT is false and $dead_g is false)",
                         "tokens": [
                             {
                                 "text": "if:",
@@ -2032,6 +2037,39 @@
                                 "name": "COAT",
                                 "text": "'s COAT",
                                 "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "false",
+                                "type": "boolean"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "and",
+                                "type": "and"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "dead_g",
+                                "text": "$dead_g",
+                                "type": "variable"
                             },
                             {
                                 "text": " ",
@@ -2920,7 +2958,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": " You pound on the hatch. Springs open. You haul yourself out of the tank.",
+                        "text": "You pound on the hatch. Springs open. You haul yourself out of the tank.",
                         "type": "text"
                     },
                     {
@@ -3411,11 +3449,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "Someone left a GUN there.  You take the GUN (set: $inv's GUN to true)",
-                        "text": "[Someone left a GUN there.  You take the GUN (set: $inv's GUN to true)]",
+                        "innerText": " Someone left a GUN there. You take the GUN (set: $inv's GUN to true)",
+                        "text": "[ Someone left a GUN there. You take the GUN (set: $inv's GUN to true)]",
                         "tokens": [
                             {
-                                "text": "Someone left a GUN there.  You take the GUN ",
+                                "text": " Someone left a GUN there. You take the GUN ",
                                 "type": "text"
                             },
                             {
@@ -3464,9 +3502,9 @@
                         "type": "hook"
                     },
                     {
-                        "innerText": "if: $inv's COAT is false",
+                        "innerText": "if: $inv's COAT is false and $dead_g is false",
                         "name": "if",
-                        "text": "(if: $inv's COAT is false)",
+                        "text": "(if: $inv's COAT is false and $dead_g is false)",
                         "tokens": [
                             {
                                 "text": "if:",
@@ -3485,6 +3523,39 @@
                                 "name": "COAT",
                                 "text": "'s COAT",
                                 "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "false",
+                                "type": "boolean"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "and",
+                                "type": "and"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "dead_g",
+                                "text": "$dead_g",
+                                "type": "variable"
                             },
                             {
                                 "text": " ",
@@ -3678,7 +3749,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": " You take a white lab COAT from the rack, put it on. The white really brings out the green in your ocular cybernetics. ",
+                        "text": "You take a white lab COAT from the rack, put it on. The white really brings out the green in your ocular cybernetics. ",
                         "type": "text"
                     },
                     {
@@ -4026,8 +4097,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "Need to turn both the power on in the Server Room and disable the security barrier in the Security Room first.(if: $inv's GUN is false)[[[LOOK-> LookWare]]] (if: $inv's COAT is false)[[[GET COAT-> GetCoat ]]] [[WEST-> Server]] [[EAST-> Security]]",
-                        "text": "[Need to turn both the power on in the Server Room and disable the security barrier in the Security Room first.(if: $inv's GUN is false)[[[LOOK-> LookWare]]] (if: $inv's COAT is false)[[[GET COAT-> GetCoat ]]] [[WEST-> Server]] [[EAST-> Security]]]",
+                        "innerText": "Need to turn both the power on in the Server Room and disable the security barrier in the Security Room first.(if: $inv's GUN is false)[[[LOOK-> LookWare]]] (if: $inv's COAT is false and $dead_g is false)[[[GET COAT-> GetCoat ]]] [[WEST-> Server]] [[EAST-> Security]]",
+                        "text": "[Need to turn both the power on in the Server Room and disable the security barrier in the Security Room first.(if: $inv's GUN is false)[[[LOOK-> LookWare]]] (if: $inv's COAT is false and $dead_g is false)[[[GET COAT-> GetCoat ]]] [[WEST-> Server]] [[EAST-> Security]]]",
                         "tokens": [
                             {
                                 "text": "Need to turn both the power on in the Server Room and disable the security barrier in the Security Room first.",
@@ -4113,9 +4184,9 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "if: $inv's COAT is false",
+                                "innerText": "if: $inv's COAT is false and $dead_g is false",
                                 "name": "if",
-                                "text": "(if: $inv's COAT is false)",
+                                "text": "(if: $inv's COAT is false and $dead_g is false)",
                                 "tokens": [
                                     {
                                         "text": "if:",
@@ -4134,6 +4205,39 @@
                                         "name": "COAT",
                                         "text": "'s COAT",
                                         "type": "property"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "is",
+                                        "type": "is"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "false",
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "and",
+                                        "type": "and"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "dead_g",
+                                        "text": "$dead_g",
+                                        "type": "variable"
                                     },
                                     {
                                         "text": " ",
@@ -5400,7 +5504,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": " You nab the key FOB. Should be able to unlock something. ",
+                        "text": "You nab the key FOB. Should be able to unlock something. ",
                         "type": "text"
                     },
                     {
@@ -5852,7 +5956,7 @@
                         "type": "macro"
                     },
                     {
-                        "text": " You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles, a data stick labeled CURE. You grab the data stick. ",
+                        "text": "You tap the key FOB onto the padlock. Cabinet swings open. Inside you find cables, dongles, a data stick labeled CURE. You grab the data stick. ",
                         "type": "text"
                     },
                     {
@@ -7063,8 +7167,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $ser_door is false)[(set: $ser_door to true) \"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.]",
-                        "text": "[(if: $ser_door is false)[(set: $ser_door to true) \"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.]]",
+                        "innerText": "(if: $ser_door is false)[(set: $ser_door to true)\"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.]",
+                        "text": "[(if: $ser_door is false)[(set: $ser_door to true)\"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.]]",
                         "tokens": [
                             {
                                 "innerText": "if: $ser_door is false",
@@ -7104,8 +7208,8 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "(set: $ser_door to true) \"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.",
-                                "text": "[(set: $ser_door to true) \"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.]",
+                                "innerText": "(set: $ser_door to true)\"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.",
+                                "text": "[(set: $ser_door to true)\"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.]",
                                 "tokens": [
                                     {
                                         "innerText": "set: $ser_door to true",
@@ -7145,7 +7249,7 @@
                                         "type": "macro"
                                     },
                                     {
-                                        "text": " \"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.",
+                                        "text": "\"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.",
                                         "type": "text"
                                     }
                                 ],
@@ -9043,7 +9147,7 @@
                         "type": "hook"
                     },
                     {
-                        "text": "You walk into the Security Room. Big console of security monitors, currently malfunctioning. Guard lying next to the console. You LOOK at a large calendar on the wall. Warehouse to the WEST.",
+                        "text": "You walk into the Security Room. Big console of security monitors, currently malfunctioning. Guard lying next to the console. You LOOK at a large calendar on the wall. Warehouse to the WEST. ",
                         "type": "text"
                     },
                     {
@@ -9811,11 +9915,11 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "That's an answer a robot would give! You get shocked. What item  opens things, that your boss would be mad if they found out you lost it?(set: $HP to it - 1) \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN](if: $HP is 1)[YOU ARE BASICALLY DEAD](if: $HP <= 0)[(set: $game_over to true)GAME OVER]",
-                        "text": "[That's an answer a robot would give! You get shocked. What item  opens things, that your boss would be mad if they found out you lost it?(set: $HP to it - 1) \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN](if: $HP is 1)[YOU ARE BASICALLY DEAD](if: $HP <= 0)[(set: $game_over to true)GAME OVER]]",
+                        "innerText": "That's an answer a robot would give! You get shocked. What item opens things, that your boss would be mad if they found out you lost it?(set: $HP to it - 1) \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN](if: $HP is 1)[YOU ARE BASICALLY DEAD](if: $HP <= 0)[(set: $game_over to true)GAME OVER]",
+                        "text": "[That's an answer a robot would give! You get shocked. What item opens things, that your boss would be mad if they found out you lost it?(set: $HP to it - 1) \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN](if: $HP is 1)[YOU ARE BASICALLY DEAD](if: $HP <= 0)[(set: $game_over to true)GAME OVER]]",
                         "tokens": [
                             {
-                                "text": "That's an answer a robot would give! You get shocked. What item  opens things, that your boss would be mad if they found out you lost it?",
+                                "text": "That's an answer a robot would give! You get shocked. What item opens things, that your boss would be mad if they found out you lost it?",
                                 "type": "text"
                             },
                             {

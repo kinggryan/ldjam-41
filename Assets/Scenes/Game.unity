@@ -1804,8 +1804,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.305, y: -10.08}
-  m_SizeDelta: {x: 30.4, y: -122.68}
+  m_AnchoredPosition: {x: 0.00000047684, y: -11.3}
+  m_SizeDelta: {x: 57.3, y: -125.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1257246256
 MonoBehaviour:
@@ -1853,7 +1853,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.5
-  m_Text: "ERROR:\n\nMALWARE\nPRESENT\n\nMOD HUD\nLIMITED\n \n"
+  m_Text: "ERROR:\n\nMALWARE PRESENT\n\nMOD HUD LIMITED\n \n"
 --- !u!222 &1257246258
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2396,7 +2396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1490567117
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2413,8 +2413,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -264.53, y: -0.000030517578}
-  m_SizeDelta: {x: 29.79, y: -522}
+  m_AnchoredPosition: {x: -209.5, y: -0.000030517578}
+  m_SizeDelta: {x: 57.3, y: -522}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1490567118
 MonoBehaviour:

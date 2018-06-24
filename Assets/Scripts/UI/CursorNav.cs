@@ -22,13 +22,13 @@ public class CursorNav : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		textList = GetComponentsInChildren<Text>();
+
 		soundEngine = Object.FindObjectOfType<SoundEngine>();
 		currentScene = SceneManager.GetActiveScene();
 
 		if (currentScene == SceneManager.GetSceneByName("Options"))
 		{
-			sliders = GetComponentsInChildren<Slider>();
+	
 			sliders[0].Select();
 			lastSelect = new GameObject();
 
@@ -44,11 +44,11 @@ public class CursorNav : MonoBehaviour {
 			lastSelect = EventSystem.current.currentSelectedGameObject;
 		}
 		if (Input.GetButtonDown("down")){
-			if(curIndex < 6  && currentScene == SceneManager.GetSceneByName("Options")){
+			if(curIndex < textList.Length - 1  && currentScene == SceneManager.GetSceneByName("Options")){
 				textList[curIndex].color = lime;
 				if (curIndex == 2)
                 {
-                    cursor.transform.position += Vector3.down * 22;
+                    cursor.transform.position += Vector3.down * 72;
 					foreach(Slider s in sliders){
 						s.interactable = false;
 					}
@@ -61,7 +61,7 @@ public class CursorNav : MonoBehaviour {
 				soundEngine.PlaySoundWithName("MenuNav");
 			}
             
-			if (curIndex < 3 && currentScene == SceneManager.GetSceneByName("Menu") )
+			if (curIndex < textList.Length - 1 && currentScene == SceneManager.GetSceneByName("Menu") )
             {
                 textList[curIndex].color = lime;
 				curIndex++;
@@ -82,7 +82,7 @@ public class CursorNav : MonoBehaviour {
 				textList[curIndex].color = lime;
 				if (curIndex == 3 && currentScene == SceneManager.GetSceneByName("Options"))
                 {
-                    cursor.transform.position += Vector3.up * 22;
+                    cursor.transform.position += Vector3.up * 72;
 					foreach (Slider s in sliders)
                     {
 						s.interactable = true;
@@ -106,20 +106,17 @@ public class CursorNav : MonoBehaviour {
 				if (curIndex == 0){
 					SceneManager.LoadScene("Game");
 				}
-                
-				if (curIndex == 1){
-					SceneManager.LoadScene("TEST");
-				}
+               
 
-				if(curIndex == 2){
+				if(curIndex == 1){
 					SceneManager.LoadScene("Options");
 				}
 
-				if (curIndex == 3)
+				if (curIndex == 2)
                 {
                     SceneManager.LoadScene("Credits");
                 }
-
+                
 
 			}
 			if (currentScene == SceneManager.GetSceneByName("Options")){
@@ -128,18 +125,14 @@ public class CursorNav : MonoBehaviour {
                 {
                     SceneManager.LoadScene("Game");
                 }
+               
 
-                if (curIndex == 4)
-                {
-                    SceneManager.LoadScene("TEST");
-                }
-
-				if(curIndex == 5)
+				if(curIndex == 4)
                 {
                     SceneManager.LoadScene("Menu");
                 }
-
-				if (curIndex == 6)
+                
+				if (curIndex == 5)
                 {
                     SceneManager.LoadScene("Credits");
                 }

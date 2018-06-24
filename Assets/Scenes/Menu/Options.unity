@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 2997674}
   - component: {fileID: 2997673}
   m_Layer: 5
-  m_Name: Label
+  m_Name: SFXLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,84 +191,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2997671}
---- !u!1 &23637108
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1985167601028564, guid: 1d2677f7bac4348dd9567c24d509b5b9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 23637109}
-  - component: {fileID: 23637111}
-  - component: {fileID: 23637110}
-  m_Layer: 5
-  m_Name: Test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &23637109
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 224185768593035978, guid: 1d2677f7bac4348dd9567c24d509b5b9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 23637108}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
-  m_Children: []
-  m_Father: {fileID: 358945631}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -251}
-  m_SizeDelta: {x: 50, y: 12}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &23637110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114764019787113462, guid: 1d2677f7bac4348dd9567c24d509b5b9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 23637108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 29821db8324231f4481e730bf6288b9c, type: 2}
-    m_FontSize: 0
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: TEST
---- !u!222 &23637111
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 222254127320067398, guid: 1d2677f7bac4348dd9567c24d509b5b9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 23637108}
 --- !u!1 &42855339
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -201}
+  m_AnchoredPosition: {x: 100, y: -251}
   m_SizeDelta: {x: 50, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &42855341
@@ -521,7 +443,7 @@ RectTransform:
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 358945631}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -599,7 +521,7 @@ RectTransform:
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 358945631}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -698,7 +620,6 @@ RectTransform:
   - {fileID: 462689758}
   - {fileID: 1939734605}
   - {fileID: 42855340}
-  - {fileID: 23637109}
   - {fileID: 295007782}
   - {fileID: 842003022}
   - {fileID: 221381420}
@@ -1261,7 +1182,7 @@ RectTransform:
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 358945631}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2249,7 +2170,7 @@ GameObject:
   - component: {fileID: 1171053841}
   - component: {fileID: 1171053840}
   m_Layer: 5
-  m_Name: Label
+  m_Name: UILabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2534,8 +2455,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1205051f55c5d4c25a54ecdada14ed72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textList: []
-  sliders: []
+  textList:
+  - {fileID: 1748627541}
+  - {fileID: 2997673}
+  - {fileID: 1171053840}
+  - {fileID: 42855341}
+  - {fileID: 295007783}
+  - {fileID: 842003023}
+  sliders:
+  - {fileID: 941524278}
+  - {fileID: 462689760}
+  - {fileID: 1939734607}
   cursor: {fileID: 221381420}
   curIndex: 0
   lime: {r: 0, g: 255, b: 0, a: 1}
@@ -2729,7 +2659,7 @@ GameObject:
   - component: {fileID: 1748627542}
   - component: {fileID: 1748627541}
   m_Layer: 5
-  m_Name: Label
+  m_Name: MusicLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
