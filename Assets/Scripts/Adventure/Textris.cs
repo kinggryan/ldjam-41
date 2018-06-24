@@ -210,7 +210,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("Doesn't look like the guard is following you. Must be pretty drunk. ");
 		}
 		yield return text(" ");
-		if(Vars.inv["GUN"] == false) {
+		if(Vars.inv["GUN"] == false && Vars.ser_door == false) {
 			yield return link("LOOK", " LookWare", null);
 		}
 		yield return text(" ");
@@ -265,7 +265,9 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	IStoryThread passage5_Main()
 	{
-		yield return text("\"Looks like you're human ... or, human enough. Opening cleanroom door.\" The cleanroom door to the NORTH hisses as it unlocks. ");
+		yield return text("\"Looks like you're human ... or, human enough. Opening cleanroom door.\" ");
+		yield return lineBreak();
+		yield return text("The cleanroom door to the NORTH hisses as it unlocks. ");
 		Vars.open_clean  = true;
 		yield return text(" ");
 		yield return link("NORTH", " Clean", null);
@@ -709,6 +711,9 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 				Vars.ser_door  = true;
 				yield return text("\"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.");
 			}
+			if(Vars.ser_door == true) {
+				yield return text("The guard passed out. He should lay off the drink.");
+			}
 		}
 		else if(Vars.dead_g == false) {
 			Vars.HP  = Vars.HP - 1;
@@ -882,14 +887,14 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 	{
 		if(Vars.open_clean == false) {
 			Vars.cor_ans  = "FOB";
-			yield return text(" You go over to the hologram head. \"I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot.\"");
+			yield return text("You go over to the hologram head. \"I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot.\"");
 			yield return lineBreak();
 			yield return text("First question: What is something that opens things, that your boss would be mad if they found out you lost it? ");
-			yield return link("USE FOB", " AIFob", null);
+			yield return link("FOB", " AIFob", null);
 			yield return text(" ");
-			yield return link("USE COAT", " AICoat", null);
+			yield return link("COAT", " AICoat", null);
 			yield return text(" ");
-			yield return link("USE GUN", " AIGun", null);
+			yield return link("GUN", " AIGun", null);
 		}
 		yield return text(" ");
 		if(Vars.open_clean == true) {
@@ -931,11 +936,11 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			}
 		}
 		yield return text(" ");
-		yield return link("USE FOB", " AIFob", null);
+		yield return link("FOB", " AIFob", null);
 		yield return text(" ");
-		yield return link("USE COAT", " AICoat", null);
+		yield return link("COAT", " AICoat", null);
 		yield return text(" ");
-		yield return link("USE GUN", " AIGun", null);
+		yield return link("GUN", " AIGun", null);
 		yield break;
 	}
 
@@ -971,11 +976,11 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 			}
 		}
 		yield return text(" ");
-		yield return link("USE FOB", " AIFob", null);
+		yield return link("FOB", " AIFob", null);
 		yield return text(" ");
-		yield return link("USE COAT", " AICoat", null);
+		yield return link("COAT", " AICoat", null);
 		yield return text(" ");
-		yield return link("USE GUN", " AIGun", null);
+		yield return link("GUN", " AIGun", null);
 		yield break;
 	}
 
@@ -1012,11 +1017,11 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 				yield return text("GAME OVER");
 			}
 			yield return text(" ");
-			yield return link("USE FOB", " AIFob", null);
+			yield return link("FOB", " AIFob", null);
 			yield return text(" ");
-			yield return link("USE COAT", " AICoat", null);
+			yield return link("COAT", " AICoat", null);
 			yield return text(" ");
-			yield return link("USE GUN", " AIGun", null);
+			yield return link("GUN", " AIGun", null);
 		}
 		yield break;
 	}
@@ -1077,9 +1082,7 @@ public partial class @Textris: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return lineBreak();
 		yield return text("You jack out of the machine, feel dizzy. Questions spin through your mind. What was that code? Where are you? Who sent you here? Why? You struggle to think, but you can’t remember why you’re even here. Your memory centers are purging themselves.");
 		yield return lineBreak();
-		yield return text("You feel sick.");
-		yield return lineBreak();
-		yield return text("You black out. ");
+		yield return text("You feel sick. You black out. ");
 		using (Group("hook", "end")) {
 			yield return text("END");
 		}

@@ -31,16 +31,20 @@ public static class LetterGenerator {
         new WeightedCommand( TwineTextPlayer.Command.Hack, "HACK", 1, new string[]{ }),
         new WeightedCommand( TwineTextPlayer.Command.Look, "LOOK", 1, new string[]{ "SEARCH", "PEER", "GAPE", "OGLE", "SCAN", "PROBE", "SEEK", "PEEK" }),
         new WeightedCommand( TwineTextPlayer.Command.Talk, "TALK", 1, new string[]{ "SPEAK", "HELLO", "CHAT", "GAB", "CONFAB"}),
+        
+		new WeightedCommand( TwineTextPlayer.Command.Gun, "GUN", 1, new string[]{"GUN", "ARM", "GAT" }),
+        new WeightedCommand( TwineTextPlayer.Command.Fob, "FOB", 1, new string[]{"FOB" }),
+        new WeightedCommand( TwineTextPlayer.Command.Coat, "COAT", 1, new string[]{"COAT", "CLOTH", "GARB"}),
 
-        // And all the item commands
-        new WeightedCommand( TwineTextPlayer.Command.UseGun, "USEGUN", 1, new string[]{"GUN", "ARM", "GAT" }),
-        new WeightedCommand( TwineTextPlayer.Command.UseFob, "USEFOB", 1, new string[]{"FOB" }),
-		new WeightedCommand( TwineTextPlayer.Command.UseCoat, "USECOAT", 1, new string[]{"COAT", "CLOTH", "GARB" }),
-		new WeightedCommand( TwineTextPlayer.Command.UseCure, "USECURE", 1, new string[]{"CURE", "HEAL" }),
+		// And all the item commands
+        new WeightedCommand( TwineTextPlayer.Command.UseGun, "USEGUN", 1, new string[]{"GUN", "ARM", "GAT", "" }),
+        new WeightedCommand( TwineTextPlayer.Command.UseFob, "USEFOB", 1, new string[]{"FOB", "USE" }),
+		new WeightedCommand( TwineTextPlayer.Command.UseCoat, "USECOAT", 1, new string[]{"COAT", "CLOTH", "GARB", "USE" }),
+		new WeightedCommand( TwineTextPlayer.Command.UseCure, "USECURE", 1, new string[]{"CURE", "HEAL", "USE" }),
       
-        new WeightedCommand( TwineTextPlayer.Command.GetFob, "GETFOB", 1, new string[]{"FOB" }),
+        new WeightedCommand( TwineTextPlayer.Command.GetFob, "GETFOB", 1, new string[]{"FOB", "GET", "LOOT" }),
        
-        new WeightedCommand( TwineTextPlayer.Command.GetCoat, "GETCOAT", 1, new string[]{ "COAT", "CLOTH", "GARB"}),
+        new WeightedCommand( TwineTextPlayer.Command.GetCoat, "GETCOAT", 1, new string[]{ "COAT", "CLOTH", "GARB", "GET", "LOOT"}),
         new WeightedCommand( TwineTextPlayer.Command.End, "END", 1, new string[]{ })
 
         //North,

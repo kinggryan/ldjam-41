@@ -280,6 +280,13 @@ public class TetrisManager : MonoBehaviour {
                 soundEngine.PlaySoundWithName("LineClear");
             }
 
+			if (command.command.command != TwineTextPlayer.Command.None)
+            {
+                twinePlayer.TypeCommand(command.word);
+                twinePlayer.DoCommand(command.command.command);
+                pauser.PausePlay();
+                
+            }
             // Do something with the command
             if (command.command.command != TwineTextPlayer.Command.None || IsLineComplete(y))
             {
@@ -287,13 +294,7 @@ public class TetrisManager : MonoBehaviour {
                 didEraseLine = true;
             }
 
-            if (command.command.command != TwineTextPlayer.Command.None)
-            {
-                twinePlayer.TypeCommand(command.word);
-                twinePlayer.DoCommand(command.command.command);
-                pauser.PausePlay();
-                return true;
-            }
+            
         }
 
         return didEraseLine;
@@ -321,7 +322,16 @@ public class TetrisManager : MonoBehaviour {
             }
 
             // Do something with the command
-            if (command.command.command != TwineTextPlayer.Command.None || IsColumnComplete(x))
+                     
+            if (command.command.command != TwineTextPlayer.Command.None)
+            {
+                Debug.Log("FUCKING PAUSE");
+                twinePlayer.TypeCommand(command.word);
+                twinePlayer.DoCommand(command.command.command);
+                pauser.PausePlay();
+               
+            }
+			if (command.command.command != TwineTextPlayer.Command.None || IsColumnComplete(x))
             {
                 Debug.Log("Command: " + command.command.command);
                 Debug.Log("Command: " + command.command);
@@ -329,14 +339,6 @@ public class TetrisManager : MonoBehaviour {
                 didEraseColumn = true;
             }
 
-            if (command.command.command != TwineTextPlayer.Command.None)
-            {
-                Debug.Log("FUCKING PAUSE");
-                twinePlayer.TypeCommand(command.word);
-                twinePlayer.DoCommand(command.command.command);
-                pauser.PausePlay();
-                return true;
-            }
         }
 
         return didEraseColumn;

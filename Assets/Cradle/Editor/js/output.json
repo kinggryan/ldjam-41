@@ -1937,9 +1937,9 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "if: $inv's GUN is false",
+                        "innerText": "if: $inv's GUN is false and $ser_door is false",
                         "name": "if",
-                        "text": "(if: $inv's GUN is false)",
+                        "text": "(if: $inv's GUN is false and $ser_door is false)",
                         "tokens": [
                             {
                                 "text": "if:",
@@ -1958,6 +1958,39 @@
                                 "name": "GUN",
                                 "text": "'s GUN",
                                 "type": "property"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "is",
+                                "type": "is"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "false",
+                                "type": "boolean"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "and",
+                                "type": "and"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "ser_door",
+                                "text": "$ser_door",
+                                "type": "variable"
                             },
                             {
                                 "text": " ",
@@ -2594,7 +2627,15 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "\"Looks like you're human ... or, human enough. Opening cleanroom door.\" The cleanroom door to the NORTH hisses as it unlocks. ",
+                        "text": "\"Looks like you're human ... or, human enough. Opening cleanroom door.\" ",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "The cleanroom door to the NORTH hisses as it unlocks. ",
                         "type": "text"
                     },
                     {
@@ -7167,8 +7208,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(if: $ser_door is false)[(set: $ser_door to true)\"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.]",
-                        "text": "[(if: $ser_door is false)[(set: $ser_door to true)\"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.]]",
+                        "innerText": "(if: $ser_door is false)[(set: $ser_door to true)\"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.](if: $ser_door is true)[The guard passed out. He should lay off the drink.]",
+                        "text": "[(if: $ser_door is false)[(set: $ser_door to true)\"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.](if: $ser_door is true)[The guard passed out. He should lay off the drink.]]",
                         "tokens": [
                             {
                                 "innerText": "if: $ser_door is false",
@@ -7250,6 +7291,54 @@
                                     },
                                     {
                                         "text": "\"I'll disable the security door on the elevator for you. Careful working too hard down there. I don’t want to have to drag you up here while you’re having one of those kicking and screaming fits again.\" The guard flips a switch on the console, and you hear the elevator security door retract in the warehouse.",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
+                            },
+                            {
+                                "innerText": "if: $ser_door is true",
+                                "name": "if",
+                                "text": "(if: $ser_door is true)",
+                                "tokens": [
+                                    {
+                                        "text": "if:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "ser_door",
+                                        "text": "$ser_door",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "is",
+                                        "type": "is"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "true",
+                                        "type": "boolean"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "The guard passed out. He should lay off the drink.",
+                                "text": "[The guard passed out. He should lay off the drink.]",
+                                "tokens": [
+                                    {
+                                        "text": "The guard passed out. He should lay off the drink.",
                                         "type": "text"
                                     }
                                 ],
@@ -9588,8 +9677,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "(set: $cor_ans to \"FOB\") You go over to the hologram head. \"I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot.\"\nFirst question: What is something that opens things, that your boss would be mad if they found out you lost it? [[USE FOB-> AIFob]] [[USE COAT-> AICoat]] [[USE GUN-> AIGun]]",
-                        "text": "[(set: $cor_ans to \"FOB\") You go over to the hologram head. \"I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot.\"\nFirst question: What is something that opens things, that your boss would be mad if they found out you lost it? [[USE FOB-> AIFob]] [[USE COAT-> AICoat]] [[USE GUN-> AIGun]]]",
+                        "innerText": "(set: $cor_ans to \"FOB\")You go over to the hologram head. \"I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot.\"\nFirst question: What is something that opens things, that your boss would be mad if they found out you lost it? [[FOB-> AIFob]] [[COAT-> AICoat]] [[GUN-> AIGun]]",
+                        "text": "[(set: $cor_ans to \"FOB\")You go over to the hologram head. \"I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot.\"\nFirst question: What is something that opens things, that your boss would be mad if they found out you lost it? [[FOB-> AIFob]] [[COAT-> AICoat]] [[GUN-> AIGun]]]",
                         "tokens": [
                             {
                                 "innerText": "set: $cor_ans to \"FOB\"",
@@ -9630,7 +9719,7 @@
                                 "type": "macro"
                             },
                             {
-                                "text": " You go over to the hologram head. \"I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot.\"",
+                                "text": "You go over to the hologram head. \"I'm Kapcha, security A.I. for Project Poly. No robots are allowed into the project site due to enhanced security measures, and because robots are filthy. Please submit to Turing test to prove you are not a filthy robot.\"",
                                 "type": "text"
                             },
                             {
@@ -9642,17 +9731,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"USE FOB\",\" AIFob\"",
+                                "innerText": "link-goto:\"FOB\",\" AIFob\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE FOB\",\" AIFob\")",
+                                "text": "(link-goto:\"FOB\",\" AIFob\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE FOB",
-                                        "text": "\"USE FOB\"",
+                                        "innerText": "FOB",
+                                        "text": "\"FOB\"",
                                         "type": "string"
                                     },
                                     {
@@ -9672,17 +9761,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"USE COAT\",\" AICoat\"",
+                                "innerText": "link-goto:\"COAT\",\" AICoat\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE COAT\",\" AICoat\")",
+                                "text": "(link-goto:\"COAT\",\" AICoat\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE COAT",
-                                        "text": "\"USE COAT\"",
+                                        "innerText": "COAT",
+                                        "text": "\"COAT\"",
                                         "type": "string"
                                     },
                                     {
@@ -9702,17 +9791,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"USE GUN\",\" AIGun\"",
+                                "innerText": "link-goto:\"GUN\",\" AIGun\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE GUN\",\" AIGun\")",
+                                "text": "(link-goto:\"GUN\",\" AIGun\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE GUN",
-                                        "text": "\"USE GUN\"",
+                                        "innerText": "GUN",
+                                        "text": "\"GUN\"",
                                         "type": "string"
                                     },
                                     {
@@ -10175,17 +10264,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"USE FOB\",\" AIFob\"",
+                        "innerText": "link-goto:\"FOB\",\" AIFob\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"USE FOB\",\" AIFob\")",
+                        "text": "(link-goto:\"FOB\",\" AIFob\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "USE FOB",
-                                "text": "\"USE FOB\"",
+                                "innerText": "FOB",
+                                "text": "\"FOB\"",
                                 "type": "string"
                             },
                             {
@@ -10205,17 +10294,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"USE COAT\",\" AICoat\"",
+                        "innerText": "link-goto:\"COAT\",\" AICoat\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"USE COAT\",\" AICoat\")",
+                        "text": "(link-goto:\"COAT\",\" AICoat\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "USE COAT",
-                                "text": "\"USE COAT\"",
+                                "innerText": "COAT",
+                                "text": "\"COAT\"",
                                 "type": "string"
                             },
                             {
@@ -10235,17 +10324,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"USE GUN\",\" AIGun\"",
+                        "innerText": "link-goto:\"GUN\",\" AIGun\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"USE GUN\",\" AIGun\")",
+                        "text": "(link-goto:\"GUN\",\" AIGun\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "USE GUN",
-                                "text": "\"USE GUN\"",
+                                "innerText": "GUN",
+                                "text": "\"GUN\"",
                                 "type": "string"
                             },
                             {
@@ -10627,17 +10716,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"USE FOB\",\" AIFob\"",
+                        "innerText": "link-goto:\"FOB\",\" AIFob\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"USE FOB\",\" AIFob\")",
+                        "text": "(link-goto:\"FOB\",\" AIFob\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "USE FOB",
-                                "text": "\"USE FOB\"",
+                                "innerText": "FOB",
+                                "text": "\"FOB\"",
                                 "type": "string"
                             },
                             {
@@ -10657,17 +10746,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"USE COAT\",\" AICoat\"",
+                        "innerText": "link-goto:\"COAT\",\" AICoat\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"USE COAT\",\" AICoat\")",
+                        "text": "(link-goto:\"COAT\",\" AICoat\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "USE COAT",
-                                "text": "\"USE COAT\"",
+                                "innerText": "COAT",
+                                "text": "\"COAT\"",
                                 "type": "string"
                             },
                             {
@@ -10687,17 +10776,17 @@
                         "type": "text"
                     },
                     {
-                        "innerText": "link-goto:\"USE GUN\",\" AIGun\"",
+                        "innerText": "link-goto:\"GUN\",\" AIGun\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"USE GUN\",\" AIGun\")",
+                        "text": "(link-goto:\"GUN\",\" AIGun\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "USE GUN",
-                                "text": "\"USE GUN\"",
+                                "innerText": "GUN",
+                                "text": "\"GUN\"",
                                 "type": "string"
                             },
                             {
@@ -10802,8 +10891,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "That's an answer a robot would give! You get shocked. What item could you use to make people beg for mercy? (set: $HP to it - 1) \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true)GAME OVER] [[USE FOB-> AIFob]] [[USE COAT-> AICoat]] [[USE GUN-> AIGun]]",
-                        "text": "[That's an answer a robot would give! You get shocked. What item could you use to make people beg for mercy? (set: $HP to it - 1) \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true)GAME OVER] [[USE FOB-> AIFob]] [[USE COAT-> AICoat]] [[USE GUN-> AIGun]]]",
+                        "innerText": "That's an answer a robot would give! You get shocked. What item could you use to make people beg for mercy? (set: $HP to it - 1) \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true)GAME OVER] [[FOB-> AIFob]] [[COAT-> AICoat]] [[GUN-> AIGun]]",
+                        "text": "[That's an answer a robot would give! You get shocked. What item could you use to make people beg for mercy? (set: $HP to it - 1) \n(if: $HP is 2)[YOU ARE PRETTY HURT, MAN] (if: $HP is 1)[YOU ARE BASICALLY DEAD] (if: $HP <= 0)[(set: $game_over to true)GAME OVER] [[FOB-> AIFob]] [[COAT-> AICoat]] [[GUN-> AIGun]]]",
                         "tokens": [
                             {
                                 "text": "That's an answer a robot would give! You get shocked. What item could you use to make people beg for mercy? ",
@@ -11067,17 +11156,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"USE FOB\",\" AIFob\"",
+                                "innerText": "link-goto:\"FOB\",\" AIFob\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE FOB\",\" AIFob\")",
+                                "text": "(link-goto:\"FOB\",\" AIFob\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE FOB",
-                                        "text": "\"USE FOB\"",
+                                        "innerText": "FOB",
+                                        "text": "\"FOB\"",
                                         "type": "string"
                                     },
                                     {
@@ -11097,17 +11186,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"USE COAT\",\" AICoat\"",
+                                "innerText": "link-goto:\"COAT\",\" AICoat\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE COAT\",\" AICoat\")",
+                                "text": "(link-goto:\"COAT\",\" AICoat\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE COAT",
-                                        "text": "\"USE COAT\"",
+                                        "innerText": "COAT",
+                                        "text": "\"COAT\"",
                                         "type": "string"
                                     },
                                     {
@@ -11127,17 +11216,17 @@
                                 "type": "text"
                             },
                             {
-                                "innerText": "link-goto:\"USE GUN\",\" AIGun\"",
+                                "innerText": "link-goto:\"GUN\",\" AIGun\"",
                                 "name": "linkgoto",
-                                "text": "(link-goto:\"USE GUN\",\" AIGun\")",
+                                "text": "(link-goto:\"GUN\",\" AIGun\")",
                                 "tokens": [
                                     {
                                         "text": "link-goto:",
                                         "type": "macroName"
                                     },
                                     {
-                                        "innerText": "USE GUN",
-                                        "text": "\"USE GUN\"",
+                                        "innerText": "GUN",
+                                        "text": "\"GUN\"",
                                         "type": "string"
                                     },
                                     {
@@ -11577,15 +11666,7 @@
                         "type": "br"
                     },
                     {
-                        "text": "You feel sick.",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "You black out. ",
+                        "text": "You feel sick. You black out. ",
                         "type": "text"
                     },
                     {
