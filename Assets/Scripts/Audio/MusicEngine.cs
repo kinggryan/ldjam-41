@@ -26,7 +26,7 @@ public class MusicEngine : MonoBehaviour {
 	public void ChangeMusicWithName(string name) {
 		var playedSound = false;
 		foreach (var eventAndName in events) {
-			if (eventAndName.name == name) {
+			if (eventAndName.name == name && eventAndName.transition) {
 				eventAndName.transition.ChangeMusic();
 				playedSound = true;
 			}
