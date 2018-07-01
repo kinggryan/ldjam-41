@@ -99,28 +99,38 @@ public class TetrisDisplay : MonoBehaviour {
 
     void HighLightWordInColumn(char[,] board, string word, int xCoord)
     {
+        // In the given column
+        // Construct a comparison string
+        // Determine what the y coordinates of the given word are
+        // Then type out the board
+        var columnString = "";
+        for(var y = board.GetLength(1) - 1; y >= 0 ; y--) {
+            columnString += board[xCoord, y];
+        }
+
+        Debug.Log("Column string: " + columnString);
+
+        var endYCoord = board.GetLength(1) - columnString.IndexOf(word);
+        var startYCoord = endYCoord - word.Length;
+
+        Debug.Log("Start Y " + startYCoord + ", end y " + endYCoord);
+
         var textString = "";
-        var currentWordIndex = 0;
-        for (var x = board.GetLength(0) - 1; x >= 0; x--)
+        for (var y = board.GetLength(1) - 1; y >= 0; y--)
         {
-            for (var y = 0; y < board.GetLength(1); y++)
-            {
-                if(currentWordIndex < word.Length && xCoord == x && board[x, y] == word[currentWordIndex])
-                {
-                    textString += board[x, y];
-                    currentWordIndex++;
-                } else
-                {
-                    textString += ' ';
-                }
+            for(var x = 0 ; x < board.GetLength(0); x++) {
+                 if(y >= startYCoord - 1 && y < endYCoord && x == xCoord) {
+                     textString += board[x,y];
+                 } else {
+                     textString += " ";
+                 }
             }
+
             textString += "\n";
         }
 
         //Debug.Log("Highlighting word with " + textString);
         commandText.text = textString;
-
-        Debug.Log("WORD HIGLIGHTED?");
     }
 
     void HighlightLine(char[,] board, int yCoord)
