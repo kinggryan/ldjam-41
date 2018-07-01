@@ -52,7 +52,7 @@ public class TetrisDisplay : MonoBehaviour {
     {
         UpdateBoard(board, null);
         HighLightWordInColumn(board, command, xCoord);
-        HighlightColumn(board, xCoord);
+        // HighlightColumn(board, xCoord);
     }
 
     public void UpdateBoardWithCompleteLine(char[,] board, int yCoord)
