@@ -5,6 +5,7 @@ using UnityEngine;
 public class WakeUpTetris : MonoBehaviour {
 
     public GameObject pressButtonToPlayParent;
+	public GameObject hideFirstBlockPanel;
     public UnityEngine.UI.Text[] gameTextToFadeOut;
     public TetrisManager tetris;
     public Color fadedOutGameTextColor;
@@ -30,6 +31,7 @@ public class WakeUpTetris : MonoBehaviour {
         if (pauseTimer >= (isFirstPause ? firstPauseMinDuration : minPauseDuration) && tetris.IsPaused() && (Input.GetButtonUp("left") || Input.GetButtonUp("right") || Input.GetButtonUp("up") || Input.GetButtonUp("down") || Input.GetButtonUp("rotateclockwise") || Input.GetButtonUp("rotatecounterclockwise") ))
         {
             isFirstPause = false;
+			hideFirstBlockPanel.SetActive(false);
             BeginPlay();
 
 
