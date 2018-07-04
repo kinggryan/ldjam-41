@@ -119,7 +119,7 @@ public class TetrisDisplay : MonoBehaviour {
         for (var y = board.GetLength(1) - 1; y >= 0; y--)
         {
             for(var x = 0 ; x < board.GetLength(0); x++) {
-                 if(y >= startYCoord - 1 && y < endYCoord && x == xCoord) {
+                 if(y > startYCoord - 1 && y < endYCoord && x == xCoord) {
                      textString += board[x,y];
                  } else {
                      textString += " ";
